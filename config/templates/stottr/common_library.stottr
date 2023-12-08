@@ -1,0 +1,213 @@
+@prefix ax:           <http://tpl.ottr.xyz/owl/axiom/0.1/> .
+@prefix dc:           <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms:      <http://purl.org/dc/terms/> .
+@prefix ex:           <http://example.org/> .
+@prefix fmea:         <http://example.com/ns/asset-maintenance/fmea/> .
+@prefix fmea-tmp:     <http://tpl.ottr.xyz/p/asset-maintenance/fmea/0.2/> .
+@prefix foaf:         <http://xmlns.com/foaf/0.1/> .
+@prefix inter:        <http://tpl.ottr.xyz/p/asset-maintenance/interface/0.2/> .
+@prefix iso-tmp:      <http://tpl.ottr.xyz/p/asset-maintenance/iso14224/0.2/> .
+@prefix lis:          <http://rds.posccaesar.org/ontology/lis14/rdl/> .
+@prefix listpl:       <http://rds.posccaesar.org/ontology/lis14/tpl/0.1/> .
+@prefix macro:        <http://tpl.ottr.xyz/p/asset-maintenance/owl/macro/0.1/> .
+@prefix o-docttr:     <http://tpl.ottr.xyz/p/docttr/0.1/> .
+@prefix o-owl-ax:     <http://tpl.ottr.xyz/owl/axiom/0.1/> .
+@prefix o-owl-dec:    <http://tpl.ottr.xyz/owl/declaration/0.1/> .
+@prefix o-owl-ma:     <http://tpl.ottr.xyz/owl/macro/0.1/> .
+@prefix o-owl-re:     <http://tpl.ottr.xyz/owl/restriction/0.1/> .
+@prefix o-owl-ut:     <http://tpl.ottr.xyz/owl/util/0.1/> .
+@prefix o-pizza:      <http://tpl.ottr.xyz/pizza/0.1/> .
+@prefix o-rdf:        <http://tpl.ottr.xyz/rdf/0.1/> .
+@prefix o-rdfs:       <http://tpl.ottr.xyz/rdfs/0.2/> .
+@prefix om:           <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix ont:          <http://data.grundfos.com/ontology/pump/ont/> .
+@prefix ottr:         <http://ns.ottr.xyz/0.4/> .
+@prefix owl:          <http://www.w3.org/2002/07/owl#> .
+@prefix pav:          <http://purl.org/pav/> .
+@prefix plmtpl:       <http://rds.posccaesar.org/ontology/plm/tpl/0.1/> .
+@prefix pz:           <http://www.co-ode.org/ontologies/pizza/pizza.owl#> .
+@prefix rdf:          <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:         <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdl:          <http://rds.posccaesar.org/ontology/plm/rdl/> .
+@prefix reqtpl:       <http://w3id.org/requirement-ontology/tpl/0.1/> .
+@prefix rstr:         <http://tpl.ottr.xyz/owl/restriction/0.1/> .
+@prefix sd:           <http://www.w3.org/ns/sparql-service-description#> .
+@prefix skos:         <http://www.w3.org/2004/02/skos/core#> .
+@prefix tmp:          <http://tpl.ottr.xyz/p/asset-maintenance/general/0.2/> .
+@prefix tmp1:         <http://tpl.ottr.xyz/p/asset-maintenance/general/0.1/> .
+@prefix tmp2:         <http://tpl.ottr.xyz/p/asset-maintenance/general/0.2/> .
+@prefix vann:         <http://purl.org/vocab/vann/> .
+@prefix void:         <http://rdfs.org/ns/void#> .
+@prefix wo-tmp:       <http://tpl.ottr.xyz/p/asset-maintenance/work-orders/0.1/> .
+@prefix x:            <http://example.ottr.xyz/argument/> .
+@prefix xml:          <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:          <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms:     <http://purl.org/dc/terms/> .
+@prefix ido-tpl:      <http://example.com/ido/> .
+@prefix lis:          <http://rds.posccaesar.org/ontology/lis14/rdl/> .
+@prefix proc: <http://spec.equonto.com/ontology/maintenance-procedure#> .
+@prefix proc-tpl: <http://tpl.equonto.com/ontology/maintenance-procedure/> .
+@prefix iof-av: <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/> .
+
+## metadata
+proc-tpl:IOF_OntologyMetadata[
+    ottr:IRI ?ontologyIri,
+    !? ottr:IRI ?ontologyVersionIri,
+    !? xsd:string ?label,
+    !? xsd:string ?license,
+    !? xsd:string ?abstract,
+    !? List<xsd:string> ?contributors,
+    !? xsd:string ?creator,
+    !? xsd:string ?publisher,
+    !? xsd:string ?title,
+    !? ottr:IRI ?maturity,
+    !? List<ottr:IRI> ?imports
+]
+@@o-docttr:Signature(proc-tpl:IOF_OntologyMetadata, # resource
+    none, # label
+    "Define metatadata for an ontology according to the IOF Annotation Schema", #description
+    none, #scope
+    none, #notes
+    none, #see also
+    none #editorial note
+),
+@@o-docttr:Version(proc-tpl:IOF_OntologyMetadata, # resource
+    ottr:released, # status
+    "0.1.0", # version
+    none, #previous version
+    none # next version
+),
+@@o-docttr:Provenance(proc-tpl:IOF_OntologyMetadata,
+    "2023-08-12T00:00:00Z"^^xsd:dateTime, # created,
+    "2023-08-12T00:00:00Z"^^xsd:dateTime, # modified,
+    none, # authors,
+    none # contributors
+) :: {
+    o-rdf:Type(?ontologyIri, owl:Ontology),
+    ottr:Triple(?ontologyIri, owl:versionIRI, ?ontologyVersionIri),
+    ottr:Triple(?ontologyIri, rdfs:label, ?label),
+    ottr:Triple(?ontologyIri, dcterms:license, ?license),
+    ottr:Triple(?ontologyIri, dcterms:abstract, ?abstract),
+    cross | ottr:Triple(?ontologyIri, dcterms:contributor, ++?contributors),
+    ottr:Triple(?ontologyIri, dcterms:title, ?title),
+    ottr:Triple(?ontologyIri, dcterms:creator, ?creator),
+    ottr:Triple(?ontologyIri, dcterms:publisher, ?publisher),
+    ottr:Triple(?ontologyIri, iof-av:maturity, ?maturity),
+    cross | ottr:Triple(?ontologyIri, owl:imports, ++?imports)
+} .
+
+proc-tpl:IOF_EntityAnnotations[
+    ottr:IRI ?entity,
+    !? xsd:string ?label,
+    !? xsd:string ?description,
+    !? xsd:boolean ?isPrimitive,
+    !? ottr:IRI ?maturity,
+    !? xsd:string ?logicAxiom,
+    !? xsd:string ?subjectMatterExpertExplanation,
+    !? xsd:string ?example,
+    !? xsd:string ?adaptedFrom
+] 
+@@o-docttr:Signature(proc-tpl:IOF_EntityAnnotations, # resource
+    none, # label
+    "Define metatadata for an entity according to the IOF Annotation Schema", #description
+    none, #scope
+    none, #notes
+    none, #see also
+    none #editorial note
+),
+@@o-docttr:Version(proc-tpl:IOF_EntityAnnotations, # resource
+    ottr:released, # status
+    "0.1.0", # version
+    none, #previous version
+    none # next version
+),
+@@o-docttr:Provenance(proc-tpl:IOF_EntityAnnotations,
+    "2023-08-12T00:00:00Z"^^xsd:dateTime, # created,
+    "2023-08-12T00:00:00Z"^^xsd:dateTime, # modified,
+    none, # authors,
+    none # contributors
+) :: {
+    ottr:Triple(?entity, rdfs:label, ?label),
+    ottr:Triple(?entity, rdfs:comment, ?description),
+    ottr:Triple(?entity, iof-av:isPrimitive, ?isPrimitive),
+    ottr:Triple(?entity, iof-av:maturity, ?maturity),
+    ottr:Triple(?entity, iof-av:logicAxiom, ?logicAxiom),
+    ottr:Triple(?entity, iof-av:subjectMatterExpertExplanation, ?subjectMatterExpertExplanation),
+    ottr:Triple(?entity, iof-av:example, ?example),
+    ottr:Triple(?entity, iof-av:adaptedFrom, ?adaptedFrom)
+} .
+
+## classes,label,description,seeAlso,definedBy
+proc-tpl:PROC_Class[
+    owl:Class ?class,
+    !? List<owl:Class> ?superclass,
+    !? xsd:string ?label,
+    !? xsd:string ?description,
+    !? xsd:boolean ?isPrimitive,
+    !? ottr:IRI ?maturity,
+    !? xsd:string ?logicAxiom,
+    !? xsd:string ?subjectMatterExpertExplanation,
+    !? xsd:string ?example,
+    !? xsd:string ?adaptedFrom
+] 
+@@o-docttr:Signature(proc-tpl:PROC_Class, # resource
+    none, # label
+    "Create a class that is annotated according to the IOF annotation schema", #description
+    none, #scope
+    none, #notes
+    none, #see also
+    none #editorial note
+),
+@@o-docttr:Version(proc-tpl:PROC_Class, # resource
+    ottr:released, # status
+    "0.1.0", # version
+    none, #previous version
+    none # next version
+),
+@@o-docttr:Provenance(proc-tpl:PROC_Class,
+    "2023-08-12T00:00:00Z"^^xsd:dateTime, # created,
+    "2023-08-12T00:00:00Z"^^xsd:dateTime, # modified,
+    ( <https://orcid.org/0000-0001-7829-7674> ), # authors,
+    none # contributors
+):: {
+    o-rdf:Type(?class, owl:Class),
+    cross | ottr:Triple(?class, rdfs:subClassOf, ++?superclass),
+    proc-tpl:IOF_EntityAnnotations(?class, ?label, ?description, ?isPrimitive, ?maturity, ?logicAxiom, ?subjectMatterExpertExplanation, ?example, ?adaptedFrom)
+} .
+
+proc-tpl:PCA_ObjectPropertyWithPropertyChain[
+    ! owl:ObjectProperty ?RDLOP,
+    ? List<owl:ObjectProperty> ?superprop,
+    !? xsd:string ?label,
+    !? xsd:string ?description,
+    ? List<rdfs:Resource> ?seeAlso,
+    ? ottr:IRI ?definedBy,
+    ? owl:Class ?domain,
+    ? owl:Class ?range,
+    ? NEList<ottr:IRI> ?propertyType,
+    ? owl:ObjectProperty ?inverse,
+    ? NEList<owl:ObjectProperty> ?propertyChain
+] 
+@@o-docttr:Signature(proc-tpl:PCA_ObjectPropertyWithPropertyChain, # resource
+    none, # label
+    "Create a PCA RDL object property with a property chain axiom", #description
+    none, #scope
+    none, #notes
+    none, #TODO: set seealso here
+    none #editorial note
+),
+@@o-docttr:Version(proc-tpl:PCA_ObjectPropertyWithPropertyChain, # resource
+    ottr:released, # status
+    "0.1.0", # version
+    none, #previous version
+    none # next version
+),
+@@o-docttr:Provenance(proc-tpl:PCA_ObjectPropertyWithPropertyChain,
+    "2023-08-12T00:00:00Z"^^xsd:dateTime, # created,
+    "2023-08-12T00:00:00Z"^^xsd:dateTime, # modified,
+    none, # authors,
+    none # contributors
+) :: {
+    plmtpl:RDLObjectProperty(?RDLOP, ?superprop, ?label, ?description, ?seeAlso, ?definedBy, ?domain, ?range, ?propertyType, ?inverse),
+    o-owl-ax:SubObjectPropertyOfChain(?RDLOP, ?propertyChain)
+} .

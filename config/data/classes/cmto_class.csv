@@ -1,0 +1,5 @@
+class,superclass,label,description,isPrimitive,maturity,logicAxiom,subjectMatterExpertExplanation,example,adaptedFrom
+proc:FunctionalFailure,lis:Activity,Functional Failure,An ISO: Activity that is represented in a OMPD: Failure Mode Observation and hasParticipant some OMPD: Maintainable Item,TRUE,iof-av:Released,,,,
+proc:FailureEvent,lis:Event,Failure Event,An ISO:Event that resuts in a OMPD: Functional Failure,TRUE,iof-av:Released,,,,
+proc:FailureModeObservation,lis:InformationObject,Failure Mode Observation,An ISO:Information object that denotes a OMPD:functional failure,FALSE,iof-av:Released,,,,
+proc:CorrectiveMaintenanceTask,proc:MaintenanceTask,Corrective Maintenance Task,A OMPD:maintenance task that addresses a OMPD:functional failure,FALSE,iof-av:Released,,,,

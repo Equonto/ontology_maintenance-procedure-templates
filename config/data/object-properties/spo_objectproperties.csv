@@ -1,0 +1,13 @@
+iri,superprop,label,description,seeAlso,definedBy,domain,range,propertyType,inverse
+proc:indirectActivityPartOf,lis:activityPartOf,,,,,,,owl:TransitiveProperty,proc:hasIndirectActivityPart
+proc:directActivityPartOf,proc:indirectActivityPartOf,,,,,,,owl:IrreflexiveProperty,proc:hasDirectActivityPart
+proc:indirectlyAfter,lis:after,,,,,,,,proc:indirectlyBefore
+proc:directlyAfter,proc:indirectlyAfter,,,,,,,,proc:directlyBefore
+proc:indirectlyBefore,lis:before,,,,,,,owl:TransitiveProperty,proc:indirectlyAfter
+proc:directlyBefore,proc:indirectlyBefore,,,,,,,"owl:IrreflexiveProperty,owl:FunctionalProperty",proc:directlyAfter
+proc:hasIndirectActivityPart,lis:hasActivityPart,,,,,,,owl:TransitiveProperty,proc:indirectActivityPartOf
+proc:hasDirectActivityPart,proc:hasIndirectActivityPart,,,,,,,,proc:directActivityPartOf
+proc:hasRequirement,lis:hasParticipant,,,,,,,,proc:requirementOf
+proc:requirementOf,proc:hasRequirement,,,,,,,,proc:hasRequirement
+proc:reasoningSupport,,,,,,,,,
+proc:locallyEquivalentTo,proc:reasoningSupport,,,,,proc:MaintenanceTask,proc:MaintenanceTask,owl:SymmetricProperty,

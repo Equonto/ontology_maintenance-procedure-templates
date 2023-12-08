@@ -1,0 +1,5 @@
+dataprop,superprop,label,description,seeAlso,definedBy,domain,range,propertyType
+proc:documentIdentifier,owl:topDataProperty,documentIdentifier,,,,,,
+proc:hasTextValue,owl:topDataProperty,hasTextValue,,,,,,
+proc:hasImageUrl,owl:topDataProperty,hasImageUrl,,,,,,
+proc:hasVersion,owl:topDataProperty,hasVersion,,,,,,
