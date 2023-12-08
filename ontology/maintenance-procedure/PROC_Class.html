@@ -1,4 +1,10 @@
-<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><style>@import url("https://ottr.xyz/inc/style.css");body{padding-bottom:50px}div{max-width:1200px}p,li,pre,svg{max-width:100%}code,p code,li code{background-color:transparent}table,tr,td{border:0;font-size:100%;vertical-align:top}th{border:0;border-bottom:1px solid #ccc}summary{font-family:arial,sans-serif;font-size:100%}b.heading{color:#333;font-family:arial,sans-serif;font-size:100%;margin-bottom:3px;margin-top:3px}.info{color:#888;font-size:9pt;max-width:800px;padding:1px}span.colourbox{border:1px #ccc solid;display:inline-block;height:12px;margin:0 10px;width:12px}.error{color:red}.button{cursor:pointer}img.logo{float:right;margin:20px}details>details{margin-left:25px}details span.leaf{display:list-item;list-style-type:circle;margin-left:40px}details ul{margin-bottom:0;margin-top:0}p.treeviewbuttons{color:#555;font-family:arial,sans-serif;font-size:10pt}p.treeviewbuttons .button{margin-right:5px}div#ToC{background-color:rgba(255,255,255,0.7);font-family:arial,sans-serif;font-size:80%;padding:10px;position:fixed;right:0;top:0}div#ToC ul{margin:0;margin-top:3px;padding-left:10px}div#ToC ul li{font-family:arial,sans-serif}div#metadata dt.deprecated,div#metadata dt.inv-hasPreviousVersion{border-left:10px solid red;padding-left:5px}</style><title>Template: proc-tpl:PROC_Class</title></head><body><span id="top"></span><div id="ToC"><b>Contents</b><ul><li><a href="#top">top</a></li><li><a href="#Parameters">Parameters</a></li><li><a href="#Pattern">Pattern</a></li><li><a href="#Dependencies">Dependencies</a></li><li><a href="#Metrics">Metrics</a></li><li><a href="#Serialisations">Serialisations</a></li><li><a href="#Prefixes">Prefixes</a></li></ul></div><h1>Template: <code>proc-tpl:PROC_Class</code></h1><div><div><p>URI: <code><a href="http://tpl.equonto.com/ontology/maintenance-procedure/PROC_Class">http://tpl.equonto.com/ontology/maintenance-procedure/PROC_Class</a></code></p></div><div id="metadata"></div><div id="parameters"><h2 id="Parameters">Parameters</h2><p class="info">&#128712; The parameters defined by the signature are listed here. Unfortunately parameter names are not informative; fixing it is a planned future feature. An optional parameter will accept the value ottr:none as an argument. A parameter which allows blanks will accept a blank node as argument value. </p><table><tr><th>Index</th><th>Name</th><th>Type</th><th>Optional</th><th>Blanks allowed</th><th>Default value</th></tr><tr><td>1</td><td>class</td><td>owl:Class</td><td>no</td><td>yes</td><td>no</td></tr><tr><td>2</td><td>superclass</td><td>List&lt;owl:Class&gt;</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>3</td><td>label</td><td>xsd:string</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>4</td><td>description</td><td>xsd:string</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>5</td><td>isPrimitive</td><td>xsd:boolean</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>6</td><td>maturity</td><td>ottr:IRI</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>7</td><td>logicAxiom</td><td>xsd:string</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>8</td><td>subjectMatterExpertExplanation</td><td>xsd:string</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>9</td><td>example</td><td>xsd:string</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>10</td><td>adaptedFrom</td><td>xsd:string</td><td>yes</td><td>no</td><td>no</td></tr></table></div><div id="pattern"><h2 id="Pattern">Pattern</h2><h4>stOTTR</h4><p class="info">&#128712; stOTTR serialisation of the template without annotation instances.</p><pre>proc-tpl:PROC_Class[
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><style>@import url("https://ottr.xyz/inc/style.css");body{padding-bottom:50px}div{max-width:1200px}p,li,pre,svg{max-width:100%}code,p code,li code{background-color:transparent}table,tr,td{border:0;font-size:100%;vertical-align:top}th{border:0;border-bottom:1px solid #ccc}summary{font-family:arial,sans-serif;font-size:100%}b.heading{color:#333;font-family:arial,sans-serif;font-size:100%;margin-bottom:3px;margin-top:3px}.info{color:#888;font-size:9pt;max-width:800px;padding:1px}span.colourbox{border:1px #ccc solid;display:inline-block;height:12px;margin:0 10px;width:12px}.error{color:red}.button{cursor:pointer}img.logo{float:right;margin:20px}details>details{margin-left:25px}details span.leaf{display:list-item;list-style-type:circle;margin-left:40px}details ul{margin-bottom:0;margin-top:0}p.treeviewbuttons{color:#555;font-family:arial,sans-serif;font-size:10pt}p.treeviewbuttons .button{margin-right:5px}div#ToC{background-color:rgba(255,255,255,0.7);font-family:arial,sans-serif;font-size:80%;padding:10px;position:fixed;right:0;top:0}div#ToC ul{margin:0;margin-top:3px;padding-left:10px}div#ToC ul li{font-family:arial,sans-serif}div#metadata dt.deprecated,div#metadata dt.inv-hasPreviousVersion{border-left:10px solid red;padding-left:5px}</style><title>Template: proc-tpl:PROC_Class</title></head><body><span id="top"></span><div id="ToC"><b>Contents</b><ul><li><a href="#top">top</a></li><li><a href="#Metadata">Metadata</a></li><li><a href="#Parameters">Parameters</a></li><li><a href="#Pattern">Pattern</a></li><li><a href="#Dependencies">Dependencies</a></li><li><a href="#Metrics">Metrics</a></li><li><a href="#Serialisations">Serialisations</a></li><li><a href="#Prefixes">Prefixes</a></li></ul></div><h1>Template: <code>proc-tpl:PROC_Class</code></h1><div><div><p>URI: <code><a href="http://tpl.equonto.com/ontology/maintenance-procedure/PROC_Class">http://tpl.equonto.com/ontology/maintenance-procedure/PROC_Class</a></code></p></div><div id="metadata"><h2 id="Metadata">Metadata</h2><p class="info">&#128712; This section contains the data represented by the signature&#x27;s annotation instances.</p><dl><dt class="status"><a href="http://ns.ottr.xyz/0.4/status">ottr:status</a></dt><dd><span><a href="http://ns.ottr.xyz/0.4/released">ottr:released</a></span></dd><dt class="versionInfo"><a href="http://www.w3.org/2002/07/owl#versionInfo">owl:versionInfo</a></dt><dd><span>0.1.0</span></dd><dt class="description"><a href="http://purl.org/dc/elements/1.1/description">dc:description</a></dt><dd><span>Create a class that is annotated according to the IOF annotation schema</span></dd><dt class="createdOn"><a href="http://purl.org/pav/createdOn">pav:createdOn</a></dt><dd><span>2023-08-12T00:00:00Z^^xsd:dateTime</span></dd><dt class="lastUpdateOn"><a href="http://purl.org/pav/lastUpdateOn">pav:lastUpdateOn</a></dt><dd><span>2023-08-12T00:00:00Z^^xsd:dateTime</span></dd><dt class="creator"><a href="http://purl.org/dc/elements/1.1/creator">dc:creator</a></dt><dd><span><a href="https://orcid.org/0000-0001-7829-7674">https://orcid.org/0000-0001-7829-7674</a></span></dd></dl><details><summary>Metadata as RDF graph</summary><pre>
+proc-tpl:PROC_Class  ottr:status  ottr:released ;
+        dc:creator        &lt;https://orcid.org/0000-0001-7829-7674&gt; ;
+        dc:description    &quot;Create a class that is annotated according to the IOF annotation schema&quot; ;
+        pav:createdOn     &quot;2023-08-12T00:00:00Z&quot;^^&lt;http://www.w3.org/2001/XMLSchema#dateTime&gt; ;
+        pav:lastUpdateOn  &quot;2023-08-12T00:00:00Z&quot;^^&lt;http://www.w3.org/2001/XMLSchema#dateTime&gt; ;
+        owl:versionInfo   &quot;0.1.0&quot; .</pre></details></div><div id="parameters"><h2 id="Parameters">Parameters</h2><p class="info">&#128712; The parameters defined by the signature are listed here. Unfortunately parameter names are not informative; fixing it is a planned future feature. An optional parameter will accept the value ottr:none as an argument. A parameter which allows blanks will accept a blank node as argument value. </p><table><tr><th>Index</th><th>Name</th><th>Type</th><th>Optional</th><th>Blanks allowed</th><th>Default value</th></tr><tr><td>1</td><td>class</td><td>owl:Class</td><td>no</td><td>yes</td><td>no</td></tr><tr><td>2</td><td>superclass</td><td>List&lt;owl:Class&gt;</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>3</td><td>label</td><td>xsd:string</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>4</td><td>description</td><td>xsd:string</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>5</td><td>isPrimitive</td><td>xsd:boolean</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>6</td><td>maturity</td><td>ottr:IRI</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>7</td><td>logicAxiom</td><td>xsd:string</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>8</td><td>subjectMatterExpertExplanation</td><td>xsd:string</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>9</td><td>example</td><td>xsd:string</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>10</td><td>adaptedFrom</td><td>xsd:string</td><td>yes</td><td>no</td><td>no</td></tr></table></div><div id="pattern"><h2 id="Pattern">Pattern</h2><h4>stOTTR</h4><p class="info">&#128712; stOTTR serialisation of the template without annotation instances.</p><pre>proc-tpl:PROC_Class[
     owl:Class ?class,
     !? List&lt;owl:Class&gt; ?superclass,
     !? xsd:string ?label,
@@ -932,7 +938,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node1" class="node">
 <title>proc&#45;tpl:PROC_Class</title>
 <g id="a_node1"><a xlink:href="PROC_Class.html" xlink:title="proc&#45;tpl:PROC_Class">
-<polygon fill="#ffdbe5" stroke="black" points="146,-71 0,-71 0,-48 146,-48 146,-71"/>
+<polygon fill="#eec3ff" stroke="black" points="146,-71 0,-71 0,-48 146,-48 146,-71"/>
 <text text-anchor="middle" x="73" y="-55.8" font-family="Arial" font-size="14.00">proc&#45;tpl:PROC_Class</text>
 </a>
 </g>
@@ -940,7 +946,7 @@ x:argument1  rdf:type       owl:Class ;
 <!-- ottr:Triple -->
 <g id="node2" class="node">
 <title>ottr:Triple</title>
-<polygon fill="#c2ff99" stroke="black" points="471,-71 397,-71 397,-48 471,-48 471,-71"/>
+<polygon fill="#c2ffed" stroke="black" points="471,-71 397,-71 397,-48 471,-48 471,-71"/>
 <text text-anchor="middle" x="434" y="-55.8" font-family="Arial" font-size="14.00">ottr:Triple</text>
 </g>
 <!-- proc&#45;tpl:PROC_Class&#45;&gt;ottr:Triple -->
@@ -953,7 +959,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node3" class="node">
 <title>proc&#45;tpl:IOF_EntityAnnotations</title>
 <g id="a_node3"><a xlink:href="IOF_EntityAnnotations.html" xlink:title="proc&#45;tpl:IOF_EntityAnnotations">
-<polygon fill="#ffdbe5" stroke="black" points="372,-71 171,-71 171,-48 372,-48 372,-71"/>
+<polygon fill="#eec3ff" stroke="black" points="372,-71 171,-71 171,-48 372,-48 372,-71"/>
 <text text-anchor="middle" x="271.5" y="-55.8" font-family="Arial" font-size="14.00">proc&#45;tpl:IOF_EntityAnnotations</text>
 </a>
 </g>
@@ -968,7 +974,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node4" class="node">
 <title>o&#45;rdf:Type</title>
 <g id="a_node4"><a xlink:href="../../../tpl.ottr.xyz/rdf/0.1/Type.html" xlink:title="o&#45;rdf:Type">
-<polygon fill="#eec3ff" stroke="black" points="310,-23 233,-23 233,0 310,0 310,-23"/>
+<polygon fill="#c2ff99" stroke="black" points="310,-23 233,-23 233,0 310,0 310,-23"/>
 <text text-anchor="middle" x="271.5" y="-7.8" font-family="Arial" font-size="14.00">o&#45;rdf:Type</text>
 </a>
 </g>
@@ -1001,7 +1007,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node1" class="node">
 <title>proc&#45;tpl:PROC_Class</title>
 <g id="a_node1"><a xlink:href="PROC_Class.html" xlink:title="proc&#45;tpl:PROC_Class">
-<polygon fill="#ffdbe5" stroke="black" points="191.27,-119 45.27,-119 45.27,-96 191.27,-96 191.27,-119"/>
+<polygon fill="#eec3ff" stroke="black" points="191.27,-119 45.27,-119 45.27,-96 191.27,-96 191.27,-119"/>
 <text text-anchor="middle" x="118.27" y="-103.8" font-family="Arial" font-size="14.00">proc&#45;tpl:PROC_Class</text>
 </a>
 </g>
@@ -1009,7 +1015,7 @@ x:argument1  rdf:type       owl:Class ;
 <!-- ottr:Triple -->
 <g id="node2" class="node">
 <title>ottr:Triple</title>
-<polygon fill="#c2ff99" stroke="black" points="155.27,-23 81.27,-23 81.27,0 155.27,0 155.27,-23"/>
+<polygon fill="#c2ffed" stroke="black" points="155.27,-23 81.27,-23 81.27,0 155.27,0 155.27,-23"/>
 <text text-anchor="middle" x="118.27" y="-7.8" font-family="Arial" font-size="14.00">ottr:Triple</text>
 </g>
 <!-- proc&#45;tpl:PROC_Class&#45;&gt;ottr:Triple -->
@@ -1022,7 +1028,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node3" class="node">
 <title>proc&#45;tpl:IOF_EntityAnnotations</title>
 <g id="a_node3"><a xlink:href="IOF_EntityAnnotations.html" xlink:title="proc&#45;tpl:IOF_EntityAnnotations">
-<polygon fill="#ffdbe5" stroke="black" points="218.77,-71 17.77,-71 17.77,-48 218.77,-48 218.77,-71"/>
+<polygon fill="#eec3ff" stroke="black" points="218.77,-71 17.77,-71 17.77,-48 218.77,-48 218.77,-71"/>
 <text text-anchor="middle" x="118.27" y="-55.8" font-family="Arial" font-size="14.00">proc&#45;tpl:IOF_EntityAnnotations</text>
 </a>
 </g>
@@ -1037,7 +1043,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node4" class="node">
 <title>o&#45;rdf:Type</title>
 <g id="a_node4"><a xlink:href="../../../tpl.ottr.xyz/rdf/0.1/Type.html" xlink:title="o&#45;rdf:Type">
-<polygon fill="#eec3ff" stroke="black" points="320.77,-71 243.77,-71 243.77,-48 320.77,-48 320.77,-71"/>
+<polygon fill="#c2ff99" stroke="black" points="320.77,-71 243.77,-71 243.77,-48 320.77,-48 320.77,-71"/>
 <text text-anchor="middle" x="282.27" y="-55.8" font-family="Arial" font-size="14.00">o&#45;rdf:Type</text>
 </a>
 </g>
@@ -1070,7 +1076,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node1" class="node">
 <title>proc&#45;tpl:PROC_Class</title>
 <g id="a_node1"><a xlink:href="PROC_Class.html" xlink:title="proc&#45;tpl:PROC_Class">
-<polygon fill="#ffdbe5" stroke="black" points="146,-123.71 0,-123.71 0,-100.71 146,-100.71 146,-123.71"/>
+<polygon fill="#eec3ff" stroke="black" points="146,-123.71 0,-123.71 0,-100.71 146,-100.71 146,-123.71"/>
 <text text-anchor="middle" x="73" y="-108.51" font-family="Arial" font-size="14.00">proc&#45;tpl:PROC_Class</text>
 </a>
 </g>
@@ -1078,7 +1084,7 @@ x:argument1  rdf:type       owl:Class ;
 <!-- ottr:Triple -->
 <g id="node2" class="node">
 <title>ottr:Triple</title>
-<polygon fill="#c2ff99" stroke="black" points="228.01,-141.35 154.01,-141.35 154.01,-118.35 228.01,-118.35 228.01,-141.35"/>
+<polygon fill="#c2ffed" stroke="black" points="228.01,-141.35 154.01,-141.35 154.01,-118.35 228.01,-118.35 228.01,-141.35"/>
 <text text-anchor="middle" x="191.01" y="-126.15" font-family="Arial" font-size="14.00">ottr:Triple</text>
 </g>
 <!-- proc&#45;tpl:PROC_Class&#45;&gt;ottr:Triple -->
@@ -1091,7 +1097,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node3" class="node">
 <title>proc&#45;tpl:IOF_EntityAnnotations</title>
 <g id="a_node3"><a xlink:href="IOF_EntityAnnotations.html" xlink:title="proc&#45;tpl:IOF_EntityAnnotations">
-<polygon fill="#ffdbe5" stroke="black" points="248.67,-23 47.67,-23 47.67,0 248.67,0 248.67,-23"/>
+<polygon fill="#eec3ff" stroke="black" points="248.67,-23 47.67,-23 47.67,0 248.67,0 248.67,-23"/>
 <text text-anchor="middle" x="148.17" y="-7.8" font-family="Arial" font-size="14.00">proc&#45;tpl:IOF_EntityAnnotations</text>
 </a>
 </g>
@@ -1106,7 +1112,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node4" class="node">
 <title>o&#45;rdf:Type</title>
 <g id="a_node4"><a xlink:href="../../../tpl.ottr.xyz/rdf/0.1/Type.html" xlink:title="o&#45;rdf:Type">
-<polygon fill="#eec3ff" stroke="black" points="153.94,-242.01 76.94,-242.01 76.94,-219.01 153.94,-219.01 153.94,-242.01"/>
+<polygon fill="#c2ff99" stroke="black" points="153.94,-242.01 76.94,-242.01 76.94,-219.01 153.94,-219.01 153.94,-242.01"/>
 <text text-anchor="middle" x="115.44" y="-226.81" font-family="Arial" font-size="14.00">o&#45;rdf:Type</text>
 </a>
 </g>
@@ -1139,7 +1145,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node1" class="node">
 <title>proc&#45;tpl:PROC_Class</title>
 <g id="a_node1"><a xlink:href="PROC_Class.html" xlink:title="proc&#45;tpl:PROC_Class">
-<polygon fill="#ffdbe5" stroke="black" points="145.79,-121.49 -0.21,-121.49 -0.21,-98.49 145.79,-98.49 145.79,-121.49"/>
+<polygon fill="#eec3ff" stroke="black" points="145.79,-121.49 -0.21,-121.49 -0.21,-98.49 145.79,-98.49 145.79,-121.49"/>
 <text text-anchor="middle" x="72.79" y="-106.29" font-family="Arial" font-size="14.00">proc&#45;tpl:PROC_Class</text>
 </a>
 </g>
@@ -1147,7 +1153,7 @@ x:argument1  rdf:type       owl:Class ;
 <!-- ottr:Triple -->
 <g id="node2" class="node">
 <title>ottr:Triple</title>
-<polygon fill="#c2ff99" stroke="black" points="227.8,-141.74 153.8,-141.74 153.8,-118.74 227.8,-118.74 227.8,-141.74"/>
+<polygon fill="#c2ffed" stroke="black" points="227.8,-141.74 153.8,-141.74 153.8,-118.74 227.8,-118.74 227.8,-141.74"/>
 <text text-anchor="middle" x="190.8" y="-126.54" font-family="Arial" font-size="14.00">ottr:Triple</text>
 </g>
 <!-- proc&#45;tpl:PROC_Class&#45;&gt;ottr:Triple -->
@@ -1160,7 +1166,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node3" class="node">
 <title>proc&#45;tpl:IOF_EntityAnnotations</title>
 <g id="a_node3"><a xlink:href="IOF_EntityAnnotations.html" xlink:title="proc&#45;tpl:IOF_EntityAnnotations">
-<polygon fill="#ffdbe5" stroke="black" points="250.86,-23.49 49.86,-23.49 49.86,-0.49 250.86,-0.49 250.86,-23.49"/>
+<polygon fill="#eec3ff" stroke="black" points="250.86,-23.49 49.86,-23.49 49.86,-0.49 250.86,-0.49 250.86,-23.49"/>
 <text text-anchor="middle" x="150.36" y="-8.29" font-family="Arial" font-size="14.00">proc&#45;tpl:IOF_EntityAnnotations</text>
 </a>
 </g>
@@ -1175,7 +1181,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node4" class="node">
 <title>o&#45;rdf:Type</title>
 <g id="a_node4"><a xlink:href="../../../tpl.ottr.xyz/rdf/0.1/Type.html" xlink:title="o&#45;rdf:Type">
-<polygon fill="#eec3ff" stroke="black" points="154.05,-226.26 77.05,-226.26 77.05,-203.26 154.05,-203.26 154.05,-226.26"/>
+<polygon fill="#c2ff99" stroke="black" points="154.05,-226.26 77.05,-226.26 77.05,-203.26 154.05,-203.26 154.05,-226.26"/>
 <text text-anchor="middle" x="115.55" y="-211.06" font-family="Arial" font-size="14.00">o&#45;rdf:Type</text>
 </a>
 </g>
@@ -1208,7 +1214,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node1" class="node">
 <title>proc&#45;tpl:PROC_Class</title>
 <g id="a_node1"><a xlink:href="PROC_Class.html" xlink:title="proc&#45;tpl:PROC_Class">
-<polygon fill="#ffdbe5" stroke="black" points="355.02,-180.2 209.02,-180.2 209.02,-157.2 355.02,-157.2 355.02,-180.2"/>
+<polygon fill="#eec3ff" stroke="black" points="355.02,-180.2 209.02,-180.2 209.02,-157.2 355.02,-157.2 355.02,-180.2"/>
 <text text-anchor="middle" x="282.02" y="-165" font-family="Arial" font-size="14.00">proc&#45;tpl:PROC_Class</text>
 </a>
 </g>
@@ -1216,7 +1222,7 @@ x:argument1  rdf:type       owl:Class ;
 <!-- ottr:Triple -->
 <g id="node2" class="node">
 <title>ottr:Triple</title>
-<polygon fill="#c2ff99" stroke="black" points="409.78,-337.4 335.78,-337.4 335.78,-314.4 409.78,-314.4 409.78,-337.4"/>
+<polygon fill="#c2ffed" stroke="black" points="409.78,-337.4 335.78,-337.4 335.78,-314.4 409.78,-314.4 409.78,-337.4"/>
 <text text-anchor="middle" x="372.78" y="-322.2" font-family="Arial" font-size="14.00">ottr:Triple</text>
 </g>
 <!-- proc&#45;tpl:PROC_Class&#45;&gt;ottr:Triple -->
@@ -1229,7 +1235,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node3" class="node">
 <title>proc&#45;tpl:IOF_EntityAnnotations</title>
 <g id="a_node3"><a xlink:href="IOF_EntityAnnotations.html" xlink:title="proc&#45;tpl:IOF_EntityAnnotations">
-<polygon fill="#ffdbe5" stroke="black" points="201,-180.2 0,-180.2 0,-157.2 201,-157.2 201,-180.2"/>
+<polygon fill="#eec3ff" stroke="black" points="201,-180.2 0,-180.2 0,-157.2 201,-157.2 201,-180.2"/>
 <text text-anchor="middle" x="100.5" y="-165" font-family="Arial" font-size="14.00">proc&#45;tpl:IOF_EntityAnnotations</text>
 </a>
 </g>
@@ -1244,7 +1250,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node4" class="node">
 <title>o&#45;rdf:Type</title>
 <g id="a_node4"><a xlink:href="../../../tpl.ottr.xyz/rdf/0.1/Type.html" xlink:title="o&#45;rdf:Type">
-<polygon fill="#eec3ff" stroke="black" points="411.28,-23 334.28,-23 334.28,0 411.28,0 411.28,-23"/>
+<polygon fill="#c2ff99" stroke="black" points="411.28,-23 334.28,-23 334.28,0 411.28,0 411.28,-23"/>
 <text text-anchor="middle" x="372.78" y="-7.8" font-family="Arial" font-size="14.00">o&#45;rdf:Type</text>
 </a>
 </g>
@@ -1277,7 +1283,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node1" class="node">
 <title>proc&#45;tpl:PROC_Class</title>
 <g id="a_node1"><a xlink:href="PROC_Class.html" xlink:title="proc&#45;tpl:PROC_Class">
-<polygon fill="#ffdbe5" stroke="black" points="247.01,-23 101.01,-23 101.01,0 247.01,0 247.01,-23"/>
+<polygon fill="#eec3ff" stroke="black" points="247.01,-23 101.01,-23 101.01,0 247.01,0 247.01,-23"/>
 <text text-anchor="middle" x="174.01" y="-7.8" font-family="Arial" font-size="14.00">proc&#45;tpl:PROC_Class</text>
 </a>
 </g>
@@ -1285,7 +1291,7 @@ x:argument1  rdf:type       owl:Class ;
 <!-- ottr:Triple -->
 <g id="node2" class="node">
 <title>ottr:Triple</title>
-<polygon fill="#c2ff99" stroke="black" points="211.01,-170.01 137.01,-170.01 137.01,-147.01 211.01,-147.01 211.01,-170.01"/>
+<polygon fill="#c2ffed" stroke="black" points="211.01,-170.01 137.01,-170.01 137.01,-147.01 211.01,-147.01 211.01,-170.01"/>
 <text text-anchor="middle" x="174.01" y="-154.81" font-family="Arial" font-size="14.00">ottr:Triple</text>
 </g>
 <!-- proc&#45;tpl:PROC_Class&#45;&gt;ottr:Triple -->
@@ -1298,7 +1304,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node3" class="node">
 <title>proc&#45;tpl:IOF_EntityAnnotations</title>
 <g id="a_node3"><a xlink:href="IOF_EntityAnnotations.html" xlink:title="proc&#45;tpl:IOF_EntityAnnotations">
-<polygon fill="#ffdbe5" stroke="black" points="201,-96.51 0,-96.51 0,-73.51 201,-73.51 201,-96.51"/>
+<polygon fill="#eec3ff" stroke="black" points="201,-96.51 0,-96.51 0,-73.51 201,-73.51 201,-96.51"/>
 <text text-anchor="middle" x="100.5" y="-81.31" font-family="Arial" font-size="14.00">proc&#45;tpl:IOF_EntityAnnotations</text>
 </a>
 </g>
@@ -1313,7 +1319,7 @@ x:argument1  rdf:type       owl:Class ;
 <g id="node4" class="node">
 <title>o&#45;rdf:Type</title>
 <g id="a_node4"><a xlink:href="../../../tpl.ottr.xyz/rdf/0.1/Type.html" xlink:title="o&#45;rdf:Type">
-<polygon fill="#eec3ff" stroke="black" points="286.01,-96.51 209.01,-96.51 209.01,-73.51 286.01,-73.51 286.01,-96.51"/>
+<polygon fill="#c2ff99" stroke="black" points="286.01,-96.51 209.01,-96.51 209.01,-73.51 286.01,-73.51 286.01,-96.51"/>
 <text text-anchor="middle" x="247.51" y="-81.31" font-family="Arial" font-size="14.00">o&#45;rdf:Type</text>
 </a>
 </g>
@@ -1349,12 +1355,42 @@ x:argument1  rdf:type       owl:Class ;
     !? xsd:string ?subjectMatterExpertExplanation,
     !? xsd:string ?example,
     !? xsd:string ?adaptedFrom
-] :: {
+]
+@@o-docttr:Provenance(
+    proc-tpl:PROC_Class,
+    &quot;2023-08-12T00:00:00Z&quot;^^xsd:dateTime,
+    &quot;2023-08-12T00:00:00Z&quot;^^xsd:dateTime,
+    (&lt;https://orcid.org/0000-0001-7829-7674&gt;),
+    none),
+@@o-docttr:Signature(
+    proc-tpl:PROC_Class,
+    none,
+    &quot;Create a class that is annotated according to the IOF annotation schema&quot;,
+    none,
+    none,
+    none,
+    none),
+@@o-docttr:Version(
+    proc-tpl:PROC_Class,
+    ottr:released,
+    &quot;0.1.0&quot;,
+    none,
+    none)
+ :: {
     cross | ottr:Triple(?class, rdfs:subClassOf, ++?superclass),
     proc-tpl:IOF_EntityAnnotations(?class, ?label, ?description, ?isPrimitive, ?maturity, ?logicAxiom, ?subjectMatterExpertExplanation, ?example, ?adaptedFrom),
     o-rdf:Type(?class, owl:Class)
 } .</pre><h4>RDF/wOTTR</h4><pre>
 proc-tpl:PROC_Class  rdf:type  ottr:Template ;
+        ottr:annotation  [ ottr:of      o-docttr:Version ;
+                           ottr:values  ( proc-tpl:PROC_Class ottr:released &quot;0.1.0&quot; ottr:none ottr:none )
+                         ] ;
+        ottr:annotation  [ ottr:of      o-docttr:Signature ;
+                           ottr:values  ( proc-tpl:PROC_Class ottr:none &quot;Create a class that is annotated according to the IOF annotation schema&quot; ottr:none ottr:none ottr:none ottr:none )
+                         ] ;
+        ottr:annotation  [ ottr:of      o-docttr:Provenance ;
+                           ottr:values  ( proc-tpl:PROC_Class &quot;2023-08-12T00:00:00Z&quot;^^xsd:dateTime &quot;2023-08-12T00:00:00Z&quot;^^xsd:dateTime ( &lt;https://orcid.org/0000-0001-7829-7674&gt; ) ottr:none )
+                         ] ;
         ottr:parameters  ( [ ottr:type      owl:Class ;
                              ottr:variable  _:b0
                            ]
@@ -1467,7 +1503,7 @@ proc-tpl:PROC_Class  rdf:type  ottr:Template ;
 @prefix xml:        &lt;http://www.w3.org/XML/1998/namespace&gt;.
 @prefix sd:         &lt;http://www.w3.org/ns/sparql-service-description#&gt;.
 @prefix foaf:       &lt;http://xmlns.com/foaf/0.1/&gt;.
-@prefix iof-av:     &lt;https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/&gt;.</pre></div></div><div class="footer"><p>This is a generated documentation page for an OTTR template library. For more information about Reasonable Ontology Templates (OTTR), visit <a href="http://ottr.xyz" target="_blank">ottr.xyz</a>.</p><p>Generated: 2023/12/08 02:22:06 Z</p></div><script>var treeviewCounter=0;for(var treeview of document.getElementsByClassName("treeview")){if(treeview.classList.contains('toggle-all')){treeviewCounter+=1;treeview.setAttribute("id","treeview"+treeviewCounter)
+@prefix iof-av:     &lt;https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/&gt;.</pre></div></div><div class="footer"><p>This is a generated documentation page for an OTTR template library. For more information about Reasonable Ontology Templates (OTTR), visit <a href="http://ottr.xyz" target="_blank">ottr.xyz</a>.</p><p>Generated: 2023/12/08 03:49:09 Z</p></div><script>var treeviewCounter=0;for(var treeview of document.getElementsByClassName("treeview")){if(treeview.classList.contains('toggle-all')){treeviewCounter+=1;treeview.setAttribute("id","treeview"+treeviewCounter)
 treeview.insertAdjacentHTML('beforebegin','<p class="treeviewbuttons"><span class="button" onclick="treeViewToggleAll(\'treeview'+treeviewCounter+'\', 1)">Expand all</span> '
 +'<span class="button" onclick="treeViewToggleAll(\'treeview'+treeviewCounter+'\', 0)">Contract all</span></p>');}
 if(treeview.classList.contains('click-first')){treeview.firstChild.firstChild.click();}
