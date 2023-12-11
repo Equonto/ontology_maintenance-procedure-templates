@@ -80,11 +80,11 @@ proc:FailureModeObservation
 _:b1    rdf:type            owl:Class ;
         owl:intersectionOf  _:b2 .
 
-_:b3    rdf:rest   rdf:nil ;
-        rdf:first  _:b0 .
-
 _:b2    rdf:rest   _:b3 ;
         rdf:first  lis:InformationObject .
+
+_:b3    rdf:rest   rdf:nil ;
+        rdf:first  _:b0 .
 
 lis:hasParticipant  rdf:type  owl:ObjectProperty .
 
@@ -116,11 +116,11 @@ proc:CorrectiveMaintenanceTask
 _:b6    rdf:type            owl:Class ;
         owl:intersectionOf  _:b7 .
 
-_:b7    rdf:rest   _:b8 ;
-        rdf:first  proc:MaintenanceTask .
-
 _:b8    rdf:rest   rdf:nil ;
         rdf:first  _:b5 .
+
+_:b7    rdf:rest   _:b8 ;
+        rdf:first  proc:MaintenanceTask .
 
 proc:resultsIn  rdf:type  owl:ObjectProperty .
 

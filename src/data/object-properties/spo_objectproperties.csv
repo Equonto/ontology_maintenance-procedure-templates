@@ -8,6 +8,6 @@ proc:directlyBefore,proc:indirectlyBefore,,,,,,,"owl:IrreflexiveProperty,owl:Fun
 proc:hasIndirectActivityPart,lis:hasActivityPart,,,,,,,owl:TransitiveProperty,proc:indirectActivityPartOf
 proc:hasDirectActivityPart,proc:hasIndirectActivityPart,,,,,,,,proc:directActivityPartOf
 proc:hasRequirement,lis:hasParticipant,,,,,,,,proc:requirementOf
-proc:requirementOf,proc:hasRequirement,,,,,,,,proc:hasRequirement
+proc:requirementOf,lis:participantIn,,,,,,,,proc:hasRequirement
 proc:reasoningSupport,,,,,,,,,
 proc:locallyEquivalentTo,proc:reasoningSupport,,,,,proc:MaintenanceTask,proc:MaintenanceTask,owl:SymmetricProperty,
