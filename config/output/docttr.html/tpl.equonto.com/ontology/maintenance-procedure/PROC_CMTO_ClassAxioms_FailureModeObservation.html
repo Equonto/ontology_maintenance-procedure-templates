@@ -7,8 +7,8 @@ proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation
         pav:lastUpdateOn  &quot;2023-08-12T00:00:00Z&quot;^^&lt;http://www.w3.org/2001/XMLSchema#dateTime&gt; ;
         owl:versionInfo   &quot;0.1.0&quot; .</pre></details></div><div id="parameters"><h2 id="Parameters">Parameters</h2><p class="info">&#128712; The parameters defined by the signature are listed here. Unfortunately parameter names are not informative; fixing it is a planned future feature. An optional parameter will accept the value ottr:none as an argument. A parameter which allows blanks will accept a blank node as argument value. </p><table><tr><th>Index</th><th>Name</th><th>Type</th><th>Optional</th><th>Blanks allowed</th><th>Default value</th></tr></table></div><div id="pattern"><h2 id="Pattern">Pattern</h2><h4>stOTTR</h4><p class="info">&#128712; stOTTR serialisation of the template without annotation instances.</p><pre>proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation[
 ] :: {
-    o-owl-ax:EquivObjectIntersectionOf(proc:FailureModeObservation, (lis:InformationObject, _:blank519)),
-    o-owl-re:ObjectSomeValuesFrom(_:blank519, lis:isAbout, proc:FunctionalFailure)
+    o-owl-ax:EquivObjectIntersectionOf(proc:FailureModeObservation, (lis:InformationObject, _:blank520)),
+    o-owl-re:ObjectSomeValuesFrom(_:blank520, lis:isAbout, proc:FunctionalFailure)
 } .</pre><p class="info">&#128712; The pattern of the template is illustrated by expanding a generated instance. Below the generated instance is shown in different serialisations, and its expansion is presented in different formats.</p><h4>Generated instance</h4><b class="heading">stOTTR</b><pre>proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation()</pre><b class="heading">RDF/wOTTR</b><pre>
 [ ottr:of      proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation ;
   ottr:values  ()
@@ -16,629 +16,629 @@ proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation
  viewBox="0.00 0.00 1098.00 115.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 111.5)">
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-111.5 1094,-111.5 1094,4 -4,4"/>
-<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt; -->
+<!-- blank666 : LUB&lt;rdfs:Resource&gt; -->
 <g id="node1" class="node">
-<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node1"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FailureModeObservation" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FailureModeObservation">
-<polygon fill="lightskyblue" stroke="black" points="196,-90 0,-90 0,-54 196,-54 196,-90"/>
-<text text-anchor="start" x="69" y="-75.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-<text text-anchor="start" x="8" y="-61.8" font-family="Arial" font-size="14.00">proc:FailureModeObservation</text>
-</a>
-</g>
-</g>
-<!-- blank660 : LUB&lt;rdfs:Resource&gt; -->
-<g id="node2" class="node">
-<title>blank660 : LUB&lt;rdfs:Resource&gt;</title>
-<polygon fill="#e5e5e5" stroke="black" points="416,-83.5 342,-83.5 342,-60.5 416,-60.5 416,-83.5"/>
-<text text-anchor="start" x="350" y="-69.3" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-</g>
-<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank660 : LUB&lt;rdfs:Resource&gt; -->
-<g id="edge1" class="edge">
-<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank660 : LUB&lt;rdfs:Resource&gt;</title>
-<path fill="none" stroke="black" d="M196.19,-72C241.99,-72 294.52,-72 331.3,-72"/>
-<polygon fill="black" stroke="black" points="331.7,-75.5 341.7,-72 331.7,-68.5 331.7,-75.5"/>
-<text text-anchor="start" x="209" y="-75.8" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192) -->
-<g id="node3" class="node">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)</title>
-<polygon fill="#e5e5e5" stroke="black" points="608,-83.5 551,-83.5 551,-60.5 608,-60.5 608,-83.5"/>
-<text text-anchor="start" x="559" y="-69.3" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
-</g>
-<!-- blank660 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192) -->
-<g id="edge2" class="edge">
-<title>blank660 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)</title>
-<path fill="none" stroke="black" d="M416.41,-72C451.76,-72 505.17,-72 540.91,-72"/>
-<polygon fill="black" stroke="black" points="540.95,-75.5 550.95,-72 540.95,-68.5 540.95,-75.5"/>
-<text text-anchor="start" x="429" y="-75.8" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
-</g>
-<!-- http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
-<g id="node4" class="node">
-<title>http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node4"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject" xlink:title="lis:InformationObject">
-<polygon fill="lightskyblue" stroke="black" points="783,-107.5 642,-107.5 642,-84.5 783,-84.5 783,-107.5"/>
-<text text-anchor="start" x="650" y="-92.3" font-family="Arial" font-size="14.00">lis:InformationObject</text>
-</a>
-</g>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
-<g id="edge3" class="edge">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M608.28,-77.09C616.81,-78.65 626.63,-80.45 636.76,-82.31"/>
-<polygon fill="none" stroke="black" points="636.92,-82.34 643.54,-79.48 648.72,-84.5 642.1,-87.35 636.92,-82.34"/>
-<text text-anchor="middle" x="625" y="-83.8" font-family="Arial" font-size="14.00">1</text>
-</g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt; -->
-<g id="node5" class="node">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;</title>
-<polygon fill="#e5e5e5" stroke="black" points="764.5,-59.5 660.5,-59.5 660.5,-36.5 764.5,-36.5 764.5,-59.5"/>
-<text text-anchor="start" x="668.5" y="-45.3" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;blank659 : LUB&lt;rdfs:Resource&gt; -->
-<g id="edge4" class="edge">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;blank659 : LUB&lt;rdfs:Resource&gt;</title>
-<path fill="none" stroke="black" d="M608.15,-61.53C612.41,-60.18 616.79,-58.95 621,-58 629.79,-56.02 639.16,-54.43 648.4,-53.15"/>
-<polygon fill="none" stroke="black" points="648.53,-53.13 653.98,-48.41 660.43,-51.63 654.98,-56.35 648.53,-53.13"/>
-<text text-anchor="middle" x="625" y="-61.8" font-family="Arial" font-size="14.00">2</text>
+<title>blank666 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="764.5,-71 660.5,-71 660.5,-48 764.5,-48 764.5,-71"/>
+<text text-anchor="start" x="668.5" y="-56.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
 </g>
 <!-- http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
-<g id="node6" class="node">
+<g id="node2" class="node">
 <title>http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node6"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:isAbout">
-<polygon fill="lightskyblue" stroke="black" points="1080.5,-97 949.5,-97 949.5,-61 1080.5,-61 1080.5,-97"/>
-<text text-anchor="start" x="957.5" y="-82.8" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
-<text text-anchor="start" x="984" y="-68.8" font-family="Arial" font-size="14.00">lis:isAbout</text>
+<g id="a_node2"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:isAbout">
+<polygon fill="lightskyblue" stroke="black" points="1080.5,-107.5 949.5,-107.5 949.5,-71.5 1080.5,-71.5 1080.5,-107.5"/>
+<text text-anchor="start" x="957.5" y="-93.3" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
+<text text-anchor="start" x="984" y="-79.3" font-family="Arial" font-size="14.00">lis:isAbout</text>
 </a>
 </g>
 </g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
-<g id="edge6" class="edge">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M764.82,-53.29C812.69,-58.23 884.69,-65.66 939,-71.26"/>
-<polygon fill="black" stroke="black" points="938.96,-74.78 949.27,-72.32 939.68,-67.81 938.96,-74.78"/>
-<text text-anchor="start" x="816" y="-72.8" font-family="Arial" font-size="14.00">owl:onProperty</text>
+<!-- blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
+<g id="edge2" class="edge">
+<title>blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M764.82,-64.62C812.69,-69.4 884.69,-76.59 939,-82.01"/>
+<polygon fill="black" stroke="black" points="938.97,-85.53 949.27,-83.04 939.67,-78.56 938.97,-85.53"/>
+<text text-anchor="start" x="816" y="-84.3" font-family="Arial" font-size="14.00">owl:onProperty</text>
 </g>
 <!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
-<g id="node7" class="node">
+<g id="node3" class="node">
 <title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node7"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FunctionalFailure">
-<polygon fill="lightskyblue" stroke="black" points="1090,-36 940,-36 940,0 1090,0 1090,-36"/>
-<text text-anchor="start" x="986" y="-21.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-<text text-anchor="start" x="948" y="-7.8" font-family="Arial" font-size="14.00">proc:FunctionalFailure</text>
+<g id="a_node3"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FunctionalFailure">
+<polygon fill="lightskyblue" stroke="black" points="1090,-46.5 940,-46.5 940,-10.5 1090,-10.5 1090,-46.5"/>
+<text text-anchor="start" x="986" y="-32.3" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="948" y="-18.3" font-family="Arial" font-size="14.00">proc:FunctionalFailure</text>
 </a>
 </g>
 </g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
+<!-- blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
+<g id="edge1" class="edge">
+<title>blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M764.91,-50.8C775.19,-49.23 785.92,-47.71 796,-46.5 840.06,-41.22 889.31,-37.01 929.84,-33.99"/>
+<polygon fill="black" stroke="black" points="930.23,-37.47 939.95,-33.25 929.72,-30.49 930.23,-37.47"/>
+<text text-anchor="start" x="796" y="-50.3" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+</g>
+<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt; -->
+<g id="node4" class="node">
+<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node4"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FailureModeObservation" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FailureModeObservation">
+<polygon fill="lightskyblue" stroke="black" points="196,-51.5 0,-51.5 0,-15.5 196,-15.5 196,-51.5"/>
+<text text-anchor="start" x="69" y="-37.3" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="8" y="-23.3" font-family="Arial" font-size="14.00">proc:FailureModeObservation</text>
+</a>
+</g>
+</g>
+<!-- blank667 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node5" class="node">
+<title>blank667 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="416,-45 342,-45 342,-22 416,-22 416,-45"/>
+<text text-anchor="start" x="350" y="-30.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+</g>
+<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank667 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge3" class="edge">
+<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank667 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M196.19,-33.5C241.99,-33.5 294.52,-33.5 331.3,-33.5"/>
+<polygon fill="black" stroke="black" points="331.7,-37 341.7,-33.5 331.7,-30 331.7,-37"/>
+<text text-anchor="start" x="209" y="-37.3" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202) -->
+<g id="node6" class="node">
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)</title>
+<polygon fill="#e5e5e5" stroke="black" points="608,-45 551,-45 551,-22 608,-22 608,-45"/>
+<text text-anchor="start" x="559" y="-30.8" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
+</g>
+<!-- blank667 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202) -->
+<g id="edge4" class="edge">
+<title>blank667 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)</title>
+<path fill="none" stroke="black" d="M416.41,-33.5C451.76,-33.5 505.17,-33.5 540.91,-33.5"/>
+<polygon fill="black" stroke="black" points="540.95,-37 550.95,-33.5 540.95,-30 540.95,-37"/>
+<text text-anchor="start" x="429" y="-37.3" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;blank666 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge6" class="edge">
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;blank666 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M608.28,-39.01C620.13,-41.37 634.49,-44.21 648.67,-47.03"/>
+<polygon fill="none" stroke="black" points="648.72,-47.04 655.38,-44.28 660.49,-49.38 653.82,-52.13 648.72,-47.04"/>
+<text text-anchor="middle" x="625" y="-46.3" font-family="Arial" font-size="14.00">2</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
+<g id="node7" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node7"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject" xlink:title="lis:InformationObject">
+<polygon fill="lightskyblue" stroke="black" points="783,-23 642,-23 642,0 783,0 783,-23"/>
+<text text-anchor="start" x="650" y="-7.8" font-family="Arial" font-size="14.00">lis:InformationObject</text>
+</a>
+</g>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
 <g id="edge5" class="edge">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M764.85,-37.75C775.14,-35.96 785.89,-34.26 796,-33 839.99,-27.51 889.24,-23.9 929.78,-21.61"/>
-<polygon fill="black" stroke="black" points="930.1,-25.1 939.89,-21.05 929.71,-18.11 930.1,-25.1"/>
-<text text-anchor="start" x="796" y="-36.8" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M597.45,-21.84C604.42,-17.72 612.78,-13.59 621,-11.5 623.93,-10.76 626.93,-10.12 629.98,-9.59"/>
+<polygon fill="none" stroke="black" points="629.99,-9.59 635.41,-4.83 641.89,-8 636.47,-12.76 629.99,-9.59"/>
+<text text-anchor="middle" x="625" y="-15.3" font-family="Arial" font-size="14.00">1</text>
 </g>
 </g>
 </svg>
-</div></details><details><summary>Hierarchical vertical layout (dot)</summary><div><svg width="412px" height="313px"
- viewBox="0.00 0.00 412.00 313.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+</div></details><details><summary>Hierarchical vertical layout (dot)</summary><div><svg width="375px" height="313px"
+ viewBox="0.00 0.00 375.00 313.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 309.0)">
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-309 408,-309 408,4 -4,4"/>
-<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt; -->
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-309 371,-309 371,4 -4,4"/>
+<!-- blank666 : LUB&lt;rdfs:Resource&gt; -->
 <g id="node1" class="node">
-<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node1"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FailureModeObservation" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FailureModeObservation">
-<polygon fill="lightskyblue" stroke="black" points="196,-305 0,-305 0,-269 196,-269 196,-305"/>
-<text text-anchor="start" x="69" y="-290.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-<text text-anchor="start" x="8" y="-276.8" font-family="Arial" font-size="14.00">proc:FailureModeObservation</text>
-</a>
-</g>
-</g>
-<!-- blank660 : LUB&lt;rdfs:Resource&gt; -->
-<g id="node2" class="node">
-<title>blank660 : LUB&lt;rdfs:Resource&gt;</title>
-<polygon fill="#e5e5e5" stroke="black" points="135,-228 61,-228 61,-205 135,-205 135,-228"/>
-<text text-anchor="start" x="69" y="-213.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-</g>
-<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank660 : LUB&lt;rdfs:Resource&gt; -->
-<g id="edge1" class="edge">
-<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank660 : LUB&lt;rdfs:Resource&gt;</title>
-<path fill="none" stroke="black" d="M98,-268.71C98,-259.5 98,-248.09 98,-238.39"/>
-<polygon fill="black" stroke="black" points="101.5,-238.35 98,-228.35 94.5,-238.35 101.5,-238.35"/>
-<text text-anchor="start" x="98" y="-244.8" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192) -->
-<g id="node3" class="node">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)</title>
-<polygon fill="#e5e5e5" stroke="black" points="126.5,-164 69.5,-164 69.5,-141 126.5,-141 126.5,-164"/>
-<text text-anchor="start" x="77.5" y="-149.8" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
-</g>
-<!-- blank660 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192) -->
-<g id="edge2" class="edge">
-<title>blank660 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)</title>
-<path fill="none" stroke="black" d="M98,-204.98C98,-196.66 98,-184.77 98,-174.52"/>
-<polygon fill="black" stroke="black" points="101.5,-174.28 98,-164.28 94.5,-174.28 101.5,-174.28"/>
-<text text-anchor="start" x="98" y="-180.8" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
-</g>
-<!-- http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
-<g id="node4" class="node">
-<title>http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node4"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject" xlink:title="lis:InformationObject">
-<polygon fill="lightskyblue" stroke="black" points="149.5,-100 8.5,-100 8.5,-77 149.5,-77 149.5,-100"/>
-<text text-anchor="start" x="16.5" y="-84.8" font-family="Arial" font-size="14.00">lis:InformationObject</text>
-</a>
-</g>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
-<g id="edge3" class="edge">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M94.78,-140.98C92.34,-133.01 88.89,-121.78 85.85,-111.84"/>
-<polygon fill="none" stroke="black" points="85.82,-111.75 80.24,-107.19 82.3,-100.28 87.89,-104.84 85.82,-111.75"/>
-<text text-anchor="middle" x="95" y="-116.8" font-family="Arial" font-size="14.00">1</text>
-</g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt; -->
-<g id="node5" class="node">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;</title>
-<polygon fill="#e5e5e5" stroke="black" points="279,-100 175,-100 175,-77 279,-77 279,-100"/>
-<text text-anchor="start" x="183" y="-85.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;blank659 : LUB&lt;rdfs:Resource&gt; -->
-<g id="edge4" class="edge">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;blank659 : LUB&lt;rdfs:Resource&gt;</title>
-<path fill="none" stroke="black" d="M119.88,-140.98C140.18,-131.23 170.66,-116.58 193.92,-105.4"/>
-<polygon fill="none" stroke="black" points="194.19,-105.27 197.87,-99.06 205.01,-100.07 201.33,-106.27 194.19,-105.27"/>
-<text text-anchor="middle" x="182" y="-116.8" font-family="Arial" font-size="14.00">2</text>
+<title>blank666 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="200.5,-100 96.5,-100 96.5,-77 200.5,-77 200.5,-100"/>
+<text text-anchor="start" x="104.5" y="-85.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
 </g>
 <!-- http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
-<g id="node6" class="node">
+<g id="node2" class="node">
 <title>http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node6"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:isAbout">
-<polygon fill="lightskyblue" stroke="black" points="209.5,-36 78.5,-36 78.5,0 209.5,0 209.5,-36"/>
-<text text-anchor="start" x="86.5" y="-21.8" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
-<text text-anchor="start" x="113" y="-7.8" font-family="Arial" font-size="14.00">lis:isAbout</text>
+<g id="a_node2"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:isAbout">
+<polygon fill="lightskyblue" stroke="black" points="131,-36 0,-36 0,0 131,0 131,-36"/>
+<text text-anchor="start" x="8" y="-21.8" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
+<text text-anchor="start" x="34.5" y="-7.8" font-family="Arial" font-size="14.00">lis:isAbout</text>
 </a>
 </g>
 </g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
-<g id="edge6" class="edge">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M178.42,-76.95C171.24,-73.72 164.45,-69.51 159,-64 154.21,-59.16 150.95,-52.75 148.73,-46.29"/>
-<polygon fill="black" stroke="black" points="152.02,-45.06 146.03,-36.32 145.27,-46.89 152.02,-45.06"/>
-<text text-anchor="start" x="159" y="-52.8" font-family="Arial" font-size="14.00">owl:onProperty</text>
+<!-- blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
+<g id="edge2" class="edge">
+<title>blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M101.06,-76.91C93.86,-73.69 87,-69.48 81.5,-64 76.64,-59.16 73.25,-52.76 70.89,-46.3"/>
+<polygon fill="black" stroke="black" points="74.14,-44.93 67.96,-36.32 67.42,-46.91 74.14,-44.93"/>
+<text text-anchor="start" x="81.5" y="-52.8" font-family="Arial" font-size="14.00">owl:onProperty</text>
 </g>
 <!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
-<g id="node7" class="node">
+<g id="node3" class="node">
 <title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node7"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FunctionalFailure">
-<polygon fill="lightskyblue" stroke="black" points="385,-36 235,-36 235,0 385,0 385,-36"/>
-<text text-anchor="start" x="281" y="-21.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-<text text-anchor="start" x="243" y="-7.8" font-family="Arial" font-size="14.00">proc:FunctionalFailure</text>
+<g id="a_node3"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FunctionalFailure">
+<polygon fill="lightskyblue" stroke="black" points="306.5,-36 156.5,-36 156.5,0 306.5,0 306.5,-36"/>
+<text text-anchor="start" x="202.5" y="-21.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="164.5" y="-7.8" font-family="Arial" font-size="14.00">proc:FunctionalFailure</text>
 </a>
 </g>
 </g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
+<!-- blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
+<g id="edge1" class="edge">
+<title>blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M161.47,-76.8C172.52,-67.67 188.81,-54.23 202.89,-42.61"/>
+<polygon fill="black" stroke="black" points="205.39,-45.09 210.88,-36.02 200.94,-39.69 205.39,-45.09"/>
+<text text-anchor="start" x="195.5" y="-52.8" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+</g>
+<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt; -->
+<g id="node4" class="node">
+<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node4"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FailureModeObservation" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FailureModeObservation">
+<polygon fill="lightskyblue" stroke="black" points="320.5,-305 124.5,-305 124.5,-269 320.5,-269 320.5,-305"/>
+<text text-anchor="start" x="193.5" y="-290.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="132.5" y="-276.8" font-family="Arial" font-size="14.00">proc:FailureModeObservation</text>
+</a>
+</g>
+</g>
+<!-- blank667 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node5" class="node">
+<title>blank667 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="259.5,-228 185.5,-228 185.5,-205 259.5,-205 259.5,-228"/>
+<text text-anchor="start" x="193.5" y="-213.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+</g>
+<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank667 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge3" class="edge">
+<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank667 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M222.5,-268.71C222.5,-259.5 222.5,-248.09 222.5,-238.39"/>
+<polygon fill="black" stroke="black" points="226,-238.35 222.5,-228.35 219,-238.35 226,-238.35"/>
+<text text-anchor="start" x="222.5" y="-244.8" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202) -->
+<g id="node6" class="node">
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)</title>
+<polygon fill="#e5e5e5" stroke="black" points="251,-164 194,-164 194,-141 251,-141 251,-164"/>
+<text text-anchor="start" x="202" y="-149.8" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
+</g>
+<!-- blank667 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202) -->
+<g id="edge4" class="edge">
+<title>blank667 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)</title>
+<path fill="none" stroke="black" d="M222.5,-204.98C222.5,-196.66 222.5,-184.77 222.5,-174.52"/>
+<polygon fill="black" stroke="black" points="226,-174.28 222.5,-164.28 219,-174.28 226,-174.28"/>
+<text text-anchor="start" x="222.5" y="-180.8" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;blank666 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge6" class="edge">
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;blank666 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M209.95,-140.98C199.27,-132.04 183.69,-118.98 170.89,-108.26"/>
+<polygon fill="none" stroke="black" points="170.56,-107.98 163.39,-107.2 161.36,-100.28 168.53,-101.06 170.56,-107.98"/>
+<text text-anchor="middle" x="198.5" y="-116.8" font-family="Arial" font-size="14.00">2</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
+<g id="node7" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node7"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject" xlink:title="lis:InformationObject">
+<polygon fill="lightskyblue" stroke="black" points="367,-100 226,-100 226,-77 367,-77 367,-100"/>
+<text text-anchor="start" x="234" y="-84.8" font-family="Arial" font-size="14.00">lis:InformationObject</text>
+</a>
+</g>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
 <g id="edge5" class="edge">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M239.97,-76.8C251.02,-67.67 267.31,-54.23 281.39,-42.61"/>
-<polygon fill="black" stroke="black" points="283.89,-45.09 289.38,-36.02 279.44,-39.69 283.89,-45.09"/>
-<text text-anchor="start" x="273" y="-52.8" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M235.05,-140.98C245.73,-132.04 261.31,-118.98 274.11,-108.26"/>
+<polygon fill="none" stroke="black" points="274.44,-107.98 276.47,-101.06 283.64,-100.28 281.61,-107.2 274.44,-107.98"/>
+<text text-anchor="middle" x="271.5" y="-116.8" font-family="Arial" font-size="14.00">1</text>
 </g>
 </g>
 </svg>
-</div></details><details><summary>Spring model layout (neato)</summary><div><svg width="454px" height="264px"
- viewBox="0.00 0.00 453.68 263.75" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 259.75)">
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-259.75 449.68,-259.75 449.68,4 -4,4"/>
-<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt; -->
+</div></details><details><summary>Spring model layout (neato)</summary><div><svg width="480px" height="508px"
+ viewBox="0.00 0.00 479.57 507.88" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 503.88)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-503.88 475.57,-503.88 475.57,4 -4,4"/>
+<!-- blank666 : LUB&lt;rdfs:Resource&gt; -->
 <g id="node1" class="node">
-<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node1"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FailureModeObservation" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FailureModeObservation">
-<polygon fill="lightskyblue" stroke="black" points="445.68,-36 249.68,-36 249.68,0 445.68,0 445.68,-36"/>
-<text text-anchor="start" x="318.68" y="-21.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-<text text-anchor="start" x="257.68" y="-7.8" font-family="Arial" font-size="14.00">proc:FailureModeObservation</text>
-</a>
-</g>
-</g>
-<!-- blank660 : LUB&lt;rdfs:Resource&gt; -->
-<g id="node2" class="node">
-<title>blank660 : LUB&lt;rdfs:Resource&gt;</title>
-<polygon fill="#e5e5e5" stroke="black" points="334.96,-93.71 260.96,-93.71 260.96,-70.71 334.96,-70.71 334.96,-93.71"/>
-<text text-anchor="start" x="268.96" y="-79.51" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-</g>
-<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank660 : LUB&lt;rdfs:Resource&gt; -->
-<g id="edge1" class="edge">
-<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank660 : LUB&lt;rdfs:Resource&gt;</title>
-<path fill="none" stroke="black" d="M333.57,-36.23C327.26,-44.37 319.81,-53.99 313.36,-62.32"/>
-<polygon fill="black" stroke="black" points="310.44,-60.37 307.09,-70.42 315.98,-64.66 310.44,-60.37"/>
-<text text-anchor="start" x="200.28" y="-57.19" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192) -->
-<g id="node3" class="node">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)</title>
-<polygon fill="#e5e5e5" stroke="black" points="277.63,-164.72 220.63,-164.72 220.63,-141.72 277.63,-141.72 277.63,-164.72"/>
-<text text-anchor="start" x="228.63" y="-150.52" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
-</g>
-<!-- blank660 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192) -->
-<g id="edge2" class="edge">
-<title>blank660 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)</title>
-<path fill="none" stroke="black" d="M289.89,-93.93C282.57,-104.58 271.61,-120.52 262.9,-133.18"/>
-<polygon fill="black" stroke="black" points="259.82,-131.49 257.04,-141.71 265.59,-135.45 259.82,-131.49"/>
-<text text-anchor="start" x="273.56" y="-121.48" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
-</g>
-<!-- http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
-<g id="node4" class="node">
-<title>http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node4"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject" xlink:title="lis:InformationObject">
-<polygon fill="lightskyblue" stroke="black" points="373.58,-234.02 232.58,-234.02 232.58,-211.02 373.58,-211.02 373.58,-234.02"/>
-<text text-anchor="start" x="240.58" y="-218.82" font-family="Arial" font-size="14.00">lis:InformationObject</text>
-</a>
-</g>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
-<g id="edge3" class="edge">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M258.28,-164.97C266,-174.89 277.24,-189.33 286.54,-201.27"/>
-<polygon fill="none" stroke="black" points="286.69,-201.47 293.53,-203.74 294.06,-210.94 287.22,-208.66 286.69,-201.47"/>
-<text text-anchor="middle" x="272.02" y="-191.56" font-family="Arial" font-size="14.00">1</text>
-</g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt; -->
-<g id="node5" class="node">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;</title>
-<polygon fill="#e5e5e5" stroke="black" points="212.62,-174.92 108.62,-174.92 108.62,-151.92 212.62,-151.92 212.62,-174.92"/>
-<text text-anchor="start" x="116.62" y="-160.72" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;blank659 : LUB&lt;rdfs:Resource&gt; -->
-<g id="edge4" class="edge">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;blank659 : LUB&lt;rdfs:Resource&gt;</title>
-<path fill="none" stroke="black" d="M220.15,-156.56C219.99,-156.57 219.84,-156.59 219.69,-156.61"/>
-<polygon fill="none" stroke="black" points="224.63,-156.04 219.13,-160.7 212.71,-157.41 218.21,-152.75 224.63,-156.04"/>
-<text text-anchor="middle" x="215.75" y="-145.4" font-family="Arial" font-size="14.00">2</text>
+<title>blank666 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="332.56,-152.51 228.56,-152.51 228.56,-129.51 332.56,-129.51 332.56,-152.51"/>
+<text text-anchor="start" x="236.56" y="-138.31" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
 </g>
 <!-- http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
-<g id="node6" class="node">
+<g id="node2" class="node">
 <title>http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node6"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:isAbout">
-<polygon fill="lightskyblue" stroke="black" points="181.79,-255.75 50.79,-255.75 50.79,-219.75 181.79,-219.75 181.79,-255.75"/>
-<text text-anchor="start" x="58.79" y="-241.55" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
-<text text-anchor="start" x="85.29" y="-227.55" font-family="Arial" font-size="14.00">lis:isAbout</text>
+<g id="a_node2"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:isAbout">
+<polygon fill="lightskyblue" stroke="black" points="471.57,-150.45 340.57,-150.45 340.57,-114.45 471.57,-114.45 471.57,-150.45"/>
+<text text-anchor="start" x="348.57" y="-136.25" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
+<text text-anchor="start" x="375.07" y="-122.25" font-family="Arial" font-size="14.00">lis:isAbout</text>
 </a>
 </g>
 </g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
-<g id="edge6" class="edge">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M153.69,-175.03C147.97,-184.63 139.62,-198.62 132.26,-210.96"/>
-<polygon fill="black" stroke="black" points="129.25,-209.18 127.13,-219.56 135.26,-212.77 129.25,-209.18"/>
-<text text-anchor="start" x="49.41" y="-201.1" font-family="Arial" font-size="14.00">owl:onProperty</text>
+<!-- blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
+<g id="edge2" class="edge">
+<title>blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M332.7,-137.46C332.86,-137.45 333.02,-137.44 333.18,-137.42"/>
+<polygon fill="black" stroke="black" points="330.69,-141.1 340.43,-136.93 330.22,-134.12 330.69,-141.1"/>
+<text text-anchor="start" x="242.12" y="-126.23" font-family="Arial" font-size="14.00">owl:onProperty</text>
 </g>
 <!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
-<g id="node7" class="node">
+<g id="node3" class="node">
 <title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node7"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FunctionalFailure">
-<polygon fill="lightskyblue" stroke="black" points="168.59,-126.77 18.59,-126.77 18.59,-90.77 168.59,-90.77 168.59,-126.77"/>
-<text text-anchor="start" x="64.59" y="-112.57" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-<text text-anchor="start" x="26.59" y="-98.57" font-family="Arial" font-size="14.00">proc:FunctionalFailure</text>
+<g id="a_node3"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FunctionalFailure">
+<polygon fill="lightskyblue" stroke="black" points="328.44,-36 178.44,-36 178.44,0 328.44,0 328.44,-36"/>
+<text text-anchor="start" x="224.44" y="-21.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="186.44" y="-7.8" font-family="Arial" font-size="14.00">proc:FunctionalFailure</text>
 </a>
 </g>
 </g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
+<!-- blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
+<g id="edge1" class="edge">
+<title>blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M277.96,-129.22C273.79,-110.3 265.48,-72.63 259.7,-46.4"/>
+<polygon fill="black" stroke="black" points="263.04,-45.3 257.47,-36.29 256.2,-46.81 263.04,-45.3"/>
+<text text-anchor="start" x="136.71" y="-86.52" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+</g>
+<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt; -->
+<g id="node4" class="node">
+<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node4"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FailureModeObservation" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FailureModeObservation">
+<polygon fill="lightskyblue" stroke="black" points="314.26,-499.88 118.26,-499.88 118.26,-463.88 314.26,-463.88 314.26,-499.88"/>
+<text text-anchor="start" x="187.26" y="-485.68" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="126.26" y="-471.68" font-family="Arial" font-size="14.00">proc:FailureModeObservation</text>
+</a>
+</g>
+</g>
+<!-- blank667 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node5" class="node">
+<title>blank667 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="253.36,-375.18 179.36,-375.18 179.36,-352.18 253.36,-352.18 253.36,-375.18"/>
+<text text-anchor="start" x="187.36" y="-360.98" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+</g>
+<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank667 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge3" class="edge">
+<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank667 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M216.27,-463.67C216.29,-442.62 216.32,-407.99 216.34,-385.51"/>
+<polygon fill="black" stroke="black" points="219.84,-385.29 216.35,-375.28 212.84,-385.28 219.84,-385.29"/>
+<text text-anchor="start" x="96.31" y="-422.98" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202) -->
+<g id="node6" class="node">
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)</title>
+<polygon fill="#e5e5e5" stroke="black" points="225.12,-251.27 168.12,-251.27 168.12,-228.27 225.12,-228.27 225.12,-251.27"/>
+<text text-anchor="start" x="176.12" y="-237.07" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
+</g>
+<!-- blank667 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202) -->
+<g id="edge4" class="edge">
+<title>blank667 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)</title>
+<path fill="none" stroke="black" d="M214.47,-351.8C211.16,-331.02 204.28,-287.8 200.09,-261.54"/>
+<polygon fill="black" stroke="black" points="203.51,-260.76 198.48,-251.43 196.6,-261.86 203.51,-260.76"/>
+<text text-anchor="start" x="97.48" y="-305.46" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;blank666 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge6" class="edge">
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;blank666 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M206.58,-228.05C220.4,-211.79 245.62,-182.12 262.73,-161.99"/>
+<polygon fill="none" stroke="black" points="262.84,-161.86 263.68,-154.7 270.61,-152.72 269.78,-159.88 262.84,-161.86"/>
+<text text-anchor="middle" x="234.69" y="-194.07" font-family="Arial" font-size="14.00">2</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
+<g id="node7" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node7"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject" xlink:title="lis:InformationObject">
+<polygon fill="lightskyblue" stroke="black" points="141,-230.82 0,-230.82 0,-207.82 141,-207.82 141,-230.82"/>
+<text text-anchor="start" x="8" y="-215.62" font-family="Arial" font-size="14.00">lis:InformationObject</text>
+</a>
+</g>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
 <g id="edge5" class="edge">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M146.4,-151.83C139.72,-146.38 131.47,-139.66 123.51,-133.16"/>
-<polygon fill="black" stroke="black" points="125.66,-130.4 115.7,-126.8 121.24,-135.83 125.66,-130.4"/>
-<text text-anchor="start" x="0" y="-143.07" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M168.01,-235.13C163.43,-234.38 158.5,-233.59 153.38,-232.76"/>
+<polygon fill="none" stroke="black" points="152.99,-232.69 146.43,-235.68 141.14,-230.77 147.71,-227.78 152.99,-232.69"/>
+<text text-anchor="middle" x="150.33" y="-236.71" font-family="Arial" font-size="14.00">1</text>
 </g>
 </g>
 </svg>
-</div></details><details><summary>Spring model layout (fdp)</summary><div><svg width="454px" height="289px"
- viewBox="0.00 0.00 454.25 289.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(19.25 285.0)">
-<polygon fill="white" stroke="transparent" points="-19.25,4 -19.25,-285 435,-285 435,4 -19.25,4"/>
-<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt; -->
+</div></details><details><summary>Spring model layout (fdp)</summary><div><svg width="392px" height="378px"
+ viewBox="0.00 0.00 392.00 378.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 374.0)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-374 388,-374 388,4 -4,4"/>
+<!-- blank666 : LUB&lt;rdfs:Resource&gt; -->
 <g id="node1" class="node">
-<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node1"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FailureModeObservation" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FailureModeObservation">
-<polygon fill="lightskyblue" stroke="black" points="196.1,-36.45 0.1,-36.45 0.1,-0.45 196.1,-0.45 196.1,-36.45"/>
-<text text-anchor="start" x="69.1" y="-22.25" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-<text text-anchor="start" x="8.1" y="-8.25" font-family="Arial" font-size="14.00">proc:FailureModeObservation</text>
-</a>
-</g>
-</g>
-<!-- blank660 : LUB&lt;rdfs:Resource&gt; -->
-<g id="node2" class="node">
-<title>blank660 : LUB&lt;rdfs:Resource&gt;</title>
-<polygon fill="#e5e5e5" stroke="black" points="147.69,-144.05 73.69,-144.05 73.69,-121.05 147.69,-121.05 147.69,-144.05"/>
-<text text-anchor="start" x="81.69" y="-129.85" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-</g>
-<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank660 : LUB&lt;rdfs:Resource&gt; -->
-<g id="edge1" class="edge">
-<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank660 : LUB&lt;rdfs:Resource&gt;</title>
-<path fill="none" stroke="black" d="M100.1,-36.53C102.32,-56.65 105.9,-89.16 108.28,-110.69"/>
-<polygon fill="black" stroke="black" points="104.82,-111.27 109.4,-120.83 111.78,-110.5 104.82,-111.27"/>
-<text text-anchor="start" x="-15.25" y="-82.51" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192) -->
-<g id="node3" class="node">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)</title>
-<polygon fill="#e5e5e5" stroke="black" points="222.17,-191.87 165.17,-191.87 165.17,-168.87 222.17,-168.87 222.17,-191.87"/>
-<text text-anchor="start" x="173.17" y="-177.67" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
-</g>
-<!-- blank660 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192) -->
-<g id="edge2" class="edge">
-<title>blank660 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)</title>
-<path fill="none" stroke="black" d="M130.78,-144.13C140.89,-149.96 153.35,-157.13 164.5,-163.56"/>
-<polygon fill="black" stroke="black" points="163.07,-166.77 173.48,-168.73 166.56,-160.71 163.07,-166.77"/>
-<text text-anchor="start" x="43.14" y="-160.24" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
-</g>
-<!-- http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
-<g id="node4" class="node">
-<title>http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node4"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject" xlink:title="lis:InformationObject">
-<polygon fill="lightskyblue" stroke="black" points="195.67,-280.91 54.67,-280.91 54.67,-257.91 195.67,-257.91 195.67,-280.91"/>
-<text text-anchor="start" x="62.67" y="-265.71" font-family="Arial" font-size="14.00">lis:InformationObject</text>
-</a>
-</g>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
-<g id="edge3" class="edge">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M184.71,-192.01C173.84,-206.14 155.29,-230.26 141.78,-247.82"/>
-<polygon fill="none" stroke="black" points="141.44,-248.25 140.96,-255.45 134.13,-257.76 134.61,-250.57 141.44,-248.25"/>
-<text text-anchor="middle" x="155.52" y="-228.55" font-family="Arial" font-size="14.00">1</text>
-</g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt; -->
-<g id="node5" class="node">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;</title>
-<polygon fill="#e5e5e5" stroke="black" points="327.42,-150.03 223.42,-150.03 223.42,-127.03 327.42,-127.03 327.42,-150.03"/>
-<text text-anchor="start" x="231.42" y="-135.83" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;blank659 : LUB&lt;rdfs:Resource&gt; -->
-<g id="edge4" class="edge">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;blank659 : LUB&lt;rdfs:Resource&gt;</title>
-<path fill="none" stroke="black" d="M216.44,-168.71C224.32,-164.68 233.33,-160.07 241.9,-155.69"/>
-<polygon fill="none" stroke="black" points="242.09,-155.59 245.6,-149.3 252.77,-150.12 249.25,-156.42 242.09,-155.59"/>
-<text text-anchor="middle" x="230.6" y="-163.22" font-family="Arial" font-size="14.00">2</text>
+<title>blank666 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="288.9,-119.26 184.9,-119.26 184.9,-96.26 288.9,-96.26 288.9,-119.26"/>
+<text text-anchor="start" x="192.9" y="-105.06" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
 </g>
 <!-- http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
-<g id="node6" class="node">
+<g id="node2" class="node">
 <title>http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node6"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:isAbout">
-<polygon fill="lightskyblue" stroke="black" points="430.64,-194.04 299.64,-194.04 299.64,-158.04 430.64,-158.04 430.64,-194.04"/>
-<text text-anchor="start" x="307.64" y="-179.84" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
-<text text-anchor="start" x="334.14" y="-165.84" font-family="Arial" font-size="14.00">lis:isAbout</text>
+<g id="a_node2"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:isAbout">
+<polygon fill="lightskyblue" stroke="black" points="384.41,-75.85 253.41,-75.85 253.41,-39.85 384.41,-39.85 384.41,-75.85"/>
+<text text-anchor="start" x="261.41" y="-61.65" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
+<text text-anchor="start" x="287.91" y="-47.65" font-family="Arial" font-size="14.00">lis:isAbout</text>
 </a>
 </g>
 </g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
-<g id="edge6" class="edge">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M303.31,-150.19C306.25,-151.42 309.29,-152.69 312.39,-153.99"/>
-<polygon fill="black" stroke="black" points="311.2,-157.28 321.77,-157.91 313.9,-150.82 311.2,-157.28"/>
-<text text-anchor="start" x="312.1" y="-142.67" font-family="Arial" font-size="14.00">owl:onProperty</text>
+<!-- blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
+<g id="edge2" class="edge">
+<title>blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M255.92,-96.19C263.22,-91.74 271.85,-86.49 280.34,-81.33"/>
+<polygon fill="black" stroke="black" points="282.35,-84.2 289.07,-76.01 278.71,-78.22 282.35,-84.2"/>
+<text text-anchor="start" x="181.38" y="-74.97" font-family="Arial" font-size="14.00">owl:onProperty</text>
 </g>
 <!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
-<g id="node7" class="node">
+<g id="node3" class="node">
 <title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node7"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FunctionalFailure">
-<polygon fill="lightskyblue" stroke="black" points="415.07,-60.67 265.07,-60.67 265.07,-24.67 415.07,-24.67 415.07,-60.67"/>
-<text text-anchor="start" x="311.07" y="-46.47" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-<text text-anchor="start" x="273.07" y="-32.47" font-family="Arial" font-size="14.00">proc:FunctionalFailure</text>
+<g id="a_node3"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FunctionalFailure">
+<polygon fill="lightskyblue" stroke="black" points="245.4,-35.51 95.4,-35.51 95.4,0.49 245.4,0.49 245.4,-35.51"/>
+<text text-anchor="start" x="141.4" y="-21.31" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="103.4" y="-7.31" font-family="Arial" font-size="14.00">proc:FunctionalFailure</text>
 </a>
 </g>
 </g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
+<!-- blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
+<g id="edge1" class="edge">
+<title>blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M228.2,-95.97C218.46,-82.74 202.36,-60.89 189.63,-43.61"/>
+<polygon fill="black" stroke="black" points="192.44,-41.52 183.69,-35.55 186.8,-45.67 192.44,-41.52"/>
+<text text-anchor="start" x="74.84" y="-54.41" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+</g>
+<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt; -->
+<g id="node4" class="node">
+<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node4"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FailureModeObservation" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FailureModeObservation">
+<polygon fill="lightskyblue" stroke="black" points="308.74,-369.95 112.74,-369.95 112.74,-333.95 308.74,-333.95 308.74,-369.95"/>
+<text text-anchor="start" x="181.74" y="-355.75" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="120.74" y="-341.75" font-family="Arial" font-size="14.00">proc:FailureModeObservation</text>
+</a>
+</g>
+</g>
+<!-- blank667 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node5" class="node">
+<title>blank667 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="281.5,-279.52 207.5,-279.52 207.5,-256.52 281.5,-256.52 281.5,-279.52"/>
+<text text-anchor="start" x="215.5" y="-265.32" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+</g>
+<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank667 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge3" class="edge">
+<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank667 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M218.07,-333.74C223.32,-320.67 230.42,-303.03 235.93,-289.32"/>
+<polygon fill="black" stroke="black" points="239.3,-290.32 239.79,-279.73 232.81,-287.7 239.3,-290.32"/>
+<text text-anchor="start" x="108.95" y="-310.48" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202) -->
+<g id="node6" class="node">
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)</title>
+<polygon fill="#e5e5e5" stroke="black" points="211.25,-200.93 154.25,-200.93 154.25,-177.93 211.25,-177.93 211.25,-200.93"/>
+<text text-anchor="start" x="162.25" y="-186.73" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
+</g>
+<!-- blank667 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202) -->
+<g id="edge4" class="edge">
+<title>blank667 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)</title>
+<path fill="none" stroke="black" d="M235.39,-256.42C225.63,-244 209.97,-224.07 198.26,-209.17"/>
+<polygon fill="black" stroke="black" points="200.83,-206.78 191.9,-201.08 195.33,-211.1 200.83,-206.78"/>
+<text text-anchor="start" x="104.52" y="-232.38" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;blank666 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge6" class="edge">
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;blank666 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M190.51,-177.73C198.79,-165.24 212.11,-145.16 222.35,-129.7"/>
+<polygon fill="none" stroke="black" points="222.52,-129.45 222.5,-122.23 229.15,-119.44 229.17,-126.66 222.52,-129.45"/>
+<text text-anchor="middle" x="205.69" y="-152.6" font-family="Arial" font-size="14.00">2</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
+<g id="node7" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node7"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject" xlink:title="lis:InformationObject">
+<polygon fill="lightskyblue" stroke="black" points="140.83,-204.04 -0.17,-204.04 -0.17,-181.04 140.83,-181.04 140.83,-204.04"/>
+<text text-anchor="start" x="7.83" y="-188.84" font-family="Arial" font-size="14.00">lis:InformationObject</text>
+</a>
+</g>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
 <g id="edge5" class="edge">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M283.34,-126.78C292.95,-112.53 309.43,-88.1 322.16,-69.23"/>
-<polygon fill="black" stroke="black" points="325.19,-70.99 327.88,-60.74 319.39,-67.08 325.19,-70.99"/>
-<text text-anchor="start" x="174.83" y="-97.24" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M154.09,-190.22C153.83,-190.23 153.57,-190.24 153.31,-190.25"/>
+<polygon fill="none" stroke="black" points="152.93,-190.26 147.04,-194.42 140.93,-190.59 146.82,-186.42 152.93,-190.26"/>
+<text text-anchor="middle" x="149.34" y="-194.04" font-family="Arial" font-size="14.00">1</text>
 </g>
 </g>
 </svg>
-</div></details><details><summary>Radial layout (twopi)</summary><div><svg width="394px" height="269px"
- viewBox="0.00 0.00 393.62 269.02" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 265.02)">
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-265.02 389.62,-265.02 389.62,4 -4,4"/>
-<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt; -->
+</div></details><details><summary>Radial layout (twopi)</summary><div><svg width="548px" height="341px"
+ viewBox="0.00 0.00 547.79 341.03" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 337.03)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-337.03 543.79,-337.03 543.79,4 -4,4"/>
+<!-- blank666 : LUB&lt;rdfs:Resource&gt; -->
 <g id="node1" class="node">
-<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node1"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FailureModeObservation" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FailureModeObservation">
-<polygon fill="lightskyblue" stroke="black" points="375.62,-111.01 179.62,-111.01 179.62,-75.01 375.62,-75.01 375.62,-111.01"/>
-<text text-anchor="start" x="248.62" y="-96.81" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-<text text-anchor="start" x="187.62" y="-82.81" font-family="Arial" font-size="14.00">proc:FailureModeObservation</text>
-</a>
-</g>
-</g>
-<!-- blank660 : LUB&lt;rdfs:Resource&gt; -->
-<g id="node2" class="node">
-<title>blank660 : LUB&lt;rdfs:Resource&gt;</title>
-<polygon fill="#e5e5e5" stroke="black" points="277.11,-142.01 203.11,-142.01 203.11,-119.01 277.11,-119.01 277.11,-142.01"/>
-<text text-anchor="start" x="211.11" y="-127.81" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-</g>
-<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank660 : LUB&lt;rdfs:Resource&gt; -->
-<g id="edge1" class="edge">
-<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank660 : LUB&lt;rdfs:Resource&gt;</title>
-<path fill="none" stroke="black" d="M259.3,-111.32C259.14,-111.48 258.99,-111.64 258.83,-111.79"/>
-<polygon fill="black" stroke="black" points="256.46,-109.21 251.87,-118.75 261.41,-114.16 256.46,-109.21"/>
-<text text-anchor="start" x="258.86" y="-115.56" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192) -->
-<g id="node3" class="node">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)</title>
-<polygon fill="#e5e5e5" stroke="black" points="231.11,-179.51 174.11,-179.51 174.11,-156.51 231.11,-156.51 231.11,-179.51"/>
-<text text-anchor="start" x="182.11" y="-165.31" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
-</g>
-<!-- blank660 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192) -->
-<g id="edge2" class="edge">
-<title>blank660 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)</title>
-<path fill="none" stroke="black" d="M228.24,-142.38C226.15,-144.47 223.93,-146.7 221.7,-148.93"/>
-<polygon fill="black" stroke="black" points="218.86,-146.81 214.27,-156.35 223.81,-151.76 218.86,-146.81"/>
-<text text-anchor="start" x="221.8" y="-152.62" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
-</g>
-<!-- http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
-<g id="node4" class="node">
-<title>http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node4"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject" xlink:title="lis:InformationObject">
-<polygon fill="lightskyblue" stroke="black" points="385.62,-217.02 244.62,-217.02 244.62,-194.02 385.62,-194.02 385.62,-217.02"/>
-<text text-anchor="start" x="252.62" y="-201.82" font-family="Arial" font-size="14.00">lis:InformationObject</text>
-</a>
-</g>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
-<g id="edge3" class="edge">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M231.29,-177.58C242.75,-181.4 256.25,-185.9 269.02,-190.15"/>
-<polygon fill="none" stroke="black" points="269.08,-190.17 276.04,-188.28 280.47,-193.97 273.51,-195.87 269.08,-190.17"/>
-<text text-anchor="middle" x="251.71" y="-174.51" font-family="Arial" font-size="14.00">1</text>
-</g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt; -->
-<g id="node5" class="node">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;</title>
-<polygon fill="#e5e5e5" stroke="black" points="186.03,-142.01 82.03,-142.01 82.03,-119.01 186.03,-119.01 186.03,-142.01"/>
-<text text-anchor="start" x="90.03" y="-127.81" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;blank659 : LUB&lt;rdfs:Resource&gt; -->
-<g id="edge4" class="edge">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;blank659 : LUB&lt;rdfs:Resource&gt;</title>
-<path fill="none" stroke="black" d="M181.29,-156.35C176.34,-153.65 170.97,-150.71 165.68,-147.82"/>
-<polygon fill="none" stroke="black" points="165.64,-147.79 158.45,-148.42 155.11,-142.04 162.29,-141.41 165.64,-147.79"/>
-<text text-anchor="middle" x="164.16" y="-152.98" font-family="Arial" font-size="14.00">2</text>
+<title>blank666 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="271.01,-252.27 167.01,-252.27 167.01,-229.27 271.01,-229.27 271.01,-252.27"/>
+<text text-anchor="start" x="175.01" y="-238.07" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
 </g>
 <!-- http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
-<g id="node6" class="node">
+<g id="node2" class="node">
 <title>http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node6"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:isAbout">
-<polygon fill="lightskyblue" stroke="black" points="193.1,-261.02 62.1,-261.02 62.1,-225.02 193.1,-225.02 193.1,-261.02"/>
-<text text-anchor="start" x="70.1" y="-246.82" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
-<text text-anchor="start" x="96.6" y="-232.82" font-family="Arial" font-size="14.00">lis:isAbout</text>
+<g id="a_node2"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:isAbout">
+<polygon fill="lightskyblue" stroke="black" points="358.77,-333.03 227.77,-333.03 227.77,-297.03 358.77,-297.03 358.77,-333.03"/>
+<text text-anchor="start" x="235.77" y="-318.83" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
+<text text-anchor="start" x="262.27" y="-304.83" font-family="Arial" font-size="14.00">lis:isAbout</text>
 </a>
 </g>
 </g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
-<g id="edge6" class="edge">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M133.37,-142.13C132.4,-159.17 130.55,-191.46 129.21,-214.94"/>
-<polygon fill="black" stroke="black" points="125.71,-214.83 128.63,-225.01 132.7,-215.23 125.71,-214.83"/>
-<text text-anchor="start" x="40" y="-187.37" font-family="Arial" font-size="14.00">owl:onProperty</text>
+<!-- blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
+<g id="edge2" class="edge">
+<title>blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M230.62,-252.37C240.57,-262.33 255.28,-277.04 267.94,-289.7"/>
+<polygon fill="black" stroke="black" points="265.56,-292.27 275.11,-296.86 270.51,-287.32 265.56,-292.27"/>
+<text text-anchor="start" x="161.88" y="-278.44" font-family="Arial" font-size="14.00">owl:onProperty</text>
 </g>
 <!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
-<g id="node7" class="node">
+<g id="node3" class="node">
 <title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node7"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FunctionalFailure">
-<polygon fill="lightskyblue" stroke="black" points="202.6,-36 52.6,-36 52.6,0 202.6,0 202.6,-36"/>
-<text text-anchor="start" x="98.6" y="-21.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-<text text-anchor="start" x="60.6" y="-7.8" font-family="Arial" font-size="14.00">proc:FunctionalFailure</text>
+<g id="a_node3"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FunctionalFailure">
+<polygon fill="lightskyblue" stroke="black" points="219.76,-333.03 69.76,-333.03 69.76,-297.03 219.76,-297.03 219.76,-333.03"/>
+<text text-anchor="start" x="115.76" y="-318.83" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="77.76" y="-304.83" font-family="Arial" font-size="14.00">proc:FunctionalFailure</text>
 </a>
 </g>
 </g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
+<!-- blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
+<g id="edge1" class="edge">
+<title>blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M207.41,-252.37C197.46,-262.33 182.75,-277.04 170.09,-289.7"/>
+<polygon fill="black" stroke="black" points="167.52,-287.32 162.92,-296.86 172.47,-292.27 167.52,-287.32"/>
+<text text-anchor="start" x="54.15" y="-263.44" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+</g>
+<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt; -->
+<g id="node4" class="node">
+<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node4"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FailureModeObservation" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FailureModeObservation">
+<polygon fill="lightskyblue" stroke="black" points="539.79,-36 343.79,-36 343.79,0 539.79,0 539.79,-36"/>
+<text text-anchor="start" x="412.79" y="-21.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="351.79" y="-7.8" font-family="Arial" font-size="14.00">proc:FailureModeObservation</text>
+</a>
+</g>
+</g>
+<!-- blank667 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node5" class="node">
+<title>blank667 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="404.53,-103.76 330.53,-103.76 330.53,-80.76 404.53,-80.76 404.53,-103.76"/>
+<text text-anchor="start" x="338.53" y="-89.56" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+</g>
+<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank667 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge3" class="edge">
+<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank667 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M423.43,-36.36C412.26,-47.52 398.02,-61.76 386.71,-73.08"/>
+<polygon fill="black" stroke="black" points="384.02,-70.82 379.42,-80.37 388.97,-75.77 384.02,-70.82"/>
+<text text-anchor="start" x="281.25" y="-62.34" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202) -->
+<g id="node6" class="node">
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)</title>
+<polygon fill="#e5e5e5" stroke="black" points="247.51,-147.26 190.51,-147.26 190.51,-124.26 247.51,-124.26 247.51,-147.26"/>
+<text text-anchor="start" x="198.51" y="-133.06" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
+</g>
+<!-- blank667 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202) -->
+<g id="edge4" class="edge">
+<title>blank667 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)</title>
+<path fill="none" stroke="black" d="M330.44,-103.12C308.23,-109.62 280.06,-117.88 257.6,-124.46"/>
+<polygon fill="black" stroke="black" points="256.33,-121.18 247.72,-127.35 258.3,-127.9 256.33,-121.18"/>
+<text text-anchor="start" x="179.79" y="-104.12" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;blank666 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge6" class="edge">
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;blank666 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M219.01,-147.4C219.01,-164.11 219.01,-195.29 219.01,-217"/>
+<polygon fill="none" stroke="black" points="219.01,-217.08 223.01,-223.08 219.01,-229.08 215.01,-223.08 219.01,-217.08"/>
+<text text-anchor="middle" x="215.01" y="-191.86" font-family="Arial" font-size="14.00">2</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
+<g id="node7" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node7"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject" xlink:title="lis:InformationObject">
+<polygon fill="lightskyblue" stroke="black" points="141,-103.76 0,-103.76 0,-80.76 141,-80.76 141,-103.76"/>
+<text text-anchor="start" x="8" y="-88.56" font-family="Arial" font-size="14.00">lis:InformationObject</text>
+</a>
+</g>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
 <g id="edge5" class="edge">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M133.37,-118.89C132.4,-101.85 130.55,-69.56 129.21,-46.09"/>
-<polygon fill="black" stroke="black" points="132.7,-45.79 128.63,-36.01 125.71,-46.19 132.7,-45.79"/>
-<text text-anchor="start" x="0" y="-81.25" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M190.38,-127.37C170.93,-121.67 144.66,-113.98 121.67,-107.24"/>
+<polygon fill="none" stroke="black" points="121.51,-107.2 114.63,-109.35 109.99,-103.83 116.88,-101.67 121.51,-107.2"/>
+<text text-anchor="middle" x="146.07" y="-119.36" font-family="Arial" font-size="14.00">1</text>
 </g>
 </g>
 </svg>
-</div></details><details><summary>Circular layout (circo)</summary><div><svg width="975px" height="555px"
- viewBox="0.00 0.00 975.35 554.98" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 550.98)">
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-550.98 971.35,-550.98 971.35,4 -4,4"/>
-<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt; -->
+</div></details><details><summary>Circular layout (circo)</summary><div><svg width="530px" height="453px"
+ viewBox="0.00 0.00 530.19 453.13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 449.13)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-449.13 526.19,-449.13 526.19,4 -4,4"/>
+<!-- blank666 : LUB&lt;rdfs:Resource&gt; -->
 <g id="node1" class="node">
-<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node1"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FailureModeObservation" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FailureModeObservation">
-<polygon fill="lightskyblue" stroke="black" points="196,-288.24 0,-288.24 0,-252.24 196,-252.24 196,-288.24"/>
-<text text-anchor="start" x="69" y="-274.04" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-<text text-anchor="start" x="8" y="-260.04" font-family="Arial" font-size="14.00">proc:FailureModeObservation</text>
-</a>
-</g>
-</g>
-<!-- blank660 : LUB&lt;rdfs:Resource&gt; -->
-<g id="node2" class="node">
-<title>blank660 : LUB&lt;rdfs:Resource&gt;</title>
-<polygon fill="#e5e5e5" stroke="black" points="278.01,-281.74 204.01,-281.74 204.01,-258.74 278.01,-258.74 278.01,-281.74"/>
-<text text-anchor="start" x="212.01" y="-267.54" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-</g>
-<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank660 : LUB&lt;rdfs:Resource&gt; -->
-<g id="edge1" class="edge">
-<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank660 : LUB&lt;rdfs:Resource&gt;</title>
-<path fill="none" stroke="black" d="M196.16,-270.24C196.32,-270.24 196.48,-270.24 196.65,-270.24"/>
-<polygon fill="black" stroke="black" points="193.87,-273.74 203.87,-270.24 193.87,-266.74 193.87,-273.74"/>
-<text text-anchor="start" x="196.59" y="-274.04" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192) -->
-<g id="node3" class="node">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)</title>
-<polygon fill="#e5e5e5" stroke="black" points="792.86,-281.74 735.86,-281.74 735.86,-258.74 792.86,-258.74 792.86,-281.74"/>
-<text text-anchor="start" x="743.86" y="-267.54" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
-</g>
-<!-- blank660 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192) -->
-<g id="edge2" class="edge">
-<title>blank660 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)</title>
-<path fill="none" stroke="black" d="M278.23,-270.24C373.99,-270.24 628.19,-270.24 725.61,-270.24"/>
-<polygon fill="black" stroke="black" points="725.62,-273.74 735.62,-270.24 725.62,-266.74 725.62,-273.74"/>
-<text text-anchor="start" x="397.95" y="-274.04" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
-</g>
-<!-- http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
-<g id="node4" class="node">
-<title>http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node4"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject" xlink:title="lis:InformationObject">
-<polygon fill="lightskyblue" stroke="black" points="834.86,-23 693.86,-23 693.86,0 834.86,0 834.86,-23"/>
-<text text-anchor="start" x="701.86" y="-7.8" font-family="Arial" font-size="14.00">lis:InformationObject</text>
-</a>
-</g>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
-<g id="edge3" class="edge">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M764.36,-258.45C764.36,-218.71 764.36,-89.13 764.36,-35.29"/>
-<polygon fill="none" stroke="black" points="764.36,-35.06 760.36,-29.06 764.36,-23.06 768.36,-29.06 764.36,-35.06"/>
-<text text-anchor="middle" x="760.36" y="-144.56" font-family="Arial" font-size="14.00">1</text>
-</g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt; -->
-<g id="node5" class="node">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;</title>
-<polygon fill="#e5e5e5" stroke="black" points="816.36,-540.48 712.36,-540.48 712.36,-517.48 816.36,-517.48 816.36,-540.48"/>
-<text text-anchor="start" x="720.36" y="-526.28" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
-</g>
-<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;blank659 : LUB&lt;rdfs:Resource&gt; -->
-<g id="edge4" class="edge">
-<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank659 : LUB&lt;rdfs:Resource&gt;&gt;(id: 192)&#45;&gt;blank659 : LUB&lt;rdfs:Resource&gt;</title>
-<path fill="none" stroke="black" d="M764.36,-282.03C764.36,-321.77 764.36,-451.35 764.36,-505.18"/>
-<polygon fill="none" stroke="black" points="764.36,-505.41 768.36,-511.41 764.36,-517.41 760.36,-511.41 764.36,-505.41"/>
-<text text-anchor="middle" x="760.36" y="-403.51" font-family="Arial" font-size="14.00">2</text>
+<title>blank666 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="318.06,-248.69 214.06,-248.69 214.06,-225.69 318.06,-225.69 318.06,-248.69"/>
+<text text-anchor="start" x="222.06" y="-234.49" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
 </g>
 <!-- http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
-<g id="node6" class="node">
+<g id="node2" class="node">
 <title>http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node6"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:isAbout">
-<polygon fill="lightskyblue" stroke="black" points="967.35,-546.98 836.35,-546.98 836.35,-510.98 967.35,-510.98 967.35,-546.98"/>
-<text text-anchor="start" x="844.35" y="-532.78" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
-<text text-anchor="start" x="870.85" y="-518.78" font-family="Arial" font-size="14.00">lis:isAbout</text>
+<g id="a_node2"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:isAbout">
+<polygon fill="lightskyblue" stroke="black" points="522.19,-255.19 391.19,-255.19 391.19,-219.19 522.19,-219.19 522.19,-255.19"/>
+<text text-anchor="start" x="399.19" y="-240.99" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
+<text text-anchor="start" x="425.69" y="-226.99" font-family="Arial" font-size="14.00">lis:isAbout</text>
 </a>
 </g>
 </g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
-<g id="edge6" class="edge">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M816.73,-528.98C819.82,-528.98 822.96,-528.98 826.11,-528.98"/>
-<polygon fill="black" stroke="black" points="826.22,-532.48 836.22,-528.98 826.22,-525.48 826.22,-532.48"/>
-<text text-anchor="start" x="757.56" y="-517.78" font-family="Arial" font-size="14.00">owl:onProperty</text>
+<!-- blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt; -->
+<g id="edge2" class="edge">
+<title>blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/isAbout : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M318.15,-237.19C337.48,-237.19 359.81,-237.19 380.83,-237.19"/>
+<polygon fill="black" stroke="black" points="381.02,-240.69 391.02,-237.19 381.02,-233.69 381.02,-240.69"/>
+<text text-anchor="start" x="308.85" y="-225.99" font-family="Arial" font-size="14.00">owl:onProperty</text>
 </g>
 <!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
-<g id="node7" class="node">
+<g id="node3" class="node">
 <title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
-<g id="a_node7"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FunctionalFailure">
-<polygon fill="lightskyblue" stroke="black" points="701.88,-546.98 551.88,-546.98 551.88,-510.98 701.88,-510.98 701.88,-546.98"/>
-<text text-anchor="start" x="597.88" y="-532.78" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
-<text text-anchor="start" x="559.88" y="-518.78" font-family="Arial" font-size="14.00">proc:FunctionalFailure</text>
+<g id="a_node3"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FunctionalFailure">
+<polygon fill="lightskyblue" stroke="black" points="324.77,-445.13 174.77,-445.13 174.77,-409.13 324.77,-409.13 324.77,-445.13"/>
+<text text-anchor="start" x="220.77" y="-430.93" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="182.77" y="-416.93" font-family="Arial" font-size="14.00">proc:FunctionalFailure</text>
 </a>
 </g>
 </g>
-<!-- blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
+<!-- blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt; -->
+<g id="edge1" class="edge">
+<title>blank666 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M265.06,-248.79C262.54,-278.2 255.84,-356.4 252.2,-398.82"/>
+<polygon fill="black" stroke="black" points="248.69,-398.76 251.32,-409.02 255.67,-399.36 248.69,-398.76"/>
+<text text-anchor="start" x="127.18" y="-332.81" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+</g>
+<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt; -->
+<g id="node4" class="node">
+<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node4"><a xlink:href="http://spec.equonto.com/ontology/maintenance-procedure#FailureModeObservation" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc:FailureModeObservation">
+<polygon fill="lightskyblue" stroke="black" points="322.38,-36 126.38,-36 126.38,0 322.38,0 322.38,-36"/>
+<text text-anchor="start" x="195.38" y="-21.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="134.38" y="-7.8" font-family="Arial" font-size="14.00">proc:FailureModeObservation</text>
+</a>
+</g>
+</g>
+<!-- blank667 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node5" class="node">
+<title>blank667 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="209.67,-76.17 135.67,-76.17 135.67,-53.17 209.67,-53.17 209.67,-76.17"/>
+<text text-anchor="start" x="143.67" y="-61.97" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+</g>
+<!-- http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank667 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge3" class="edge">
+<title>http://spec.equonto.com/ontology/maintenance&#45;procedure#FailureModeObservation : LUB&lt;ottr:IRI&gt;&#45;&gt;blank667 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M204.24,-36.18C200.63,-39.43 196.87,-42.83 193.25,-46.1"/>
+<polygon fill="black" stroke="black" points="190.75,-43.64 185.68,-52.94 195.45,-48.83 190.75,-43.64"/>
+<text text-anchor="start" x="194.96" y="-48.36" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202) -->
+<g id="node6" class="node">
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)</title>
+<polygon fill="#e5e5e5" stroke="black" points="166.82,-107.18 109.82,-107.18 109.82,-84.18 166.82,-84.18 166.82,-107.18"/>
+<text text-anchor="start" x="117.82" y="-92.98" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
+</g>
+<!-- blank667 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202) -->
+<g id="edge4" class="edge">
+<title>blank667 : LUB&lt;rdfs:Resource&gt;&#45;&gt;&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)</title>
+<path fill="none" stroke="black" d="M159.88,-76.22C159.62,-76.45 159.37,-76.68 159.11,-76.92"/>
+<polygon fill="black" stroke="black" points="156.55,-74.51 151.47,-83.81 161.24,-79.71 156.55,-74.51"/>
+<text text-anchor="start" x="159.13" y="-80.7" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;blank666 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge6" class="edge">
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;blank666 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M148.78,-107.26C170.3,-131.1 219.81,-185.96 247.12,-216.22"/>
+<polygon fill="none" stroke="black" points="247.42,-216.54 254.41,-218.32 255.46,-225.45 248.47,-223.68 247.42,-216.54"/>
+<text text-anchor="middle" x="198.3" y="-170.35" font-family="Arial" font-size="14.00">2</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
+<g id="node7" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node7"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject" xlink:title="lis:InformationObject">
+<polygon fill="lightskyblue" stroke="black" points="141,-168.39 0,-168.39 0,-145.39 141,-145.39 141,-168.39"/>
+<text text-anchor="start" x="8" y="-153.19" font-family="Arial" font-size="14.00">lis:InformationObject</text>
+</a>
+</g>
+</g>
+<!-- &lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt; -->
 <g id="edge5" class="edge">
-<title>blank659 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.com/ontology/maintenance&#45;procedure#FunctionalFailure : LUB&lt;ottr:IRI&gt;</title>
-<path fill="none" stroke="black" d="M711.99,-528.98C711.89,-528.98 711.79,-528.98 711.69,-528.98"/>
-<polygon fill="black" stroke="black" points="712.31,-525.48 702.31,-528.98 712.31,-532.48 712.31,-525.48"/>
-<text text-anchor="start" x="711.73" y="-532.78" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+<title>&lt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;, blank666 : LUB&lt;rdfs:Resource&gt;&gt;(id: 202)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M125.57,-107.19C116.31,-115.55 103.54,-127.07 92.64,-136.91"/>
+<polygon fill="none" stroke="black" points="92.57,-136.97 90.8,-143.96 83.66,-145.01 85.44,-138.02 92.57,-136.97"/>
+<text text-anchor="middle" x="100.87" y="-129.68" font-family="Arial" font-size="14.00">1</text>
 </g>
 </g>
 </svg>
@@ -657,7 +657,7 @@ proc:FailureModeObservation
                                                    )
                              ] .
 
-lis:isAbout  rdf:type  owl:ObjectProperty .</pre><h4>Interactive expansion</h4><p class="info">&#128712; Click the list to expand/contract one list element. Click &#x27;expand/contact all&#x27; to expand/contract all elements. Note that the interactive expansion is not correct for instances that are marked by list expanders.</p><div><div class="treeview toggle-all click-first"><details><summary><code>proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation()</code></summary><details><summary><code>o-owl-ax:EquivObjectIntersectionOf(proc:FailureModeObservation, (lis:InformationObject, _:blank655))</code></summary><details><summary><code>o-owl-ax:EquivalentClass(proc:FailureModeObservation, _:blank656)</code></summary><span class="leaf"><code>ottr:Triple(proc:FailureModeObservation, owl:equivalentClass, _:blank656)</code></span><details><summary><code>o-rdf:Type(_:blank656, owl:Class)</code></summary><span class="leaf"><code>ottr:Triple(_:blank656, rdf:type, owl:Class)</code></span></details><details><summary><code>o-rdf:Type(proc:FailureModeObservation, owl:Class)</code></summary><span class="leaf"><code>ottr:Triple(proc:FailureModeObservation, rdf:type, owl:Class)</code></span></details></details><details><summary><code>o-owl-re:ObjectIntersectionOf(_:blank656, (lis:InformationObject, _:blank655))</code></summary><details><summary><code>o-owl-ut:TypedListRelation(_:blank656, owl:Class, owl:intersectionOf, (lis:InformationObject, _:blank655))</code></summary><details><summary><code>o-owl-ut:ListRelation(_:blank656, owl:intersectionOf, (lis:InformationObject, _:blank655))</code></summary><span class="leaf"><code>ottr:Triple(_:blank656, owl:intersectionOf, (lis:InformationObject, _:blank655))</code></span></details><details><summary><code>o-rdf:Type(_:blank656, owl:Class)</code></summary><span class="leaf"><code>ottr:Triple(_:blank656, rdf:type, owl:Class)</code></span></details></details></details></details><details><summary><code>o-owl-re:ObjectSomeValuesFrom(_:blank655, lis:isAbout, proc:FunctionalFailure)</code></summary><details><summary><code>o-owl-re:SomeValuesFrom(_:blank655, lis:isAbout, proc:FunctionalFailure)</code></summary><details><summary><code>o-owl-ut:ValueRestriction(_:blank655, owl:someValuesFrom, lis:isAbout, proc:FunctionalFailure)</code></summary><span class="leaf"><code>ottr:Triple(_:blank655, owl:onProperty, lis:isAbout)</code></span><span class="leaf"><code>ottr:Triple(_:blank655, owl:someValuesFrom, proc:FunctionalFailure)</code></span><details><summary><code>o-rdf:Type(_:blank655, owl:Restriction)</code></summary><span class="leaf"><code>ottr:Triple(_:blank655, rdf:type, owl:Restriction)</code></span></details></details></details><details><summary><code>o-rdf:Type(lis:isAbout, owl:ObjectProperty)</code></summary><span class="leaf"><code>ottr:Triple(lis:isAbout, rdf:type, owl:ObjectProperty)</code></span></details><details><summary><code>o-rdf:Type(proc:FunctionalFailure, owl:Class)</code></summary><span class="leaf"><code>ottr:Triple(proc:FunctionalFailure, rdf:type, owl:Class)</code></span></details></details></details></div></div></div><div id="dependencies"><h2 id="Dependencies">Dependencies</h2><h4>Dependency graph</h4> <p class="info">&#128712; The graph shows all the templates that this template depends on. The colour of the node indicates its namespace. Each node is linked to its documentation page.</p> <div><details open="open"><summary>Hierarchical horizontal layout (dot)</summary><div><svg width="1276px" height="180px"
+lis:isAbout  rdf:type  owl:ObjectProperty .</pre><h4>Interactive expansion</h4><p class="info">&#128712; Click the list to expand/contract one list element. Click &#x27;expand/contact all&#x27; to expand/contract all elements. Note that the interactive expansion is not correct for instances that are marked by list expanders.</p><div><div class="treeview toggle-all click-first"><details><summary><code>proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation()</code></summary><details><summary><code>o-owl-ax:EquivObjectIntersectionOf(proc:FailureModeObservation, (lis:InformationObject, _:blank662))</code></summary><details><summary><code>o-owl-ax:EquivalentClass(proc:FailureModeObservation, _:blank663)</code></summary><span class="leaf"><code>ottr:Triple(proc:FailureModeObservation, owl:equivalentClass, _:blank663)</code></span><details><summary><code>o-rdf:Type(_:blank663, owl:Class)</code></summary><span class="leaf"><code>ottr:Triple(_:blank663, rdf:type, owl:Class)</code></span></details><details><summary><code>o-rdf:Type(proc:FailureModeObservation, owl:Class)</code></summary><span class="leaf"><code>ottr:Triple(proc:FailureModeObservation, rdf:type, owl:Class)</code></span></details></details><details><summary><code>o-owl-re:ObjectIntersectionOf(_:blank663, (lis:InformationObject, _:blank662))</code></summary><details><summary><code>o-owl-ut:TypedListRelation(_:blank663, owl:Class, owl:intersectionOf, (lis:InformationObject, _:blank662))</code></summary><details><summary><code>o-owl-ut:ListRelation(_:blank663, owl:intersectionOf, (lis:InformationObject, _:blank662))</code></summary><span class="leaf"><code>ottr:Triple(_:blank663, owl:intersectionOf, (lis:InformationObject, _:blank662))</code></span></details><details><summary><code>o-rdf:Type(_:blank663, owl:Class)</code></summary><span class="leaf"><code>ottr:Triple(_:blank663, rdf:type, owl:Class)</code></span></details></details></details></details><details><summary><code>o-owl-re:ObjectSomeValuesFrom(_:blank662, lis:isAbout, proc:FunctionalFailure)</code></summary><details><summary><code>o-owl-re:SomeValuesFrom(_:blank662, lis:isAbout, proc:FunctionalFailure)</code></summary><details><summary><code>o-owl-ut:ValueRestriction(_:blank662, owl:someValuesFrom, lis:isAbout, proc:FunctionalFailure)</code></summary><span class="leaf"><code>ottr:Triple(_:blank662, owl:onProperty, lis:isAbout)</code></span><span class="leaf"><code>ottr:Triple(_:blank662, owl:someValuesFrom, proc:FunctionalFailure)</code></span><details><summary><code>o-rdf:Type(_:blank662, owl:Restriction)</code></summary><span class="leaf"><code>ottr:Triple(_:blank662, rdf:type, owl:Restriction)</code></span></details></details></details><details><summary><code>o-rdf:Type(lis:isAbout, owl:ObjectProperty)</code></summary><span class="leaf"><code>ottr:Triple(lis:isAbout, rdf:type, owl:ObjectProperty)</code></span></details><details><summary><code>o-rdf:Type(proc:FunctionalFailure, owl:Class)</code></summary><span class="leaf"><code>ottr:Triple(proc:FunctionalFailure, rdf:type, owl:Class)</code></span></details></details></details></div></div></div><div id="dependencies"><h2 id="Dependencies">Dependencies</h2><h4>Dependency graph</h4> <p class="info">&#128712; The graph shows all the templates that this template depends on. The colour of the node indicates its namespace. Each node is linked to its documentation page.</p> <div><details open="open"><summary>Hierarchical horizontal layout (dot)</summary><div><svg width="1276px" height="180px"
  viewBox="0.00 0.00 1276.00 180.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 176.0)">
 <polygon fill="white" stroke="transparent" points="-4,4 -4,-176 1272,-176 1272,4 -4,4"/>
@@ -1868,30 +1868,30 @@ lis:isAbout  rdf:type  owl:ObjectProperty .</pre><h4>Interactive expansion</h4><
     none,
     none)
  :: {
-    o-owl-ax:EquivObjectIntersectionOf(proc:FailureModeObservation, (lis:InformationObject, _:blank519)),
-    o-owl-re:ObjectSomeValuesFrom(_:blank519, lis:isAbout, proc:FunctionalFailure)
+    o-owl-ax:EquivObjectIntersectionOf(proc:FailureModeObservation, (lis:InformationObject, _:blank520)),
+    o-owl-re:ObjectSomeValuesFrom(_:blank520, lis:isAbout, proc:FunctionalFailure)
 } .</pre><h4>RDF/wOTTR</h4><pre>
 proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation
         rdf:type         ottr:Template ;
         ottr:annotation  [ ottr:of      o-docttr:Version ;
                            ottr:values  ( proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation ottr:released &quot;0.1.0&quot; ottr:none ottr:none )
                          ] ;
-        ottr:annotation  [ ottr:of      o-docttr:Signature ;
-                           ottr:values  ( proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation ottr:none &quot;Create axioms for the Failure Mode Observation class in the OMPD Conditional Maintenance Task Ontology&quot; ottr:none ottr:none ottr:none ottr:none )
-                         ] ;
         ottr:annotation  [ ottr:of      o-docttr:Provenance ;
                            ottr:values  ( proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation &quot;2023-08-12T00:00:00Z&quot;^^&lt;http://www.w3.org/2001/XMLSchema#dateTime&gt; &quot;2023-08-12T00:00:00Z&quot;^^&lt;http://www.w3.org/2001/XMLSchema#dateTime&gt; ( &lt;https://orcid.org/0000-0001-7829-7674&gt; ) ottr:none )
                          ] ;
-        ottr:parameters  () ;
-        ottr:pattern     [ ottr:of      rstr:ObjectSomeValuesFrom ;
-                           ottr:values  ( _:b0
-                                          lis:isAbout proc:FunctionalFailure
-                                        )
+        ottr:annotation  [ ottr:of      o-docttr:Signature ;
+                           ottr:values  ( proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation ottr:none &quot;Create axioms for the Failure Mode Observation class in the OMPD Conditional Maintenance Task Ontology&quot; ottr:none ottr:none ottr:none ottr:none )
                          ] ;
+        ottr:parameters  () ;
         ottr:pattern     [ ottr:of      o-owl-ax:EquivObjectIntersectionOf ;
                            ottr:values  ( proc:FailureModeObservation ( lis:InformationObject
                                                                         _:b0
                                                                       ) )
+                         ] ;
+        ottr:pattern     [ ottr:of      rstr:ObjectSomeValuesFrom ;
+                           ottr:values  ( _:b0
+                                          lis:isAbout proc:FunctionalFailure
+                                        )
                          ] .</pre></div></div><h2 id="Prefixes">Prefixes</h2><div id="prefixes"><p class="info">&#128712; Prefixes are removed from all listings on this page for readability, but are listed here in RDF Turtle format.</p><pre>@prefix ont:        &lt;http://data.grundfos.com/ontology/pump/ont/&gt;.
 @prefix ido-tpl:    &lt;http://example.com/ido/&gt;.
 @prefix fmea:       &lt;http://example.com/ns/asset-maintenance/fmea/&gt;.
@@ -1939,7 +1939,7 @@ proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation
 @prefix xml:        &lt;http://www.w3.org/XML/1998/namespace&gt;.
 @prefix sd:         &lt;http://www.w3.org/ns/sparql-service-description#&gt;.
 @prefix foaf:       &lt;http://xmlns.com/foaf/0.1/&gt;.
-@prefix iof-av:     &lt;https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/&gt;.</pre></div></div><div class="footer"><p>This is a generated documentation page for an OTTR template library. For more information about Reasonable Ontology Templates (OTTR), visit <a href="http://ottr.xyz" target="_blank">ottr.xyz</a>.</p><p>Generated: 2023/12/08 08:23:41 Z</p></div><script>var treeviewCounter=0;for(var treeview of document.getElementsByClassName("treeview")){if(treeview.classList.contains('toggle-all')){treeviewCounter+=1;treeview.setAttribute("id","treeview"+treeviewCounter)
+@prefix iof-av:     &lt;https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/&gt;.</pre></div></div><div class="footer"><p>This is a generated documentation page for an OTTR template library. For more information about Reasonable Ontology Templates (OTTR), visit <a href="http://ottr.xyz" target="_blank">ottr.xyz</a>.</p><p>Generated: 2023/12/11 05:38:40 Z</p></div><script>var treeviewCounter=0;for(var treeview of document.getElementsByClassName("treeview")){if(treeview.classList.contains('toggle-all')){treeviewCounter+=1;treeview.setAttribute("id","treeview"+treeviewCounter)
 treeview.insertAdjacentHTML('beforebegin','<p class="treeviewbuttons"><span class="button" onclick="treeViewToggleAll(\'treeview'+treeviewCounter+'\', 1)">Expand all</span> '
 +'<span class="button" onclick="treeViewToggleAll(\'treeview'+treeviewCounter+'\', 0)">Contract all</span></p>');}
 if(treeview.classList.contains('click-first')){treeview.firstChild.firstChild.click();}

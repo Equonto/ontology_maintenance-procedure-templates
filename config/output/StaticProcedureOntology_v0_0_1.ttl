@@ -1,0 +1,597 @@
+@prefix proc-tpl: <http://tpl.equonto.com/ontology/maintenance-procedure/> .
+@prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix pz: <http://www.co-ode.org/ontologies/pizza/pizza.owl#> .
+@prefix iso-tmp: <http://tpl.ottr.xyz/p/asset-maintenance/iso14224/0.2/> .
+@prefix ido-tpl: <http://example.com/ido/> .
+@prefix fmea: <http://example.com/ns/asset-maintenance/fmea/> .
+@prefix tmp: <http://tpl.ottr.xyz/p/asset-maintenance/general/0.2/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix ottr: <http://ns.ottr.xyz/0.4/> .
+@prefix lis: <http://rds.posccaesar.org/ontology/lis14/rdl/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix plmtpl: <http://rds.posccaesar.org/ontology/plm/tpl/0.1/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix o-rdf: <http://tpl.ottr.xyz/rdf/0.1/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix inter: <http://tpl.ottr.xyz/p/asset-maintenance/interface/0.2/> .
+@prefix ex: <http://example.org/> .
+@prefix ax: <http://tpl.ottr.xyz/owl/axiom/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rstr: <http://tpl.ottr.xyz/owl/restriction/0.1/> .
+@prefix tmp1: <http://tpl.ottr.xyz/p/asset-maintenance/general/0.1/> .
+@prefix tmp2: <http://tpl.ottr.xyz/p/asset-maintenance/general/0.2/> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix o-docttr: <http://tpl.ottr.xyz/p/docttr/0.1/> .
+@prefix listpl: <http://rds.posccaesar.org/ontology/lis14/tpl/0.1/> .
+@prefix o-pizza: <http://tpl.ottr.xyz/pizza/0.1/> .
+@prefix o-owl-ma: <http://tpl.ottr.xyz/owl/macro/0.1/> .
+@prefix iof-av: <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/> .
+@prefix om: <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix reqtpl: <http://w3id.org/requirement-ontology/tpl/0.1/> .
+@prefix macro: <http://tpl.ottr.xyz/p/asset-maintenance/owl/macro/0.1/> .
+@prefix wo-tmp: <http://tpl.ottr.xyz/p/asset-maintenance/work-orders/0.1/> .
+@prefix proc: <http://spec.equonto.com/ontology/maintenance-procedure#> .
+@prefix o-owl-ut: <http://tpl.ottr.xyz/owl/util/0.1/> .
+@prefix fmea-tmp: <http://tpl.ottr.xyz/p/asset-maintenance/fmea/0.2/> .
+@prefix ont: <http://data.grundfos.com/ontology/pump/ont/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix o-owl-dec: <http://tpl.ottr.xyz/owl/declaration/0.1/> .
+@prefix x: <http://example.ottr.xyz/argument/> .
+@prefix o-owl-re: <http://tpl.ottr.xyz/owl/restriction/0.1/> .
+@prefix rdl: <http://rds.posccaesar.org/ontology/plm/rdl/> .
+@prefix o-owl-ax: <http://tpl.ottr.xyz/owl/axiom/0.1/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+lis:isAbout  rdf:type  owl:ObjectProperty .
+
+_:b0    rdf:type            owl:Restriction ;
+        owl:onProperty      lis:isAbout ;
+        owl:someValuesFrom  proc:MaintenanceProcedureProcess .
+
+proc:MaintenanceProcedureProcess
+        rdf:type  owl:Class .
+
+_:b1    rdf:type  owl:Class .
+
+proc:MaintenanceProcedureDocument
+        rdf:type             owl:Class ;
+        owl:equivalentClass  _:b1 .
+
+_:b1    rdf:type            owl:Class ;
+        owl:intersectionOf  _:b2 .
+
+_:b3    rdf:rest   rdf:nil ;
+        rdf:first  _:b0 .
+
+_:b2    rdf:rest   _:b3 ;
+        rdf:first  lis:InformationObject .
+
+_:b4    owl:onClass                  proc:MaintenanceProcedureProcess ;
+        owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               proc:directlyActivityPartOf .
+
+proc:directlyActivityPartOf
+        rdf:type  owl:ObjectProperty .
+
+proc:MaintenanceProcedureProcess
+        rdf:type  owl:Class .
+
+_:b5    owl:onClass                  proc:MaintenanceTask ;
+        owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               proc:directlyBefore .
+
+proc:directlyBefore  rdf:type  owl:ObjectProperty .
+
+proc:MaintenanceTask  rdf:type  owl:Class .
+
+_:b6    rdf:type  owl:Class .
+
+proc:MaintenanceTask  rdf:type  owl:Class ;
+        owl:equivalentClass  _:b6 .
+
+_:b6    rdf:type            owl:Class ;
+        owl:intersectionOf  _:b7 .
+
+_:b8    rdf:rest   _:b9 ;
+        rdf:first  _:b4 .
+
+_:b7    rdf:rest   _:b10 ;
+        rdf:first  proc:MaintenanceProcess .
+
+_:b11   rdf:rest   rdf:nil ;
+        rdf:first  _:b12 .
+
+_:b13   rdf:rest   _:b8 ;
+        rdf:first  _:b14 .
+
+_:b9    rdf:rest   _:b11 ;
+        rdf:first  _:b15 .
+
+_:b10   rdf:rest   _:b13 ;
+        rdf:first  _:b5 .
+
+proc:representedBy  rdf:type  owl:ObjectProperty .
+
+_:b12   rdf:type            owl:Restriction ;
+        owl:onProperty      proc:representedBy ;
+        owl:someValuesFrom  proc:MaintenanceTaskDescription .
+
+proc:MaintenanceTaskDescription
+        rdf:type  owl:Class .
+
+_:b14   owl:onClass                  proc:MaintenanceTask ;
+        owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
+        rdf:type                     owl:Restriction ;
+        owl:onProperty               proc:directActivityPartOf .
+
+proc:directActivityPartOf
+        rdf:type  owl:ObjectProperty .
+
+proc:MaintenanceTask  rdf:type  owl:Class .
+
+_:b15   rdf:type           owl:Restriction ;
+        owl:onProperty     proc:locallyEquivalentTo ;
+        owl:allValuesFrom  proc:MaintenanceTask .
+
+proc:locallyEquivalentTo
+        rdf:type  owl:ObjectProperty .
+
+proc:MaintenanceTask  rdf:type  owl:Class .
+
+lis:hasRole  rdf:type  owl:ObjectProperty .
+
+_:b16   rdf:type            owl:Restriction ;
+        owl:onProperty      lis:hasRole ;
+        owl:someValuesFrom  proc:MaintainableItemRole .
+
+proc:MaintainableItemRole
+        rdf:type  owl:Class .
+
+_:b17   rdf:type  owl:Class .
+
+proc:MaintainableItem
+        rdf:type             owl:Class ;
+        owl:equivalentClass  _:b17 .
+
+_:b17   rdf:type            owl:Class ;
+        owl:intersectionOf  _:b18 .
+
+_:b18   rdf:rest   _:b19 ;
+        rdf:first  lis:PhysicalObject .
+
+_:b19   rdf:rest   rdf:nil ;
+        rdf:first  _:b16 .
+
+_:b20   rdf:type            owl:Class ;
+        owl:intersectionOf  _:b21 .
+
+_:b22   rdf:rest   rdf:nil ;
+        rdf:first  _:b23 .
+
+_:b21   rdf:rest   _:b22 ;
+        rdf:first  proc:HazardRealizationProcess .
+
+_:b24   rdf:type  owl:Class .
+
+proc:HazardInMaintenanceProcess
+        rdf:type             owl:Class ;
+        owl:equivalentClass  _:b24 .
+
+_:b24   rdf:type            owl:Class ;
+        owl:intersectionOf  _:b25 .
+
+_:b25   rdf:rest   _:b26 ;
+        rdf:first  proc:Hazard .
+
+_:b26   rdf:rest   rdf:nil ;
+        rdf:first  _:b27 .
+
+lis:occursRelativeTo  rdf:type  owl:ObjectProperty .
+
+_:b23   rdf:type            owl:Restriction ;
+        owl:onProperty      lis:occursRelativeTo ;
+        owl:someValuesFrom  proc:MaintenanceProcess .
+
+proc:MaintenanceProcess
+        rdf:type  owl:Class .
+
+lis:realizedIn  rdf:type  owl:ObjectProperty .
+
+_:b27   rdf:type            owl:Restriction ;
+        owl:onProperty      lis:realizedIn ;
+        owl:someValuesFrom  _:b20 .
+
+_:b20   rdf:type  owl:Class .
+
+lis:hasActivityPart  rdf:type  owl:ObjectProperty .
+
+_:b28   rdf:type            owl:Restriction ;
+        owl:onProperty      lis:hasActivityPart ;
+        owl:someValuesFrom  proc:MaintenanceTask .
+
+proc:MaintenanceTask  rdf:type  owl:Class .
+
+lis:representedBy  rdf:type  owl:ObjectProperty .
+
+_:b29   rdf:type            owl:Restriction ;
+        owl:onProperty      lis:representedBy ;
+        owl:someValuesFrom  proc:MaintenanceProcedureDocument .
+
+proc:MaintenanceProcedureDocument
+        rdf:type  owl:Class .
+
+_:b30   rdf:type  owl:Class .
+
+proc:MaintenanceProcedureProcess
+        rdf:type             owl:Class ;
+        owl:equivalentClass  _:b30 .
+
+_:b30   rdf:type            owl:Class ;
+        owl:intersectionOf  _:b31 .
+
+_:b31   rdf:rest   _:b32 ;
+        rdf:first  proc:MaintenanceProcess .
+
+_:b33   rdf:rest   rdf:nil ;
+        rdf:first  _:b29 .
+
+_:b32   rdf:rest   _:b33 ;
+        rdf:first  _:b28 .
+
+proc:requirementOf  rdf:type  owl:ObjectProperty .
+
+_:b34   rdf:type            owl:Restriction ;
+        owl:onProperty      proc:requirementOf ;
+        owl:someValuesFrom  lis:Activity .
+
+lis:Activity  rdf:type  owl:Class .
+
+lis:hasQuality  rdf:type  owl:ObjectProperty .
+
+_:b35   rdf:type            owl:Restriction ;
+        owl:onProperty      lis:hasQuality ;
+        owl:someValuesFrom  proc:Qualification .
+
+proc:Qualification  rdf:type  owl:Class .
+
+_:b36   rdf:type  owl:Class .
+
+proc:QualifiedPerson  rdf:type  owl:Class ;
+        owl:equivalentClass  _:b36 .
+
+_:b36   rdf:type            owl:Class ;
+        owl:intersectionOf  _:b37 .
+
+_:b37   rdf:rest   _:b38 ;
+        rdf:first  lis:Person .
+
+_:b38   rdf:rest   _:b39 ;
+        rdf:first  _:b35 .
+
+_:b39   rdf:rest   rdf:nil ;
+        rdf:first  _:b34 .
+
+lis:hasRole  rdf:type  owl:ObjectProperty .
+
+_:b40   rdf:type            owl:Restriction ;
+        owl:onProperty      lis:hasRole ;
+        owl:someValuesFrom  proc:ResourceRole .
+
+proc:ResourceRole  rdf:type  owl:Class .
+
+_:b41   rdf:type  owl:Class .
+
+proc:Resource  rdf:type      owl:Class ;
+        owl:equivalentClass  _:b41 .
+
+_:b41   rdf:type            owl:Class ;
+        owl:intersectionOf  _:b42 .
+
+_:b42   rdf:rest   _:b43 ;
+        rdf:first  lis:Object .
+
+_:b43   rdf:rest   rdf:nil ;
+        rdf:first  _:b40 .
+
+_:b44   rdf:type  owl:Class .
+
+proc:MaintenanceTaskDescription
+        rdf:type             owl:Class ;
+        owl:equivalentClass  _:b44 .
+
+_:b44   rdf:type            owl:Class ;
+        owl:intersectionOf  _:b45 .
+
+_:b46   rdf:rest   rdf:nil ;
+        rdf:first  _:b47 .
+
+_:b45   rdf:rest   _:b46 ;
+        rdf:first  lis:InformationObject .
+
+lis:isAbout  rdf:type  owl:ObjectProperty .
+
+_:b47   rdf:type            owl:Restriction ;
+        owl:onProperty      lis:isAbout ;
+        owl:someValuesFrom  proc:MaintenanceTask .
+
+proc:MaintenanceTask  rdf:type  owl:Class .
+
+_:b48   rdf:type  owl:Class .
+
+proc:Hazard  rdf:type        owl:Class ;
+        owl:equivalentClass  _:b48 .
+
+_:b48   rdf:type            owl:Class ;
+        owl:intersectionOf  _:b49 .
+
+_:b49   rdf:rest   _:b50 ;
+        rdf:first  lis:RealizableEntity .
+
+_:b50   rdf:rest   rdf:nil ;
+        rdf:first  _:b51 .
+
+lis:realizedIn  rdf:type  owl:ObjectProperty .
+
+_:b51   rdf:type            owl:Restriction ;
+        owl:onProperty      lis:realizedIn ;
+        owl:someValuesFrom  proc:HazardRealizationProcess .
+
+proc:HazardRealizationProcess
+        rdf:type  owl:Class .
+
+proc:requirementOf  rdf:type  owl:ObjectProperty .
+
+_:b52   rdf:type            owl:Restriction ;
+        owl:onProperty      proc:requirementOf ;
+        owl:someValuesFrom  lis:Activity .
+
+lis:Activity  rdf:type  owl:Class .
+
+_:b53   rdf:type           owl:Restriction ;
+        owl:onProperty     lis:roleOf ;
+        owl:allValuesFrom  _:b54 .
+
+lis:roleOf  rdf:type  owl:ObjectProperty .
+
+_:b54   rdf:type            owl:Class ;
+        rdf:type            owl:Class ;
+        owl:intersectionOf  _:b55 .
+
+_:b55   rdf:rest   _:b56 ;
+        rdf:first  lis:Object .
+
+_:b56   rdf:rest   rdf:nil ;
+        rdf:first  _:b52 .
+
+_:b57   rdf:type  owl:Class .
+
+proc:ResourceRole  rdf:type  owl:Class ;
+        owl:equivalentClass  _:b57 .
+
+_:b57   rdf:type            owl:Class ;
+        owl:intersectionOf  _:b58 .
+
+_:b59   rdf:rest   rdf:nil ;
+        rdf:first  _:b53 .
+
+_:b58   rdf:rest   _:b59 ;
+        rdf:first  lis:Role .
+
+proc:Component  rdfs:subClassOf  lis:PhysicalObject ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "A ISO:PhysicalObject that  may have some OMPD:ResourceRole" ;
+        rdfs:label          "Component" ;
+        iof-av:isPrimitive  "TRUE"^^xsd:boolean .
+
+proc:Hazard  rdfs:subClassOf  lis:Disposition ;
+        rdf:type            owl:Class ;
+        iof-av:logicAxiom   "Hazard _ RealizeableEntity _ (_realizedIn.HazardRealizationProcess)" ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "An ISO: Realizeable Entity that is realizrd in some OMPD: Hazard Realization Process" ;
+        rdfs:label          "Hazard" ;
+        iof-av:isPrimitive  "FALSE"^^xsd:boolean .
+
+proc:HazardInMaintenanceProcess
+        rdfs:subClassOf     lis:Disposition ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "An OMPD: Hazard that is realized in some OMPD: Hazard Realization Process that occurs relative to some OMPD: Maintenance Process" ;
+        rdfs:label          "HazardInMaintenanceProcess" ;
+        iof-av:isPrimitive  "FALSE"^^xsd:boolean .
+
+proc:HazardRealizationProcess
+        rdfs:subClassOf     lis:Activity ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "An ISO: Activity that has the potential to cause harm" ;
+        rdfs:label          "HazardRealizationProcess" ;
+        iof-av:isPrimitive  "TRUE"^^xsd:boolean .
+
+proc:MaintainableItem
+        rdfs:subClassOf     lis:PhysicalObject ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "An ISO:PhysicalObject hat has a role OMPD:MaintainableItemRole" ;
+        rdfs:label          "MaintainableItem" ;
+        iof-av:isPrimitive  "FALSE"^^xsd:boolean .
+
+proc:MaintainableItemRole
+        rdfs:subClassOf     lis:Role ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "An ISO:Role that is the role of the item that work is performed on in a OMPD:MaintenanceProcess" ;
+        rdfs:label          "MaintainableItemRole" ;
+        iof-av:isPrimitive  "TRUE"^^xsd:boolean .
+
+proc:MaintenanceProcedureDocument
+        rdfs:subClassOf     lis:InformationObject ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "An ISO:InformationObject that is about some OMPD:MaineanceProcedureProcess" ;
+        rdfs:label          "MaintenanceProcedureDocument" ;
+        iof-av:isPrimitive  "FALSE"^^xsd:boolean .
+
+proc:MaintenanceProcedureProcess
+        rdfs:subClassOf     proc:MaintenanceProcess ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "An OMPD:MaintenanceProcess that is represented in some OMPD:MaintenanceProcedureDocument and has activity part some OMPD:MaintenanceTask" ;
+        rdfs:label          "MaintenanceProcedureProcess" ;
+        iof-av:isPrimitive  "FALSE"^^xsd:boolean .
+
+proc:MaintenanceProcess
+        rdfs:subClassOf     lis:Activity ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "An ISO: Activity, intended to repair or restore an item to a state in which it can perform its required function" ;
+        rdfs:label          "MaintenanceProcess" ;
+        iof-av:isPrimitive  "TRUE"^^xsd:boolean .
+
+proc:MaintenanceTask  rdfs:subClassOf  proc:MaintenanceProcess ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "An OMPD:MaintenanceProcess that is: - a direct activity part of zero or one OMPD:MaintenanceProcedureProcess - an activity part of zero or more OMPD:MaintenanceProcedureProcess - a direct activity part of zero or one OMPD:MaintenanceTask - an activity part of zero or more OMPD:MaintenanceTask - occurs directly before zero or one Maintenance task - occurs before zero or more MaintenanceTask - occurs directly after zero or one MaintenanceTask - occurs after zero or more OMPD:MaintenanceTask" ;
+        rdfs:label          "MaintenanceTask" ;
+        iof-av:isPrimitive  "FALSE"^^xsd:boolean .
+
+proc:MaintenanceTaskDescription
+        rdfs:subClassOf     lis:InformationObject ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "An ISO:InformationObject that is about some OMPD:MaintenanceTask" ;
+        rdfs:label          "MaintenanceTaskDescription" ;
+        iof-av:isPrimitive  "FALSE"^^xsd:boolean .
+
+proc:Material  rdfs:subClassOf  lis:PhysicalObject ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "A ISO:PhysicalObject that may have some OMPD:ResourceRole" ;
+        rdfs:label          "Material" ;
+        iof-av:isPrimitive  "TRUE"^^xsd:boolean .
+
+proc:Permit  rdfs:subClassOf  lis:InformationObject ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "A ISO:InformationObject that  may have some OMPD:ResourceRole" ;
+        rdfs:label          "Permit" ;
+        iof-av:isPrimitive  "TRUE"^^xsd:boolean .
+
+proc:Qualification  rdfs:subClassOf  lis:Quality ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "A ISO:Quality that is beared by zero or more OMPD:QualitifiedPerson" ;
+        rdfs:label          "Qualification" ;
+        iof-av:isPrimitive  "TRUE"^^xsd:boolean .
+
+proc:QualifiedPerson  rdfs:subClassOf  lis:Person ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "A ISO:Person that may have some OMPD:ResourceRole and has a OMPD:Qualification" ;
+        rdfs:label          "QualifiedPerson" ;
+        iof-av:isPrimitive  "FALSE"^^xsd:boolean .
+
+proc:Resource  rdfs:subClassOf  lis:Object ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "An ISO: Object that has some OMPD: Resource Role" ;
+        rdfs:label          "Resource" ;
+        iof-av:isPrimitive  "FALSE"^^xsd:boolean .
+
+proc:ResourceRole  rdfs:subClassOf  lis:Role ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "An ISO:Role that is the role of an ISO:Object that is required to execute some ISO:Activity" ;
+        rdfs:label          "ResourceRole" ;
+        iof-av:isPrimitive  "FALSE"^^xsd:boolean .
+
+proc:Tool  rdfs:subClassOf  lis:PhysicalObject ;
+        rdf:type            owl:Class ;
+        iof-av:maturity     iof-av:Released ;
+        rdfs:comment        "A ISO:PhysicalObject that  may have some OMPD:ResourceRole" ;
+        rdfs:label          "Tool" ;
+        iof-av:isPrimitive  "TRUE"^^xsd:boolean .
+
+<http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology>
+        rdf:type             owl:Ontology ;
+        owl:versionIRI       <http://spec.equonto.com/ontology/202312/maintenance-procedure/static-procedure-ontology> ;
+        iof-av:maturity      iof-av:Released ;
+        rdfs:label           "Maintenance Procedures - Static Procedure Ontology" ;
+        owl:imports          iof-av: ;
+        owl:imports          <http://rds.posccaesar.org/ontology/lis14/ont/core> ;
+        dcterms:creator      "The University of Western Australia & Equonto Pty. Ltd." ;
+        dcterms:contributor  "Tim French: The University of Western Australia" ;
+        dcterms:contributor  "Caitlin Woods: The University of Western Australia and Equonto" ;
+        dcterms:contributor  "Melinda Hodkiewicz: The University of Western Australia" ;
+        dcterms:license      "http://opensource.org/licenses/MIT" ;
+        dcterms:title        "Ontology for Maintenance Procedure Documentation (OMPD) Static Procedure Ontology" ;
+        dcterms:publisher    "Equonto Pty. Ltd." ;
+        dcterms:abstract     "The OMPD Static Procedure Ontology captures static information found in most insdutrial maintenance procedures." .
+
+proc:indirectActivityPartOf
+        rdf:type            owl:ObjectProperty ;
+        rdf:type            owl:TransitiveProperty ;
+        rdfs:subPropertyOf  lis:activityPartOf ;
+        owl:inverseOf       proc:hasIndirectActivityPart .
+
+proc:directActivityPartOf
+        rdf:type            owl:ObjectProperty ;
+        rdf:type            owl:IrreflexiveProperty ;
+        rdfs:subPropertyOf  proc:indirectActivityPartOf ;
+        owl:inverseOf       proc:hasDirectActivityPart .
+
+proc:indirectlyAfter  rdf:type  owl:ObjectProperty ;
+        rdfs:subPropertyOf  lis:after ;
+        owl:inverseOf       proc:indirectlyBefore .
+
+proc:directlyAfter  rdf:type  owl:ObjectProperty ;
+        rdfs:subPropertyOf  proc:indirectlyAfter ;
+        owl:inverseOf       proc:directlyBefore .
+
+proc:indirectlyBefore
+        rdf:type            owl:ObjectProperty ;
+        rdf:type            owl:TransitiveProperty ;
+        rdfs:subPropertyOf  lis:before ;
+        owl:inverseOf       proc:indirectlyAfter .
+
+proc:directlyBefore  rdf:type  owl:ObjectProperty ;
+        rdf:type            owl:IrreflexiveProperty ;
+        rdf:type            owl:FunctionalProperty ;
+        rdfs:subPropertyOf  proc:indirectlyBefore ;
+        owl:inverseOf       proc:directlyAfter .
+
+proc:hasIndirectActivityPart
+        rdf:type            owl:ObjectProperty ;
+        rdf:type            owl:TransitiveProperty ;
+        rdfs:subPropertyOf  lis:hasActivityPart ;
+        owl:inverseOf       proc:indirectActivityPartOf .
+
+proc:hasDirectActivityPart
+        rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  proc:hasIndirectActivityPart ;
+        owl:inverseOf       proc:directActivityPartOf .
+
+proc:hasRequirement  rdf:type  owl:ObjectProperty ;
+        rdfs:subPropertyOf  lis:hasParticipant ;
+        owl:inverseOf       proc:requirementOf .
+
+proc:requirementOf  rdf:type  owl:ObjectProperty ;
+        rdfs:subPropertyOf  proc:hasRequirement ;
+        owl:inverseOf       proc:hasRequirement .
+
+proc:reasoningSupport
+        rdf:type  owl:ObjectProperty .
+
+proc:locallyEquivalentTo
+        rdfs:domain         proc:MaintenanceTask ;
+        rdf:type            owl:ObjectProperty ;
+        rdf:type            owl:SymmetricProperty ;
+        rdfs:subPropertyOf  proc:reasoningSupport ;
+        rdfs:range          proc:MaintenanceTask .

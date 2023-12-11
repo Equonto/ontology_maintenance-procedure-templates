@@ -1,3 +1,4 @@
+
 @prefix ax:           <http://tpl.ottr.xyz/owl/axiom/0.1/> .
 @prefix dc:           <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms:      <http://purl.org/dc/terms/> .
@@ -72,9 +73,34 @@ proc-tpl:PROC_CMTO_ClassAxioms[]
 ) :: {
     proc-tpl:PROC_CMTO_ClassAxioms_FunctionalFailure(),
     proc-tpl:PROC_CMTO_ClassAxioms_FailureEvent(),
-    proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation()
-    #proc-tpl:PROC_CMTO_ClassAxioms_CorrectiveMaintenanceTask() 
+    proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation(),
+    proc-tpl:PROC_CMTO_ClassAxioms_CorrectiveMaintenanceTask() 
 } .
+
+proc-tpl:PROC_CMTO_ClassAxioms_CorrectiveMaintenanceTask[]
+@@o-docttr:Signature(proc-tpl:PROC_CMTO_ClassAxioms_CorrectiveMaintenanceTask, # resource
+    none, # label
+    "Create axioms for the Corrective Maintenance Task class in the OMPD Conditional Maintenance Task Ontology", #description
+    none, #scope
+    none, #notes
+    none, #see also
+    none #editorial note
+),
+@@o-docttr:Version(proc-tpl:PROC_CMTO_ClassAxioms_CorrectiveMaintenanceTask, # resource
+    ottr:released, # status
+    "0.1.0", # version
+    none, #previous version
+    none # next version
+),
+@@o-docttr:Provenance(proc-tpl:PROC_CMTO_ClassAxioms_CorrectiveMaintenanceTask,
+    "2023-08-12T00:00:00Z"^^xsd:dateTime, # created,
+    "2023-08-12T00:00:00Z"^^xsd:dateTime, # modified,
+    ( <https://orcid.org/0000-0001-7829-7674> ), # authors,
+    none # contributors
+) :: {
+    o-owl-re:ObjectSomeValuesFrom(?blank30002, proc:addresses, proc:FunctionalFailure),
+    o-owl-ax:EquivObjectIntersectionOf(proc:CorrectiveMaintenanceTask, (proc:MaintenanceTask, ?blank30002))
+} . 
 
 proc-tpl:PROC_CMTO_ClassAxioms_FunctionalFailure[]
 @@o-docttr:Signature(proc-tpl:PROC_CMTO_ClassAxioms_FunctionalFailure, # resource
@@ -96,8 +122,8 @@ proc-tpl:PROC_CMTO_ClassAxioms_FunctionalFailure[]
     "2023-08-12T00:00:00Z"^^xsd:dateTime, # modified,
     ( <https://orcid.org/0000-0001-7829-7674> ), # authors,
     none # contributors
-)  :: {
-    o-owl-ax:SubObjectSomeValuesFrom(proc:FunctionalFailure,lis:hasParticipant,proc:MaintainableItem) 
+) :: {
+    o-owl-ax:SubObjectSomeValuesFrom(proc:FunctionalFailure, lis:hasParticipant, proc:MaintainableItem)
 } .
 
 proc-tpl:PROC_CMTO_ClassAxioms_FailureEvent[]
@@ -121,7 +147,7 @@ proc-tpl:PROC_CMTO_ClassAxioms_FailureEvent[]
     ( <https://orcid.org/0000-0001-7829-7674> ), # authors,
     none # contributors
 ) :: {
-    o-owl-ax:SubObjectSomeValuesFrom(proc:FailureEvent,proc:resultsIn,proc:FunctionalFailure) 
+    o-owl-ax:SubObjectSomeValuesFrom(proc:FailureEvent, proc:resultsIn, proc:FunctionalFailure)
 } .
 
 proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation[]
@@ -148,4 +174,3 @@ proc-tpl:PROC_CMTO_ClassAxioms_FailureModeObservation[]
     o-owl-re:ObjectSomeValuesFrom(?blank30001, lis:isAbout, proc:FunctionalFailure),
     o-owl-ax:EquivObjectIntersectionOf(proc:FailureModeObservation, (lis:InformationObject, ?blank30001))
 } .
-
