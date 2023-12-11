@@ -36,10 +36,6 @@ from CSVREAD('data/axioms/axioms-trigger.csv')
 """ ;
 ottr:template proc-tpl:PROC_SPO_ClassAxioms ;
 ottr:argumentMaps (
-      [ ottr:type owl:Class ]
-      [ ottr:type ( rdf:List owl:Class ) ]
-      [ ottr:type xsd:string ]
-      [ ottr:type xsd:string ]
 ) .
 
 

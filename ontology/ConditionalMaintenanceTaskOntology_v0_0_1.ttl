@@ -62,11 +62,11 @@
         dcterms:publisher    "Equonto Pty. Ltd." ;
         dcterms:abstract     "The OMPD Conditional Mainteance Task Ontology captures conditial task information (i.e. in response to some limit or functional failure) present in some industrial maintenance procedures." .
 
+lis:isAbout  rdf:type  owl:ObjectProperty .
+
 _:b0    rdf:type            owl:Restriction ;
         owl:onProperty      lis:isAbout ;
         owl:someValuesFrom  proc:FunctionalFailure .
-
-lis:isAbout  rdf:type  owl:ObjectProperty .
 
 proc:FunctionalFailure
         rdf:type  owl:Class .
@@ -86,11 +86,11 @@ _:b3    rdf:rest   rdf:nil ;
 _:b2    rdf:rest   _:b3 ;
         rdf:first  lis:InformationObject .
 
+lis:hasParticipant  rdf:type  owl:ObjectProperty .
+
 _:b4    rdf:type            owl:Restriction ;
         owl:onProperty      lis:hasParticipant ;
         owl:someValuesFrom  proc:MaintainableItem .
-
-lis:hasParticipant  rdf:type  owl:ObjectProperty .
 
 proc:MaintainableItem
         rdf:type  owl:Class .
@@ -98,11 +98,11 @@ proc:MaintainableItem
 proc:FunctionalFailure
         rdfs:subClassOf  _:b4 .
 
+proc:addresses  rdf:type  owl:ObjectProperty .
+
 _:b5    rdf:type            owl:Restriction ;
         owl:onProperty      proc:addresses ;
         owl:someValuesFrom  proc:FunctionalFailure .
-
-proc:addresses  rdf:type  owl:ObjectProperty .
 
 proc:FunctionalFailure
         rdf:type  owl:Class .
@@ -122,11 +122,11 @@ _:b7    rdf:rest   _:b8 ;
 _:b8    rdf:rest   rdf:nil ;
         rdf:first  _:b5 .
 
+proc:resultsIn  rdf:type  owl:ObjectProperty .
+
 _:b9    rdf:type            owl:Restriction ;
         owl:onProperty      proc:resultsIn ;
         owl:someValuesFrom  proc:FunctionalFailure .
-
-proc:resultsIn  rdf:type  owl:ObjectProperty .
 
 proc:FunctionalFailure
         rdf:type  owl:Class .

@@ -47,6 +47,23 @@
 @prefix o-owl-ax: <http://tpl.ottr.xyz/owl/axiom/0.1/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
+proc:documentIdentifier
+        rdfs:label          "documentIdentifier" ;
+        rdfs:subPropertyOf  owl:topDataProperty ;
+        rdf:type            owl:DatatypeProperty .
+
+proc:hasTextValue  rdfs:label  "hasTextValue" ;
+        rdfs:subPropertyOf  owl:topDataProperty ;
+        rdf:type            owl:DatatypeProperty .
+
+proc:hasImageUrl  rdfs:label  "hasImageUrl" ;
+        rdfs:subPropertyOf  owl:topDataProperty ;
+        rdf:type            owl:DatatypeProperty .
+
+proc:hasVersion  rdfs:label  "hasVersion" ;
+        rdfs:subPropertyOf  owl:topDataProperty ;
+        rdf:type            owl:DatatypeProperty .
+
 lis:isAbout  rdf:type  owl:ObjectProperty .
 
 _:b0    rdf:type            owl:Restriction ;
@@ -99,23 +116,23 @@ proc:MaintenanceTask  rdf:type  owl:Class ;
 _:b6    rdf:type            owl:Class ;
         owl:intersectionOf  _:b7 .
 
+_:b8    rdf:rest   _:b9 ;
+        rdf:first  _:b5 .
+
+_:b10   rdf:rest   _:b11 ;
+        rdf:first  _:b4 .
+
 _:b7    rdf:rest   _:b8 ;
         rdf:first  proc:MaintenanceProcess .
 
+_:b11   rdf:rest   _:b12 ;
+        rdf:first  _:b13 .
+
 _:b9    rdf:rest   _:b10 ;
-        rdf:first  _:b4 .
-
-_:b11   rdf:rest   _:b9 ;
-        rdf:first  _:b12 .
-
-_:b10   rdf:rest   _:b13 ;
         rdf:first  _:b14 .
 
-_:b13   rdf:rest   rdf:nil ;
+_:b12   rdf:rest   rdf:nil ;
         rdf:first  _:b15 .
-
-_:b8    rdf:rest   _:b11 ;
-        rdf:first  _:b5 .
 
 proc:representedBy  rdf:type  owl:ObjectProperty .
 
@@ -126,7 +143,7 @@ _:b15   rdf:type            owl:Restriction ;
 proc:MaintenanceTaskDescription
         rdf:type  owl:Class .
 
-_:b12   owl:onClass                  proc:MaintenanceTask ;
+_:b14   owl:onClass                  proc:MaintenanceTask ;
         owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
         rdf:type                     owl:Restriction ;
         owl:onProperty               proc:directActivityPartOf .
@@ -136,14 +153,14 @@ proc:directActivityPartOf
 
 proc:MaintenanceTask  rdf:type  owl:Class .
 
-_:b14   rdf:type           owl:Restriction ;
+_:b13   rdf:type           owl:Restriction ;
         owl:onProperty     proc:locallyEquivalentTo ;
         owl:allValuesFrom  proc:MaintenanceTask .
 
+proc:MaintenanceTask  rdf:type  owl:Class .
+
 proc:locallyEquivalentTo
         rdf:type  owl:ObjectProperty .
-
-proc:MaintenanceTask  rdf:type  owl:Class .
 
 lis:hasRole  rdf:type  owl:ObjectProperty .
 
@@ -187,11 +204,11 @@ proc:HazardInMaintenanceProcess
 _:b24   rdf:type            owl:Class ;
         owl:intersectionOf  _:b25 .
 
-_:b25   rdf:rest   _:b26 ;
-        rdf:first  proc:Hazard .
-
 _:b26   rdf:rest   rdf:nil ;
         rdf:first  _:b27 .
+
+_:b25   rdf:rest   _:b26 ;
+        rdf:first  proc:Hazard .
 
 lis:occursRelativeTo  rdf:type  owl:ObjectProperty .
 
@@ -236,13 +253,13 @@ proc:MaintenanceProcedureProcess
 _:b30   rdf:type            owl:Class ;
         owl:intersectionOf  _:b31 .
 
-_:b32   rdf:rest   rdf:nil ;
-        rdf:first  _:b29 .
-
-_:b33   rdf:rest   _:b32 ;
+_:b32   rdf:rest   _:b33 ;
         rdf:first  _:b28 .
 
-_:b31   rdf:rest   _:b33 ;
+_:b33   rdf:rest   rdf:nil ;
+        rdf:first  _:b29 .
+
+_:b31   rdf:rest   _:b32 ;
         rdf:first  proc:MaintenanceProcess .
 
 proc:requirementOf  rdf:type  owl:ObjectProperty .
@@ -269,13 +286,13 @@ proc:QualifiedPerson  rdf:type  owl:Class ;
 _:b36   rdf:type            owl:Class ;
         owl:intersectionOf  _:b37 .
 
-_:b37   rdf:rest   _:b38 ;
-        rdf:first  lis:Person .
-
-_:b39   rdf:rest   rdf:nil ;
+_:b38   rdf:rest   rdf:nil ;
         rdf:first  _:b34 .
 
-_:b38   rdf:rest   _:b39 ;
+_:b37   rdf:rest   _:b39 ;
+        rdf:first  lis:Person .
+
+_:b39   rdf:rest   _:b38 ;
         rdf:first  _:b35 .
 
 lis:hasRole  rdf:type  owl:ObjectProperty .
@@ -358,17 +375,18 @@ _:b53   rdf:type           owl:Restriction ;
         owl:onProperty     lis:roleOf ;
         owl:allValuesFrom  _:b54 .
 
+_:b54   rdf:type  owl:Class .
+
 lis:roleOf  rdf:type  owl:ObjectProperty .
 
 _:b54   rdf:type            owl:Class ;
-        rdf:type            owl:Class ;
         owl:intersectionOf  _:b55 .
-
-_:b56   rdf:rest   rdf:nil ;
-        rdf:first  _:b52 .
 
 _:b55   rdf:rest   _:b56 ;
         rdf:first  lis:Object .
+
+_:b56   rdf:rest   rdf:nil ;
+        rdf:first  _:b52 .
 
 _:b57   rdf:type  owl:Class .
 
