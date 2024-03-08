@@ -11,3 +11,5 @@ Repository Structure
 - **ontology:** the ontology generated using the templates (plus imported ontologies for easy access in Protege)
 
 These templates are written using the OTTR templating language. Find OTTR at <https://ottr.xyz/>
+
+For more information, contaxt Caitlin Woods at caitlin@equonto.com
