@@ -1,4 +1,4 @@
-@prefix proc-tpl: <http://tpl.equonto.com/ontology/maintenance-procedure/> .
+@prefix proc-tpl: <http://tpl.equonto.org/ontology/maintenance-procedure/> .
 @prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -35,7 +35,7 @@
 @prefix reqtpl: <http://w3id.org/requirement-ontology/tpl/0.1/> .
 @prefix macro: <http://tpl.ottr.xyz/p/asset-maintenance/owl/macro/0.1/> .
 @prefix wo-tmp: <http://tpl.ottr.xyz/p/asset-maintenance/work-orders/0.1/> .
-@prefix proc: <http://spec.equonto.com/ontology/maintenance-procedure#> .
+@prefix proc: <http://spec.equonto.org/ontology/maintenance-procedure#> .
 @prefix o-owl-ut: <http://tpl.ottr.xyz/owl/util/0.1/> .
 @prefix fmea-tmp: <http://tpl.ottr.xyz/p/asset-maintenance/fmea/0.2/> .
 @prefix ont: <http://data.grundfos.com/ontology/pump/ont/> .
@@ -537,9 +537,9 @@ proc:Tool  rdfs:subClassOf  lis:PhysicalObject ;
         rdfs:label          "Tool" ;
         iof-av:isPrimitive  "TRUE"^^xsd:boolean .
 
-<http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology>
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology>
         rdf:type             owl:Ontology ;
-        owl:versionIRI       <http://spec.equonto.com/ontology/202312/maintenance-procedure/static-procedure-ontology> ;
+        owl:versionIRI       <http://spec.equonto.org/ontology/202312/maintenance-procedure/static-procedure-ontology> ;
         iof-av:maturity      iof-av:Released ;
         rdfs:label           "Maintenance Procedures - Static Procedure Ontology" ;
         owl:imports          iof-av: ;

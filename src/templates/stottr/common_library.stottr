@@ -45,8 +45,8 @@
 @prefix dcterms:     <http://purl.org/dc/terms/> .
 @prefix ido-tpl:      <http://example.com/ido/> .
 @prefix lis:          <http://rds.posccaesar.org/ontology/lis14/rdl/> .
-@prefix proc: <http://spec.equonto.com/ontology/maintenance-procedure#> .
-@prefix proc-tpl: <http://tpl.equonto.com/ontology/maintenance-procedure/> .
+@prefix proc: <http://spec.equonto.org/ontology/maintenance-procedure#> .
+@prefix proc-tpl: <http://tpl.equonto.org/ontology/maintenance-procedure/> .
 @prefix iof-av: <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/> .
 
 ## metadata
