@@ -2,9 +2,7 @@
 
 This repository contains resources and documentation for the for the Ontology for Maintenance Procedure Documentation (OMPD). This ontology is published in the Applied Ontology Journal and is available [here](https://content.iospress.com/articles/applied-ontology/ao230279).
 
-The published templates are available at<https://spec.equonto.org/template>
-
-Repository Structure
+Repository Contents
 
 - **docs:** the published documentation for OMPD
     - [static procedure ontology documentation](https://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology>)
