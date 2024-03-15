@@ -7,11 +7,15 @@ Repository Contents
 - **docs:** the published documentation for OMPD
     - [static procedure ontology documentation](https://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology)
     - [conditional maintenance task ontology documentation](https://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology)
-    - [OTTR templates for generating OMPD](https://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology)
+    - [OTTR templates for generating OMPD](https://spec.equonto.org/template/maintenance-procedure/)
   
 - **src:** the data, configuration files and OTTR templates used for generating OMPD
 - **ontology:** the ontology generated using the templates given in **src** (including a catalog file and imported ontologies for easy access in protege)
 - **test:** a test suite for OMPD, testing each competency question described in our [Applied Ontology publication](https://content.iospress.com/articles/applied-ontology/ao230279)
+
+This ontology is also available on the Ontocommons Industry Portal at:
+- https://industryportal.enit.fr/ontologies/OMPD-SPO
+- https://industryportal.enit.fr/ontologies/OMPD-CMTO
 
 To cite this work, please use the following:
 

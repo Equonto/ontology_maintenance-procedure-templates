@@ -33,7 +33,7 @@ class TestOntologyCompetency3(unittest.TestCase):
         with namespace:
             task1 = namespace.MaintenanceTask("task_001")
             task2 = namespace.MaintenanceTask("task_002")
-            task2.directlyAfter.append(task1) # note quirk in owlready where you cannot query direct inverse but you can access it in code
+            task2.directlyAfter.append(task1) # TODO: check owl(inverseOf) in query
             tu.run_pellet_reasoner()
             result = tu.run_query(self.query)
             self.assertEqual(len(result), 1)
@@ -73,5 +73,3 @@ class TestOntologyCompetency3(unittest.TestCase):
             self.assertEqual(result[0][0], task2)
         namespace.destroy()
 
-if __name__ == '__main__':
-    unittest.main()
