@@ -1,0 +1,225 @@
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology> <http://www.w3.org/2002/07/owl#versionIRI> <http://spec.equonto.org/ontology/202312/maintenance-procedure/conditional-maintenance-task-ontology> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology> <http://www.w3.org/2002/07/owl#imports> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology> <http://purl.org/dc/terms/abstract> "The OMPD Conditional Maintenance Task Ontology captures functional failures and corrective maintenance tasks (to be conditionally executed on the occurrence of a function failure) found in some industrial maintenance procedures. This ontology captures information currently stored in maintenance procedure documentation in a generalizable way and supports its core users (maintenance technicians, maintenance engineers and maintenance schedulers) in their work. This ontology is designed to be used alongside the Static Procedure Ontology (https://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology/) for a more detailed description of maintenance procedures. Users can find details of the design methodology for this ontology at https://content.iospress.com/articles/applied-ontology/ao230279" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology> <http://purl.org/dc/terms/contributor> "Caitlin Woods: The University of Western Australia and Equonto" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology> <http://purl.org/dc/terms/contributor> "Melinda Hodkiewicz: The University of Western Australia" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology> <http://purl.org/dc/terms/contributor> "Tim French: The University of Western Australia" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology> <http://purl.org/dc/terms/creator> "The University of Western Australia & Equonto Pty. Ltd." .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology> <http://purl.org/dc/terms/license> "http://opensource.org/licenses/MIT" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology> <http://purl.org/dc/terms/publisher> "Equonto Pty. Ltd." .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology> <http://purl.org/dc/terms/title> "Ontology for Maintenance Procedure Documentation (OMPD) Conditional Maintenance Task Ontology" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology> <http://www.w3.org/2000/01/rdf-schema#label> "Maintenance Procedures - Conditional Maintenance Task Ontology" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn
+<http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore
+# 
+# https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom
+<https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example
+<https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive
+<https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity
+<https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms
+<https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation
+<https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://rds.posccaesar.org/ontology/lis14/rdl/before
+<http://rds.posccaesar.org/ontology/lis14/rdl/before> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant
+<http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://rds.posccaesar.org/ontology/lis14/rdl/isAbout
+<http://rds.posccaesar.org/ontology/lis14/rdl/isAbout> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo
+<http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addressedBy
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addressedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addressedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo> .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addresses
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addresses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addresses> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addresses> <http://www.w3.org/2002/07/owl#inverseOf> <http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addressedBy> .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealizedIn> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealizedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealizedIn
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#resultsIn
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#resultsIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#resultsIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rds.posccaesar.org/ontology/lis14/rdl/before> .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://rds.posccaesar.org/ontology/lis14/rdl/Activity
+<http://rds.posccaesar.org/ontology/lis14/rdl/Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://rds.posccaesar.org/ontology/lis14/rdl/Event
+<http://rds.posccaesar.org/ontology/lis14/rdl/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject
+<http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject
+<http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#CorrectiveMaintenanceTask
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#CorrectiveMaintenanceTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#CorrectiveMaintenanceTask> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid3 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addresses> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#CorrectiveMaintenanceTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#CorrectiveMaintenanceTask> <http://www.w3.org/2000/01/rdf-schema#comment> "A OMPD:maintenance task that addresses a OMPD:functional failure" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#CorrectiveMaintenanceTask> <http://www.w3.org/2000/01/rdf-schema#label> "Corrective Maintenance Task" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#CorrectiveMaintenanceTask> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "Replace the leaking mechanical seal, replace the blown light bulb" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#CorrectiveMaintenanceTask> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#CorrectiveMaintenanceTask> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#CorrectiveMaintenanceTask> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A OMPD:maintenance task that addresses a OMPD:functional failure" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#CorrectiveMaintenanceTask> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "maintenance carried out after fault recognition and intended to restore an item into a state in which it can perform a required function (EN13306)" .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Event> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#resultsIn> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An LIS:Event that resuts in a OMPD: Functional Failure" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Failure Event" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://spec.industrialontologies.org/iof/ontology/maintenance/MaintenanceReferenceOntology/FailureEvent" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "explosion, seizure, loss of power, loss of control" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "An LIS:Event that resuts in a OMPD: Functional Failure" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "event that causes an item to lose its ability to perform a required function (IOF Maintenance Reference Ontology)" .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureModeObservation
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureModeObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureModeObservation> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid8 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/isAbout> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureModeObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureModeObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "An LIS:Information object that denotes a OMPD:functional failure" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureModeObservation> <http://www.w3.org/2000/01/rdf-schema#label> "Failure Mode Observation" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureModeObservation> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "Erratic output, vibration,  over-heating" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureModeObservation> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureModeObservation> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureModeObservation> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "An LIS:Information object that denotes a OMPD:functional failure" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureModeObservation> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the manner in which a failure occurs (IEC60050-192, EN 13306, ISO 14224)" .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Activity> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure> <http://www.w3.org/2000/01/rdf-schema#comment> "An LIS: Activity that is represented in a OMPD: Failure Mode Observation and hasParticipant some LIS: Physical Object" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure> <http://www.w3.org/2000/01/rdf-schema#label> "Functional Failure" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://spec.industrialontologies.org/iof/ontology/maintenance/MaintenanceReferenceOntology/FailureProcess" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "deformation process, corrosion process" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "An LIS: Activity that is represented in a OMPD: Failure Mode Observation and hasParticipant some LIS: Physical Object" .
+<http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "process that changes some quality of an item causing the the item to become degraded or failed such that it fails to fulfil its required function (IOF Maintenance Reference Ontology, IEC60050-192:12015, ISO 14224-2016, EN13306)" .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

@@ -1,0 +1,16 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<http://spec.equonto.org/ontology/202312/maintenance-procedure/conditional-maintenance-task-ontology> a prov:Entity;
+	 dc:title "Ontology for Maintenance Procedure Documentation (OMPD) Conditional Maintenance Task Ontology";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+.
+:agent0 a prov:Agent; foaf:name "The University of Western Australia & Equonto Pty. Ltd.".
+:agent1 a prov:Agent; foaf:name "Caitlin Woods: The University of Western Australia and Equonto".
+:agent2 a prov:Agent; foaf:name "Melinda Hodkiewicz: The University of Western Australia".
+:agent3 a prov:Agent; foaf:name "Tim French: The University of Western Australia".

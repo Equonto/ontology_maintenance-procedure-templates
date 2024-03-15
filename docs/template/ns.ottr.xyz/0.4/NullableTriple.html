@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><style>@import url("https://ottr.xyz/inc/style.css");body{padding-bottom:50px}div{max-width:1200px}p,li,pre,svg{max-width:100%}code,p code,li code{background-color:transparent}table,tr,td{border:0;font-size:100%;vertical-align:top}th{border:0;border-bottom:1px solid #ccc}summary{font-family:arial,sans-serif;font-size:100%}b.heading{color:#333;font-family:arial,sans-serif;font-size:100%;margin-bottom:3px;margin-top:3px}.info{color:#888;font-size:9pt;max-width:800px;padding:1px}span.colourbox{border:1px #ccc solid;display:inline-block;height:12px;margin:0 10px;width:12px}.error{color:red}.button{cursor:pointer}img.logo{float:right;margin:20px}details>details{margin-left:25px}details span.leaf{display:list-item;list-style-type:circle;margin-left:40px}details ul{margin-bottom:0;margin-top:0}p.treeviewbuttons{color:#555;font-family:arial,sans-serif;font-size:10pt}p.treeviewbuttons .button{margin-right:5px}div#ToC{background-color:rgba(255,255,255,0.7);font-family:arial,sans-serif;font-size:80%;padding:10px;position:fixed;right:0;top:0}div#ToC ul{margin:0;margin-top:3px;padding-left:10px}div#ToC ul li{font-family:arial,sans-serif}div#metadata dt.deprecated,div#metadata dt.inv-hasPreviousVersion{border-left:10px solid red;padding-left:5px}</style><title>BaseTemplate: ottr:NullableTriple</title></head><body><span id="top"></span><div id="ToC"><b>Contents</b><ul><li><a href="#top">top</a></li><li><a href="#Parameters">Parameters</a></li><li><a href="#Pattern">Pattern</a></li><li><a href="#Dependencies">Dependencies</a></li><li><a href="#Serialisations">Serialisations</a></li><li><a href="#Prefixes">Prefixes</a></li></ul></div><h1>BaseTemplate: <code>ottr:NullableTriple</code></h1><div><div><p>URI: <code><a href="http://ns.ottr.xyz/0.4/NullableTriple">http://ns.ottr.xyz/0.4/NullableTriple</a></code></p></div><div id="metadata"></div><div id="parameters"><h2 id="Parameters">Parameters</h2><p class="info">&#128712; The parameters defined by the signature are listed here. Unfortunately parameter names are not informative; fixing it is a planned future feature. An optional parameter will accept the value ottr:none as an argument. A parameter which allows blanks will accept a blank node as argument value. </p><table><tr><th>Index</th><th>Name</th><th>Type</th><th>Optional</th><th>Blanks allowed</th><th>Default value</th></tr><tr><td>1</td><td>s</td><td>rdfs:Resource</td><td>yes</td><td>yes</td><td>no</td></tr><tr><td>2</td><td>p</td><td>rdfs:Resource</td><td>yes</td><td>no</td><td>no</td></tr><tr><td>3</td><td>o</td><td>rdfs:Resource</td><td>yes</td><td>yes</td><td>no</td></tr></table></div><div><h2 id="Pattern">Pattern</h2><p>The resource is a BaseTemplate and has no pattern.</p></div><div id="dependencies"><h2 id="Dependencies">Dependencies</h2><p>The resource is a BaseTemplate and depends on no other templates.</p><h4>Depending templates</h4><p class="info">&#128712; The templates in this library that depend on this template.</p><p>None found.</p></div><div id="serialisations"><h2 id="Serialisations">Serialisations</h2><div><h4>stOTTR</h4><pre>ottr:NullableTriple[
+    ? rdfs:Resource ?s,
+    !? rdfs:Resource ?p,
+    ? rdfs:Resource ?o
+] :: BASE .</pre><h4>RDF/wOTTR</h4><pre>
+ottr:NullableTriple  rdf:type  ottr:BaseTemplate ;
+        ottr:parameters  ( [ ottr:modifier  ottr:optional ;
+                             ottr:name      &quot;s&quot; ;
+                             ottr:type      rdfs:Resource ;
+                             ottr:variable  [] 
+                           ]
+                           [ ottr:modifier  ottr:nonBlank , ottr:optional ;
+                             ottr:name      &quot;p&quot; ;
+                             ottr:type      rdfs:Resource ;
+                             ottr:variable  [] 
+                           ]
+                           [ ottr:modifier  ottr:optional ;
+                             ottr:name      &quot;o&quot; ;
+                             ottr:type      rdfs:Resource ;
+                             ottr:variable  [] 
+                           ]
+                         ) .</pre></div></div><h2 id="Prefixes">Prefixes</h2><div id="prefixes"><p class="info">&#128712; Prefixes are removed from all listings on this page for readability, but are listed here in RDF Turtle format.</p><pre>@prefix ottr:       &lt;http://ns.ottr.xyz/0.4/&gt;.
+@prefix rdf:        &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;.
+@prefix rdfs:       &lt;http://www.w3.org/2000/01/rdf-schema#&gt;.</pre></div></div><div class="footer"><p>This is a generated documentation page for an OTTR template library. For more information about Reasonable Ontology Templates (OTTR), visit <a href="http://ottr.xyz" target="_blank">ottr.xyz</a>.</p><p>Generated: 2024/03/15 02:17:42 Z</p></div><script>var treeviewCounter=0;for(var treeview of document.getElementsByClassName("treeview")){if(treeview.classList.contains('toggle-all')){treeviewCounter+=1;treeview.setAttribute("id","treeview"+treeviewCounter)
+treeview.insertAdjacentHTML('beforebegin','<p class="treeviewbuttons"><span class="button" onclick="treeViewToggleAll(\'treeview'+treeviewCounter+'\', 1)">Expand all</span> '
++'<span class="button" onclick="treeViewToggleAll(\'treeview'+treeviewCounter+'\', 0)">Contract all</span></p>');}
+if(treeview.classList.contains('click-first')){treeview.firstChild.firstChild.click();}
+if(treeview.classList.contains('expand-all')){treeViewToggleAll('treeview'+treeviewCounter,1);}}
+function treeViewToggleAll(elementid,open){var treeview=document.getElementById(elementid);for(var list of treeview.querySelectorAll("details")){if(open){list.setAttribute("open","open");}else{list.removeAttribute("open");}}}</script></body></html>

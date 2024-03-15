@@ -1,0 +1,1941 @@
+<!DOCTYPE html><html><head lang="en"><meta charset="UTF-8"><style>@import url("https://ottr.xyz/inc/style.css");body{padding-bottom:50px}div{max-width:1200px}p,li,pre,svg{max-width:100%}code,p code,li code{background-color:transparent}table,tr,td{border:0;font-size:100%;vertical-align:top}th{border:0;border-bottom:1px solid #ccc}summary{font-family:arial,sans-serif;font-size:100%}b.heading{color:#333;font-family:arial,sans-serif;font-size:100%;margin-bottom:3px;margin-top:3px}.info{color:#888;font-size:9pt;max-width:800px;padding:1px}span.colourbox{border:1px #ccc solid;display:inline-block;height:12px;margin:0 10px;width:12px}.error{color:red}.button{cursor:pointer}img.logo{float:right;margin:20px}details>details{margin-left:25px}details span.leaf{display:list-item;list-style-type:circle;margin-left:40px}details ul{margin-bottom:0;margin-top:0}p.treeviewbuttons{color:#555;font-family:arial,sans-serif;font-size:10pt}p.treeviewbuttons .button{margin-right:5px}div#ToC{background-color:rgba(255,255,255,0.7);font-family:arial,sans-serif;font-size:80%;padding:10px;position:fixed;right:0;top:0}div#ToC ul{margin:0;margin-top:3px;padding-left:10px}div#ToC ul li{font-family:arial,sans-serif}div#metadata dt.deprecated,div#metadata dt.inv-hasPreviousVersion{border-left:10px solid red;padding-left:5px}</style><title>Template: proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</title></head><body><span id="top"></span><div id="ToC"><b>Contents</b><ul><li><a href="#top">top</a></li><li><a href="#Metadata">Metadata</a></li><li><a href="#Parameters">Parameters</a></li><li><a href="#Pattern">Pattern</a></li><li><a href="#Dependencies">Dependencies</a></li><li><a href="#Metrics">Metrics</a></li><li><a href="#Serialisations">Serialisations</a></li><li><a href="#Prefixes">Prefixes</a></li></ul></div><h1>Template: <code>proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</code></h1><div><div><p>URI: <code><a href="http://spec.equonto.org/template/maintenance-procedure/PROC_SPO_ClassAxioms_ItemInMaintenanceProcess">http://spec.equonto.org/template/maintenance-procedure/PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</a></code></p></div><div id="metadata"><h2 id="Metadata">Metadata</h2><p class="info">&#128712; This section contains the data represented by the signature&#x27;s annotation instances.</p><dl><dt class="status"><a href="http://ns.ottr.xyz/0.4/status">ottr:status</a></dt><dd><span><a href="http://ns.ottr.xyz/0.4/released">ottr:released</a></span></dd><dt class="versionInfo"><a href="http://www.w3.org/2002/07/owl#versionInfo">owl:versionInfo</a></dt><dd><span>0.1.0</span></dd><dt class="description"><a href="http://purl.org/dc/elements/1.1/description">dc:description</a></dt><dd><span>Create axioms for the Item in Maintenance Process class in the OMPD Static Procedure Ontology</span></dd><dt class="createdOn"><a href="http://purl.org/pav/createdOn">pav:createdOn</a></dt><dd><span>2023-08-12T00:00:00Z^^xsd:dateTime</span></dd><dt class="lastUpdateOn"><a href="http://purl.org/pav/lastUpdateOn">pav:lastUpdateOn</a></dt><dd><span>2023-08-12T00:00:00Z^^xsd:dateTime</span></dd><dt class="creator"><a href="http://purl.org/dc/elements/1.1/creator">dc:creator</a></dt><dd><span><a href="https://orcid.org/0000-0001-7829-7674">https://orcid.org/0000-0001-7829-7674</a></span></dd></dl><details><summary>Metadata as RDF graph</summary><pre>
+proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess
+        ottr:status       ottr:released ;
+        dc:creator        &lt;https://orcid.org/0000-0001-7829-7674&gt; ;
+        dc:description    &quot;Create axioms for the Item in Maintenance Process class in the OMPD Static Procedure Ontology&quot; ;
+        pav:createdOn     &quot;2023-08-12T00:00:00Z&quot;^^&lt;http://www.w3.org/2001/XMLSchema#dateTime&gt; ;
+        pav:lastUpdateOn  &quot;2023-08-12T00:00:00Z&quot;^^&lt;http://www.w3.org/2001/XMLSchema#dateTime&gt; ;
+        owl:versionInfo   &quot;0.1.0&quot; .</pre></details></div><div id="parameters"><h2 id="Parameters">Parameters</h2><p class="info">&#128712; The parameters defined by the signature are listed here. Unfortunately parameter names are not informative; fixing it is a planned future feature. An optional parameter will accept the value ottr:none as an argument. A parameter which allows blanks will accept a blank node as argument value. </p><table><tr><th>Index</th><th>Name</th><th>Type</th><th>Optional</th><th>Blanks allowed</th><th>Default value</th></tr></table></div><div id="pattern"><h2 id="Pattern">Pattern</h2><h4>stOTTR</h4><p class="info">&#128712; stOTTR serialisation of the template without annotation instances.</p><pre>proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess[
+] :: {
+    o-owl-ax:EquivObjectIntersectionOf(proc-spo:ItemInMaintenanceProcess, (lis:PhysicalObject, _:blank511)),
+    o-owl-re:ObjectSomeValuesFrom(_:blank514, lis:participantIn, proc-spo:MaintenanceProcess)
+} .</pre><p class="info">&#128712; The pattern of the template is illustrated by expanding a generated instance. Below the generated instance is shown in different serialisations, and its expansion is presented in different formats.</p><h4>Generated instance</h4><b class="heading">stOTTR</b><pre>proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess()</pre><b class="heading">RDF/wOTTR</b><pre>
+[ ottr:of      proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess ;
+  ottr:values  ()
+] .</pre><h4>Visualisation of expanded RDF graph</h4><p class="info">&#128712; Each resource node is linked to its IRI. Type relationships are not visualised, rather each node contains its type.</p><div><details open="open"><summary>Hierarchical horizontal layout (dot)</summary><div><svg width="952px" height="178px"
+ viewBox="0.00 0.00 952.00 177.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 173.5)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-173.5 948,-173.5 948,4 -4,4"/>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node1" class="node">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="171,-60.5 67,-60.5 67,-37.5 171,-37.5 171,-60.5"/>
+<text text-anchor="start" x="75" y="-46.3" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="node2" class="node">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node2"><a xlink:href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc&#45;spo:MaintenanceProcess">
+<polygon fill="lightskyblue" stroke="black" points="595,-97 395,-97 395,-61 595,-61 595,-97"/>
+<text text-anchor="start" x="466" y="-82.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="403" y="-68.8" font-family="Arial" font-size="14.00">proc&#45;spo:MaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="edge2" class="edge">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M171.22,-53.11C225.85,-57.49 314.02,-64.56 384.42,-70.21"/>
+<polygon fill="black" stroke="black" points="384.42,-73.72 394.67,-71.03 384.98,-66.74 384.42,-73.72"/>
+<text text-anchor="start" x="251" y="-73.8" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt; -->
+<g id="node3" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node3"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:participantIn">
+<polygon fill="lightskyblue" stroke="black" points="560.5,-36 429.5,-36 429.5,0 560.5,0 560.5,-36"/>
+<text text-anchor="start" x="437.5" y="-21.8" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
+<text text-anchor="start" x="449.5" y="-7.8" font-family="Arial" font-size="14.00">lis:participantIn</text>
+</a>
+</g>
+</g>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt; -->
+<g id="edge1" class="edge">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M171.22,-44.75C235.32,-39.44 345.61,-30.3 419.17,-24.2"/>
+<polygon fill="black" stroke="black" points="419.62,-27.68 429.3,-23.36 419.05,-20.7 419.62,-27.68"/>
+<text text-anchor="start" x="271" y="-42.8" font-family="Arial" font-size="14.00">owl:onProperty</text>
+</g>
+<!-- blank691 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node4" class="node">
+<title>blank691 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="532,-145.5 458,-145.5 458,-122.5 532,-122.5 532,-145.5"/>
+<text text-anchor="start" x="466" y="-131.3" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232) -->
+<g id="node5" class="node">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)</title>
+<polygon fill="#e5e5e5" stroke="black" points="787,-145.5 730,-145.5 730,-122.5 787,-122.5 787,-145.5"/>
+<text text-anchor="start" x="738" y="-131.3" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
+</g>
+<!-- blank691 : LUB&lt;rdfs:Resource&gt;&#45;&gt;(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232) -->
+<g id="edge3" class="edge">
+<title>blank691 : LUB&lt;rdfs:Resource&gt;&#45;&gt;(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)</title>
+<path fill="none" stroke="black" d="M532.09,-134C581.4,-134 669.44,-134 719.65,-134"/>
+<polygon fill="black" stroke="black" points="719.77,-137.5 729.77,-134 719.77,-130.5 719.77,-137.5"/>
+<text text-anchor="start" x="608" y="-137.8" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt; -->
+<g id="node6" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node6"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject" xlink:title="lis:PhysicalObject">
+<polygon fill="lightskyblue" stroke="black" points="944,-169.5 821,-169.5 821,-146.5 944,-146.5 944,-169.5"/>
+<text text-anchor="start" x="829" y="-154.3" font-family="Arial" font-size="14.00">lis:PhysicalObject</text>
+</a>
+</g>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt; -->
+<g id="edge4" class="edge">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M787.18,-139.45C794.45,-140.87 802.62,-142.48 811.04,-144.14"/>
+<polygon fill="none" stroke="black" points="811.26,-144.18 817.92,-141.42 823.03,-146.5 816.38,-149.27 811.26,-144.18"/>
+<text text-anchor="middle" x="804" y="-147.8" font-family="Arial" font-size="14.00">1</text>
+</g>
+<!-- blank690 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node7" class="node">
+<title>blank690 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="893.5,-121 871.5,-121 871.5,-99 893.5,-99 893.5,-121"/>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;blank690 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge5" class="edge">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;blank690 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M787.25,-125.21C791.5,-124.03 795.85,-122.92 800,-122 819.86,-117.62 842.8,-114.4 859.27,-112.41"/>
+<polygon fill="none" stroke="black" points="859.46,-112.39 864.96,-107.73 871.38,-111.02 865.87,-115.68 859.46,-112.39"/>
+<text text-anchor="middle" x="804" y="-125.8" font-family="Arial" font-size="14.00">2</text>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="node8" class="node">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node8"><a xlink:href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc&#45;spo:ItemInMaintenanceProcess">
+<polygon fill="lightskyblue" stroke="black" points="238,-152 0,-152 0,-116 238,-116 238,-152"/>
+<text text-anchor="start" x="90" y="-137.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="8" y="-123.8" font-family="Arial" font-size="14.00">proc&#45;spo:ItemInMaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;&#45;&gt;blank691 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge6" class="edge">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;&#45;&gt;blank691 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M238.08,-134C308.97,-134 395.23,-134 447.31,-134"/>
+<polygon fill="black" stroke="black" points="447.58,-137.5 457.58,-134 447.58,-130.5 447.58,-137.5"/>
+<text text-anchor="start" x="256.5" y="-137.8" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
+</g>
+</g>
+</svg>
+</div></details><details><summary>Hierarchical vertical layout (dot)</summary><div><svg width="611px" height="249px"
+ viewBox="0.00 0.00 611.00 249.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 245.0)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-245 607,-245 607,4 -4,4"/>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node1" class="node">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="278,-234.5 174,-234.5 174,-211.5 278,-211.5 278,-234.5"/>
+<text text-anchor="start" x="182" y="-220.3" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="node2" class="node">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node2"><a xlink:href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc&#45;spo:MaintenanceProcess">
+<polygon fill="lightskyblue" stroke="black" points="200,-164 0,-164 0,-128 200,-128 200,-164"/>
+<text text-anchor="start" x="71" y="-149.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="8" y="-135.8" font-family="Arial" font-size="14.00">proc&#45;spo:MaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="edge2" class="edge">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M173.93,-218.09C153.7,-214.15 131.68,-206.54 116,-192 110.77,-187.15 107.25,-180.48 104.88,-173.76"/>
+<polygon fill="black" stroke="black" points="108.24,-172.77 102.16,-164.09 101.5,-174.66 108.24,-172.77"/>
+<text text-anchor="start" x="116" y="-180.8" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt; -->
+<g id="node3" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node3"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:participantIn">
+<polygon fill="lightskyblue" stroke="black" points="356.5,-164 225.5,-164 225.5,-128 356.5,-128 356.5,-164"/>
+<text text-anchor="start" x="233.5" y="-149.8" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
+<text text-anchor="start" x="245.5" y="-135.8" font-family="Arial" font-size="14.00">lis:participantIn</text>
+</a>
+</g>
+</g>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt; -->
+<g id="edge1" class="edge">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M235.31,-211.25C244.15,-201.06 257.76,-185.35 269.31,-172.02"/>
+<polygon fill="black" stroke="black" points="272.27,-173.95 276.18,-164.1 266.99,-169.37 272.27,-173.95"/>
+<text text-anchor="start" x="265" y="-180.8" font-family="Arial" font-size="14.00">owl:onProperty</text>
+</g>
+<!-- blank691 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node4" class="node">
+<title>blank691 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="520,-157.5 446,-157.5 446,-134.5 520,-134.5 520,-157.5"/>
+<text text-anchor="start" x="454" y="-143.3" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232) -->
+<g id="node5" class="node">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)</title>
+<polygon fill="#e5e5e5" stroke="black" points="511.5,-87 454.5,-87 454.5,-64 511.5,-64 511.5,-87"/>
+<text text-anchor="start" x="462.5" y="-72.8" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
+</g>
+<!-- blank691 : LUB&lt;rdfs:Resource&gt;&#45;&gt;(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232) -->
+<g id="edge3" class="edge">
+<title>blank691 : LUB&lt;rdfs:Resource&gt;&#45;&gt;(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)</title>
+<path fill="none" stroke="black" d="M483,-134.3C483,-124.5 483,-109.73 483,-97.57"/>
+<polygon fill="black" stroke="black" points="486.5,-97.35 483,-87.35 479.5,-97.35 486.5,-97.35"/>
+<text text-anchor="start" x="483" y="-103.8" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt; -->
+<g id="node6" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node6"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject" xlink:title="lis:PhysicalObject">
+<polygon fill="lightskyblue" stroke="black" points="495.5,-23 372.5,-23 372.5,0 495.5,0 495.5,-23"/>
+<text text-anchor="start" x="380.5" y="-7.8" font-family="Arial" font-size="14.00">lis:PhysicalObject</text>
+</a>
+</g>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt; -->
+<g id="edge4" class="edge">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M474.69,-63.98C467.97,-55.48 458.32,-43.27 450.1,-32.87"/>
+<polygon fill="none" stroke="black" points="449.96,-32.69 443.1,-30.47 442.52,-23.28 449.38,-25.5 449.96,-32.69"/>
+<text text-anchor="middle" x="469" y="-39.8" font-family="Arial" font-size="14.00">1</text>
+</g>
+<!-- blank690 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node7" class="node">
+<title>blank690 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="543,-22.5 521,-22.5 521,-0.5 543,-0.5 543,-22.5"/>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;blank690 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge5" class="edge">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;blank690 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M491.31,-63.98C498.11,-55.38 507.92,-42.97 516.2,-32.49"/>
+<polygon fill="none" stroke="black" points="516.37,-32.28 516.95,-25.09 523.81,-22.86 523.23,-30.05 516.37,-32.28"/>
+<text text-anchor="middle" x="518" y="-39.8" font-family="Arial" font-size="14.00">2</text>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="node8" class="node">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node8"><a xlink:href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc&#45;spo:ItemInMaintenanceProcess">
+<polygon fill="lightskyblue" stroke="black" points="602,-241 364,-241 364,-205 602,-205 602,-241"/>
+<text text-anchor="start" x="454" y="-226.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="372" y="-212.8" font-family="Arial" font-size="14.00">proc&#45;spo:ItemInMaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;&#45;&gt;blank691 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge6" class="edge">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;&#45;&gt;blank691 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M483,-204.98C483,-193.98 483,-179.58 483,-167.88"/>
+<polygon fill="black" stroke="black" points="486.5,-167.7 483,-157.7 479.5,-167.7 486.5,-167.7"/>
+<text text-anchor="start" x="483" y="-180.8" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
+</g>
+</g>
+</svg>
+</div></details><details><summary>Spring model layout (neato)</summary><div><svg width="556px" height="360px"
+ viewBox="0.00 0.00 555.82 360.05" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 356.05)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-356.05 551.82,-356.05 551.82,4 -4,4"/>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node1" class="node">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="471.15,-308.05 367.15,-308.05 367.15,-285.05 471.15,-285.05 471.15,-308.05"/>
+<text text-anchor="start" x="375.15" y="-293.85" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="node2" class="node">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node2"><a xlink:href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc&#45;spo:MaintenanceProcess">
+<polygon fill="lightskyblue" stroke="black" points="547.82,-352.05 347.82,-352.05 347.82,-316.05 547.82,-316.05 547.82,-352.05"/>
+<text text-anchor="start" x="418.82" y="-337.85" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="355.82" y="-323.85" font-family="Arial" font-size="14.00">proc&#45;spo:MaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="edge2" class="edge">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M428.22,-308.42C428.33,-308.57 428.45,-308.72 428.57,-308.87"/>
+<polygon fill="black" stroke="black" points="425.13,-310.14 433.99,-315.96 430.69,-305.89 425.13,-310.14"/>
+<text text-anchor="start" x="297.54" y="-312.64" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt; -->
+<g id="node3" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node3"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:participantIn">
+<polygon fill="lightskyblue" stroke="black" points="469,-270 338,-270 338,-234 469,-234 469,-270"/>
+<text text-anchor="start" x="346" y="-255.8" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
+<text text-anchor="start" x="358" y="-241.8" font-family="Arial" font-size="14.00">lis:participantIn</text>
+</a>
+</g>
+</g>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt; -->
+<g id="edge1" class="edge">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M415.04,-284.84C414.44,-283.14 413.8,-281.33 413.15,-279.47"/>
+<polygon fill="black" stroke="black" points="416.44,-278.28 409.83,-270.01 409.84,-280.6 416.44,-278.28"/>
+<text text-anchor="start" x="413.18" y="-268.36" font-family="Arial" font-size="14.00">owl:onProperty</text>
+</g>
+<!-- blank691 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node4" class="node">
+<title>blank691 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="239.82,-152.72 165.82,-152.72 165.82,-129.72 239.82,-129.72 239.82,-152.72"/>
+<text text-anchor="start" x="173.82" y="-138.52" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232) -->
+<g id="node5" class="node">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)</title>
+<polygon fill="#e5e5e5" stroke="black" points="321.29,-118.42 264.29,-118.42 264.29,-95.42 321.29,-95.42 321.29,-118.42"/>
+<text text-anchor="start" x="272.29" y="-104.22" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
+</g>
+<!-- blank691 : LUB&lt;rdfs:Resource&gt;&#45;&gt;(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232) -->
+<g id="edge3" class="edge">
+<title>blank691 : LUB&lt;rdfs:Resource&gt;&#45;&gt;(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)</title>
+<path fill="none" stroke="black" d="M233.28,-129.6C240.15,-126.98 247.53,-124.17 254.67,-121.45"/>
+<polygon fill="black" stroke="black" points="256.09,-124.65 264.19,-117.82 253.6,-118.11 256.09,-124.65"/>
+<text text-anchor="start" x="139.6" y="-112.56" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt; -->
+<g id="node6" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node6"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject" xlink:title="lis:PhysicalObject">
+<polygon fill="lightskyblue" stroke="black" points="374.37,-23 251.37,-23 251.37,0 374.37,0 374.37,-23"/>
+<text text-anchor="start" x="259.37" y="-7.8" font-family="Arial" font-size="14.00">lis:PhysicalObject</text>
+</a>
+</g>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt; -->
+<g id="edge4" class="edge">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M295.26,-95.22C298.39,-80.34 303.87,-54.29 307.88,-35.19"/>
+<polygon fill="none" stroke="black" points="307.91,-35.04 305.23,-28.34 310.38,-23.3 313.06,-29.99 307.91,-35.04"/>
+<text text-anchor="middle" x="298.84" y="-62.96" font-family="Arial" font-size="14.00">1</text>
+</g>
+<!-- blank690 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node7" class="node">
+<title>blank690 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="382.92,-174.96 360.92,-174.96 360.92,-152.96 382.92,-152.96 382.92,-174.96"/>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;blank690 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge5" class="edge">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;blank690 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M308.81,-118.46C320.8,-127.11 337.34,-139.03 350.47,-148.5"/>
+<polygon fill="none" stroke="black" points="350.8,-148.73 358.01,-149 360.54,-155.75 353.33,-155.48 350.8,-148.73"/>
+<text text-anchor="middle" x="330.68" y="-140.91" font-family="Arial" font-size="14.00">2</text>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="node8" class="node">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node8"><a xlink:href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc&#45;spo:ItemInMaintenanceProcess">
+<polygon fill="lightskyblue" stroke="black" points="238,-196.72 0,-196.72 0,-160.72 238,-160.72 238,-196.72"/>
+<text text-anchor="start" x="90" y="-182.52" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="8" y="-168.52" font-family="Arial" font-size="14.00">proc&#45;spo:ItemInMaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;&#45;&gt;blank691 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge6" class="edge">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;&#45;&gt;blank691 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M159.44,-160.63C162.09,-159.44 164.76,-158.25 167.39,-157.07"/>
+<polygon fill="black" stroke="black" points="168.98,-160.19 176.68,-152.91 166.12,-153.8 168.98,-160.19"/>
+<text text-anchor="start" x="47.26" y="-145.93" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
+</g>
+</g>
+</svg>
+</div></details><details><summary>Spring model layout (fdp)</summary><div><svg width="537px" height="222px"
+ viewBox="0.00 0.00 537.00 222.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 218.0)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-218 533,-218 533,4 -4,4"/>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node1" class="node">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="411.4,-169.95 307.4,-169.95 307.4,-146.95 411.4,-146.95 411.4,-169.95"/>
+<text text-anchor="start" x="315.4" y="-155.75" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="node2" class="node">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node2"><a xlink:href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc&#45;spo:MaintenanceProcess">
+<polygon fill="lightskyblue" stroke="black" points="529.1,-213.95 329.1,-213.95 329.1,-177.95 529.1,-177.95 529.1,-213.95"/>
+<text text-anchor="start" x="400.1" y="-199.75" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="337.1" y="-185.75" font-family="Arial" font-size="14.00">proc&#45;spo:MaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="edge2" class="edge">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M381.07,-170.11C382.78,-171.03 384.54,-171.97 386.33,-172.93"/>
+<polygon fill="black" stroke="black" points="384.95,-176.17 395.42,-177.82 388.27,-170 384.95,-176.17"/>
+<text text-anchor="start" x="386.24" y="-161.69" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt; -->
+<g id="node3" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node3"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:participantIn">
+<polygon fill="lightskyblue" stroke="black" points="418.68,-108.3 287.68,-108.3 287.68,-72.3 418.68,-72.3 418.68,-108.3"/>
+<text text-anchor="start" x="295.68" y="-94.1" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
+<text text-anchor="start" x="307.68" y="-80.1" font-family="Arial" font-size="14.00">lis:participantIn</text>
+</a>
+</g>
+</g>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt; -->
+<g id="edge1" class="edge">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M358.35,-146.89C357.63,-139.05 356.65,-128.34 355.74,-118.34"/>
+<polygon fill="black" stroke="black" points="359.22,-117.98 354.82,-108.34 352.25,-118.61 359.22,-117.98"/>
+<text text-anchor="start" x="265.56" y="-116.14" font-family="Arial" font-size="14.00">owl:onProperty</text>
+</g>
+<!-- blank691 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node4" class="node">
+<title>blank691 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="171.82,-60.43 97.82,-60.43 97.82,-37.43 171.82,-37.43 171.82,-60.43"/>
+<text text-anchor="start" x="105.82" y="-46.23" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232) -->
+<g id="node5" class="node">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)</title>
+<polygon fill="#e5e5e5" stroke="black" points="244.43,-78.02 187.43,-78.02 187.43,-55.02 244.43,-55.02 244.43,-78.02"/>
+<text text-anchor="start" x="195.43" y="-63.82" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
+</g>
+<!-- blank691 : LUB&lt;rdfs:Resource&gt;&#45;&gt;(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232) -->
+<g id="edge3" class="edge">
+<title>blank691 : LUB&lt;rdfs:Resource&gt;&#45;&gt;(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)</title>
+<path fill="none" stroke="black" d="M172.05,-57.01C173.82,-57.39 175.61,-57.78 177.39,-58.16"/>
+<polygon fill="black" stroke="black" points="176.91,-61.64 187.42,-60.34 178.39,-54.8 176.91,-61.64"/>
+<text text-anchor="start" x="68.3" y="-61.95" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt; -->
+<g id="node6" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node6"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject" xlink:title="lis:PhysicalObject">
+<polygon fill="lightskyblue" stroke="black" points="336.39,-22.89 213.39,-22.89 213.39,0.11 336.39,0.11 336.39,-22.89"/>
+<text text-anchor="start" x="221.39" y="-7.69" font-family="Arial" font-size="14.00">lis:PhysicalObject</text>
+</a>
+</g>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt; -->
+<g id="edge4" class="edge">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M228.43,-54.83C235.7,-48.03 245.06,-39.28 253.47,-31.42"/>
+<polygon fill="none" stroke="black" points="253.64,-31.26 255.29,-24.24 262.4,-23.07 260.75,-30.09 253.64,-31.26"/>
+<text text-anchor="middle" x="241.4" y="-42.76" font-family="Arial" font-size="14.00">1</text>
+</g>
+<!-- blank690 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node7" class="node">
+<title>blank690 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="267.72,-158.25 245.72,-158.25 245.72,-136.25 267.72,-136.25 267.72,-158.25"/>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;blank690 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge5" class="edge">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;blank690 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M221.77,-78.09C227.96,-90.34 237.88,-109.96 245.57,-125.18"/>
+<polygon fill="none" stroke="black" points="245.74,-125.51 252.01,-129.06 251.15,-136.22 244.87,-132.67 245.74,-125.51"/>
+<text text-anchor="middle" x="232.49" y="-96.02" font-family="Arial" font-size="14.00">2</text>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="node8" class="node">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node8"><a xlink:href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc&#45;spo:ItemInMaintenanceProcess">
+<polygon fill="lightskyblue" stroke="black" points="237.71,-155.99 -0.29,-155.99 -0.29,-119.99 237.71,-119.99 237.71,-155.99"/>
+<text text-anchor="start" x="89.71" y="-141.79" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="7.71" y="-127.79" font-family="Arial" font-size="14.00">proc&#45;spo:ItemInMaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;&#45;&gt;blank691 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge6" class="edge">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;&#45;&gt;blank691 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M121.97,-119.97C124.54,-105.73 128.14,-85.82 130.88,-70.7"/>
+<polygon fill="black" stroke="black" points="134.36,-71.14 132.69,-60.68 127.47,-69.9 134.36,-71.14"/>
+<text text-anchor="start" x="7.32" y="-94.19" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
+</g>
+</g>
+</svg>
+</div></details><details><summary>Radial layout (twopi)</summary><div><svg width="408px" height="219px"
+ viewBox="0.00 0.00 407.61 219.01" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 215.01)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-215.01 403.61,-215.01 403.61,4 -4,4"/>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node1" class="node">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="351.61,-167 247.61,-167 247.61,-144 351.61,-144 351.61,-167"/>
+<text text-anchor="start" x="255.61" y="-152.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="node2" class="node">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node2"><a xlink:href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc&#45;spo:MaintenanceProcess">
+<polygon fill="lightskyblue" stroke="black" points="399.61,-211.01 199.61,-211.01 199.61,-175.01 399.61,-175.01 399.61,-211.01"/>
+<text text-anchor="start" x="270.61" y="-196.81" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="207.61" y="-182.81" font-family="Arial" font-size="14.00">proc&#45;spo:MaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="edge2" class="edge">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M299.61,-167.37C299.61,-167.52 299.61,-167.67 299.61,-167.82"/>
+<polygon fill="black" stroke="black" points="296.11,-164.91 299.61,-174.91 303.11,-164.91 296.11,-164.91"/>
+<text text-anchor="start" x="168.61" y="-171.57" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt; -->
+<g id="node3" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node3"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:participantIn">
+<polygon fill="lightskyblue" stroke="black" points="365.11,-136 234.11,-136 234.11,-100 365.11,-100 365.11,-136"/>
+<text text-anchor="start" x="242.11" y="-121.8" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
+<text text-anchor="start" x="254.11" y="-107.8" font-family="Arial" font-size="14.00">lis:participantIn</text>
+</a>
+</g>
+</g>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt; -->
+<g id="edge1" class="edge">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M299.61,-143.64C299.61,-143.49 299.61,-143.34 299.61,-143.18"/>
+<polygon fill="black" stroke="black" points="303.11,-146.09 299.61,-136.09 296.11,-146.09 303.11,-146.09"/>
+<text text-anchor="start" x="208.61" y="-132.04" font-family="Arial" font-size="14.00">owl:onProperty</text>
+</g>
+<!-- blank691 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node4" class="node">
+<title>blank691 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="134.61,-67 60.61,-67 60.61,-44 134.61,-44 134.61,-67"/>
+<text text-anchor="start" x="68.61" y="-52.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232) -->
+<g id="node5" class="node">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)</title>
+<polygon fill="#e5e5e5" stroke="black" points="104.46,-104.51 47.46,-104.51 47.46,-81.51 104.46,-81.51 104.46,-104.51"/>
+<text text-anchor="start" x="55.46" y="-90.31" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
+</g>
+<!-- blank691 : LUB&lt;rdfs:Resource&gt;&#45;&gt;(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232) -->
+<g id="edge3" class="edge">
+<title>blank691 : LUB&lt;rdfs:Resource&gt;&#45;&gt;(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)</title>
+<path fill="none" stroke="black" d="M90.76,-67.37C89.79,-69.04 88.78,-70.8 87.75,-72.58"/>
+<polygon fill="black" stroke="black" points="84.66,-70.94 82.69,-81.35 90.72,-74.44 84.66,-70.94"/>
+<text text-anchor="start" x="87.8" y="-76.3" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt; -->
+<g id="node6" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node6"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject" xlink:title="lis:PhysicalObject">
+<polygon fill="lightskyblue" stroke="black" points="202.42,-142.01 79.42,-142.01 79.42,-119.01 202.42,-119.01 202.42,-142.01"/>
+<text text-anchor="start" x="87.42" y="-126.81" font-family="Arial" font-size="14.00">lis:PhysicalObject</text>
+</a>
+</g>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt; -->
+<g id="edge4" class="edge">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M96.16,-104.67C100.72,-107.3 105.66,-110.16 110.54,-112.98"/>
+<polygon fill="none" stroke="black" points="110.56,-112.99 117.76,-112.52 120.96,-118.99 113.76,-119.45 110.56,-112.99"/>
+<text text-anchor="middle" x="112.25" y="-100.45" font-family="Arial" font-size="14.00">1</text>
+</g>
+<!-- blank690 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node7" class="node">
+<title>blank690 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="22,-66.5 0,-66.5 0,-44.5 22,-44.5 22,-66.5"/>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;blank690 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge5" class="edge">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;blank690 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M55.76,-81.35C48.44,-77.12 40.14,-72.33 32.7,-68.03"/>
+<polygon fill="none" stroke="black" points="32.68,-68.02 25.49,-68.49 22.29,-62.02 29.49,-61.56 32.68,-68.02"/>
+<text text-anchor="middle" x="35.14" y="-75.55" font-family="Arial" font-size="14.00">2</text>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="node8" class="node">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node8"><a xlink:href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc&#45;spo:ItemInMaintenanceProcess">
+<polygon fill="lightskyblue" stroke="black" points="238.26,-36 0.26,-36 0.26,0 238.26,0 238.26,-36"/>
+<text text-anchor="start" x="90.26" y="-21.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="8.26" y="-7.8" font-family="Arial" font-size="14.00">proc&#45;spo:ItemInMaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;&#45;&gt;blank691 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge6" class="edge">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;&#45;&gt;blank691 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M108.69,-36.31C108.6,-36.47 108.51,-36.63 108.42,-36.79"/>
+<polygon fill="black" stroke="black" points="106.37,-33.34 104.4,-43.75 112.43,-36.84 106.37,-33.34"/>
+<text text-anchor="start" x="108.43" y="-40.56" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
+</g>
+</g>
+</svg>
+</div></details><details><summary>Circular layout (circo)</summary><div><svg width="1266px" height="458px"
+ viewBox="0.00 0.00 1265.50 457.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 453.5)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-453.5 1261.5,-453.5 1261.5,4 -4,4"/>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node1" class="node">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="985.5,-443 881.5,-443 881.5,-420 985.5,-420 985.5,-443"/>
+<text text-anchor="start" x="889.5" y="-428.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Restriction</text>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="node2" class="node">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node2"><a xlink:href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc&#45;spo:MaintenanceProcess">
+<polygon fill="lightskyblue" stroke="black" points="1257.5,-449.5 1057.5,-449.5 1057.5,-413.5 1257.5,-413.5 1257.5,-449.5"/>
+<text text-anchor="start" x="1128.5" y="-435.3" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="1065.5" y="-421.3" font-family="Arial" font-size="14.00">proc&#45;spo:MaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="edge2" class="edge">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#MaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M985.74,-431.5C1004.15,-431.5 1025.61,-431.5 1047,-431.5"/>
+<polygon fill="black" stroke="black" points="1047.15,-435 1057.15,-431.5 1047.15,-428 1047.15,-435"/>
+<text text-anchor="start" x="923.35" y="-420.3" font-family="Arial" font-size="14.00">owl:someValuesFrom</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt; -->
+<g id="node3" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node3"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn" xlink:title="&lt;i&gt;owl:ObjectProperty&lt;/i&gt;&lt;br/&gt;lis:participantIn">
+<polygon fill="lightskyblue" stroke="black" points="775,-449.5 644,-449.5 644,-413.5 775,-413.5 775,-449.5"/>
+<text text-anchor="start" x="652" y="-435.3" font-family="Arial" font-style="italic" font-size="14.00">owl:ObjectProperty</text>
+<text text-anchor="start" x="664" y="-421.3" font-family="Arial" font-size="14.00">lis:participantIn</text>
+</a>
+</g>
+</g>
+<!-- blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt; -->
+<g id="edge1" class="edge">
+<title>blank689 : LUB&lt;rdfs:Resource&gt;&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/participantIn : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M881.26,-431.5C852.68,-431.5 816.76,-431.5 785.17,-431.5"/>
+<polygon fill="black" stroke="black" points="785.07,-428 775.07,-431.5 785.07,-435 785.07,-428"/>
+<text text-anchor="start" x="782.64" y="-420.3" font-family="Arial" font-size="14.00">owl:onProperty</text>
+</g>
+<!-- blank691 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node4" class="node">
+<title>blank691 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="488.5,-185 414.5,-185 414.5,-162 488.5,-162 488.5,-185"/>
+<text text-anchor="start" x="422.5" y="-170.8" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232) -->
+<g id="node5" class="node">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)</title>
+<polygon fill="#e5e5e5" stroke="black" points="812.5,-185 755.5,-185 755.5,-162 812.5,-162 812.5,-185"/>
+<text text-anchor="start" x="763.5" y="-170.8" font-family="Arial" font-style="italic" font-size="14.00">rdf:List</text>
+</g>
+<!-- blank691 : LUB&lt;rdfs:Resource&gt;&#45;&gt;(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232) -->
+<g id="edge3" class="edge">
+<title>blank691 : LUB&lt;rdfs:Resource&gt;&#45;&gt;(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)</title>
+<path fill="none" stroke="black" d="M488.67,-173.5C552.08,-173.5 680.54,-173.5 745.1,-173.5"/>
+<polygon fill="black" stroke="black" points="745.27,-177 755.27,-173.5 745.27,-170 745.27,-177"/>
+<text text-anchor="start" x="513.09" y="-177.3" font-family="Arial" font-size="14.00">owl:intersectionOf</text>
+</g>
+<!-- http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt; -->
+<g id="node6" class="node">
+<title>http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node6"><a xlink:href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject" xlink:title="lis:PhysicalObject">
+<polygon fill="lightskyblue" stroke="black" points="845.5,-23 722.5,-23 722.5,0 845.5,0 845.5,-23"/>
+<text text-anchor="start" x="730.5" y="-7.8" font-family="Arial" font-size="14.00">lis:PhysicalObject</text>
+</a>
+</g>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt; -->
+<g id="edge4" class="edge">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;</title>
+<path fill="none" stroke="black" d="M784,-161.85C784,-135.46 784,-70.69 784,-35.39"/>
+<polygon fill="none" stroke="black" points="784,-35.05 780,-29.05 784,-23.05 788,-29.05 784,-35.05"/>
+<text text-anchor="middle" x="780" y="-96.2" font-family="Arial" font-size="14.00">1</text>
+</g>
+<!-- blank690 : LUB&lt;rdfs:Resource&gt; -->
+<g id="node7" class="node">
+<title>blank690 : LUB&lt;rdfs:Resource&gt;</title>
+<polygon fill="#e5e5e5" stroke="black" points="795,-346.5 773,-346.5 773,-324.5 795,-324.5 795,-346.5"/>
+</g>
+<!-- (http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;blank690 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge5" class="edge">
+<title>(http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject : LUB&lt;ottr:IRI&gt;, blank690 : LUB&lt;rdfs:Resource&gt;)(id: 232)&#45;&gt;blank690 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M784,-185.15C784,-211.67 784,-276.94 784,-312.12"/>
+<polygon fill="none" stroke="black" points="784,-312.39 788,-318.39 784,-324.39 780,-318.38 784,-312.39"/>
+<text text-anchor="middle" x="780" y="-258.8" font-family="Arial" font-size="14.00">2</text>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt; -->
+<g id="node8" class="node">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;</title>
+<g id="a_node8"><a xlink:href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess" xlink:title="&lt;i&gt;owl:Class&lt;/i&gt;&lt;br/&gt;proc&#45;spo:ItemInMaintenanceProcess">
+<polygon fill="lightskyblue" stroke="black" points="238,-191.5 0,-191.5 0,-155.5 238,-155.5 238,-191.5"/>
+<text text-anchor="start" x="90" y="-177.3" font-family="Arial" font-style="italic" font-size="14.00">owl:Class</text>
+<text text-anchor="start" x="8" y="-163.3" font-family="Arial" font-size="14.00">proc&#45;spo:ItemInMaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;&#45;&gt;blank691 : LUB&lt;rdfs:Resource&gt; -->
+<g id="edge6" class="edge">
+<title>http://spec.equonto.org/ontology/maintenance&#45;procedure/static&#45;procedure&#45;ontology#ItemInMaintenanceProcess : LUB&lt;ottr:IRI&gt;&#45;&gt;blank691 : LUB&lt;rdfs:Resource&gt;</title>
+<path fill="none" stroke="black" d="M238.1,-173.5C295.43,-173.5 360.91,-173.5 404.04,-173.5"/>
+<polygon fill="black" stroke="black" points="404.24,-177 414.24,-173.5 404.24,-170 404.24,-177"/>
+<text text-anchor="start" x="266.73" y="-162.3" font-family="Arial" font-size="14.00">owl:equivalentClass</text>
+</g>
+</g>
+</svg>
+</div></details></div><h4>Expanded RDF graph</h4><pre>
+[ rdf:type            owl:Restriction ;
+  owl:onProperty      lis:participantIn ;
+  owl:someValuesFrom  proc-spo:MaintenanceProcess
+] .
+
+proc-spo:MaintenanceProcess
+        rdf:type  owl:Class .
+
+lis:participantIn  rdf:type  owl:ObjectProperty .
+
+proc-spo:ItemInMaintenanceProcess
+        rdf:type             owl:Class ;
+        owl:equivalentClass  [ rdf:type            owl:Class ;
+                               owl:intersectionOf  ( lis:PhysicalObject
+                                                     [] 
+                                                   )
+                             ] .</pre><h4>Interactive expansion</h4><p class="info">&#128712; Click the list to expand/contract one list element. Click &#x27;expand/contact all&#x27; to expand/contract all elements. Note that the interactive expansion is not correct for instances that are marked by list expanders.</p><div><div class="treeview toggle-all click-first"><details><summary><code>proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess()</code></summary><details><summary><code>o-owl-ax:EquivObjectIntersectionOf(proc-spo:ItemInMaintenanceProcess, (lis:PhysicalObject, _:blank684))</code></summary><details><summary><code>o-owl-ax:EquivalentClass(proc-spo:ItemInMaintenanceProcess, _:blank685)</code></summary><span class="leaf"><code>ottr:Triple(proc-spo:ItemInMaintenanceProcess, owl:equivalentClass, _:blank685)</code></span><details><summary><code>o-rdf:Type(_:blank685, owl:Class)</code></summary><span class="leaf"><code>ottr:Triple(_:blank685, rdf:type, owl:Class)</code></span></details><details><summary><code>o-rdf:Type(proc-spo:ItemInMaintenanceProcess, owl:Class)</code></summary><span class="leaf"><code>ottr:Triple(proc-spo:ItemInMaintenanceProcess, rdf:type, owl:Class)</code></span></details></details><details><summary><code>o-owl-re:ObjectIntersectionOf(_:blank685, (lis:PhysicalObject, _:blank684))</code></summary><details><summary><code>o-owl-ut:TypedListRelation(_:blank685, owl:Class, owl:intersectionOf, (lis:PhysicalObject, _:blank684))</code></summary><details><summary><code>o-owl-ut:ListRelation(_:blank685, owl:intersectionOf, (lis:PhysicalObject, _:blank684))</code></summary><span class="leaf"><code>ottr:Triple(_:blank685, owl:intersectionOf, (lis:PhysicalObject, _:blank684))</code></span></details><details><summary><code>o-rdf:Type(_:blank685, owl:Class)</code></summary><span class="leaf"><code>ottr:Triple(_:blank685, rdf:type, owl:Class)</code></span></details></details></details></details><details><summary><code>o-owl-re:ObjectSomeValuesFrom(_:blank683, lis:participantIn, proc-spo:MaintenanceProcess)</code></summary><details><summary><code>o-owl-re:SomeValuesFrom(_:blank683, lis:participantIn, proc-spo:MaintenanceProcess)</code></summary><details><summary><code>o-owl-ut:ValueRestriction(_:blank683, owl:someValuesFrom, lis:participantIn, proc-spo:MaintenanceProcess)</code></summary><span class="leaf"><code>ottr:Triple(_:blank683, owl:someValuesFrom, proc-spo:MaintenanceProcess)</code></span><span class="leaf"><code>ottr:Triple(_:blank683, owl:onProperty, lis:participantIn)</code></span><details><summary><code>o-rdf:Type(_:blank683, owl:Restriction)</code></summary><span class="leaf"><code>ottr:Triple(_:blank683, rdf:type, owl:Restriction)</code></span></details></details></details><details><summary><code>o-rdf:Type(lis:participantIn, owl:ObjectProperty)</code></summary><span class="leaf"><code>ottr:Triple(lis:participantIn, rdf:type, owl:ObjectProperty)</code></span></details><details><summary><code>o-rdf:Type(proc-spo:MaintenanceProcess, owl:Class)</code></summary><span class="leaf"><code>ottr:Triple(proc-spo:MaintenanceProcess, rdf:type, owl:Class)</code></span></details></details></details></div></div></div><div id="dependencies"><h2 id="Dependencies">Dependencies</h2><h4>Dependency graph</h4> <p class="info">&#128712; The graph shows all the templates that this template depends on. The colour of the node indicates its namespace. Each node is linked to its documentation page.</p> <div><details open="open"><summary>Hierarchical horizontal layout (dot)</summary><div><svg width="1280px" height="180px"
+ viewBox="0.00 0.00 1280.00 180.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 176.0)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-176 1276,-176 1276,4 -4,4"/>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess -->
+<g id="node1" class="node">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</title>
+<g id="a_node1"><a xlink:href="PROC_SPO_ClassAxioms_ItemInMaintenanceProcess.html" xlink:title="proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess">
+<polygon fill="#c2ffed" stroke="black" points="401,-98 0,-98 0,-75 401,-75 401,-98"/>
+<text text-anchor="middle" x="200.5" y="-82.8" font-family="Arial" font-size="14.00">proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf -->
+<g id="node2" class="node">
+<title>ax:EquivObjectIntersectionOf</title>
+<g id="a_node2"><a xlink:href="../../../tpl.ottr.xyz/owl/axiom/0.1/EquivObjectIntersectionOf.html" xlink:title="ax:EquivObjectIntersectionOf">
+<polygon fill="#ffdbe5" stroke="black" points="619,-123 426,-123 426,-100 619,-100 619,-123"/>
+<text text-anchor="middle" x="522.5" y="-107.8" font-family="Arial" font-size="14.00">ax:EquivObjectIntersectionOf</text>
+</a>
+</g>
+</g>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;ax:EquivObjectIntersectionOf -->
+<g id="edge2" class="edge">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;ax:EquivObjectIntersectionOf</title>
+<path fill="none" stroke="black" d="M348.86,-98.01C371.37,-99.77 394.22,-101.56 415.61,-103.23"/>
+<polygon fill="black" stroke="black" points="415.41,-106.72 425.66,-104.01 415.96,-99.74 415.41,-106.72"/>
+</g>
+<!-- rstr:ObjectSomeValuesFrom -->
+<g id="node3" class="node">
+<title>rstr:ObjectSomeValuesFrom</title>
+<g id="a_node3"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/ObjectSomeValuesFrom.html" xlink:title="rstr:ObjectSomeValuesFrom">
+<polygon fill="#c2ff99" stroke="black" points="616.5,-73 428.5,-73 428.5,-50 616.5,-50 616.5,-73"/>
+<text text-anchor="middle" x="522.5" y="-57.8" font-family="Arial" font-size="14.00">rstr:ObjectSomeValuesFrom</text>
+</a>
+</g>
+</g>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;rstr:ObjectSomeValuesFrom -->
+<g id="edge1" class="edge">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;rstr:ObjectSomeValuesFrom</title>
+<path fill="none" stroke="black" d="M348.86,-74.99C372.33,-73.15 396.16,-71.29 418.33,-69.56"/>
+<polygon fill="black" stroke="black" points="418.69,-73.04 428.38,-68.77 418.14,-66.06 418.69,-73.04"/>
+</g>
+<!-- ax:EquivalentClass -->
+<g id="node4" class="node">
+<title>ax:EquivalentClass</title>
+<g id="a_node4"><a xlink:href="../../../tpl.ottr.xyz/owl/axiom/0.1/EquivalentClass.html" xlink:title="ax:EquivalentClass">
+<polygon fill="#ffdbe5" stroke="black" points="986.5,-172 855.5,-172 855.5,-149 986.5,-149 986.5,-172"/>
+<text text-anchor="middle" x="921" y="-156.8" font-family="Arial" font-size="14.00">ax:EquivalentClass</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf&#45;&gt;ax:EquivalentClass -->
+<g id="edge4" class="edge">
+<title>ax:EquivObjectIntersectionOf&#45;&gt;ax:EquivalentClass</title>
+<path fill="none" stroke="black" d="M575.19,-123.05C596.42,-127.46 621.3,-132.22 644,-135.5 711.8,-145.29 789.57,-151.93 845.23,-155.89"/>
+<polygon fill="black" stroke="black" points="845.14,-159.39 855.36,-156.59 845.63,-152.41 845.14,-159.39"/>
+</g>
+<!-- rstr:ObjectIntersectionOf -->
+<g id="node5" class="node">
+<title>rstr:ObjectIntersectionOf</title>
+<g id="a_node5"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/ObjectIntersectionOf.html" xlink:title="rstr:ObjectIntersectionOf">
+<polygon fill="#c2ff99" stroke="black" points="808,-123 644,-123 644,-100 808,-100 808,-123"/>
+<text text-anchor="middle" x="726" y="-107.8" font-family="Arial" font-size="14.00">rstr:ObjectIntersectionOf</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf&#45;&gt;rstr:ObjectIntersectionOf -->
+<g id="edge3" class="edge">
+<title>ax:EquivObjectIntersectionOf&#45;&gt;rstr:ObjectIntersectionOf</title>
+<path fill="none" stroke="black" d="M619.23,-111.5C623.99,-111.5 628.76,-111.5 633.5,-111.5"/>
+<polygon fill="black" stroke="black" points="633.82,-115 643.82,-111.5 633.82,-108 633.82,-115"/>
+</g>
+<!-- o&#45;rdf:Type -->
+<g id="node7" class="node">
+<title>o&#45;rdf:Type</title>
+<g id="a_node7"><a xlink:href="../../../tpl.ottr.xyz/rdf/0.1/Type.html" xlink:title="o&#45;rdf:Type">
+<polygon fill="#eec3ff" stroke="black" points="1142,-74 1065,-74 1065,-51 1142,-51 1142,-74"/>
+<text text-anchor="middle" x="1103.5" y="-58.8" font-family="Arial" font-size="14.00">o&#45;rdf:Type</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectSomeValuesFrom&#45;&gt;o&#45;rdf:Type -->
+<g id="edge5" class="edge">
+<title>rstr:ObjectSomeValuesFrom&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M616.53,-61.66C741.47,-61.88 958.85,-62.25 1054.73,-62.42"/>
+<polygon fill="black" stroke="black" points="1054.99,-65.92 1064.99,-62.44 1055,-58.92 1054.99,-65.92"/>
+</g>
+<!-- rstr:SomeValuesFrom -->
+<g id="node10" class="node">
+<title>rstr:SomeValuesFrom</title>
+<g id="a_node10"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/SomeValuesFrom.html" xlink:title="rstr:SomeValuesFrom">
+<polygon fill="#c2ff99" stroke="black" points="800.5,-23 651.5,-23 651.5,0 800.5,0 800.5,-23"/>
+<text text-anchor="middle" x="726" y="-7.8" font-family="Arial" font-size="14.00">rstr:SomeValuesFrom</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectSomeValuesFrom&#45;&gt;rstr:SomeValuesFrom -->
+<g id="edge6" class="edge">
+<title>rstr:ObjectSomeValuesFrom&#45;&gt;rstr:SomeValuesFrom</title>
+<path fill="none" stroke="black" d="M569.98,-49.97C599.35,-42.68 637.48,-33.22 668.58,-25.5"/>
+<polygon fill="black" stroke="black" points="669.54,-28.87 678.4,-23.06 667.86,-22.07 669.54,-28.87"/>
+</g>
+<!-- ottr:Triple -->
+<g id="node6" class="node">
+<title>ottr:Triple</title>
+<polygon fill="#ddefff" stroke="black" points="1272,-98 1198,-98 1198,-75 1272,-75 1272,-98"/>
+<text text-anchor="middle" x="1235" y="-82.8" font-family="Arial" font-size="14.00">ottr:Triple</text>
+</g>
+<!-- ax:EquivalentClass&#45;&gt;ottr:Triple -->
+<g id="edge8" class="edge">
+<title>ax:EquivalentClass&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M986.5,-163.52C1038.66,-163.72 1113.01,-158.81 1173,-134.5 1189.08,-127.98 1204.42,-115.88 1215.69,-105.46"/>
+<polygon fill="black" stroke="black" points="1218.37,-107.74 1223.13,-98.27 1213.51,-102.7 1218.37,-107.74"/>
+</g>
+<!-- ax:EquivalentClass&#45;&gt;o&#45;rdf:Type -->
+<g id="edge7" class="edge">
+<title>ax:EquivalentClass&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M985.45,-149C993.94,-145.6 1002.09,-141.2 1009,-135.5 1027.86,-119.95 1015.59,-102.58 1034,-86.5 1040.21,-81.08 1047.71,-76.86 1055.45,-73.58"/>
+<polygon fill="black" stroke="black" points="1056.79,-76.82 1064.93,-70.04 1054.34,-70.26 1056.79,-76.82"/>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation -->
+<g id="node8" class="node">
+<title>o&#45;owl&#45;ut:TypedListRelation</title>
+<g id="a_node8"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/TypedListRelation.html" xlink:title="o&#45;owl&#45;ut:TypedListRelation">
+<polygon fill="#fad09f" stroke="black" points="1009,-123 833,-123 833,-100 1009,-100 1009,-123"/>
+<text text-anchor="middle" x="921" y="-107.8" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:TypedListRelation</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectIntersectionOf&#45;&gt;o&#45;owl&#45;ut:TypedListRelation -->
+<g id="edge9" class="edge">
+<title>rstr:ObjectIntersectionOf&#45;&gt;o&#45;owl&#45;ut:TypedListRelation</title>
+<path fill="none" stroke="black" d="M808.01,-111.5C812.91,-111.5 817.87,-111.5 822.82,-111.5"/>
+<polygon fill="black" stroke="black" points="822.98,-115 832.98,-111.5 822.98,-108 822.98,-115"/>
+</g>
+<!-- o&#45;rdf:Type&#45;&gt;ottr:Triple -->
+<g id="edge10" class="edge">
+<title>o&#45;rdf:Type&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M1142.3,-69.51C1156.5,-72.14 1172.8,-75.16 1187.68,-77.91"/>
+<polygon fill="black" stroke="black" points="1187.24,-81.39 1197.71,-79.77 1188.51,-74.51 1187.24,-81.39"/>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;rdf:Type -->
+<g id="edge11" class="edge">
+<title>o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M964.78,-99.89C991.89,-92.53 1026.99,-83 1054.97,-75.4"/>
+<polygon fill="black" stroke="black" points="1056.2,-78.7 1064.93,-72.7 1054.36,-71.94 1056.2,-78.7"/>
+</g>
+<!-- o&#45;owl&#45;ut:ListRelation -->
+<g id="node9" class="node">
+<title>o&#45;owl&#45;ut:ListRelation</title>
+<g id="a_node9"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/ListRelation.html" xlink:title="o&#45;owl&#45;ut:ListRelation">
+<polygon fill="#fad09f" stroke="black" points="1173,-122 1034,-122 1034,-99 1173,-99 1173,-122"/>
+<text text-anchor="middle" x="1103.5" y="-106.8" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:ListRelation</text>
+</a>
+</g>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;owl&#45;ut:ListRelation -->
+<g id="edge12" class="edge">
+<title>o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;owl&#45;ut:ListRelation</title>
+<path fill="none" stroke="black" d="M1009.08,-111.02C1013.87,-110.99 1018.68,-110.96 1023.44,-110.94"/>
+<polygon fill="black" stroke="black" points="1023.81,-114.44 1033.79,-110.88 1023.77,-107.44 1023.81,-114.44"/>
+</g>
+<!-- o&#45;owl&#45;ut:ListRelation&#45;&gt;ottr:Triple -->
+<g id="edge13" class="edge">
+<title>o&#45;owl&#45;ut:ListRelation&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M1166.59,-98.99C1173.75,-97.67 1180.94,-96.33 1187.83,-95.06"/>
+<polygon fill="black" stroke="black" points="1188.47,-98.5 1197.67,-93.23 1187.2,-91.61 1188.47,-98.5"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction -->
+<g id="node11" class="node">
+<title>o&#45;owl&#45;ut:ValueRestriction</title>
+<g id="a_node11"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/ValueRestriction.html" xlink:title="o&#45;owl&#45;ut:ValueRestriction">
+<polygon fill="#fad09f" stroke="black" points="1004,-23 838,-23 838,0 1004,0 1004,-23"/>
+<text text-anchor="middle" x="921" y="-7.8" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:ValueRestriction</text>
+</a>
+</g>
+</g>
+<!-- rstr:SomeValuesFrom&#45;&gt;o&#45;owl&#45;ut:ValueRestriction -->
+<g id="edge14" class="edge">
+<title>rstr:SomeValuesFrom&#45;&gt;o&#45;owl&#45;ut:ValueRestriction</title>
+<path fill="none" stroke="black" d="M800.52,-11.5C809.42,-11.5 818.59,-11.5 827.72,-11.5"/>
+<polygon fill="black" stroke="black" points="827.99,-15 837.99,-11.5 827.99,-8 827.99,-15"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction&#45;&gt;ottr:Triple -->
+<g id="edge16" class="edge">
+<title>o&#45;owl&#45;ut:ValueRestriction&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M1004.2,-9.01C1054.61,-10.2 1119.53,-16.71 1173,-38.5 1189.07,-45.05 1204.4,-57.15 1215.68,-67.56"/>
+<polygon fill="black" stroke="black" points="1213.5,-70.32 1223.12,-74.74 1218.36,-65.28 1213.5,-70.32"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction&#45;&gt;o&#45;rdf:Type -->
+<g id="edge15" class="edge">
+<title>o&#45;owl&#45;ut:ValueRestriction&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M962.96,-23.07C990.31,-30.8 1026.38,-40.99 1055,-49.08"/>
+<polygon fill="black" stroke="black" points="1054.21,-52.49 1064.78,-51.84 1056.11,-45.76 1054.21,-52.49"/>
+</g>
+</g>
+</svg>
+</div></details><details><summary>Hierarchical vertical layout (dot)</summary><div><svg width="583px" height="271px"
+ viewBox="0.00 0.00 583.00 271.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 267.0)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-267 579,-267 579,4 -4,4"/>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess -->
+<g id="node1" class="node">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</title>
+<g id="a_node1"><a xlink:href="PROC_SPO_ClassAxioms_ItemInMaintenanceProcess.html" xlink:title="proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess">
+<polygon fill="#c2ffed" stroke="black" points="504.5,-263 103.5,-263 103.5,-240 504.5,-240 504.5,-263"/>
+<text text-anchor="middle" x="304" y="-247.8" font-family="Arial" font-size="14.00">proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf -->
+<g id="node2" class="node">
+<title>ax:EquivObjectIntersectionOf</title>
+<g id="a_node2"><a xlink:href="../../../tpl.ottr.xyz/owl/axiom/0.1/EquivObjectIntersectionOf.html" xlink:title="ax:EquivObjectIntersectionOf">
+<polygon fill="#ffdbe5" stroke="black" points="292.5,-215 99.5,-215 99.5,-192 292.5,-192 292.5,-215"/>
+<text text-anchor="middle" x="196" y="-199.8" font-family="Arial" font-size="14.00">ax:EquivObjectIntersectionOf</text>
+</a>
+</g>
+</g>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;ax:EquivObjectIntersectionOf -->
+<g id="edge2" class="edge">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;ax:EquivObjectIntersectionOf</title>
+<path fill="none" stroke="black" d="M279.22,-239.95C264.68,-233.75 246.09,-225.83 230.17,-219.05"/>
+<polygon fill="black" stroke="black" points="231.23,-215.7 220.66,-215 228.49,-222.14 231.23,-215.7"/>
+</g>
+<!-- rstr:ObjectSomeValuesFrom -->
+<g id="node3" class="node">
+<title>rstr:ObjectSomeValuesFrom</title>
+<g id="a_node3"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/ObjectSomeValuesFrom.html" xlink:title="rstr:ObjectSomeValuesFrom">
+<polygon fill="#c2ff99" stroke="black" points="506,-215 318,-215 318,-192 506,-192 506,-215"/>
+<text text-anchor="middle" x="412" y="-199.8" font-family="Arial" font-size="14.00">rstr:ObjectSomeValuesFrom</text>
+</a>
+</g>
+</g>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;rstr:ObjectSomeValuesFrom -->
+<g id="edge1" class="edge">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;rstr:ObjectSomeValuesFrom</title>
+<path fill="none" stroke="black" d="M328.78,-239.95C343.32,-233.75 361.91,-225.83 377.83,-219.05"/>
+<polygon fill="black" stroke="black" points="379.51,-222.14 387.34,-215 376.77,-215.7 379.51,-222.14"/>
+</g>
+<!-- ax:EquivalentClass -->
+<g id="node4" class="node">
+<title>ax:EquivalentClass</title>
+<g id="a_node4"><a xlink:href="../../../tpl.ottr.xyz/owl/axiom/0.1/EquivalentClass.html" xlink:title="ax:EquivalentClass">
+<polygon fill="#ffdbe5" stroke="black" points="332.5,-119 201.5,-119 201.5,-96 332.5,-96 332.5,-119"/>
+<text text-anchor="middle" x="267" y="-103.8" font-family="Arial" font-size="14.00">ax:EquivalentClass</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf&#45;&gt;ax:EquivalentClass -->
+<g id="edge4" class="edge">
+<title>ax:EquivObjectIntersectionOf&#45;&gt;ax:EquivalentClass</title>
+<path fill="none" stroke="black" d="M204.14,-191.72C216.02,-175.99 238.26,-146.55 252.85,-127.23"/>
+<polygon fill="black" stroke="black" points="255.72,-129.25 258.95,-119.16 250.13,-125.03 255.72,-129.25"/>
+</g>
+<!-- rstr:ObjectIntersectionOf -->
+<g id="node5" class="node">
+<title>rstr:ObjectIntersectionOf</title>
+<g id="a_node5"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/ObjectIntersectionOf.html" xlink:title="rstr:ObjectIntersectionOf">
+<polygon fill="#c2ff99" stroke="black" points="185,-167 21,-167 21,-144 185,-144 185,-167"/>
+<text text-anchor="middle" x="103" y="-151.8" font-family="Arial" font-size="14.00">rstr:ObjectIntersectionOf</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf&#45;&gt;rstr:ObjectIntersectionOf -->
+<g id="edge3" class="edge">
+<title>ax:EquivObjectIntersectionOf&#45;&gt;rstr:ObjectIntersectionOf</title>
+<path fill="none" stroke="black" d="M174.43,-191.83C162.34,-185.85 147.06,-178.29 133.73,-171.7"/>
+<polygon fill="black" stroke="black" points="134.97,-168.41 124.45,-167.11 131.86,-174.68 134.97,-168.41"/>
+</g>
+<!-- o&#45;rdf:Type -->
+<g id="node7" class="node">
+<title>o&#45;rdf:Type</title>
+<g id="a_node7"><a xlink:href="../../../tpl.ottr.xyz/rdf/0.1/Type.html" xlink:title="o&#45;rdf:Type">
+<polygon fill="#eec3ff" stroke="black" points="382.5,-71 305.5,-71 305.5,-48 382.5,-48 382.5,-71"/>
+<text text-anchor="middle" x="344" y="-55.8" font-family="Arial" font-size="14.00">o&#45;rdf:Type</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectSomeValuesFrom&#45;&gt;o&#45;rdf:Type -->
+<g id="edge5" class="edge">
+<title>rstr:ObjectSomeValuesFrom&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M406.89,-191.83C395.57,-168.18 368.22,-111.08 353.6,-80.55"/>
+<polygon fill="black" stroke="black" points="356.65,-78.8 349.17,-71.3 350.33,-81.83 356.65,-78.8"/>
+</g>
+<!-- rstr:SomeValuesFrom -->
+<g id="node10" class="node">
+<title>rstr:SomeValuesFrom</title>
+<g id="a_node10"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/SomeValuesFrom.html" xlink:title="rstr:SomeValuesFrom">
+<polygon fill="#c2ff99" stroke="black" points="562.5,-167 413.5,-167 413.5,-144 562.5,-144 562.5,-167"/>
+<text text-anchor="middle" x="488" y="-151.8" font-family="Arial" font-size="14.00">rstr:SomeValuesFrom</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectSomeValuesFrom&#45;&gt;rstr:SomeValuesFrom -->
+<g id="edge6" class="edge">
+<title>rstr:ObjectSomeValuesFrom&#45;&gt;rstr:SomeValuesFrom</title>
+<path fill="none" stroke="black" d="M429.63,-191.83C439.12,-186.08 451.03,-178.88 461.61,-172.47"/>
+<polygon fill="black" stroke="black" points="463.73,-175.28 470.47,-167.11 460.1,-169.29 463.73,-175.28"/>
+</g>
+<!-- ottr:Triple -->
+<g id="node6" class="node">
+<title>ottr:Triple</title>
+<polygon fill="#ddefff" stroke="black" points="342,-23 268,-23 268,0 342,0 342,-23"/>
+<text text-anchor="middle" x="305" y="-7.8" font-family="Arial" font-size="14.00">ottr:Triple</text>
+</g>
+<!-- ax:EquivalentClass&#45;&gt;ottr:Triple -->
+<g id="edge8" class="edge">
+<title>ax:EquivalentClass&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M271.36,-95.72C277.57,-80.35 289.09,-51.87 296.89,-32.55"/>
+<polygon fill="black" stroke="black" points="300.19,-33.74 300.69,-23.16 293.7,-31.12 300.19,-33.74"/>
+</g>
+<!-- ax:EquivalentClass&#45;&gt;o&#45;rdf:Type -->
+<g id="edge7" class="edge">
+<title>ax:EquivalentClass&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M284.86,-95.83C294.58,-90.03 306.79,-82.73 317.59,-76.28"/>
+<polygon fill="black" stroke="black" points="319.45,-79.24 326.24,-71.11 315.86,-73.24 319.45,-79.24"/>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation -->
+<g id="node8" class="node">
+<title>o&#45;owl&#45;ut:TypedListRelation</title>
+<g id="a_node8"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/TypedListRelation.html" xlink:title="o&#45;owl&#45;ut:TypedListRelation">
+<polygon fill="#fad09f" stroke="black" points="176,-119 0,-119 0,-96 176,-96 176,-119"/>
+<text text-anchor="middle" x="88" y="-103.8" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:TypedListRelation</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectIntersectionOf&#45;&gt;o&#45;owl&#45;ut:TypedListRelation -->
+<g id="edge9" class="edge">
+<title>rstr:ObjectIntersectionOf&#45;&gt;o&#45;owl&#45;ut:TypedListRelation</title>
+<path fill="none" stroke="black" d="M99.52,-143.83C98.04,-139.3 96.27,-133.87 94.57,-128.64"/>
+<polygon fill="black" stroke="black" points="97.89,-127.53 91.46,-119.11 91.23,-129.7 97.89,-127.53"/>
+</g>
+<!-- o&#45;rdf:Type&#45;&gt;ottr:Triple -->
+<g id="edge10" class="edge">
+<title>o&#45;rdf:Type&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M334.95,-47.83C330.72,-42.84 325.55,-36.74 320.71,-31.03"/>
+<polygon fill="black" stroke="black" points="323.13,-28.48 314,-23.11 317.79,-33 323.13,-28.48"/>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;rdf:Type -->
+<g id="edge11" class="edge">
+<title>o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M146.73,-95.95C191.73,-87.86 253.09,-76.84 295.36,-69.24"/>
+<polygon fill="black" stroke="black" points="296.18,-72.65 305.41,-67.43 294.95,-65.76 296.18,-72.65"/>
+</g>
+<!-- o&#45;owl&#45;ut:ListRelation -->
+<g id="node9" class="node">
+<title>o&#45;owl&#45;ut:ListRelation</title>
+<g id="a_node9"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/ListRelation.html" xlink:title="o&#45;owl&#45;ut:ListRelation">
+<polygon fill="#fad09f" stroke="black" points="193.5,-71 54.5,-71 54.5,-48 193.5,-48 193.5,-71"/>
+<text text-anchor="middle" x="124" y="-55.8" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:ListRelation</text>
+</a>
+</g>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;owl&#45;ut:ListRelation -->
+<g id="edge12" class="edge">
+<title>o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;owl&#45;ut:ListRelation</title>
+<path fill="none" stroke="black" d="M96.35,-95.83C100.26,-90.84 105.03,-84.74 109.5,-79.03"/>
+<polygon fill="black" stroke="black" points="112.29,-81.14 115.7,-71.11 106.78,-76.83 112.29,-81.14"/>
+</g>
+<!-- o&#45;owl&#45;ut:ListRelation&#45;&gt;ottr:Triple -->
+<g id="edge13" class="edge">
+<title>o&#45;owl&#45;ut:ListRelation&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M165.53,-47.95C193.16,-40.92 229.51,-31.68 258.18,-24.4"/>
+<polygon fill="black" stroke="black" points="259.14,-27.77 267.97,-21.91 257.42,-20.98 259.14,-27.77"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction -->
+<g id="node11" class="node">
+<title>o&#45;owl&#45;ut:ValueRestriction</title>
+<g id="a_node11"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/ValueRestriction.html" xlink:title="o&#45;owl&#45;ut:ValueRestriction">
+<polygon fill="#fad09f" stroke="black" points="575,-119 409,-119 409,-96 575,-96 575,-119"/>
+<text text-anchor="middle" x="492" y="-103.8" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:ValueRestriction</text>
+</a>
+</g>
+</g>
+<!-- rstr:SomeValuesFrom&#45;&gt;o&#45;owl&#45;ut:ValueRestriction -->
+<g id="edge14" class="edge">
+<title>rstr:SomeValuesFrom&#45;&gt;o&#45;owl&#45;ut:ValueRestriction</title>
+<path fill="none" stroke="black" d="M488.93,-143.83C489.3,-139.53 489.75,-134.42 490.18,-129.44"/>
+<polygon fill="black" stroke="black" points="493.7,-129.38 491.08,-119.11 486.72,-128.77 493.7,-129.38"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction&#45;&gt;ottr:Triple -->
+<g id="edge16" class="edge">
+<title>o&#45;owl&#45;ut:ValueRestriction&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M476.33,-95.93C457.52,-83.51 424.79,-62.73 395,-48 379.04,-40.11 360.87,-32.67 345.05,-26.65"/>
+<polygon fill="black" stroke="black" points="346.14,-23.32 335.55,-23.1 343.69,-29.88 346.14,-23.32"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction&#45;&gt;o&#45;rdf:Type -->
+<g id="edge15" class="edge">
+<title>o&#45;owl&#45;ut:ValueRestriction&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M458.05,-95.95C437.08,-89.43 409.98,-81.01 387.46,-74.01"/>
+<polygon fill="black" stroke="black" points="388.38,-70.63 377.8,-71 386.31,-77.31 388.38,-70.63"/>
+</g>
+</g>
+</svg>
+</div></details><details><summary>Spring model layout (neato)</summary><div><svg width="853px" height="605px"
+ viewBox="0.00 0.00 853.03 604.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 600.77)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-600.77 849.03,-600.77 849.03,4 -4,4"/>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess -->
+<g id="node1" class="node">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</title>
+<g id="a_node1"><a xlink:href="PROC_SPO_ClassAxioms_ItemInMaintenanceProcess.html" xlink:title="proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess">
+<polygon fill="#c2ffed" stroke="black" points="401,-373.56 0,-373.56 0,-350.56 401,-350.56 401,-373.56"/>
+<text text-anchor="middle" x="200.5" y="-358.36" font-family="Arial" font-size="14.00">proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf -->
+<g id="node2" class="node">
+<title>ax:EquivObjectIntersectionOf</title>
+<g id="a_node2"><a xlink:href="../../../tpl.ottr.xyz/owl/axiom/0.1/EquivObjectIntersectionOf.html" xlink:title="ax:EquivObjectIntersectionOf">
+<polygon fill="#ffdbe5" stroke="black" points="439.89,-508.4 246.89,-508.4 246.89,-485.4 439.89,-485.4 439.89,-508.4"/>
+<text text-anchor="middle" x="343.39" y="-493.2" font-family="Arial" font-size="14.00">ax:EquivObjectIntersectionOf</text>
+</a>
+</g>
+</g>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;ax:EquivObjectIntersectionOf -->
+<g id="edge2" class="edge">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;ax:EquivObjectIntersectionOf</title>
+<path fill="none" stroke="black" d="M213.18,-374.03C238.13,-397.57 293.78,-450.08 323.6,-478.23"/>
+<polygon fill="black" stroke="black" points="321.27,-480.84 330.94,-485.16 326.07,-475.75 321.27,-480.84"/>
+</g>
+<!-- rstr:ObjectSomeValuesFrom -->
+<g id="node3" class="node">
+<title>rstr:ObjectSomeValuesFrom</title>
+<g id="a_node3"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/ObjectSomeValuesFrom.html" xlink:title="rstr:ObjectSomeValuesFrom">
+<polygon fill="#c2ff99" stroke="black" points="389.23,-202.86 201.23,-202.86 201.23,-179.86 389.23,-179.86 389.23,-202.86"/>
+<text text-anchor="middle" x="295.23" y="-187.66" font-family="Arial" font-size="14.00">rstr:ObjectSomeValuesFrom</text>
+</a>
+</g>
+</g>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;rstr:ObjectSomeValuesFrom -->
+<g id="edge1" class="edge">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;rstr:ObjectSomeValuesFrom</title>
+<path fill="none" stroke="black" d="M207.01,-350.33C222.83,-321.82 263.46,-248.61 283.58,-212.36"/>
+<polygon fill="black" stroke="black" points="286.88,-213.62 288.68,-203.18 280.76,-210.22 286.88,-213.62"/>
+</g>
+<!-- ax:EquivalentClass -->
+<g id="node4" class="node">
+<title>ax:EquivalentClass</title>
+<g id="a_node4"><a xlink:href="../../../tpl.ottr.xyz/owl/axiom/0.1/EquivalentClass.html" xlink:title="ax:EquivalentClass">
+<polygon fill="#ffdbe5" stroke="black" points="540.03,-383.99 409.03,-383.99 409.03,-360.99 540.03,-360.99 540.03,-383.99"/>
+<text text-anchor="middle" x="474.53" y="-368.79" font-family="Arial" font-size="14.00">ax:EquivalentClass</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf&#45;&gt;ax:EquivalentClass -->
+<g id="edge4" class="edge">
+<title>ax:EquivObjectIntersectionOf&#45;&gt;ax:EquivalentClass</title>
+<path fill="none" stroke="black" d="M355.96,-484.97C378.84,-463.27 427.4,-417.19 454.75,-391.25"/>
+<polygon fill="black" stroke="black" points="457.34,-393.62 462.18,-384.2 452.52,-388.54 457.34,-393.62"/>
+</g>
+<!-- rstr:ObjectIntersectionOf -->
+<g id="node5" class="node">
+<title>rstr:ObjectIntersectionOf</title>
+<g id="a_node5"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/ObjectIntersectionOf.html" xlink:title="rstr:ObjectIntersectionOf">
+<polygon fill="#c2ff99" stroke="black" points="596.1,-596.77 432.1,-596.77 432.1,-573.77 596.1,-573.77 596.1,-596.77"/>
+<text text-anchor="middle" x="514.1" y="-581.57" font-family="Arial" font-size="14.00">rstr:ObjectIntersectionOf</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf&#45;&gt;rstr:ObjectIntersectionOf -->
+<g id="edge3" class="edge">
+<title>ax:EquivObjectIntersectionOf&#45;&gt;rstr:ObjectIntersectionOf</title>
+<path fill="none" stroke="black" d="M365.71,-508.45C395.61,-523.93 448.84,-551.49 482.76,-569.04"/>
+<polygon fill="black" stroke="black" points="481.29,-572.22 491.78,-573.71 484.51,-566.01 481.29,-572.22"/>
+</g>
+<!-- o&#45;rdf:Type -->
+<g id="node7" class="node">
+<title>o&#45;rdf:Type</title>
+<g id="a_node7"><a xlink:href="../../../tpl.ottr.xyz/rdf/0.1/Type.html" xlink:title="o&#45;rdf:Type">
+<polygon fill="#eec3ff" stroke="black" points="525.89,-251.59 448.89,-251.59 448.89,-228.59 525.89,-228.59 525.89,-251.59"/>
+<text text-anchor="middle" x="487.39" y="-236.39" font-family="Arial" font-size="14.00">o&#45;rdf:Type</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectSomeValuesFrom&#45;&gt;o&#45;rdf:Type -->
+<g id="edge5" class="edge">
+<title>rstr:ObjectSomeValuesFrom&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M340.77,-202.91C370.29,-210.39 408.7,-220.13 438.8,-227.77"/>
+<polygon fill="black" stroke="black" points="438.11,-231.2 448.66,-230.27 439.83,-224.42 438.11,-231.2"/>
+</g>
+<!-- rstr:SomeValuesFrom -->
+<g id="node10" class="node">
+<title>rstr:SomeValuesFrom</title>
+<g id="a_node10"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/SomeValuesFrom.html" xlink:title="rstr:SomeValuesFrom">
+<polygon fill="#c2ff99" stroke="black" points="427.42,-23 278.42,-23 278.42,0 427.42,0 427.42,-23"/>
+<text text-anchor="middle" x="352.92" y="-7.8" font-family="Arial" font-size="14.00">rstr:SomeValuesFrom</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectSomeValuesFrom&#45;&gt;rstr:SomeValuesFrom -->
+<g id="edge6" class="edge">
+<title>rstr:ObjectSomeValuesFrom&#45;&gt;rstr:SomeValuesFrom</title>
+<path fill="none" stroke="black" d="M298.93,-179.84C308.43,-150.21 333.82,-71.06 346.09,-32.79"/>
+<polygon fill="black" stroke="black" points="349.46,-33.75 349.18,-23.16 342.79,-31.61 349.46,-33.75"/>
+</g>
+<!-- ottr:Triple -->
+<g id="node6" class="node">
+<title>ottr:Triple</title>
+<polygon fill="#ddefff" stroke="black" points="663.43,-225.77 589.43,-225.77 589.43,-202.77 663.43,-202.77 663.43,-225.77"/>
+<text text-anchor="middle" x="626.43" y="-210.57" font-family="Arial" font-size="14.00">ottr:Triple</text>
+</g>
+<!-- ax:EquivalentClass&#45;&gt;ottr:Triple -->
+<g id="edge8" class="edge">
+<title>ax:EquivalentClass&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M485.7,-360.85C511.7,-333.77 576.5,-266.28 608.27,-233.18"/>
+<polygon fill="black" stroke="black" points="610.84,-235.56 615.24,-225.92 605.79,-230.71 610.84,-235.56"/>
+</g>
+<!-- ax:EquivalentClass&#45;&gt;o&#45;rdf:Type -->
+<g id="edge7" class="edge">
+<title>ax:EquivalentClass&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M475.67,-360.74C477.83,-338.5 482.55,-289.97 485.29,-261.7"/>
+<polygon fill="black" stroke="black" points="488.79,-261.91 486.27,-251.62 481.82,-261.24 488.79,-261.91"/>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation -->
+<g id="node8" class="node">
+<title>o&#45;owl&#45;ut:TypedListRelation</title>
+<g id="a_node8"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/TypedListRelation.html" xlink:title="o&#45;owl&#45;ut:TypedListRelation">
+<polygon fill="#fad09f" stroke="black" points="716.19,-432.99 540.19,-432.99 540.19,-409.99 716.19,-409.99 716.19,-432.99"/>
+<text text-anchor="middle" x="628.19" y="-417.79" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:TypedListRelation</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectIntersectionOf&#45;&gt;o&#45;owl&#45;ut:TypedListRelation -->
+<g id="edge9" class="edge">
+<title>rstr:ObjectIntersectionOf&#45;&gt;o&#45;owl&#45;ut:TypedListRelation</title>
+<path fill="none" stroke="black" d="M522.13,-573.75C541.31,-546.21 590.02,-476.28 614.17,-441.61"/>
+<polygon fill="black" stroke="black" points="617.18,-443.42 620.02,-433.21 611.43,-439.42 617.18,-443.42"/>
+</g>
+<!-- o&#45;rdf:Type&#45;&gt;ottr:Triple -->
+<g id="edge10" class="edge">
+<title>o&#45;rdf:Type&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M526.12,-232.9C542.65,-229.83 562.08,-226.22 579.41,-223"/>
+<polygon fill="black" stroke="black" points="580.15,-226.42 589.34,-221.15 578.87,-219.54 580.15,-226.42"/>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;rdf:Type -->
+<g id="edge11" class="edge">
+<title>o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M619.17,-409.87C595.68,-379.6 532.42,-298.1 502.93,-260.1"/>
+<polygon fill="black" stroke="black" points="505.42,-257.6 496.52,-251.85 499.89,-261.9 505.42,-257.6"/>
+</g>
+<!-- o&#45;owl&#45;ut:ListRelation -->
+<g id="node9" class="node">
+<title>o&#45;owl&#45;ut:ListRelation</title>
+<g id="a_node9"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/ListRelation.html" xlink:title="o&#45;owl&#45;ut:ListRelation">
+<polygon fill="#fad09f" stroke="black" points="845.03,-331.19 706.03,-331.19 706.03,-308.19 845.03,-308.19 845.03,-331.19"/>
+<text text-anchor="middle" x="775.53" y="-315.99" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:ListRelation</text>
+</a>
+</g>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;owl&#45;ut:ListRelation -->
+<g id="edge12" class="edge">
+<title>o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;owl&#45;ut:ListRelation</title>
+<path fill="none" stroke="black" d="M645.09,-409.81C670.96,-391.94 720.52,-357.7 750.55,-336.95"/>
+<polygon fill="black" stroke="black" points="752.59,-339.8 758.83,-331.23 748.61,-334.04 752.59,-339.8"/>
+</g>
+<!-- o&#45;owl&#45;ut:ListRelation&#45;&gt;ottr:Triple -->
+<g id="edge13" class="edge">
+<title>o&#45;owl&#45;ut:ListRelation&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M759.01,-308.01C732.92,-289.56 682.03,-253.58 651.45,-231.96"/>
+<polygon fill="black" stroke="black" points="653.22,-228.92 643.03,-226.01 649.17,-234.64 653.22,-228.92"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction -->
+<g id="node11" class="node">
+<title>o&#45;owl&#45;ut:ValueRestriction</title>
+<g id="a_node11"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/ValueRestriction.html" xlink:title="o&#45;owl&#45;ut:ValueRestriction">
+<polygon fill="#fad09f" stroke="black" points="622.04,-76.43 456.04,-76.43 456.04,-53.43 622.04,-53.43 622.04,-76.43"/>
+<text text-anchor="middle" x="539.04" y="-61.23" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:ValueRestriction</text>
+</a>
+</g>
+</g>
+<!-- rstr:SomeValuesFrom&#45;&gt;o&#45;owl&#45;ut:ValueRestriction -->
+<g id="edge14" class="edge">
+<title>rstr:SomeValuesFrom&#45;&gt;o&#45;owl&#45;ut:ValueRestriction</title>
+<path fill="none" stroke="black" d="M393.3,-23.09C421.35,-31.14 458.92,-41.93 488.89,-50.53"/>
+<polygon fill="black" stroke="black" points="488.15,-53.96 498.73,-53.36 490.09,-47.23 488.15,-53.96"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction&#45;&gt;ottr:Triple -->
+<g id="edge16" class="edge">
+<title>o&#45;owl&#45;ut:ValueRestriction&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M545.9,-76.64C560.7,-101.94 595.82,-161.95 614.41,-193.72"/>
+<polygon fill="black" stroke="black" points="611.53,-195.74 619.6,-202.6 617.57,-192.2 611.53,-195.74"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction&#45;&gt;o&#45;rdf:Type -->
+<g id="edge15" class="edge">
+<title>o&#45;owl&#45;ut:ValueRestriction&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M535.57,-76.69C527.01,-105.73 504.76,-181.18 493.75,-218.51"/>
+<polygon fill="black" stroke="black" points="490.32,-217.79 490.85,-228.37 497.03,-219.77 490.32,-217.79"/>
+</g>
+</g>
+</svg>
+</div></details><details><summary>Spring model layout (fdp)</summary><div><svg width="871px" height="629px"
+ viewBox="0.00 0.00 871.00 629.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 625.0)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-625 867,-625 867,4 -4,4"/>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess -->
+<g id="node1" class="node">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</title>
+<g id="a_node1"><a xlink:href="PROC_SPO_ClassAxioms_ItemInMaintenanceProcess.html" xlink:title="proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess">
+<polygon fill="#c2ffed" stroke="black" points="401.44,-381.06 0.44,-381.06 0.44,-358.06 401.44,-358.06 401.44,-381.06"/>
+<text text-anchor="middle" x="200.94" y="-365.86" font-family="Arial" font-size="14.00">proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf -->
+<g id="node2" class="node">
+<title>ax:EquivObjectIntersectionOf</title>
+<g id="a_node2"><a xlink:href="../../../tpl.ottr.xyz/owl/axiom/0.1/EquivObjectIntersectionOf.html" xlink:title="ax:EquivObjectIntersectionOf">
+<polygon fill="#ffdbe5" stroke="black" points="424.73,-570.98 231.73,-570.98 231.73,-547.98 424.73,-547.98 424.73,-570.98"/>
+<text text-anchor="middle" x="328.23" y="-555.78" font-family="Arial" font-size="14.00">ax:EquivObjectIntersectionOf</text>
+</a>
+</g>
+</g>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;ax:EquivObjectIntersectionOf -->
+<g id="edge2" class="edge">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;ax:EquivObjectIntersectionOf</title>
+<path fill="none" stroke="black" d="M208.71,-381.15C229.74,-412.53 287.99,-499.43 314.62,-539.17"/>
+<polygon fill="black" stroke="black" points="311.76,-541.2 320.24,-547.55 317.58,-537.3 311.76,-541.2"/>
+</g>
+<!-- rstr:ObjectSomeValuesFrom -->
+<g id="node3" class="node">
+<title>rstr:ObjectSomeValuesFrom</title>
+<g id="a_node3"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/ObjectSomeValuesFrom.html" xlink:title="rstr:ObjectSomeValuesFrom">
+<polygon fill="#c2ff99" stroke="black" points="422.6,-158.96 234.6,-158.96 234.6,-135.96 422.6,-135.96 422.6,-158.96"/>
+<text text-anchor="middle" x="328.6" y="-143.76" font-family="Arial" font-size="14.00">rstr:ObjectSomeValuesFrom</text>
+</a>
+</g>
+</g>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;rstr:ObjectSomeValuesFrom -->
+<g id="edge1" class="edge">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;rstr:ObjectSomeValuesFrom</title>
+<path fill="none" stroke="black" d="M207.62,-357.93C228.22,-322.1 290.89,-213.06 316.99,-167.65"/>
+<polygon fill="black" stroke="black" points="320.03,-169.38 321.98,-158.97 313.96,-165.9 320.03,-169.38"/>
+</g>
+<!-- ax:EquivalentClass -->
+<g id="node4" class="node">
+<title>ax:EquivalentClass</title>
+<g id="a_node4"><a xlink:href="../../../tpl.ottr.xyz/owl/axiom/0.1/EquivalentClass.html" xlink:title="ax:EquivalentClass">
+<polygon fill="#ffdbe5" stroke="black" points="494.88,-434.46 363.88,-434.46 363.88,-411.46 494.88,-411.46 494.88,-434.46"/>
+<text text-anchor="middle" x="429.38" y="-419.26" font-family="Arial" font-size="14.00">ax:EquivalentClass</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf&#45;&gt;ax:EquivalentClass -->
+<g id="edge4" class="edge">
+<title>ax:EquivObjectIntersectionOf&#45;&gt;ax:EquivalentClass</title>
+<path fill="none" stroke="black" d="M336.86,-547.84C354.18,-524.47 393.35,-471.59 414.75,-442.71"/>
+<polygon fill="black" stroke="black" points="417.64,-444.69 420.78,-434.57 412.02,-440.53 417.64,-444.69"/>
+</g>
+<!-- rstr:ObjectIntersectionOf -->
+<g id="node5" class="node">
+<title>rstr:ObjectIntersectionOf</title>
+<g id="a_node5"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/ObjectIntersectionOf.html" xlink:title="rstr:ObjectIntersectionOf">
+<polygon fill="#c2ff99" stroke="black" points="656.96,-621.42 492.96,-621.42 492.96,-598.42 656.96,-598.42 656.96,-621.42"/>
+<text text-anchor="middle" x="574.96" y="-606.22" font-family="Arial" font-size="14.00">rstr:ObjectIntersectionOf</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf&#45;&gt;rstr:ObjectIntersectionOf -->
+<g id="edge3" class="edge">
+<title>ax:EquivObjectIntersectionOf&#45;&gt;rstr:ObjectIntersectionOf</title>
+<path fill="none" stroke="black" d="M384.53,-570.99C421.34,-578.52 469.61,-588.38 508.34,-596.3"/>
+<polygon fill="black" stroke="black" points="507.98,-599.8 518.48,-598.37 509.38,-592.94 507.98,-599.8"/>
+</g>
+<!-- o&#45;rdf:Type -->
+<g id="node7" class="node">
+<title>o&#45;rdf:Type</title>
+<g id="a_node7"><a xlink:href="../../../tpl.ottr.xyz/rdf/0.1/Type.html" xlink:title="o&#45;rdf:Type">
+<polygon fill="#eec3ff" stroke="black" points="549.47,-248.09 472.47,-248.09 472.47,-225.09 549.47,-225.09 549.47,-248.09"/>
+<text text-anchor="middle" x="510.97" y="-232.89" font-family="Arial" font-size="14.00">o&#45;rdf:Type</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectSomeValuesFrom&#45;&gt;o&#45;rdf:Type -->
+<g id="edge5" class="edge">
+<title>rstr:ObjectSomeValuesFrom&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M352.44,-159.11C384.61,-174.83 442.06,-202.91 478.25,-220.6"/>
+<polygon fill="black" stroke="black" points="476.89,-223.83 487.41,-225.08 479.97,-217.54 476.89,-223.83"/>
+</g>
+<!-- rstr:SomeValuesFrom -->
+<g id="node10" class="node">
+<title>rstr:SomeValuesFrom</title>
+<g id="a_node10"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/SomeValuesFrom.html" xlink:title="rstr:SomeValuesFrom">
+<polygon fill="#c2ff99" stroke="black" points="539.1,-23.03 390.1,-23.03 390.1,-0.03 539.1,-0.03 539.1,-23.03"/>
+<text text-anchor="middle" x="464.6" y="-7.83" font-family="Arial" font-size="14.00">rstr:SomeValuesFrom</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectSomeValuesFrom&#45;&gt;rstr:SomeValuesFrom -->
+<g id="edge6" class="edge">
+<title>rstr:ObjectSomeValuesFrom&#45;&gt;rstr:SomeValuesFrom</title>
+<path fill="none" stroke="black" d="M340.2,-135.87C363.68,-112.4 417.07,-59.04 445.67,-30.45"/>
+<polygon fill="black" stroke="black" points="448.44,-32.64 453.04,-23.09 443.49,-27.69 448.44,-32.64"/>
+</g>
+<!-- ottr:Triple -->
+<g id="node6" class="node">
+<title>ottr:Triple</title>
+<polygon fill="#ddefff" stroke="black" points="657.12,-388.7 583.12,-388.7 583.12,-365.7 657.12,-365.7 657.12,-388.7"/>
+<text text-anchor="middle" x="620.12" y="-373.5" font-family="Arial" font-size="14.00">ottr:Triple</text>
+</g>
+<!-- ax:EquivalentClass&#45;&gt;ottr:Triple -->
+<g id="edge8" class="edge">
+<title>ax:EquivalentClass&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M477.51,-411.42C506.74,-404.41 543.87,-395.5 572.92,-388.53"/>
+<polygon fill="black" stroke="black" points="573.93,-391.89 582.83,-386.15 572.29,-385.08 573.93,-391.89"/>
+</g>
+<!-- ax:EquivalentClass&#45;&gt;o&#45;rdf:Type -->
+<g id="edge7" class="edge">
+<title>ax:EquivalentClass&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M434.49,-411.31C447.97,-380.52 484.66,-296.7 501.85,-257.43"/>
+<polygon fill="black" stroke="black" points="505.07,-258.81 505.87,-248.25 498.65,-256 505.07,-258.81"/>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation -->
+<g id="node8" class="node">
+<title>o&#45;owl&#45;ut:TypedListRelation</title>
+<g id="a_node8"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/TypedListRelation.html" xlink:title="o&#45;owl&#45;ut:TypedListRelation">
+<polygon fill="#fad09f" stroke="black" points="841.13,-400.74 665.13,-400.74 665.13,-377.74 841.13,-377.74 841.13,-400.74"/>
+<text text-anchor="middle" x="753.13" y="-385.54" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:TypedListRelation</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectIntersectionOf&#45;&gt;o&#45;owl&#45;ut:TypedListRelation -->
+<g id="edge9" class="edge">
+<title>rstr:ObjectIntersectionOf&#45;&gt;o&#45;owl&#45;ut:TypedListRelation</title>
+<path fill="none" stroke="black" d="M584.28,-598.36C613.14,-562.62 701.19,-453.57 737.36,-408.77"/>
+<polygon fill="black" stroke="black" points="740.12,-410.92 743.68,-400.94 734.68,-406.53 740.12,-410.92"/>
+</g>
+<!-- o&#45;rdf:Type&#45;&gt;ottr:Triple -->
+<g id="edge10" class="edge">
+<title>o&#45;rdf:Type&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M519.9,-248.1C538.53,-272.1 581.71,-327.73 604.84,-357.53"/>
+<polygon fill="black" stroke="black" points="602.17,-359.79 611.06,-365.54 607.7,-355.49 602.17,-359.79"/>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;rdf:Type -->
+<g id="edge11" class="edge">
+<title>o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M734.53,-377.51C691.99,-350.7 587.46,-284.81 537.89,-253.56"/>
+<polygon fill="black" stroke="black" points="539.63,-250.52 529.3,-248.15 535.9,-256.44 539.63,-250.52"/>
+</g>
+<!-- o&#45;owl&#45;ut:ListRelation -->
+<g id="node9" class="node">
+<title>o&#45;owl&#45;ut:ListRelation</title>
+<g id="a_node9"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/ListRelation.html" xlink:title="o&#45;owl&#45;ut:ListRelation">
+<polygon fill="#fad09f" stroke="black" points="862.83,-544.9 723.83,-544.9 723.83,-521.9 862.83,-521.9 862.83,-544.9"/>
+<text text-anchor="middle" x="793.33" y="-529.7" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:ListRelation</text>
+</a>
+</g>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;owl&#45;ut:ListRelation -->
+<g id="edge12" class="edge">
+<title>o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;owl&#45;ut:ListRelation</title>
+<path fill="none" stroke="black" d="M756.42,-401.04C763.2,-425.34 778.79,-481.28 787.38,-512.09"/>
+<polygon fill="black" stroke="black" points="784.05,-513.15 790.1,-521.84 790.79,-511.27 784.05,-513.15"/>
+</g>
+<!-- o&#45;owl&#45;ut:ListRelation&#45;&gt;ottr:Triple -->
+<g id="edge13" class="edge">
+<title>o&#45;owl&#45;ut:ListRelation&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M780.31,-521.66C750.47,-494.75 676.92,-428.43 640.81,-395.86"/>
+<polygon fill="black" stroke="black" points="643.06,-393.18 633.29,-389.08 638.37,-398.38 643.06,-393.18"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction -->
+<g id="node11" class="node">
+<title>o&#45;owl&#45;ut:ValueRestriction</title>
+<g id="a_node11"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/ValueRestriction.html" xlink:title="o&#45;owl&#45;ut:ValueRestriction">
+<polygon fill="#fad09f" stroke="black" points="720.7,-119.82 554.7,-119.82 554.7,-96.82 720.7,-96.82 720.7,-119.82"/>
+<text text-anchor="middle" x="637.7" y="-104.62" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:ValueRestriction</text>
+</a>
+</g>
+</g>
+<!-- rstr:SomeValuesFrom&#45;&gt;o&#45;owl&#45;ut:ValueRestriction -->
+<g id="edge14" class="edge">
+<title>rstr:SomeValuesFrom&#45;&gt;o&#45;owl&#45;ut:ValueRestriction</title>
+<path fill="none" stroke="black" d="M485.48,-23.21C516.1,-40.33 573.34,-72.33 608.23,-91.84"/>
+<polygon fill="black" stroke="black" points="606.58,-94.93 617.01,-96.76 609.99,-88.82 606.58,-94.93"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction&#45;&gt;ottr:Triple -->
+<g id="edge16" class="edge">
+<title>o&#45;owl&#45;ut:ValueRestriction&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M636.94,-119.87C634.25,-161.07 625.09,-301.2 621.54,-355.48"/>
+<polygon fill="black" stroke="black" points="618.03,-355.49 620.87,-365.69 625.02,-355.94 618.03,-355.49"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction&#45;&gt;o&#45;rdf:Type -->
+<g id="edge15" class="edge">
+<title>o&#45;owl&#45;ut:ValueRestriction&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M626,-120.16C604.03,-142.4 556.41,-190.6 529.84,-217.49"/>
+<polygon fill="black" stroke="black" points="527.18,-215.21 522.64,-224.78 532.16,-220.13 527.18,-215.21"/>
+</g>
+</g>
+</svg>
+</div></details><details><summary>Radial layout (twopi)</summary><div><svg width="536px" height="401px"
+ viewBox="0.00 0.00 535.98 401.48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 397.48)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-397.48 531.98,-397.48 531.98,4 -4,4"/>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess -->
+<g id="node1" class="node">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</title>
+<g id="a_node1"><a xlink:href="PROC_SPO_ClassAxioms_ItemInMaintenanceProcess.html" xlink:title="proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess">
+<polygon fill="#c2ffed" stroke="black" points="447.28,-181.78 46.28,-181.78 46.28,-158.78 447.28,-158.78 447.28,-181.78"/>
+<text text-anchor="middle" x="246.78" y="-166.58" font-family="Arial" font-size="14.00">proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf -->
+<g id="node2" class="node">
+<title>ax:EquivObjectIntersectionOf</title>
+<g id="a_node2"><a xlink:href="../../../tpl.ottr.xyz/owl/axiom/0.1/EquivObjectIntersectionOf.html" xlink:title="ax:EquivObjectIntersectionOf">
+<polygon fill="#ffdbe5" stroke="black" points="343.28,-256.62 150.28,-256.62 150.28,-233.62 343.28,-233.62 343.28,-256.62"/>
+<text text-anchor="middle" x="246.78" y="-241.42" font-family="Arial" font-size="14.00">ax:EquivObjectIntersectionOf</text>
+</a>
+</g>
+</g>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;ax:EquivObjectIntersectionOf -->
+<g id="edge2" class="edge">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;ax:EquivObjectIntersectionOf</title>
+<path fill="none" stroke="black" d="M246.78,-181.97C246.78,-192.89 246.78,-209.48 246.78,-222.91"/>
+<polygon fill="black" stroke="black" points="243.28,-223.26 246.78,-233.27 250.28,-223.27 243.28,-223.26"/>
+</g>
+<!-- rstr:ObjectSomeValuesFrom -->
+<g id="node3" class="node">
+<title>rstr:ObjectSomeValuesFrom</title>
+<g id="a_node3"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/ObjectSomeValuesFrom.html" xlink:title="rstr:ObjectSomeValuesFrom">
+<polygon fill="#c2ff99" stroke="black" points="340.78,-106.93 152.78,-106.93 152.78,-83.93 340.78,-83.93 340.78,-106.93"/>
+<text text-anchor="middle" x="246.78" y="-91.73" font-family="Arial" font-size="14.00">rstr:ObjectSomeValuesFrom</text>
+</a>
+</g>
+</g>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;rstr:ObjectSomeValuesFrom -->
+<g id="edge1" class="edge">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;rstr:ObjectSomeValuesFrom</title>
+<path fill="none" stroke="black" d="M246.78,-158.58C246.78,-147.66 246.78,-131.07 246.78,-117.64"/>
+<polygon fill="black" stroke="black" points="250.28,-117.29 246.78,-107.29 243.28,-117.29 250.28,-117.29"/>
+</g>
+<!-- ax:EquivalentClass -->
+<g id="node4" class="node">
+<title>ax:EquivalentClass</title>
+<g id="a_node4"><a xlink:href="../../../tpl.ottr.xyz/owl/axiom/0.1/EquivalentClass.html" xlink:title="ax:EquivalentClass">
+<polygon fill="#ffdbe5" stroke="black" points="418.13,-287.63 287.13,-287.63 287.13,-264.63 418.13,-264.63 418.13,-287.63"/>
+<text text-anchor="middle" x="352.63" y="-272.43" font-family="Arial" font-size="14.00">ax:EquivalentClass</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf&#45;&gt;ax:EquivalentClass -->
+<g id="edge4" class="edge">
+<title>ax:EquivObjectIntersectionOf&#45;&gt;ax:EquivalentClass</title>
+<path fill="none" stroke="black" d="M286.19,-256.67C291.84,-258.32 297.71,-260.04 303.52,-261.74"/>
+<polygon fill="black" stroke="black" points="302.6,-265.12 313.18,-264.57 304.57,-258.4 302.6,-265.12"/>
+</g>
+<!-- rstr:ObjectIntersectionOf -->
+<g id="node5" class="node">
+<title>rstr:ObjectIntersectionOf</title>
+<g id="a_node5"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/ObjectIntersectionOf.html" xlink:title="rstr:ObjectIntersectionOf">
+<polygon fill="#c2ff99" stroke="black" points="222.93,-287.63 58.93,-287.63 58.93,-264.63 222.93,-264.63 222.93,-287.63"/>
+<text text-anchor="middle" x="140.93" y="-272.43" font-family="Arial" font-size="14.00">rstr:ObjectIntersectionOf</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf&#45;&gt;rstr:ObjectIntersectionOf -->
+<g id="edge3" class="edge">
+<title>ax:EquivObjectIntersectionOf&#45;&gt;rstr:ObjectIntersectionOf</title>
+<path fill="none" stroke="black" d="M207.36,-256.67C201.71,-258.32 195.85,-260.04 190.04,-261.74"/>
+<polygon fill="black" stroke="black" points="188.99,-258.4 180.37,-264.57 190.95,-265.12 188.99,-258.4"/>
+</g>
+<!-- o&#45;rdf:Type -->
+<g id="node7" class="node">
+<title>o&#45;rdf:Type</title>
+<g id="a_node7"><a xlink:href="../../../tpl.ottr.xyz/rdf/0.1/Type.html" xlink:title="o&#45;rdf:Type">
+<polygon fill="#eec3ff" stroke="black" points="179.43,-75.93 102.43,-75.93 102.43,-52.93 179.43,-52.93 179.43,-75.93"/>
+<text text-anchor="middle" x="140.93" y="-60.73" font-family="Arial" font-size="14.00">o&#45;rdf:Type</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectSomeValuesFrom&#45;&gt;o&#45;rdf:Type -->
+<g id="edge5" class="edge">
+<title>rstr:ObjectSomeValuesFrom&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M207.36,-83.88C201.56,-82.19 195.53,-80.42 189.57,-78.67"/>
+<polygon fill="black" stroke="black" points="190.25,-75.23 179.67,-75.77 188.28,-81.94 190.25,-75.23"/>
+</g>
+<!-- rstr:SomeValuesFrom -->
+<g id="node10" class="node">
+<title>rstr:SomeValuesFrom</title>
+<g id="a_node10"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/SomeValuesFrom.html" xlink:title="rstr:SomeValuesFrom">
+<polygon fill="#c2ff99" stroke="black" points="427.13,-75.93 278.13,-75.93 278.13,-52.93 427.13,-52.93 427.13,-75.93"/>
+<text text-anchor="middle" x="352.63" y="-60.73" font-family="Arial" font-size="14.00">rstr:SomeValuesFrom</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectSomeValuesFrom&#45;&gt;rstr:SomeValuesFrom -->
+<g id="edge6" class="edge">
+<title>rstr:ObjectSomeValuesFrom&#45;&gt;rstr:SomeValuesFrom</title>
+<path fill="none" stroke="black" d="M286.19,-83.88C291.84,-82.23 297.71,-80.51 303.52,-78.81"/>
+<polygon fill="black" stroke="black" points="304.57,-82.15 313.18,-75.98 302.6,-75.43 304.57,-82.15"/>
+</g>
+<!-- ottr:Triple -->
+<g id="node6" class="node">
+<title>ottr:Triple</title>
+<polygon fill="#ddefff" stroke="black" points="442.55,-340.55 368.55,-340.55 368.55,-317.55 442.55,-317.55 442.55,-340.55"/>
+<text text-anchor="middle" x="405.55" y="-325.35" font-family="Arial" font-size="14.00">ottr:Triple</text>
+</g>
+<!-- ax:EquivalentClass&#45;&gt;ottr:Triple -->
+<g id="edge8" class="edge">
+<title>ax:EquivalentClass&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M364.37,-287.87C370.81,-294.31 378.96,-302.46 386.31,-309.81"/>
+<polygon fill="black" stroke="black" points="384.29,-312.74 393.84,-317.34 389.24,-307.79 384.29,-312.74"/>
+</g>
+<!-- ax:EquivalentClass&#45;&gt;o&#45;rdf:Type -->
+<g id="edge7" class="edge">
+<title>ax:EquivalentClass&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M374.9,-264.49C410.46,-244.25 473.78,-200.43 450.48,-155.58 423.81,-104.24 398.93,-98.81 343.98,-80.73 336.69,-78.33 282.59,-79.63 274.93,-79.13 246.6,-77.25 215.04,-73.85 189.66,-70.79"/>
+<polygon fill="black" stroke="black" points="189.9,-67.3 179.55,-69.55 189.05,-74.24 189.9,-67.3"/>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation -->
+<g id="node8" class="node">
+<title>o&#45;owl&#45;ut:TypedListRelation</title>
+<g id="a_node8"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/TypedListRelation.html" xlink:title="o&#45;owl&#45;ut:TypedListRelation">
+<polygon fill="#fad09f" stroke="black" points="176,-340.55 0,-340.55 0,-317.55 176,-317.55 176,-340.55"/>
+<text text-anchor="middle" x="88" y="-325.35" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:TypedListRelation</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectIntersectionOf&#45;&gt;o&#45;owl&#45;ut:TypedListRelation -->
+<g id="edge9" class="edge">
+<title>rstr:ObjectIntersectionOf&#45;&gt;o&#45;owl&#45;ut:TypedListRelation</title>
+<path fill="none" stroke="black" d="M129.18,-287.87C122.74,-294.31 114.59,-302.46 107.25,-309.81"/>
+<polygon fill="black" stroke="black" points="104.31,-307.79 99.71,-317.34 109.26,-312.74 104.31,-307.79"/>
+</g>
+<!-- o&#45;rdf:Type&#45;&gt;ottr:Triple -->
+<g id="edge10" class="edge">
+<title>o&#45;rdf:Type&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M179.55,-69.55C206.28,-72.88 242.7,-76.99 274.93,-79.13 282.59,-79.63 336.69,-78.33 343.98,-80.73 398.93,-98.81 423.81,-104.24 450.48,-155.58 477.22,-207.06 441.17,-275.58 419.61,-309.01"/>
+<polygon fill="black" stroke="black" points="416.61,-307.2 413.98,-317.46 422.44,-311.08 416.61,-307.2"/>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;rdf:Type -->
+<g id="edge11" class="edge">
+<title>o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M74.86,-317.26C67.98,-310.28 60.09,-300.86 55.73,-290.83 31.66,-235.46 18.99,-210.94 43.08,-155.58 57.04,-123.49 88.49,-97.58 111.98,-81.71"/>
+<polygon fill="black" stroke="black" points="114.08,-84.52 120.55,-76.12 110.26,-78.65 114.08,-84.52"/>
+</g>
+<!-- o&#45;owl&#45;ut:ListRelation -->
+<g id="node9" class="node">
+<title>o&#45;owl&#45;ut:ListRelation</title>
+<g id="a_node9"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/ListRelation.html" xlink:title="o&#45;owl&#45;ut:ListRelation">
+<polygon fill="#fad09f" stroke="black" points="527.98,-393.48 388.98,-393.48 388.98,-370.48 527.98,-370.48 527.98,-393.48"/>
+<text text-anchor="middle" x="458.48" y="-378.28" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:ListRelation</text>
+</a>
+</g>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;owl&#45;ut:ListRelation -->
+<g id="edge12" class="edge">
+<title>o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;owl&#45;ut:ListRelation</title>
+<path fill="none" stroke="black" d="M168.85,-340.6C231.06,-349.49 316.61,-361.71 378.59,-370.57"/>
+<polygon fill="black" stroke="black" points="378.32,-374.06 388.71,-372.01 379.31,-367.13 378.32,-374.06"/>
+</g>
+<!-- o&#45;owl&#45;ut:ListRelation&#45;&gt;ottr:Triple -->
+<g id="edge13" class="edge">
+<title>o&#45;owl&#45;ut:ListRelation&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M446.73,-370.23C440.29,-363.79 432.15,-355.65 424.8,-348.3"/>
+<polygon fill="black" stroke="black" points="426.81,-345.36 417.27,-340.77 421.86,-350.31 426.81,-345.36"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction -->
+<g id="node11" class="node">
+<title>o&#45;owl&#45;ut:ValueRestriction</title>
+<g id="a_node11"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/ValueRestriction.html" xlink:title="o&#45;owl&#45;ut:ValueRestriction">
+<polygon fill="#fad09f" stroke="black" points="171,-23 5,-23 5,0 171,0 171,-23"/>
+<text text-anchor="middle" x="88" y="-7.8" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:ValueRestriction</text>
+</a>
+</g>
+</g>
+<!-- rstr:SomeValuesFrom&#45;&gt;o&#45;owl&#45;ut:ValueRestriction -->
+<g id="edge14" class="edge">
+<title>rstr:SomeValuesFrom&#45;&gt;o&#45;owl&#45;ut:ValueRestriction</title>
+<path fill="none" stroke="black" d="M294.88,-52.88C253.82,-44.66 198.55,-33.61 155.46,-24.99"/>
+<polygon fill="black" stroke="black" points="156.12,-21.55 145.62,-23.02 154.74,-28.42 156.12,-21.55"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction&#45;&gt;ottr:Triple -->
+<g id="edge16" class="edge">
+<title>o&#45;owl&#45;ut:ValueRestriction&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M116.28,-23.01C160.36,-40.73 243.64,-73.26 274.93,-79.13 282.47,-80.54 336.69,-78.33 343.98,-80.73 398.93,-98.81 423.81,-104.24 450.48,-155.58 477.22,-207.06 441.17,-275.58 419.61,-309.01"/>
+<polygon fill="black" stroke="black" points="416.61,-307.2 413.98,-317.46 422.44,-311.08 416.61,-307.2"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction&#45;&gt;o&#45;rdf:Type -->
+<g id="edge15" class="edge">
+<title>o&#45;owl&#45;ut:ValueRestriction&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M99.75,-23.25C106.19,-29.69 114.33,-37.83 121.68,-45.18"/>
+<polygon fill="black" stroke="black" points="119.67,-48.12 129.21,-52.71 124.62,-43.17 119.67,-48.12"/>
+</g>
+</g>
+</svg>
+</div></details><details><summary>Circular layout (circo)</summary><div><svg width="874px" height="743px"
+ viewBox="0.00 0.00 873.93 742.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1.0 1.0) rotate(0.0) translate(4.0 738.77)">
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-738.77 869.93,-738.77 869.93,4 -4,4"/>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess -->
+<g id="node1" class="node">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</title>
+<g id="a_node1"><a xlink:href="PROC_SPO_ClassAxioms_ItemInMaintenanceProcess.html" xlink:title="proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess">
+<polygon fill="#c2ffed" stroke="black" points="560.66,-23 159.66,-23 159.66,0 560.66,0 560.66,-23"/>
+<text text-anchor="middle" x="360.16" y="-7.8" font-family="Arial" font-size="14.00">proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf -->
+<g id="node2" class="node">
+<title>ax:EquivObjectIntersectionOf</title>
+<g id="a_node2"><a xlink:href="../../../tpl.ottr.xyz/owl/axiom/0.1/EquivObjectIntersectionOf.html" xlink:title="ax:EquivObjectIntersectionOf">
+<polygon fill="#ffdbe5" stroke="black" points="672.29,-54 479.29,-54 479.29,-31 672.29,-31 672.29,-54"/>
+<text text-anchor="middle" x="575.79" y="-38.8" font-family="Arial" font-size="14.00">ax:EquivObjectIntersectionOf</text>
+</a>
+</g>
+</g>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;ax:EquivObjectIntersectionOf -->
+<g id="edge2" class="edge">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;ax:EquivObjectIntersectionOf</title>
+<path fill="none" stroke="black" d="M440.15,-23C454.85,-25.11 470.3,-27.34 485.29,-29.49"/>
+<polygon fill="black" stroke="black" points="485.18,-33.01 495.57,-30.97 486.17,-26.08 485.18,-33.01"/>
+</g>
+<!-- rstr:ObjectSomeValuesFrom -->
+<g id="node3" class="node">
+<title>rstr:ObjectSomeValuesFrom</title>
+<g id="a_node3"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/ObjectSomeValuesFrom.html" xlink:title="rstr:ObjectSomeValuesFrom">
+<polygon fill="#c2ff99" stroke="black" points="277.86,-108.13 89.86,-108.13 89.86,-85.13 277.86,-85.13 277.86,-108.13"/>
+<text text-anchor="middle" x="183.86" y="-92.93" font-family="Arial" font-size="14.00">rstr:ObjectSomeValuesFrom</text>
+</a>
+</g>
+</g>
+<!-- proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;rstr:ObjectSomeValuesFrom -->
+<g id="edge1" class="edge">
+<title>proc&#45;tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess&#45;&gt;rstr:ObjectSomeValuesFrom</title>
+<path fill="none" stroke="black" d="M336.01,-23.16C305.16,-38.06 251.59,-63.93 216.95,-80.66"/>
+<polygon fill="black" stroke="black" points="215.19,-77.62 207.71,-85.12 218.24,-83.92 215.19,-77.62"/>
+</g>
+<!-- ax:EquivalentClass -->
+<g id="node4" class="node">
+<title>ax:EquivalentClass</title>
+<g id="a_node4"><a xlink:href="../../../tpl.ottr.xyz/owl/axiom/0.1/EquivalentClass.html" xlink:title="ax:EquivalentClass">
+<polygon fill="#ffdbe5" stroke="black" points="140,-480.58 9,-480.58 9,-457.58 140,-457.58 140,-480.58"/>
+<text text-anchor="middle" x="74.5" y="-465.38" font-family="Arial" font-size="14.00">ax:EquivalentClass</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf&#45;&gt;ax:EquivalentClass -->
+<g id="edge4" class="edge">
+<title>ax:EquivObjectIntersectionOf&#45;&gt;ax:EquivalentClass</title>
+<path fill="none" stroke="black" d="M562.12,-54.13C492.87,-113.06 180.74,-378.67 95.86,-450.9"/>
+<polygon fill="black" stroke="black" points="93.5,-448.31 88.16,-457.45 98.04,-453.64 93.5,-448.31"/>
+</g>
+<!-- rstr:ObjectIntersectionOf -->
+<g id="node5" class="node">
+<title>rstr:ObjectIntersectionOf</title>
+<g id="a_node5"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/ObjectIntersectionOf.html" xlink:title="rstr:ObjectIntersectionOf">
+<polygon fill="#c2ff99" stroke="black" points="802.94,-185.36 638.94,-185.36 638.94,-162.36 802.94,-162.36 802.94,-185.36"/>
+<text text-anchor="middle" x="720.94" y="-170.16" font-family="Arial" font-size="14.00">rstr:ObjectIntersectionOf</text>
+</a>
+</g>
+</g>
+<!-- ax:EquivObjectIntersectionOf&#45;&gt;rstr:ObjectIntersectionOf -->
+<g id="edge3" class="edge">
+<title>ax:EquivObjectIntersectionOf&#45;&gt;rstr:ObjectIntersectionOf</title>
+<path fill="none" stroke="black" d="M588.67,-54.16C613.89,-76.98 669.98,-127.74 700.38,-155.25"/>
+<polygon fill="black" stroke="black" points="698.12,-157.92 707.88,-162.04 702.81,-152.73 698.12,-157.92"/>
+</g>
+<!-- o&#45;rdf:Type -->
+<g id="node7" class="node">
+<title>o&#45;rdf:Type</title>
+<g id="a_node7"><a xlink:href="../../../tpl.ottr.xyz/rdf/0.1/Type.html" xlink:title="o&#45;rdf:Type">
+<polygon fill="#eec3ff" stroke="black" points="222.36,-650.74 145.36,-650.74 145.36,-627.74 222.36,-627.74 222.36,-650.74"/>
+<text text-anchor="middle" x="183.86" y="-635.54" font-family="Arial" font-size="14.00">o&#45;rdf:Type</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectSomeValuesFrom&#45;&gt;o&#45;rdf:Type -->
+<g id="edge5" class="edge">
+<title>rstr:ObjectSomeValuesFrom&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M183.86,-108.22C183.86,-176.48 183.86,-526.4 183.86,-617.52"/>
+<polygon fill="black" stroke="black" points="180.36,-617.53 183.86,-627.53 187.36,-617.53 180.36,-617.53"/>
+</g>
+<!-- rstr:SomeValuesFrom -->
+<g id="node10" class="node">
+<title>rstr:SomeValuesFrom</title>
+<g id="a_node10"><a xlink:href="../../../tpl.ottr.xyz/owl/restriction/0.1/SomeValuesFrom.html" xlink:title="rstr:SomeValuesFrom">
+<polygon fill="#c2ff99" stroke="black" points="149,-278.3 0,-278.3 0,-255.3 149,-255.3 149,-278.3"/>
+<text text-anchor="middle" x="74.5" y="-263.1" font-family="Arial" font-size="14.00">rstr:SomeValuesFrom</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectSomeValuesFrom&#45;&gt;rstr:SomeValuesFrom -->
+<g id="edge6" class="edge">
+<title>rstr:ObjectSomeValuesFrom&#45;&gt;rstr:SomeValuesFrom</title>
+<path fill="none" stroke="black" d="M176.34,-108.33C158,-136.87 110.78,-210.35 87.65,-246.33"/>
+<polygon fill="black" stroke="black" points="84.53,-244.72 82.07,-255.02 90.42,-248.5 84.53,-244.72"/>
+</g>
+<!-- ottr:Triple -->
+<g id="node6" class="node">
+<title>ottr:Triple</title>
+<polygon fill="#ddefff" stroke="black" points="605.07,-705.98 531.07,-705.98 531.07,-682.98 605.07,-682.98 605.07,-705.98"/>
+<text text-anchor="middle" x="568.07" y="-690.78" font-family="Arial" font-size="14.00">ottr:Triple</text>
+</g>
+<!-- ax:EquivalentClass&#45;&gt;ottr:Triple -->
+<g id="edge8" class="edge">
+<title>ax:EquivalentClass&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M100,-480.72C182.07,-518.2 439.53,-635.78 533.39,-678.64"/>
+<polygon fill="black" stroke="black" points="532.18,-681.94 542.73,-682.91 535.08,-675.57 532.18,-681.94"/>
+</g>
+<!-- ax:EquivalentClass&#45;&gt;o&#45;rdf:Type -->
+<g id="edge7" class="edge">
+<title>ax:EquivalentClass&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M82.02,-480.77C100.36,-509.31 147.58,-582.79 170.7,-618.77"/>
+<polygon fill="black" stroke="black" points="167.94,-620.94 176.29,-627.46 173.83,-617.16 167.94,-620.94"/>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation -->
+<g id="node8" class="node">
+<title>o&#45;owl&#45;ut:TypedListRelation</title>
+<g id="a_node8"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/TypedListRelation.html" xlink:title="o&#45;owl&#45;ut:TypedListRelation">
+<polygon fill="#fad09f" stroke="black" points="865.93,-379.44 689.93,-379.44 689.93,-356.44 865.93,-356.44 865.93,-379.44"/>
+<text text-anchor="middle" x="777.93" y="-364.24" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:TypedListRelation</text>
+</a>
+</g>
+</g>
+<!-- rstr:ObjectIntersectionOf&#45;&gt;o&#45;owl&#45;ut:TypedListRelation -->
+<g id="edge9" class="edge">
+<title>rstr:ObjectIntersectionOf&#45;&gt;o&#45;owl&#45;ut:TypedListRelation</title>
+<path fill="none" stroke="black" d="M724.33,-185.41C733.62,-217.03 759.53,-305.29 771.6,-346.38"/>
+<polygon fill="black" stroke="black" points="768.3,-347.58 774.48,-356.19 775.02,-345.61 768.3,-347.58"/>
+</g>
+<!-- o&#45;rdf:Type&#45;&gt;ottr:Triple -->
+<g id="edge10" class="edge">
+<title>o&#45;rdf:Type&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M222.46,-644.79C293.25,-654.97 443.62,-676.59 520.56,-687.65"/>
+<polygon fill="black" stroke="black" points="520.52,-691.18 530.91,-689.14 521.51,-684.25 520.52,-691.18"/>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;rdf:Type -->
+<g id="edge11" class="edge">
+<title>o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M752.4,-379.59C657.76,-422.82 326.81,-573.95 218.48,-623.43"/>
+<polygon fill="black" stroke="black" points="216.93,-620.29 209.29,-627.63 219.84,-626.66 216.93,-620.29"/>
+</g>
+<!-- o&#45;owl&#45;ut:ListRelation -->
+<g id="node9" class="node">
+<title>o&#45;owl&#45;ut:ListRelation</title>
+<g id="a_node9"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/ListRelation.html" xlink:title="o&#45;owl&#45;ut:ListRelation">
+<polygon fill="#fad09f" stroke="black" points="790.44,-573.52 651.44,-573.52 651.44,-550.52 790.44,-550.52 790.44,-573.52"/>
+<text text-anchor="middle" x="720.94" y="-558.32" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:ListRelation</text>
+</a>
+</g>
+</g>
+<!-- o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;owl&#45;ut:ListRelation -->
+<g id="edge12" class="edge">
+<title>o&#45;owl&#45;ut:TypedListRelation&#45;&gt;o&#45;owl&#45;ut:ListRelation</title>
+<path fill="none" stroke="black" d="M774.53,-379.5C765.25,-411.11 739.34,-499.37 727.27,-540.46"/>
+<polygon fill="black" stroke="black" points="723.85,-539.69 724.39,-550.27 730.56,-541.67 723.85,-539.69"/>
+</g>
+<!-- o&#45;owl&#45;ut:ListRelation&#45;&gt;ottr:Triple -->
+<g id="edge13" class="edge">
+<title>o&#45;owl&#45;ut:ListRelation&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M707.64,-573.54C681.1,-596.54 621.37,-648.3 589.33,-676.06"/>
+<polygon fill="black" stroke="black" points="586.71,-673.7 581.45,-682.89 591.3,-678.99 586.71,-673.7"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction -->
+<g id="node11" class="node">
+<title>o&#45;owl&#45;ut:ValueRestriction</title>
+<g id="a_node11"><a xlink:href="../../../tpl.ottr.xyz/owl/util/0.1/ValueRestriction.html" xlink:title="o&#45;owl&#45;ut:ValueRestriction">
+<polygon fill="#fad09f" stroke="black" points="450.85,-734.77 284.85,-734.77 284.85,-711.77 450.85,-711.77 450.85,-734.77"/>
+<text text-anchor="middle" x="367.85" y="-719.57" font-family="Arial" font-size="14.00">o&#45;owl&#45;ut:ValueRestriction</text>
+</a>
+</g>
+</g>
+<!-- rstr:SomeValuesFrom&#45;&gt;o&#45;owl&#45;ut:ValueRestriction -->
+<g id="edge14" class="edge">
+<title>rstr:SomeValuesFrom&#45;&gt;o&#45;owl&#45;ut:ValueRestriction</title>
+<path fill="none" stroke="black" d="M82.05,-278.54C121.52,-339.96 304.31,-624.39 354.87,-703.06"/>
+<polygon fill="black" stroke="black" points="352.01,-705.08 360.36,-711.6 357.9,-701.3 352.01,-705.08"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction&#45;&gt;ottr:Triple -->
+<g id="edge16" class="edge">
+<title>o&#45;owl&#45;ut:ValueRestriction&#45;&gt;ottr:Triple</title>
+<path fill="none" stroke="black" d="M447.85,-711.77C472.67,-708.2 499.22,-704.38 521.03,-701.24"/>
+<polygon fill="black" stroke="black" points="521.62,-704.7 531.02,-699.81 520.62,-697.77 521.62,-704.7"/>
+</g>
+<!-- o&#45;owl&#45;ut:ValueRestriction&#45;&gt;o&#45;rdf:Type -->
+<g id="edge15" class="edge">
+<title>o&#45;owl&#45;ut:ValueRestriction&#45;&gt;o&#45;rdf:Type</title>
+<path fill="none" stroke="black" d="M342.66,-711.76C310.4,-697.03 254.38,-671.45 218.23,-654.94"/>
+<polygon fill="black" stroke="black" points="219.6,-651.71 209.05,-650.74 216.69,-658.08 219.6,-651.71"/>
+</g>
+</g>
+</svg>
+</div></details></div> <h4>List of dependencies</h4> <p class="info">&#128712; The number in parenthesis is the number of instances of each template.</p> <div class="treeview toggle-all click-first"><details><summary><span>proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</span></summary><details><summary><span>ax:EquivObjectIntersectionOf<span> (1)</span></span></summary><details><summary><span>ax:EquivalentClass<span> (1)</span></span></summary><span class="leaf"><span>ottr:Triple<span> (1)</span></span></span><details><summary><span>o-rdf:Type<span> (2)</span></span></summary><span class="leaf"><span>ottr:Triple<span> (1)</span></span></span></details></details><details><summary><span>rstr:ObjectIntersectionOf<span> (1)</span></span></summary><details><summary><span>o-owl-ut:TypedListRelation<span> (1)</span></span></summary><details><summary><span>o-owl-ut:ListRelation<span> (1)</span></span></summary><span class="leaf"><span>ottr:Triple<span> (1)</span></span></span></details><details><summary><span>o-rdf:Type<span> (1)</span></span></summary><span class="leaf"><span>ottr:Triple<span> (1)</span></span></span></details></details></details></details><details><summary><span>rstr:ObjectSomeValuesFrom<span> (1)</span></span></summary><details><summary><span>rstr:SomeValuesFrom<span> (1)</span></span></summary><details><summary><span>o-owl-ut:ValueRestriction<span> (1)</span></span></summary><span class="leaf"><span>ottr:Triple<span> (2)</span></span></span><details><summary><span>o-rdf:Type<span> (1)</span></span></summary><span class="leaf"><span>ottr:Triple<span> (1)</span></span></span></details></details></details><details><summary><span>o-rdf:Type<span> (2)</span></span></summary><span class="leaf"><span>ottr:Triple<span> (1)</span></span></span></details></details></details></div><h4>Depending templates</h4><p class="info">&#128712; The templates in this library that depend on this template.</p><p>None found.</p></div><div id="metrics"><h2 id="Metrics">Metrics</h2><p class="info">&#128712; Dependency graph metrics. Depth is the number of steps to a leaf node in the dependency graph. Branching is the number of outgoing edges from a node.</p><ul><li>Max. dependency depth: 5</li><li>Min. dependency depth: 3</li><li>Max. branching: 3</li><li>Min. branching: 2</li></ul><h4>Templates used</h4><table><tr><td><b class="heading">Direct dependencies</b><ul><li>Number of instances: 2</li><li>Templates used: (2 templates)<ul><li><a href="../../../tpl.ottr.xyz/owl/axiom/0.1/EquivObjectIntersectionOf.html">ax:EquivObjectIntersectionOf</a> (1)</li><li><a href="../../../tpl.ottr.xyz/owl/restriction/0.1/ObjectSomeValuesFrom.html">rstr:ObjectSomeValuesFrom</a> (1)</li></ul></li></ul></td><td><b class="heading">Complete expansion</b><ul><li>Number of instances: 25</li><li>Templates used: (11 templates)<ul><li><a>ottr:Triple</a> (10)</li><li><a href="PROC_SPO_ClassAxioms_ItemInMaintenanceProcess.html">proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess</a> (1)</li><li><a href="../../../tpl.ottr.xyz/owl/axiom/0.1/EquivObjectIntersectionOf.html">ax:EquivObjectIntersectionOf</a> (1)</li><li><a href="../../../tpl.ottr.xyz/owl/axiom/0.1/EquivalentClass.html">ax:EquivalentClass</a> (1)</li><li><a href="../../../tpl.ottr.xyz/owl/restriction/0.1/ObjectIntersectionOf.html">rstr:ObjectIntersectionOf</a> (1)</li><li><a href="../../../tpl.ottr.xyz/owl/restriction/0.1/ObjectSomeValuesFrom.html">rstr:ObjectSomeValuesFrom</a> (1)</li><li><a href="../../../tpl.ottr.xyz/owl/restriction/0.1/SomeValuesFrom.html">rstr:SomeValuesFrom</a> (1)</li><li><a href="../../../tpl.ottr.xyz/owl/util/0.1/ListRelation.html">o-owl-ut:ListRelation</a> (1)</li><li><a href="../../../tpl.ottr.xyz/owl/util/0.1/TypedListRelation.html">o-owl-ut:TypedListRelation</a> (1)</li><li><a href="../../../tpl.ottr.xyz/owl/util/0.1/ValueRestriction.html">o-owl-ut:ValueRestriction</a> (1)</li><li><a href="../../../tpl.ottr.xyz/rdf/0.1/Type.html">o-rdf:Type</a> (6)</li></ul></li></ul></td></tr></table><h4>Vocabulary introduced</h4><table><tr><td><b class="heading">Direct dependencies</b><ul><li>Namespaces introduced: (2)<ul><li><b class="heading">proc-spo</b>: <code>http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#</code><ul><li><a href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess">proc-spo:ItemInMaintenanceProcess</a></li><li><a href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess">proc-spo:MaintenanceProcess</a></li></ul></li><li><b class="heading">lis</b>: <code>http://rds.posccaesar.org/ontology/lis14/rdl/</code><ul><li><a href="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn">lis:participantIn</a></li></ul></li></ul></li></ul></td><td><b class="heading">Complete expansion</b><ul><li>Namespaces introduced: (4)<ul><li><b class="heading">rdf</b>: <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code><ul><li><a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">rdf:type</a></li></ul></li><li><b class="heading">proc-spo</b>: <code>http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#</code><ul><li><a href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess">proc-spo:ItemInMaintenanceProcess</a></li><li><a href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess">proc-spo:MaintenanceProcess</a></li></ul></li><li><b class="heading">owl</b>: <code>http://www.w3.org/2002/07/owl#</code><ul><li><a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a></li><li><a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a></li><li><a href="http://www.w3.org/2002/07/owl#Restriction">owl:Restriction</a></li><li><a href="http://www.w3.org/2002/07/owl#equivalentClass">owl:equivalentClass</a></li><li><a href="http://www.w3.org/2002/07/owl#intersectionOf">owl:intersectionOf</a></li><li><a href="http://www.w3.org/2002/07/owl#onProperty">owl:onProperty</a></li><li><a href="http://www.w3.org/2002/07/owl#someValuesFrom">owl:someValuesFrom</a></li></ul></li><li><b class="heading">lis</b>: <code>http://rds.posccaesar.org/ontology/lis14/rdl/</code><ul><li><a href="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn">lis:participantIn</a></li></ul></li></ul></li></ul></td></tr></table></div><div id="serialisations"><h2 id="Serialisations">Serialisations</h2><div><h4>stOTTR</h4><pre>proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess[
+]
+@@o-docttr:Provenance(
+    proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess,
+    &quot;2023-08-12T00:00:00Z&quot;^^xsd:dateTime,
+    &quot;2023-08-12T00:00:00Z&quot;^^xsd:dateTime,
+    (&lt;https://orcid.org/0000-0001-7829-7674&gt;),
+    none),
+@@o-docttr:Signature(
+    proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess,
+    none,
+    &quot;Create axioms for the Item in Maintenance Process class in the OMPD Static Procedure Ontology&quot;,
+    none,
+    none,
+    none,
+    none),
+@@o-docttr:Version(
+    proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess,
+    ottr:released,
+    &quot;0.1.0&quot;,
+    none,
+    none)
+ :: {
+    o-owl-ax:EquivObjectIntersectionOf(proc-spo:ItemInMaintenanceProcess, (lis:PhysicalObject, _:blank511)),
+    o-owl-re:ObjectSomeValuesFrom(_:blank514, lis:participantIn, proc-spo:MaintenanceProcess)
+} .</pre><h4>RDF/wOTTR</h4><pre>
+proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess
+        rdf:type         ottr:Template ;
+        ottr:annotation  [ ottr:of      o-docttr:Provenance ;
+                           ottr:values  ( proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess &quot;2023-08-12T00:00:00Z&quot;^^&lt;http://www.w3.org/2001/XMLSchema#dateTime&gt; &quot;2023-08-12T00:00:00Z&quot;^^&lt;http://www.w3.org/2001/XMLSchema#dateTime&gt; ( &lt;https://orcid.org/0000-0001-7829-7674&gt; ) ottr:none )
+                         ] ;
+        ottr:annotation  [ ottr:of      o-docttr:Version ;
+                           ottr:values  ( proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess ottr:released &quot;0.1.0&quot; ottr:none ottr:none )
+                         ] ;
+        ottr:annotation  [ ottr:of      o-docttr:Signature ;
+                           ottr:values  ( proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess ottr:none &quot;Create axioms for the Item in Maintenance Process class in the OMPD Static Procedure Ontology&quot; ottr:none ottr:none ottr:none ottr:none )
+                         ] ;
+        ottr:parameters  () ;
+        ottr:pattern     [ ottr:of      o-owl-ax:EquivObjectIntersectionOf ;
+                           ottr:values  ( proc-spo:ItemInMaintenanceProcess ( lis:PhysicalObject
+                                                                              [] 
+                                                                            ) )
+                         ] ;
+        ottr:pattern     [ ottr:of      rstr:ObjectSomeValuesFrom ;
+                           ottr:values  ( [] 
+                                          lis:participantIn proc-spo:MaintenanceProcess
+                                        )
+                         ] .</pre></div></div><h2 id="Prefixes">Prefixes</h2><div id="prefixes"><p class="info">&#128712; Prefixes are removed from all listings on this page for readability, but are listed here in RDF Turtle format.</p><pre>@prefix ottr:       &lt;http://ns.ottr.xyz/0.4/&gt;.
+@prefix lis:        &lt;http://rds.posccaesar.org/ontology/lis14/rdl/&gt;.
+@prefix proc-spo:   &lt;http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#&gt;.
+@prefix proc-tpl:   &lt;http://spec.equonto.org/template/maintenance-procedure/&gt;.
+@prefix ax:         &lt;http://tpl.ottr.xyz/owl/axiom/0.1/&gt;.
+@prefix o-owl-ax:   &lt;http://tpl.ottr.xyz/owl/axiom/0.1/&gt;.
+@prefix o-owl-re:   &lt;http://tpl.ottr.xyz/owl/restriction/0.1/&gt;.
+@prefix rstr:       &lt;http://tpl.ottr.xyz/owl/restriction/0.1/&gt;.
+@prefix o-docttr:   &lt;http://tpl.ottr.xyz/p/docttr/0.1/&gt;.
+@prefix rdf:        &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;.</pre></div></div><div class="footer"><p>This is a generated documentation page for an OTTR template library. For more information about Reasonable Ontology Templates (OTTR), visit <a href="http://ottr.xyz" target="_blank">ottr.xyz</a>.</p><p>Generated: 2024/03/15 02:16:38 Z</p></div><script>var treeviewCounter=0;for(var treeview of document.getElementsByClassName("treeview")){if(treeview.classList.contains('toggle-all')){treeviewCounter+=1;treeview.setAttribute("id","treeview"+treeviewCounter)
+treeview.insertAdjacentHTML('beforebegin','<p class="treeviewbuttons"><span class="button" onclick="treeViewToggleAll(\'treeview'+treeviewCounter+'\', 1)">Expand all</span> '
++'<span class="button" onclick="treeViewToggleAll(\'treeview'+treeviewCounter+'\', 0)">Contract all</span></p>');}
+if(treeview.classList.contains('click-first')){treeview.firstChild.firstChild.click();}
+if(treeview.classList.contains('expand-all')){treeViewToggleAll('treeview'+treeviewCounter,1);}}
+function treeViewToggleAll(elementid,open){var treeview=document.getElementById(elementid);for(var list of treeview.querySelectorAll("details")){if(open){list.setAttribute("open","open");}else{list.removeAttribute("open");}}}</script></body></html>

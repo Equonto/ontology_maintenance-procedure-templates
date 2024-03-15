@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Ontology for Maintenance Procedure Documentation (OMPD) Static Procedure Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology","name":"Ontology for Maintenance Procedure Documentation (OMPD) Static Procedure Ontology", "headline":"The OMPD Static Procedure Ontology captures static information found in most insdutrial maintenance procedures.", "dateReleased":"Fri Mar 15 10:20:52 AWST 2024", "license":"http://opensource.org/licenses/MIT", "author":[{"@type":"Person","name":"The University of Western Australia & Equonto Pty. Ltd."}], "contributor":[{"@type":"Person","name":"Caitlin Woods: The University of Western Australia and Equonto"},{"@type":"Person","name":"Melinda Hodkiewicz: The University of Western Australia"},{"@type":"Person","name":"Tim French: The University of Western Australia"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Ontology for Maintenance Procedure Documentation (OMPD) Static Procedure Ontology</h1>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://spec.equonto.org/ontology/202312/maintenance-procedure/static-procedure-ontology">http://spec.equonto.org/ontology/202312/maintenance-procedure/static-procedure-ontology</a></dd>
+<dt>Authors:</dt>
+<dd>The University of Western Australia & Equonto Pty. Ltd.</dd>
+
+<dt>Contributors:</dt>
+<dd>Caitlin Woods: The University of Western Australia and Equonto</dd><dd>Melinda Hodkiewicz: The University of Western Australia</dd><dd>Tim French: The University of Western Australia</dd>
+
+<dt>Publisher:</dt>
+<dd>Equonto Pty. Ltd.</dd>
+<dt>Imported Ontologies:</dt>
+<dd><a href="http://rds.posccaesar.org/ontology/lis14/ont/core">LIS14_Core</a></dd><dd><a href="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">IOF_AnnotationVocabulary</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://opensource.org/licenses/MIT" target="_blank"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="http://opensource.org/licenses/MIT" /></a>
+</dd><dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd><dt>Cite as:</dt>
+<dd>Woods, C., French, T., Hodkiewicz, M., & Bikaun, T. (2023). An ontology for maintenance procedure documentation. Applied Ontology, (Preprint), 1-38.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification</span>
+</div>
+</div><div id="toc"></div>  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Maintenance Procedures - Static Procedure Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Component"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Component">Component</a>
+   </li>
+   <li>
+      <a href="#Hazard"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard">Hazard</a>
+   </li>
+   <li>
+      <a href="#HazardInMaintenanceProcess"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess">HazardInMaintenanceProcess</a>
+   </li>
+   <li>
+      <a href="#HazardRealizationProcess"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess">HazardRealizationProcess</a>
+   </li>
+   <li>
+      <a href="#ItemInMaintenanceProcess"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess">ItemInMaintenanceProcess</a>
+   </li>
+   <li>
+      <a href="#MaintainableItem"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem">MaintainableItem</a>
+   </li>
+   <li>
+      <a href="#MaintainableItemRole"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItemRole">MaintainableItemRole</a>
+   </li>
+   <li>
+      <a href="#MaintenanceAction"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceAction">MaintenanceAction</a>
+   </li>
+   <li>
+      <a href="#MaintenanceProcedureDocument"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument">MaintenanceProcedureDocument</a>
+   </li>
+   <li>
+      <a href="#MaintenanceProcedureProcess"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess">MaintenanceProcedureProcess</a>
+   </li>
+   <li>
+      <a href="#MaintenanceProcess"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess">MaintenanceProcess</a>
+   </li>
+   <li>
+      <a href="#MaintenanceTask"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask">MaintenanceTask</a>
+   </li>
+   <li>
+      <a href="#MaintenanceTaskDescription"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription">MaintenanceTaskDescription</a>
+   </li>
+   <li>
+      <a href="#MaintenanceTaskDescriptionMedia"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescriptionMedia">MaintenanceTaskDescriptionMedia</a>
+   </li>
+   <li>
+      <a href="#Material"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Material">Material</a>
+   </li>
+   <li>
+      <a href="#MediaType"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaType">MediaType</a>
+   </li>
+   <li>
+      <a href="#Permit"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Permit">Permit</a>
+   </li>
+   <li>
+      <a href="#Qualification"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Qualification">Qualification</a>
+   </li>
+   <li>
+      <a href="#QualifiedPerson"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#QualifiedPerson">QualifiedPerson</a>
+   </li>
+   <li>
+      <a href="#Resource"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Resource">Resource</a>
+   </li>
+   <li>
+      <a href="#ResourceRole"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole">ResourceRole</a>
+   </li>
+   <li>
+      <a href="#Tool"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Tool">Tool</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#directActivityPartOf"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf">
+         <span>direct activity part of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#directlyAfter"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyAfter">
+         <span>directly after</span>
+      </a>
+   </li>
+   <li>
+      <a href="#directlyBefore"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore">
+         <span>directly before</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasDirectActivityPart"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart">
+         <span>has direct activity part</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasIndirectActivityPart"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart">
+         <span>has indirect activity part</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasPrimaryParticipant"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasPrimaryParticipant">
+         <span>has primary participant</span>
+      </a>
+   </li>
+   <li>
+      <a href="#hasRequirement"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasRequirement">
+         <span>has requirement</span>
+      </a>
+   </li>
+   <li>
+      <a href="#indirectActivityPartOf"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectActivityPartOf">
+         <span>indirect activity part of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#indirectlyAfter"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectlyAfter">
+         <span>indirectly after</span>
+      </a>
+   </li>
+   <li>
+      <a href="#indirectlyBefore"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectlyBefore">
+         <span>indirectly before</span>
+      </a>
+   </li>
+   <li>
+      <a href="#locallyEquivalentTo"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo">
+         <span>locally equivalent to</span>
+      </a>
+   </li>
+   <li>
+      <a href="#requirementOf"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#requirementOf">
+         <span>requirement of</span>
+      </a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example"
+         title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example">
+         <span>example</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+         title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+         <span>is rule enabled</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms"
+         title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms">
+         <span>semi formal natural language axioms</span>
+      </a>
+   </li>
+</ul>
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Maintenance Procedures - Static Procedure Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Maintenance Procedures - Static Procedure Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Component"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Component">Component</a>
+      </li>
+      <li>
+         <a href="#Hazard"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard">Hazard</a>
+      </li>
+      <li>
+         <a href="#HazardInMaintenanceProcess"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess">HazardInMaintenanceProcess</a>
+      </li>
+      <li>
+         <a href="#HazardRealizationProcess"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess">HazardRealizationProcess</a>
+      </li>
+      <li>
+         <a href="#ItemInMaintenanceProcess"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess">ItemInMaintenanceProcess</a>
+      </li>
+      <li>
+         <a href="#MaintainableItem"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem">MaintainableItem</a>
+      </li>
+      <li>
+         <a href="#MaintainableItemRole"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItemRole">MaintainableItemRole</a>
+      </li>
+      <li>
+         <a href="#MaintenanceAction"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceAction">MaintenanceAction</a>
+      </li>
+      <li>
+         <a href="#MaintenanceProcedureDocument"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument">MaintenanceProcedureDocument</a>
+      </li>
+      <li>
+         <a href="#MaintenanceProcedureProcess"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess">MaintenanceProcedureProcess</a>
+      </li>
+      <li>
+         <a href="#MaintenanceProcess"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess">MaintenanceProcess</a>
+      </li>
+      <li>
+         <a href="#MaintenanceTask"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask">MaintenanceTask</a>
+      </li>
+      <li>
+         <a href="#MaintenanceTaskDescription"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription">MaintenanceTaskDescription</a>
+      </li>
+      <li>
+         <a href="#MaintenanceTaskDescriptionMedia"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescriptionMedia">MaintenanceTaskDescriptionMedia</a>
+      </li>
+      <li>
+         <a href="#Material"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Material">Material</a>
+      </li>
+      <li>
+         <a href="#MediaType"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaType">MediaType</a>
+      </li>
+      <li>
+         <a href="#Permit"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Permit">Permit</a>
+      </li>
+      <li>
+         <a href="#Qualification"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Qualification">Qualification</a>
+      </li>
+      <li>
+         <a href="#QualifiedPerson"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#QualifiedPerson">QualifiedPerson</a>
+      </li>
+      <li>
+         <a href="#Resource"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Resource">Resource</a>
+      </li>
+      <li>
+         <a href="#ResourceRole"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole">ResourceRole</a>
+      </li>
+      <li>
+         <a href="#Tool"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Tool">Tool</a>
+      </li>
+   </ul>
+   <div class="entity" id="Component">
+      <h3>Component<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Component</p>
+      <div class="comment">
+         <span class="markdown">A LIS:PhysicalObject that may have some OMPD:ResourceRole</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject">physical object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Hazard">
+      <h3>Hazard<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard</p>
+      <div class="comment">
+         <span class="markdown">An LIS: Realizeable Entity that is realizrd in some OMPD: Hazard Realization Process</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity">realizable entity</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn">realized in</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#HazardRealizationProcess"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess">HazardRealizationProcess</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Disposition"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Disposition">disposition</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HazardInMaintenanceProcess">
+      <h3>HazardInMaintenanceProcess<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess</p>
+      <div class="comment">
+         <span class="markdown">An OMPD: Hazard that is realized in some OMPD: Hazard Realization Process that occurs relative to some OMPD: Maintenance Process</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#Hazard"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard">Hazard</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn">realized in</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#HazardRealizationProcess"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess">HazardRealizationProcess</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo">occurs relative to</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#MaintenanceProcess"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess">MaintenanceProcess</a>
+            <sup class="type-c" title="class">c</sup>))</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Disposition"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Disposition">disposition</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HazardRealizationProcess">
+      <h3>HazardRealizationProcess<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess</p>
+      <div class="comment">
+         <span class="markdown">An LIS: Activity that has the potential to cause harm</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ItemInMaintenanceProcess">
+      <h3>ItemInMaintenanceProcess<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess</p>
+      <div class="comment">
+         <span class="markdown">A LIS:PhysicalObject that partiticipates in some OMPD:MaintenanceProcess</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject">physical object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MaintainableItem">
+      <h3>MaintainableItem<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem</p>
+      <div class="comment">
+         <span class="markdown">An LIS:PhysicalObject hat has a role OMPD:MaintainableItemRole</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject">physical object</a> 
+            <span class="logic">and</span> (<a href="http://rds.posccaesar.org/ontology/lis14/rdl/hasRole"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/hasRole">has role</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#MaintainableItemRole"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItemRole">MaintainableItemRole</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject">physical object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MaintainableItemRole">
+      <h3>MaintainableItemRole<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItemRole</p>
+      <div class="comment">
+         <span class="markdown">An LIS:Role that is the role of the item that work is performed on in a OMPD:MaintenanceProcess</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Role"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Role">role</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MaintenanceAction">
+      <h3>MaintenanceAction<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceAction</p>
+      <div class="comment">
+         <span class="markdown">An LIS:Activity that is a maintenance activity or a supporting activity involved in execution of a maintenance task</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MaintenanceProcedureDocument">
+      <h3>MaintenanceProcedureDocument<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument</p>
+      <div class="comment">
+         <span class="markdown">An LIS:InformationObject that is about some OMPD:MaineanceProcedureProcess</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject">information object</a> 
+            <span class="logic">and</span> (<a href="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout">is about</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#MaintenanceProcedureProcess"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess">MaintenanceProcedureProcess</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject">information object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MaintenanceProcedureProcess">
+      <h3>MaintenanceProcedureProcess<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess</p>
+      <div class="comment">
+         <span class="markdown">An OMPD:MaintenanceProcess that is represented in some OMPD:MaintenanceProcedureDocument and has activity part some OMPD:MaintenanceTask</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#MaintenanceProcess"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess">MaintenanceProcess</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart">has activity part</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#MaintenanceTask"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask">MaintenanceTask</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="http://rds.posccaesar.org/ontology/lis14/rdl/representedBy"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/representedBy">represented by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#MaintenanceProcedureDocument"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument">MaintenanceProcedureDocument</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#MaintenanceProcess"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess">MaintenanceProcess</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MaintenanceProcess">
+      <h3>MaintenanceProcess<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess</p>
+      <div class="comment">
+         <span class="markdown">An LIS: Activity, intended to repair or restore an item to a state in which it can perform its required function</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#MaintenanceProcedureProcess"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess">MaintenanceProcedureProcess</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#MaintenanceTask"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask">MaintenanceTask</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MaintenanceTask">
+      <h3>MaintenanceTask<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask</p>
+      <div class="comment">
+         <span class="markdown">An OMPD:MaintenanceProcess that is: - a direct activity part of zero or one OMPD:MaintenanceProcedureProcess - an activity part of zero or more OMPD:MaintenanceProcedureProcess - a direct activity part of zero or one OMPD:MaintenanceTask - an activity part of zero or more OMPD:MaintenanceTask - occurs directly before zero or one Maintenance task - occurs before zero or more MaintenanceTask - occurs directly after zero or one MaintenanceTask - occurs after zero or more OMPD:MaintenanceTask</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="#MaintenanceProcess"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess">MaintenanceProcess</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<a href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#representedBy"
+               target="_blank"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#representedBy">represented by</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#MaintenanceTaskDescription"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription">MaintenanceTaskDescription</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#locallyEquivalentTo"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo">locally equivalent to</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#MaintenanceTask"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask">MaintenanceTask</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#directActivityPartOf"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf">direct activity part of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">max</span> 1 <a href="#MaintenanceProcedureProcess"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess">MaintenanceProcedureProcess</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#directActivityPartOf"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf">direct activity part of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">max</span> 1 <a href="#MaintenanceTask"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask">MaintenanceTask</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#directlyBefore"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore">directly before</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">max</span> 1 <a href="#MaintenanceTask"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask">MaintenanceTask</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#MaintenanceProcess"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess">MaintenanceProcess</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#locallyEquivalentTo"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo">locally equivalent to</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#locallyEquivalentTo"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo">locally equivalent to</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MaintenanceTaskDescription">
+      <h3>MaintenanceTaskDescription<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription</p>
+      <div class="comment">
+         <span class="markdown">An LIS:InformationObject that is about some OMPD:MaintenanceTask</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject">information object</a> 
+            <span class="logic">and</span> (<a href="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout">is about</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#MaintenanceTask"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask">MaintenanceTask</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject">information object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MaintenanceTaskDescriptionMedia">
+      <h3>MaintenanceTaskDescriptionMedia<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescriptionMedia</p>
+      <div class="comment">
+         <span class="markdown">An LIS:InformationObject has some proc:MediaType and is part of some OMPD:MaintenanceTaskDescription</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject">information object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Material">
+      <h3>Material<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Material</p>
+      <div class="comment">
+         <span class="markdown">A LIS:PhysicalObject that may have some OMPD:ResourceRole</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject">physical object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MediaType">
+      <h3>MediaType<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaType</p>
+      <div class="comment">
+         <span class="markdown">An LIS:InformationObject that is a type of media</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject">information object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Permit">
+      <h3>Permit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Permit</p>
+      <div class="comment">
+         <span class="markdown">A LIS:InformationObject that  may have some OMPD:ResourceRole</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject">information object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Qualification">
+      <h3>Qualification<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Qualification</p>
+      <div class="comment">
+         <span class="markdown">A LIS:Quality that is beared by zero or more OMPD:QualitifiedPerson</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Quality"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Quality">quality</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="QualifiedPerson">
+      <h3>QualifiedPerson<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#QualifiedPerson</p>
+      <div class="comment">
+         <span class="markdown">A LIS:Person that may have some OMPD:ResourceRole and has a OMPD:Qualification</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Person"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Person">person</a> 
+            <span class="logic">and</span> (<a href="http://rds.posccaesar.org/ontology/lis14/rdl/hasQuality"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/hasQuality">has quality</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Qualification"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Qualification">Qualification</a>
+            <sup class="type-c" title="class">c</sup>) <span class="logic">and</span> (<a href="#requirementOf"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#requirementOf">requirement of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Person"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Person">person</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Resource">
+      <h3>Resource<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Resource</p>
+      <div class="comment">
+         <span class="markdown">An LIS: Object that has some OMPD: Resource Role</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Object"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Object">object</a> 
+            <span class="logic">and</span> (<a href="http://rds.posccaesar.org/ontology/lis14/rdl/hasRole"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/hasRole">has role</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#ResourceRole"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole">ResourceRole</a>
+            <sup class="type-c" title="class">c</sup>)</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Object"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Object">object</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ResourceRole">
+      <h3>ResourceRole<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole</p>
+      <div class="comment">
+         <span class="markdown">An LIS:Role that is the role of an LIS:Object that is required to execute some LIS:Activity</span>
+      </div>
+      <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Role"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Role">role</a> 
+            <span class="logic">and</span> (<a href="http://rds.posccaesar.org/ontology/lis14/rdl/roleOf"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/roleOf">role of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Object"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Object">object</a> 
+            <span class="logic">and</span> (<a href="#requirementOf"
+               title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#requirementOf">requirement of</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>))</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Role"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Role">role</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Tool">
+      <h3>Tool<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Tool</p>
+      <div class="comment">
+         <span class="markdown">A LIS:PhysicalObject that  may have some OMPD:ResourceRole</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject">physical object</a>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#directActivityPartOf"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf">
+            <span>direct activity part of</span>
+         </a>
+      </li>
+      <li>
+         <a href="#directlyAfter"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyAfter">
+            <span>directly after</span>
+         </a>
+      </li>
+      <li>
+         <a href="#directlyBefore"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore">
+            <span>directly before</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasDirectActivityPart"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart">
+            <span>has direct activity part</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasIndirectActivityPart"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart">
+            <span>has indirect activity part</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasPrimaryParticipant"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasPrimaryParticipant">
+            <span>has primary participant</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasRequirement"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasRequirement">
+            <span>has requirement</span>
+         </a>
+      </li>
+      <li>
+         <a href="#indirectActivityPartOf"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectActivityPartOf">
+            <span>indirect activity part of</span>
+         </a>
+      </li>
+      <li>
+         <a href="#indirectlyAfter"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectlyAfter">
+            <span>indirectly after</span>
+         </a>
+      </li>
+      <li>
+         <a href="#indirectlyBefore"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectlyBefore">
+            <span>indirectly before</span>
+         </a>
+      </li>
+      <li>
+         <a href="#locallyEquivalentTo"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo">
+            <span>locally equivalent to</span>
+         </a>
+      </li>
+      <li>
+         <a href="#requirementOf"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#requirementOf">
+            <span>requirement of</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="directActivityPartOf">
+      <h3>direct activity part of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> irreflexive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#indirectActivityPartOf"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectActivityPartOf">indirect activity part of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasDirectActivityPart"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart">has direct activity part</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="directlyAfter">
+      <h3>directly after<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyAfter</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#indirectlyAfter"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectlyAfter">indirectly after</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#directlyBefore"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore">directly before</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="directlyBefore">
+      <h3>directly before<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> functional, irreflexive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#indirectlyBefore"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectlyBefore">indirectly before</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#directlyAfter"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyAfter">directly after</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasDirectActivityPart">
+      <h3>has direct activity part<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasIndirectActivityPart"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart">has indirect activity part</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#directActivityPartOf"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf">direct activity part of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasIndirectActivityPart">
+      <h3>has indirect activity part<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> transitive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart"
+                  target="_blank"
+                  title="http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart">has activity part</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasDirectActivityPart"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart">has direct activity part</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#indirectActivityPartOf"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectActivityPartOf">indirect activity part of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPrimaryParticipant">
+      <h3>has primary participant<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasPrimaryParticipant</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"
+                  target="_blank"
+                  title="http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant">has participant</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRequirement">
+      <h3>has requirement<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasRequirement</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"
+                  target="_blank"
+                  title="http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant">has participant</a>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#requirementOf"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#requirementOf">requirement of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="indirectActivityPartOf">
+      <h3>indirect activity part of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectActivityPartOf</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> transitive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf"
+                  target="_blank"
+                  title="http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf">activity part of</a>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#directActivityPartOf"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf">direct activity part of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasIndirectActivityPart"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart">has indirect activity part</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="indirectlyAfter">
+      <h3>indirectly after<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectlyAfter</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://rds.posccaesar.org/ontology/lis14/rdl/after"
+                  target="_blank"
+                  title="http://rds.posccaesar.org/ontology/lis14/rdl/after">after</a>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#directlyAfter"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyAfter">directly after</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#indirectlyBefore"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectlyBefore">indirectly before</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="indirectlyBefore">
+      <h3>indirectly before<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectlyBefore</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> transitive</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://rds.posccaesar.org/ontology/lis14/rdl/before"
+                  target="_blank"
+                  title="http://rds.posccaesar.org/ontology/lis14/rdl/before">before</a>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#directlyBefore"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore">directly before</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#indirectlyAfter"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectlyAfter">indirectly after</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="locallyEquivalentTo">
+      <h3>locally equivalent to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:
+                </strong> symmetric</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#reasoningSupport"
+                  target="_blank"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#reasoningSupport">reasoning support</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MaintenanceTask"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask">MaintenanceTask</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#MaintenanceTask"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask">MaintenanceTask</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="requirementOf">
+      <h3>requirement of<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#requirementOf</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"
+                  target="_blank"
+                  title="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn">participant in</a>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasRequirement"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasRequirement">has requirement</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="annotationproperties">
+   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example"
+            title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example">
+            <span>example</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+            title="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+            <span>is rule enabled</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms"
+            title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms">
+            <span>semi formal natural language axioms</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example">
+      <h3>example<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example</p>
+   </div>
+   <div class="entity" id="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled">
+      <h3>is rule enabled<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled</p>
+   </div>
+   <div class="entity" id="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms">
+      <h3>semi formal natural language axioms<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms</p>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+</div>
+</div>
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

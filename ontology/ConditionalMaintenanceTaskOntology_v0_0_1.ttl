@@ -1,5 +1,5 @@
 @prefix o-rdfs: <http://tpl.ottr.xyz/rdfs/0.2/> .
-@prefix proc-tpl: <http://tpl.equonto.org/ontology/maintenance-procedure/> .
+@prefix proc-tpl: <http://spec.equonto.org/template/maintenance-procedure/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix pz: <http://www.co-ode.org/ontologies/pizza/pizza.owl#> .
@@ -74,24 +74,33 @@ _:b0    rdf:type            owl:Restriction ;
 proc-cmto:resultsIn  rdf:type  owl:ObjectProperty .
 
 proc-cmto:FunctionalFailure
-        rdf:type  owl:Class .
+        rdf:type         owl:Class ;
+        rdfs:subClassOf  _:b1 .
 
-_:b1    owl:intersectionOf  _:b2 .
+_:b1    rdf:type            owl:Restriction ;
+        owl:someValuesFrom  lis:PhysicalObject ;
+        owl:onProperty      lis:hasParticipant .
 
-_:b3    rdf:rest   rdf:nil ;
-        rdf:first  _:b4 .
+lis:hasParticipant  rdf:type  owl:ObjectProperty .
 
-_:b2    rdf:rest   _:b3 ;
+lis:PhysicalObject  rdf:type  owl:Class .
+
+_:b2    owl:intersectionOf  _:b3 .
+
+_:b4    rdf:rest   rdf:nil ;
+        rdf:first  _:b5 .
+
+_:b3    rdf:rest   _:b4 ;
         rdf:first  proc-spo:MaintenanceTask .
 
-_:b1    rdf:type  owl:Class ;
+_:b2    rdf:type  owl:Class ;
         rdf:type  owl:Class .
 
 proc-cmto:CorrectiveMaintenanceTask
         rdf:type             owl:Class ;
-        owl:equivalentClass  _:b1 .
+        owl:equivalentClass  _:b2 .
 
-_:b4    rdf:type            owl:Restriction ;
+_:b5    rdf:type            owl:Restriction ;
         owl:someValuesFrom  proc-cmto:FunctionalFailure ;
         owl:onProperty      proc-cmto:addresses .
 
@@ -100,7 +109,7 @@ proc-cmto:addresses  rdf:type  owl:ObjectProperty .
 proc-cmto:FunctionalFailure
         rdf:type  owl:Class .
 
-_:b5    rdf:type            owl:Restriction ;
+_:b6    rdf:type            owl:Restriction ;
         owl:someValuesFrom  proc-cmto:FunctionalFailure ;
         owl:onProperty      lis:isAbout .
 
@@ -109,77 +118,66 @@ lis:isAbout  rdf:type  owl:ObjectProperty .
 proc-cmto:FunctionalFailure
         rdf:type  owl:Class .
 
-_:b6    owl:intersectionOf  _:b7 .
+_:b7    owl:intersectionOf  _:b8 .
 
-_:b7    rdf:rest   _:b8 ;
+_:b8    rdf:rest   _:b9 ;
         rdf:first  lis:InformationObject .
 
-_:b8    rdf:rest   rdf:nil ;
-        rdf:first  _:b5 .
+_:b9    rdf:rest   rdf:nil ;
+        rdf:first  _:b6 .
 
-_:b6    rdf:type  owl:Class ;
+_:b7    rdf:type  owl:Class ;
         rdf:type  owl:Class .
 
 proc-cmto:FailureModeObservation
         rdf:type             owl:Class ;
-        owl:equivalentClass  _:b6 .
+        owl:equivalentClass  _:b7 .
 
 proc-cmto:FunctionalFailure
-        rdfs:subClassOf  _:b9 .
-
-_:b9    rdf:type            owl:Restriction ;
-        owl:someValuesFrom  lis:PhysicalObject ;
-        owl:onProperty      lis:hasParticipant .
-
-lis:hasParticipant  rdf:type  owl:ObjectProperty .
-
-lis:PhysicalObject  rdf:type  owl:Class .
-
-proc-cmto:FunctionalFailure
+        rdfs:subClassOf     lis:Activity ;
+        rdf:type            owl:Class ;
         iof-av:semiFormalNaturalLanguageAxioms  "An LIS: Activity that is represented in a OMPD: Failure Mode Observation and hasParticipant some LIS: Physical Object" ;
         iof-av:adaptedFrom  "https://spec.industrialontologies.org/iof/ontology/maintenance/MaintenanceReferenceOntology/FailureProcess" ;
         iof-av:maturity     iof-av:Released ;
         rdfs:comment        "An LIS: Activity that is represented in a OMPD: Failure Mode Observation and hasParticipant some LIS: Physical Object" ;
         iof-av:example      "deformation process, corrosion process" ;
         rdfs:label          "Functional Failure" ;
-        iof-av:isPrimitive  "TRUE"^^xsd:boolean ;
         iof-av:subjectMatterExpertExplanation  "process that changes some quality of an item causing the the item to become degraded or failed such that it fails to fulfil its required function (IOF Maintenance Reference Ontology, IEC60050-192:12015, ISO 14224-2016, EN13306)" ;
-        rdfs:subClassOf     lis:Activity ;
-        rdf:type            owl:Class .
+        iof-av:isPrimitive  true .
 
 proc-cmto:FailureEvent
+        rdfs:subClassOf     lis:Event ;
+        rdf:type            owl:Class ;
         iof-av:semiFormalNaturalLanguageAxioms  "An LIS:Event that resuts in a OMPD: Functional Failure" ;
         iof-av:adaptedFrom  "https://spec.industrialontologies.org/iof/ontology/maintenance/MaintenanceReferenceOntology/FailureEvent" ;
         iof-av:maturity     iof-av:Released ;
         rdfs:comment        "An LIS:Event that resuts in a OMPD: Functional Failure" ;
         iof-av:example      "explosion, seizure, loss of power, loss of control" ;
         rdfs:label          "Failure Event" ;
-        iof-av:isPrimitive  "TRUE"^^xsd:boolean ;
         iof-av:subjectMatterExpertExplanation  "event that causes an item to lose its ability to perform a required function (IOF Maintenance Reference Ontology)" ;
-        rdfs:subClassOf     lis:Event ;
-        rdf:type            owl:Class .
+        iof-av:isPrimitive  true .
 
 proc-cmto:FailureModeObservation
+        rdfs:subClassOf     lis:InformationObject ;
+        rdf:type            owl:Class ;
         iof-av:semiFormalNaturalLanguageAxioms  "An LIS:Information object that denotes a OMPD:functional failure" ;
         iof-av:maturity     iof-av:Released ;
         rdfs:comment        "An LIS:Information object that denotes a OMPD:functional failure" ;
         iof-av:example      "Erratic output, vibration,  over-heating" ;
         rdfs:label          "Failure Mode Observation" ;
-        iof-av:isPrimitive  "FALSE"^^xsd:boolean ;
         iof-av:subjectMatterExpertExplanation  "the manner in which a failure occurs (IEC60050-192, EN 13306, ISO 14224)" ;
-        rdfs:subClassOf     lis:InformationObject ;
-        rdf:type            owl:Class .
+        iof-av:isPrimitive  false .
 
 proc-cmto:CorrectiveMaintenanceTask
+        rdfs:subClassOf     proc-spo:MaintenanceTask ;
+        rdf:type            owl:Class ;
         iof-av:semiFormalNaturalLanguageAxioms  "A OMPD:maintenance task that addresses a OMPD:functional failure" ;
         iof-av:maturity     iof-av:Released ;
         rdfs:comment        "A OMPD:maintenance task that addresses a OMPD:functional failure" ;
         iof-av:example      "Replace the leaking mechanical seal, replace the blown light bulb" ;
         rdfs:label          "Corrective Maintenance Task" ;
-        iof-av:isPrimitive  "FALSE"^^xsd:boolean ;
         iof-av:subjectMatterExpertExplanation  "maintenance carried out after fault recognition and intended to restore an item into a state in which it can perform a required function (EN13306)" ;
-        rdfs:subClassOf     proc-spo:MaintenanceTask ;
-        rdf:type            owl:Class .
+        iof-av:isPrimitive  false .
 
 proc-cmto:resultsIn  rdfs:subPropertyOf  lis:before ;
         rdf:type            owl:ObjectProperty .
@@ -187,14 +185,14 @@ proc-cmto:resultsIn  rdfs:subPropertyOf  lis:before ;
 proc-cmto:triggers  rdfs:subPropertyOf  proc-spo:directlyBefore ;
         rdf:type            owl:ObjectProperty .
 
-proc-cmto:addresses  owl:inverseOf  proc-cmto:addressedBy ;
-        rdfs:subPropertyOf  lis:occursRelativeTo ;
-        rdf:type            owl:ObjectProperty .
+proc-cmto:addresses  rdfs:subPropertyOf  lis:occursRelativeTo ;
+        rdf:type            owl:ObjectProperty ;
+        owl:inverseOf       proc-cmto:addressedBy .
 
 proc-cmto:addressedBy
-        owl:inverseOf       proc-cmto:addresses ;
         rdfs:subPropertyOf  lis:occursRelativeTo ;
-        rdf:type            owl:ObjectProperty .
+        rdf:type            owl:ObjectProperty ;
+        owl:inverseOf       proc-cmto:addresses .
 
 proc-cmto:functionalFailureRealisedIn
         rdfs:subPropertyOf      lis:realizedIn ;
