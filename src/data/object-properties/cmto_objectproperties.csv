@@ -1,6 +1,6 @@
 iri,superprop,label,description,seeAlso,definedBy,domain,range,propertyType,inverse,propertyChain
-proc:resultsIn,lis:before,,,,,,,,,
-proc:triggers,proc:directlyBefore,,,,,,,,,
-proc:addresses,lis:occursRelativeTo,,,,,,,,proc:addressedBy,
-proc:addressedBy,lis:occursRelativeTo,,,,,,,,proc:addresses,
-proc:functionalFailureRealisedIn,lis:realizedIn,,,,,,,,,"proc:functionalFailureRealizedIn,proc:triggers"
+proc-cmto:resultsIn,lis:before,,,,,,,,,
+proc-cmto:triggers,proc-spo:directlyBefore,,,,,,,,,
+proc-cmto:addresses,lis:occursRelativeTo,,,,,,,,proc-cmto:addressedBy,
+proc-cmto:addressedBy,lis:occursRelativeTo,,,,,,,,proc-cmto:addresses,
+proc-cmto:functionalFailureRealisedIn,lis:realizedIn,,,,,,,,,"proc-cmto:functionalFailureRealizedIn,proc-cmto:triggers"

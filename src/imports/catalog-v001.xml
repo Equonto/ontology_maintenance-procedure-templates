@@ -6,9 +6,9 @@
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2"
         prefer="public" xml:base="">
         <uri id="Automatically generated entry, Timestamp=1702012719003"
-            name="http://rds.posccaesar.org/ontology/lis14/ont/core" uri="iso.owl" />
+            name="http://rds.posccaesar.org/ontology/lis14/rdl/" uri="rdl" />
         <uri id="Automatically generated entry, Timestamp=1702012719003"
             name="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
-            uri="AnnotationVocabulary.rdf" />
+            uri="AnnotationVocabulary" />
     </group>
 </catalog>

@@ -45,8 +45,9 @@
 @prefix dcterms:     <http://purl.org/dc/terms/> .
 @prefix ido-tpl:      <http://example.com/ido/> .
 @prefix lis:          <http://rds.posccaesar.org/ontology/lis14/rdl/> .
-@prefix proc: <http://spec.equonto.org/ontology/maintenance-procedure#> .
-@prefix proc-tpl: <http://tpl.equonto.org/ontology/maintenance-procedure/> .
+@prefix proc-cmto: <http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#> .
+@prefix proc-spo: <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#> .
+@prefix proc-tpl: <http://spec.equonto.org/template/maintenance-procedure/> .
 @prefix iof-av: <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/> .
 
 ## axioms - hard coded - TODO: can I make this "dry"
@@ -104,9 +105,9 @@ proc-tpl:PROC_SPO_ClassAxioms_MaintenanceProcedureProcess[]
     ( <https://orcid.org/0000-0001-7829-7674> ), # authors,
     none # contributors
  ) :: {
-    o-owl-re:ObjectSomeValuesFrom(?blank10001, lis:hasActivityPart, proc:MaintenanceTask),
-    o-owl-re:ObjectSomeValuesFrom(?blank10002, lis:representedBy, proc:MaintenanceProcedureDocument),
-    o-owl-ax:EquivObjectIntersectionOf(proc:MaintenanceProcedureProcess, (proc:MaintenanceProcess, ?blank10001, ?blank10002))
+    o-owl-re:ObjectSomeValuesFrom(?blank10001, lis:hasActivityPart, proc-spo:MaintenanceTask),
+    o-owl-re:ObjectSomeValuesFrom(?blank10002, lis:representedBy, proc-spo:MaintenanceProcedureDocument),
+    o-owl-ax:EquivObjectIntersectionOf(proc-spo:MaintenanceProcedureProcess, (proc-spo:MaintenanceProcess, ?blank10001, ?blank10002))
 } .
 
 proc-tpl:PROC_SPO_ClassAxioms_Hazard[]
@@ -130,8 +131,8 @@ proc-tpl:PROC_SPO_ClassAxioms_Hazard[]
     ( <https://orcid.org/0000-0001-7829-7674> ), # authors,
     none # contributors
  ) :: {
-    o-owl-re:ObjectSomeValuesFrom(?blank10003, lis:realizedIn, proc:HazardRealizationProcess),
-    o-owl-ax:EquivObjectIntersectionOf(proc:Hazard, (lis:RealizableEntity, ?blank10003))
+    o-owl-re:ObjectSomeValuesFrom(?blank10003, lis:realizedIn, proc-spo:HazardRealizationProcess),
+    o-owl-ax:EquivObjectIntersectionOf(proc-spo:Hazard, (lis:RealizableEntity, ?blank10003))
 } .
 
 proc-tpl:PROC_SPO_ClassAxioms_Resource[] 
@@ -155,8 +156,8 @@ proc-tpl:PROC_SPO_ClassAxioms_Resource[]
     ( <https://orcid.org/0000-0001-7829-7674> ), # authors,
     none # contributors
  ) :: {
-    o-owl-re:ObjectSomeValuesFrom(?blank10004, lis:hasRole, proc:ResourceRole),
-    o-owl-ax:EquivObjectIntersectionOf(proc:Resource, (lis:Object, ?blank10004))
+    o-owl-re:ObjectSomeValuesFrom(?blank10004, lis:hasRole, proc-spo:ResourceRole),
+    o-owl-ax:EquivObjectIntersectionOf(proc-spo:Resource, (lis:Object, ?blank10004))
 } .
 
 proc-tpl:PROC_SPO_ClassAxioms_MaintenanceTask[] 
@@ -180,12 +181,12 @@ proc-tpl:PROC_SPO_ClassAxioms_MaintenanceTask[]
     ( <https://orcid.org/0000-0001-7829-7674> ), # authors,
     none # contributors
  ) :: {
-    o-owl-re:ObjectMaxCardinality(?blank10014, "1"^^xsd:nonNegativeInteger, proc:directlyBefore, proc:MaintenanceTask),
-    o-owl-re:ObjectMaxCardinality(?blank10015, "1"^^xsd:nonNegativeInteger, proc:directActivityPartOf, proc:MaintenanceTask),
-    o-owl-re:ObjectMaxCardinality(?blank10016, "1"^^xsd:nonNegativeInteger, proc:directlyActivityPartOf, proc:MaintenanceProcedureProcess),
-    o-owl-re:ObjectAllValuesFrom(?blank10017, proc:locallyEquivalentTo, proc:MaintenanceTask),
-    o-owl-re:ObjectSomeValuesFrom(?blank10018, proc:representedBy, proc:MaintenanceTaskDescription),
-    o-owl-ax:EquivObjectIntersectionOf(proc:MaintenanceTask, (proc:MaintenanceProcess, ?blank10014, ?blank10015, ?blank10016, ?blank10017, ?blank10018))
+    o-owl-re:ObjectMaxCardinality(?blank10014, "1"^^xsd:nonNegativeInteger, proc-spo:directlyBefore, proc-spo:MaintenanceTask),
+    o-owl-re:ObjectMaxCardinality(?blank10015, "1"^^xsd:nonNegativeInteger, proc-spo:directActivityPartOf, proc-spo:MaintenanceTask),
+    o-owl-re:ObjectMaxCardinality(?blank10016, "1"^^xsd:nonNegativeInteger, proc-spo:directActivityPartOf, proc-spo:MaintenanceProcedureProcess),
+    o-owl-re:ObjectAllValuesFrom(?blank10017, proc-spo:locallyEquivalentTo, proc-spo:MaintenanceTask),
+    o-owl-re:ObjectSomeValuesFrom(?blank10018, proc-spo:representedBy, proc-spo:MaintenanceTaskDescription),
+    o-owl-ax:EquivObjectIntersectionOf(proc-spo:MaintenanceTask, (proc-spo:MaintenanceProcess, ?blank10014, ?blank10015, ?blank10016, ?blank10017, ?blank10018))
 } .
 
 proc-tpl:PROC_SPO_ClassAxioms_HazardInMaintenanceProcess[] 
@@ -209,10 +210,10 @@ proc-tpl:PROC_SPO_ClassAxioms_HazardInMaintenanceProcess[]
     ( <https://orcid.org/0000-0001-7829-7674> ), # authors,
     none # contributors
  ) :: {
-    o-owl-re:ObjectSomeValuesFrom(?blank10008, lis:occursRelativeTo, proc:MaintenanceProcess),
-    o-owl-re:ObjectIntersectionOf(?blank10009, (proc:HazardRealizationProcess, ?blank10008)),
+    o-owl-re:ObjectSomeValuesFrom(?blank10008, lis:occursRelativeTo, proc-spo:MaintenanceProcess),
+    o-owl-re:ObjectIntersectionOf(?blank10009, (proc-spo:HazardRealizationProcess, ?blank10008)),
     o-owl-re:ObjectSomeValuesFrom(?blank10010, lis:realizedIn, ?blank10009),
-    o-owl-ax:EquivObjectIntersectionOf(proc:HazardInMaintenanceProcess, (proc:Hazard, ?blank10010))
+    o-owl-ax:EquivObjectIntersectionOf(proc-spo:HazardInMaintenanceProcess, (proc-spo:Hazard, ?blank10010))
 } .
 
 proc-tpl:PROC_SPO_ClassAxioms_ResourceRole[] 
@@ -236,10 +237,10 @@ proc-tpl:PROC_SPO_ClassAxioms_ResourceRole[]
     ( <https://orcid.org/0000-0001-7829-7674> ), # authors,
     none # contributors
  ) :: {
-    o-owl-re:ObjectSomeValuesFrom(?blank10011, proc:requirementOf, lis:Activity),
+    o-owl-re:ObjectSomeValuesFrom(?blank10011, proc-spo:requirementOf, lis:Activity),
     o-owl-re:ObjectIntersectionOf(?blank10012, (lis:Object, ?blank10011)),
     o-owl-re:ObjectAllValuesFrom(?blank10013, lis:roleOf, ?blank10012),
-    o-owl-ax:EquivObjectIntersectionOf(proc:ResourceRole, (lis:Role, ?blank10013))
+    o-owl-ax:EquivObjectIntersectionOf(proc-spo:ResourceRole, (lis:Role, ?blank10013))
 } .
 
 proc-tpl:PROC_SPO_ClassAxioms_MaintenanceProcedureDocument[] 
@@ -263,8 +264,8 @@ proc-tpl:PROC_SPO_ClassAxioms_MaintenanceProcedureDocument[]
     ( <https://orcid.org/0000-0001-7829-7674> ), # authors,
     none # contributors
  ) :: {
-    o-owl-re:ObjectSomeValuesFrom(?blank10008, lis:isAbout, proc:MaintenanceProcedureProcess),
-    o-owl-ax:EquivObjectIntersectionOf(proc:MaintenanceProcedureDocument, (lis:InformationObject, ?blank10008))
+    o-owl-re:ObjectSomeValuesFrom(?blank10008, lis:isAbout, proc-spo:MaintenanceProcedureProcess),
+    o-owl-ax:EquivObjectIntersectionOf(proc-spo:MaintenanceProcedureDocument, (lis:InformationObject, ?blank10008))
 } .
 
 proc-tpl:PROC_SPO_ClassAxioms_MaintenanceTaskDescription[] 
@@ -288,8 +289,8 @@ proc-tpl:PROC_SPO_ClassAxioms_MaintenanceTaskDescription[]
     ( <https://orcid.org/0000-0001-7829-7674> ), # authors,
     none # contributors
  ) :: {
-    o-owl-re:ObjectSomeValuesFrom(?blank10007, lis:isAbout, proc:MaintenanceTask),
-    o-owl-ax:EquivObjectIntersectionOf(proc:MaintenanceTaskDescription, (lis:InformationObject, ?blank10007))
+    o-owl-re:ObjectSomeValuesFrom(?blank10007, lis:isAbout, proc-spo:MaintenanceTask),
+    o-owl-ax:EquivObjectIntersectionOf(proc-spo:MaintenanceTaskDescription, (lis:InformationObject, ?blank10007))
 } .
 
 proc-tpl:PROC_SPO_ClassAxioms_QualifiedPerson[] 
@@ -313,9 +314,9 @@ proc-tpl:PROC_SPO_ClassAxioms_QualifiedPerson[]
     ( <https://orcid.org/0000-0001-7829-7674> ), # authors,
     none # contributors
  ):: {
-    o-owl-re:ObjectSomeValuesFrom(?blank10005, lis:hasQuality, proc:Qualification),
-    o-owl-re:ObjectSomeValuesFrom(?blank10006, proc:requirementOf, lis:Activity),
-    o-owl-ax:EquivObjectIntersectionOf(proc:QualifiedPerson, (lis:Person, ?blank10005, ?blank10006))
+    o-owl-re:ObjectSomeValuesFrom(?blank10005, lis:hasQuality, proc-spo:Qualification),
+    o-owl-re:ObjectSomeValuesFrom(?blank10006, proc-spo:requirementOf, lis:Activity),
+    o-owl-ax:EquivObjectIntersectionOf(proc-spo:QualifiedPerson, (lis:Person, ?blank10005, ?blank10006))
 } .
 
 proc-tpl:PROC_SPO_ClassAxioms_MaintainableItem[] 
@@ -339,6 +340,55 @@ proc-tpl:PROC_SPO_ClassAxioms_MaintainableItem[]
     ( <https://orcid.org/0000-0001-7829-7674> ), # authors,
     none # contributors
  ) :: {
-    o-owl-re:ObjectSomeValuesFrom(?blank10009, lis:hasRole, proc:MaintainableItemRole),
-    o-owl-ax:EquivObjectIntersectionOf(proc:MaintainableItem, (lis:PhysicalObject, ?blank10009)) 
+    o-owl-re:ObjectSomeValuesFrom(?blank10009, lis:hasRole, proc-spo:MaintainableItemRole),
+    o-owl-ax:EquivObjectIntersectionOf(proc-spo:MaintainableItem, (lis:PhysicalObject, ?blank10009)) 
+} .
+
+proc-tpl:PROC_SPO_ClassAxioms_MaintenanceAction[]
+@@o-docttr:Signature(proc-tpl:PROC_SPO_ClassAxioms_MaintenanceAction, # resource
+    none, # label
+    "Create axioms for the Maintenance Action class in the OMPD Static Procedure Ontology", #description
+    none, #scope
+    none, #notes
+    none, #see also
+    none #editorial note
+),
+@@o-docttr:Version(proc-tpl:PROC_SPO_ClassAxioms_MaintenanceAction, # resource
+    ottr:released, # status
+    "0.1.0", # version
+    none, #previous version
+    none # next version
+) ,
+@@o-docttr:Provenance(proc-tpl:PROC_SPO_ClassAxioms_MaintenanceAction,
+    "2023-08-12T00:00:00Z"^^xsd:dateTime, # created,
+    "2023-08-12T00:00:00Z"^^xsd:dateTime, # modified,
+    ( <https://orcid.org/0000-0001-7829-7674> ), # authors,
+    none # contributors 
+) :: {
+    o-owl-ax:SubObjectSomeValuesFrom(proc-cmto:MaintenanceAction, lis:participantIn, proc-spo:MaintenanceProcess)
+} .
+
+proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess[]
+@@o-docttr:Signature(proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess, # resource
+    none, # label
+    "Create axioms for the Item in Maintenance Process class in the OMPD Static Procedure Ontology", #description
+    none, #scope
+    none, #notes
+    none, #see also
+    none #editorial note 
+),
+@@o-docttr:Version(proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess, # resource
+    ottr:released, # status
+    "0.1.0", # version 
+    none, #previous version
+    none # next version
+),
+@@o-docttr:Provenance(proc-tpl:PROC_SPO_ClassAxioms_ItemInMaintenanceProcess,
+    "2023-08-12T00:00:00Z"^^xsd:dateTime, # created, 
+    "2023-08-12T00:00:00Z"^^xsd:dateTime, # modified, 
+    ( <https://orcid.org/0000-0001-7829-7674> ), # authors, 
+    none # contributors 
+) :: {
+    o-owl-re:ObjectSomeValuesFrom(?blank10012, lis:participantIn, proc-spo:MaintenanceProcess),
+    o-owl-ax:EquivObjectIntersectionOf(proc-spo:ItemInMaintenanceProcess, (lis:PhysicalObject, ?blank10009)) 
 } .
