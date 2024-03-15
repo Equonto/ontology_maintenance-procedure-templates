@@ -2,6 +2,11 @@ import unittest
 import utility.TestUtilities as tu
 from owlready2 import *
 
+'''
+Competency ID: 02
+User: Maintenance Technician
+Competency Question: What steps need to be performed to execute my procedure?
+'''
 class TestOntologyCompetency2(unittest.TestCase):
 
     query = """
@@ -24,25 +29,68 @@ class TestOntologyCompetency2(unittest.TestCase):
         self.ontologies = None
         tu.clear_staging()
 
-    def test_single_maintenance_task(self):
+    def test_singleMaintenanceTaskAtTopLevel_shouldReturnMaintenanceTask(self):
         namespace = self.ontologies["spo"].get_namespace("http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#")
-                
-        # arrage
         with namespace:
             proc1 = namespace.MaintenanceProcedureProcess("procedure_process_001")
             task1 = namespace.MaintenanceTask("task_001")
             task1.directActivityPartOf.append(proc1)
-
             tu.run_pellet_reasoner()
-            # act
             result = tu.run_query(self.query)
-            
-            # assert that list has one entry
             self.assertEqual(len(result), 1)
-
-            # assert that the resource found is the tool_001
             self.assertEqual(result[0][0], task1)
+        namespace.destroy()
 
+    def test_multipleMaintenanceTasksAtTopLevel_shouldReturnAllMaintenanceTasks(self):
+        
+        namespace = self.ontologies["spo"].get_namespace("http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#")
+        with namespace:
+            proc1 = namespace.MaintenanceProcedureProcess("procedure_process_001")
+            task1 = namespace.MaintenanceTask("task_001")
+            task1.directActivityPartOf.append(proc1)
+            task2 = namespace.MaintenanceTask("task_002")
+            task2.directActivityPartOf.append(proc1)
+            tu.run_pellet_reasoner()
+            result = tu.run_query(self.query)
+            self.assertEqual(len(result), 2)
+            self.assertEqual(result[0][0], task1)
+            self.assertEqual(result[1][0], task2)
+        namespace.destroy()
+
+    def test_multipleMainteananceTasksAtDifferentNestingLevels_shouldReturnAllMaintenanceTasks(self):
+    
+        namespace = self.ontologies["spo"].get_namespace("http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#")
+        with namespace:
+            proc1 = namespace.MaintenanceProcedureProcess("procedure_process_001")
+            task1 = namespace.MaintenanceTask("task_001")
+            task1.directActivityPartOf.append(proc1)
+            task2 = namespace.MaintenanceTask("task_002")
+            task2.directActivityPartOf.append(task1)
+            task3 = namespace.MaintenanceTask("task_003")
+            task3.directActivityPartOf.append(task2)
+            tu.run_pellet_reasoner()
+            result = tu.run_query(self.query)
+            self.assertEqual(len(result), 3)
+            self.assertEqual(result[0][0], task1)
+            self.assertEqual(result[0][1], proc1)
+            self.assertEqual(result[1][0], task2)
+            self.assertEqual(result[1][1], task1)
+            self.assertEqual(result[2][0], task3)
+            self.assertEqual(result[2][1], task2)
+
+        namespace.destroy()
+
+    def test_maintenanceTaskInDifferentProcedure_shouldNotReturnMaintenanceTask(self):
+        namespace = self.ontologies["spo"].get_namespace("http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#")
+        with namespace:
+            proc1 = namespace.MaintenanceProcedureProcess("procedure_process_001")
+            proc2 = namespace.MaintenanceProcedureProcess("procedure_process_002")
+            task1 = namespace.MaintenanceTask("task_001")
+            task1.directActivityPartOf.append(proc2)
+            tu.run_pellet_reasoner()
+            result = tu.run_query(self.query)
+            self.assertEqual(len(result), 0)
+        namespace.destroy()
 
 if __name__ == '__main__':
     unittest.main()
