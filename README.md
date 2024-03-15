@@ -12,4 +12,4 @@ Repository Structure
 
 These templates are written using the OTTR templating language. Find OTTR at <https://ottr.xyz/>
 
-For more information, contaxt Caitlin Woods at caitlin@equonto.com
+For more information, contaxt Caitlin Woods at caitlin@equonto.org
