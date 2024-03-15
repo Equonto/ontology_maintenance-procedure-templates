@@ -156,6 +156,36 @@
 
 
 #################################################################
+#    Data properties
+#################################################################
+
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#documentIdentifier
+:documentIdentifier rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:label "documentIdentifier" .
+
+
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasValue
+:hasValue rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> ;
+          rdfs:label "hasValue" .
+
+
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasVersion
+:hasVersion rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:label "hasVersion" .
+
+
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isAuxilliaryMedia
+:isAuxilliaryMedia rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:range xsd:boolean ;
+                   rdfs:label "isAuxilliaryMedia" .
+
+
+#################################################################
 #    Classes
 #################################################################
 
@@ -557,15 +587,73 @@
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean
 ] .
 
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean
+ ] .
+
 #################################################################
 #    Rules
 #################################################################
 
-<file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/y> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/owl/owlapi/turtle#a> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/x> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/owl/owlapi/turtle#b> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+<http://www.semanticweb.org/owl/owlapi/turtle#p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/owl/owlapi/turtle#c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/owl/owlapi/turtle#y> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/owl/owlapi/turtle#x> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.semanticweb.org/owl/owlapi/turtle#z> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdfs:comment "" ;
+   rdfs:label "Rule 3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasDirectActivityPart ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/owl/owlapi/turtle#a> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/owl/owlapi/turtle#b>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :HazardRealizationProcess ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/owl/owlapi/turtle#p>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :HazardInMaintenanceProcess ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/owl/owlapi/turtle#b>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/owl/owlapi/turtle#b> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/owl/owlapi/turtle#p>
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/owl/owlapi/turtle#p> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/owl/owlapi/turtle#c>
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/owl/owlapi/turtle#p> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/owl/owlapi/turtle#a>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
 
 [ rdfs:comment "" ;
    rdfs:label "Rule 2" ;
@@ -573,14 +661,14 @@
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasDirectActivityPart ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/y> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/x>
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/owl/owlapi/turtle#y> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/owl/owlapi/turtle#x>
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/x>
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/owl/owlapi/turtle#z> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/owl/owlapi/turtle#x>
                                                                 ] ;
                                                       rdf:rest rdf:nil
                                                     ]
@@ -588,8 +676,8 @@
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/y>
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.semanticweb.org/owl/owlapi/turtle#z> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <http://www.semanticweb.org/owl/owlapi/turtle#y>
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]

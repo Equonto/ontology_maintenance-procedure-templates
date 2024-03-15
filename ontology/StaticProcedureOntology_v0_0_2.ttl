@@ -49,6 +49,26 @@
 @prefix o-owl-ax: <http://tpl.ottr.xyz/owl/axiom/0.1/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 
+proc-spo:documentIdentifier
+        rdfs:label          "documentIdentifier" ;
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+proc-spo:hasVersion  rdfs:label  "hasVersion" ;
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+proc-spo:hasValue  rdfs:label  "hasValue" ;
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:domain         lis:InformationObject ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
+proc-spo:isAuxilliaryMedia
+        rdfs:label          "isAuxilliaryMedia" ;
+        rdfs:range          xsd:boolean ;
+        rdf:type            owl:DatatypeProperty ;
+        rdfs:subPropertyOf  owl:topDataProperty .
+
 _:b0    rdf:type            owl:Restriction ;
         owl:someValuesFrom  proc-spo:MaintainableItemRole ;
         owl:onProperty      lis:hasRole .
@@ -60,11 +80,11 @@ proc-spo:MaintainableItemRole
 
 _:b1    owl:intersectionOf  _:b2 .
 
-_:b2    rdf:rest   _:b3 ;
-        rdf:first  lis:PhysicalObject .
-
 _:b3    rdf:rest   rdf:nil ;
         rdf:first  _:b0 .
+
+_:b2    rdf:rest   _:b3 ;
+        rdf:first  lis:PhysicalObject .
 
 _:b1    rdf:type  owl:Class ;
         rdf:type  owl:Class .
@@ -75,11 +95,11 @@ proc-spo:MaintainableItem
 
 _:b4    owl:intersectionOf  _:b5 .
 
-_:b6    rdf:rest   rdf:nil ;
-        rdf:first  _:b7 .
-
 _:b5    rdf:rest   _:b6 ;
         rdf:first  lis:InformationObject .
+
+_:b6    rdf:rest   rdf:nil ;
+        rdf:first  _:b7 .
 
 _:b4    rdf:type  owl:Class ;
         rdf:type  owl:Class .
@@ -102,11 +122,11 @@ _:b8    owl:intersectionOf  _:b9 .
 _:b10   rdf:rest   rdf:nil ;
         rdf:first  _:b11 .
 
-_:b12   rdf:rest   _:b10 ;
-        rdf:first  _:b13 .
-
 _:b9    rdf:rest   _:b12 ;
         rdf:first  proc-spo:MaintenanceProcess .
+
+_:b12   rdf:rest   _:b10 ;
+        rdf:first  _:b13 .
 
 _:b8    rdf:type  owl:Class ;
         rdf:type  owl:Class .
@@ -162,11 +182,11 @@ _:b15   rdf:type  owl:Class .
 
 _:b19   owl:intersectionOf  _:b20 .
 
-_:b21   rdf:rest   rdf:nil ;
-        rdf:first  _:b14 .
-
 _:b20   rdf:rest   _:b21 ;
         rdf:first  lis:Role .
+
+_:b21   rdf:rest   rdf:nil ;
+        rdf:first  _:b14 .
 
 _:b19   rdf:type  owl:Class ;
         rdf:type  owl:Class .
@@ -201,21 +221,21 @@ proc-spo:MaintenanceProcedureProcess
 
 _:b26   owl:intersectionOf  _:b27 .
 
-_:b28   rdf:rest   rdf:nil ;
-        rdf:first  _:b29 .
-
 _:b27   rdf:rest   _:b28 ;
         rdf:first  proc-spo:HazardRealizationProcess .
+
+_:b28   rdf:rest   rdf:nil ;
+        rdf:first  _:b29 .
 
 _:b26   rdf:type  owl:Class .
 
 _:b30   owl:intersectionOf  _:b31 .
 
-_:b32   rdf:rest   rdf:nil ;
-        rdf:first  _:b33 .
-
 _:b31   rdf:rest   _:b32 ;
         rdf:first  proc-spo:Hazard .
+
+_:b32   rdf:rest   rdf:nil ;
+        rdf:first  _:b33 .
 
 _:b30   rdf:type  owl:Class ;
         rdf:type  owl:Class .
@@ -302,22 +322,22 @@ proc-spo:Qualification
 
 _:b44   owl:intersectionOf  _:b45 .
 
-_:b46   rdf:rest   _:b47 ;
-        rdf:first  _:b48 .
-
-_:b45   rdf:rest   _:b49 ;
+_:b45   rdf:rest   _:b46 ;
         rdf:first  proc-spo:MaintenanceProcess .
 
-_:b50   rdf:rest   _:b46 ;
+_:b47   rdf:rest   _:b48 ;
+        rdf:first  _:b49 .
+
+_:b46   rdf:rest   _:b50 ;
         rdf:first  _:b51 .
 
-_:b47   rdf:rest   rdf:nil ;
+_:b48   rdf:rest   rdf:nil ;
         rdf:first  _:b52 .
 
-_:b49   rdf:rest   _:b53 ;
+_:b53   rdf:rest   _:b47 ;
         rdf:first  _:b54 .
 
-_:b53   rdf:rest   _:b50 ;
+_:b50   rdf:rest   _:b53 ;
         rdf:first  _:b55 .
 
 _:b44   rdf:type  owl:Class ;
@@ -327,7 +347,7 @@ proc-spo:MaintenanceTask
         rdf:type             owl:Class ;
         owl:equivalentClass  _:b44 .
 
-_:b48   rdf:type           owl:Restriction ;
+_:b49   rdf:type           owl:Restriction ;
         owl:allValuesFrom  proc-spo:MaintenanceTask ;
         owl:onProperty     proc-spo:locallyEquivalentTo .
 
@@ -349,7 +369,7 @@ _:b55   owl:onProperty               proc-spo:directActivityPartOf ;
         rdf:type                     owl:Restriction ;
         owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger .
 
-_:b54   owl:onClass  proc-spo:MaintenanceTask .
+_:b51   owl:onClass  proc-spo:MaintenanceTask .
 
 proc-spo:directlyBefore
         rdf:type  owl:ObjectProperty .
@@ -357,7 +377,7 @@ proc-spo:directlyBefore
 proc-spo:MaintenanceTask
         rdf:type  owl:Class .
 
-_:b54   owl:onProperty               proc-spo:directlyBefore ;
+_:b51   owl:onProperty               proc-spo:directlyBefore ;
         rdf:type                     owl:Restriction ;
         owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger .
 
@@ -371,7 +391,7 @@ proc-spo:representedBy
 proc-spo:MaintenanceTaskDescription
         rdf:type  owl:Class .
 
-_:b51   owl:onClass  proc-spo:MaintenanceProcedureProcess .
+_:b54   owl:onClass  proc-spo:MaintenanceProcedureProcess .
 
 proc-spo:directActivityPartOf
         rdf:type  owl:ObjectProperty .
@@ -379,7 +399,7 @@ proc-spo:directActivityPartOf
 proc-spo:MaintenanceProcedureProcess
         rdf:type  owl:Class .
 
-_:b51   owl:onProperty               proc-spo:directActivityPartOf ;
+_:b54   owl:onProperty               proc-spo:directActivityPartOf ;
         rdf:type                     owl:Restriction ;
         owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger .
 
@@ -394,11 +414,11 @@ proc-spo:HazardRealizationProcess
 
 _:b57   owl:intersectionOf  _:b58 .
 
-_:b59   rdf:rest   rdf:nil ;
-        rdf:first  _:b56 .
-
 _:b58   rdf:rest   _:b59 ;
         rdf:first  lis:RealizableEntity .
+
+_:b59   rdf:rest   rdf:nil ;
+        rdf:first  _:b56 .
 
 _:b57   rdf:type  owl:Class ;
         rdf:type  owl:Class .
@@ -728,15 +748,72 @@ proc-spo:locallyEquivalentTo
 proc-spo:hasPrimaryParticipant
         rdf:type            owl:ObjectProperty ;
         rdfs:subPropertyOf  lis:hasParticipant .
+
 #################################################################
 #    Rules
 #################################################################
 
-<y> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:a rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<x> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:b rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
 
-<z> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+:p rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:c rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:y rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:x rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:z rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment ""^^xsd:string ;
+   rdfs:label "Rule 3"^^xsd:string ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> proc-spo:hasDirectActivityPart ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :a ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :b
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> proc-spo:HazardRealizationProcess ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :p
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> proc-spo:HazardInMaintenanceProcess ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :b
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> lis:realizedIn ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :b ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :p
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> lis:occursRelativeTo ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> :c
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> lis:occursRelativeTo ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :p ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :a
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
    rdfs:comment ""^^xsd:string ;
@@ -745,14 +822,14 @@ proc-spo:hasPrimaryParticipant
    <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> proc-spo:hasDirectActivityPart ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <y> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <x>
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :y ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :x
                                                      ] ;
                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> lis:participantIn ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <z> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> <x>
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :z ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :x
                                                                 ] ;
                                                       rdf:rest rdf:nil
                                                     ]
@@ -760,8 +837,8 @@ proc-spo:hasPrimaryParticipant
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> lis:participantIn ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <z> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <y>
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :z ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :y
                                                      ] ;
                                            rdf:rest rdf:nil
                                          ]

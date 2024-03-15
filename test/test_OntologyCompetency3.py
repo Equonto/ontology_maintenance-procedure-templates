@@ -72,3 +72,6 @@ class TestOntologyCompetency3(unittest.TestCase):
             self.assertEqual(len(result), 1)
             self.assertEqual(result[0][0], task2)
         namespace.destroy()
+
+if __name__ == '__main__':
+    unittest.main()

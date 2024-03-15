@@ -87,11 +87,11 @@ lis:PhysicalObject  rdf:type  owl:Class .
 
 _:b2    owl:intersectionOf  _:b3 .
 
-_:b4    rdf:rest   rdf:nil ;
-        rdf:first  _:b5 .
-
 _:b3    rdf:rest   _:b4 ;
         rdf:first  proc-spo:MaintenanceTask .
+
+_:b4    rdf:rest   rdf:nil ;
+        rdf:first  _:b5 .
 
 _:b2    rdf:type  owl:Class ;
         rdf:type  owl:Class .
@@ -120,11 +120,11 @@ proc-cmto:FunctionalFailure
 
 _:b7    owl:intersectionOf  _:b8 .
 
-_:b8    rdf:rest   _:b9 ;
-        rdf:first  lis:InformationObject .
-
 _:b9    rdf:rest   rdf:nil ;
         rdf:first  _:b6 .
+
+_:b8    rdf:rest   _:b9 ;
+        rdf:first  lis:InformationObject .
 
 _:b7    rdf:type  owl:Class ;
         rdf:type  owl:Class .
@@ -199,11 +199,11 @@ proc-cmto:functionalFailureRealisedIn
         rdf:type                owl:ObjectProperty ;
         owl:propertyChainAxiom  _:b10 .
 
-_:b10   rdf:rest   _:b11 ;
-        rdf:first  proc-cmto:functionalFailureRealizedIn .
-
 _:b11   rdf:rest   rdf:nil ;
         rdf:first  proc-cmto:triggers .
+
+_:b10   rdf:rest   _:b11 ;
+        rdf:first  proc-cmto:functionalFailureRealizedIn .
 
 proc-cmto:functionalFailureRealisedIn
         rdf:type  owl:ObjectProperty .
