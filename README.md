@@ -5,9 +5,9 @@ This repository contains resources and documentation for the for the Ontology fo
 Repository Contents
 
 - **docs:** the published documentation for OMPD
-    - [static procedure ontology documentation](https://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology>)
-    - [conditional maintenance task ontology documentation](https://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology>)
-    - [OTTR templates for generating OMPD](https://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology>)
+    - [static procedure ontology documentation](https://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology)
+    - [conditional maintenance task ontology documentation](https://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology)
+    - [OTTR templates for generating OMPD](https://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology)
   
 - **src:** the data, configuration files and OTTR templates used for generating OMPD
 - **ontology:** the ontology generated using the templates given in **src** (including a catalog file and imported ontologies for easy access in protege)
