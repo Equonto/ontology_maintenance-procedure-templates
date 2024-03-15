@@ -87,11 +87,11 @@ lis:PhysicalObject  rdf:type  owl:Class .
 
 _:b2    owl:intersectionOf  _:b3 .
 
-_:b3    rdf:rest   _:b4 ;
-        rdf:first  proc-spo:MaintenanceTask .
-
 _:b4    rdf:rest   rdf:nil ;
         rdf:first  _:b5 .
+
+_:b3    rdf:rest   _:b4 ;
+        rdf:first  proc-spo:MaintenanceTask .
 
 _:b2    rdf:type  owl:Class ;
         rdf:type  owl:Class .
@@ -120,11 +120,11 @@ proc-cmto:FunctionalFailure
 
 _:b7    owl:intersectionOf  _:b8 .
 
-_:b9    rdf:rest   rdf:nil ;
-        rdf:first  _:b6 .
-
 _:b8    rdf:rest   _:b9 ;
         rdf:first  lis:InformationObject .
+
+_:b9    rdf:rest   rdf:nil ;
+        rdf:first  _:b6 .
 
 _:b7    rdf:type  owl:Class ;
         rdf:type  owl:Class .
@@ -179,24 +179,24 @@ proc-cmto:CorrectiveMaintenanceTask
         iof-av:subjectMatterExpertExplanation  "maintenance carried out after fault recognition and intended to restore an item into a state in which it can perform a required function (EN13306)" ;
         iof-av:isPrimitive  false .
 
-proc-cmto:resultsIn  rdfs:subPropertyOf  lis:before ;
-        rdf:type            owl:ObjectProperty .
+proc-cmto:resultsIn  rdf:type  owl:ObjectProperty ;
+        rdfs:subPropertyOf  lis:before .
 
-proc-cmto:triggers  rdfs:subPropertyOf  proc-spo:directlyBefore ;
-        rdf:type            owl:ObjectProperty .
+proc-cmto:triggers  rdf:type  owl:ObjectProperty ;
+        rdfs:subPropertyOf  proc-spo:directlyBefore .
 
-proc-cmto:addresses  rdfs:subPropertyOf  lis:occursRelativeTo ;
-        rdf:type            owl:ObjectProperty ;
+proc-cmto:addresses  rdf:type  owl:ObjectProperty ;
+        rdfs:subPropertyOf  lis:occursRelativeTo ;
         owl:inverseOf       proc-cmto:addressedBy .
 
 proc-cmto:addressedBy
-        rdfs:subPropertyOf  lis:occursRelativeTo ;
         rdf:type            owl:ObjectProperty ;
+        rdfs:subPropertyOf  lis:occursRelativeTo ;
         owl:inverseOf       proc-cmto:addresses .
 
 proc-cmto:functionalFailureRealisedIn
-        rdfs:subPropertyOf      lis:realizedIn ;
         rdf:type                owl:ObjectProperty ;
+        rdfs:subPropertyOf      lis:realizedIn ;
         owl:propertyChainAxiom  _:b10 .
 
 _:b11   rdf:rest   rdf:nil ;
