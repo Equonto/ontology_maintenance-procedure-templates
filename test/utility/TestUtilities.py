@@ -25,9 +25,9 @@ def load_ontology():
     iso.load()
     annotation_vocabulary = owlready2.get_ontology("file://"+path+"AnnotationVocabulary.rdf")
     annotation_vocabulary.load()
-    spo = owlready2.get_ontology("file://"+path+"StaticProcedureOntology_v0_0_1.xml")
+    spo = owlready2.get_ontology("file://"+path+"StaticProcedureOntology_v0_0_2.xml")
     spo.load()
-    ontology = owlready2.get_ontology("file://"+path+"ConditionalMaintenanceTaskOntology_v0_0_1.xml")
+    ontology = owlready2.get_ontology("file://"+path+"ConditionalMaintenanceTaskOntology_v0_0_2.xml")
 
     # add imported ontologies
     spo.imported_ontologies.append(iso)
