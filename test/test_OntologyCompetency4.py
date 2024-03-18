@@ -207,3 +207,5 @@ class TestOntologyCompetency4(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+# <these tests are developed with the help of GitHub co-pilot>
