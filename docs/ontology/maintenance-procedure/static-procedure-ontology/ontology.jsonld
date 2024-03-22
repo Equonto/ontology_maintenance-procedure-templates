@@ -328,10 +328,10 @@
   "@id" : "_:genid65",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#p"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#c"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/a"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"
@@ -340,10 +340,10 @@
   "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#b"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/c"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#p"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"
@@ -352,7 +352,7 @@
   "@id" : "_:genid69",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#b"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/c"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess"
@@ -370,7 +370,7 @@
   "@id" : "_:genid71",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#p"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess"
@@ -379,10 +379,10 @@
   "@id" : "_:genid73",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#a"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/b"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#b"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/a"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart"
@@ -391,10 +391,10 @@
   "@id" : "_:genid75",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#p"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#a"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/b"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"
@@ -424,10 +424,10 @@
   "@id" : "_:genid78",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#z"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#x"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/x"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"
@@ -446,10 +446,10 @@
   "@id" : "_:genid80",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#y"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/y"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#x"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/x"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart"
@@ -458,14 +458,35 @@
   "@id" : "_:genid82",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#z"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z"
   } ],
   "http://www.w3.org/2003/11/swrl#argument2" : [ {
-    "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#y"
+    "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/y"
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"
   } ]
+}, {
+  "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/a",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/b",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/c",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/x",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/y",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
 }, {
   "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Activity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
@@ -1331,27 +1352,6 @@
 }, {
   "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#a",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
-}, {
-  "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#b",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
-}, {
-  "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#c",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
-}, {
-  "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#p",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
-}, {
-  "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#x",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
-}, {
-  "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#y",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
-}, {
-  "@id" : "http://www.semanticweb.org/owl/owlapi/turtle#z",
-  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
 }, {
   "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]

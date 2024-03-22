@@ -3,11 +3,11 @@ import utility.TestUtilities as tu
 from owlready2 import *
 
 '''
-Competency ID: 08
+Competency ID: 09
 User: Maintenance Planner
 Competency Question: What resources to I require to execute this week's procedures?
 '''
-class TestOntologyCompetency7(unittest.TestCase):
+class TestOntologyCompetency9(unittest.TestCase):
 
     query = """
         prefix spo: <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#>
@@ -17,8 +17,7 @@ class TestOntologyCompetency7(unittest.TestCase):
         SELECT ?resource {
         VALUES ?procedure_process { spo:procedure_process_001 spo:procedure_process_002 } 
         ?resource iso:participantIn ?procedure_process; a spo:Resource
-    }
-            
+    }         
     """
 
     def setUp(self):

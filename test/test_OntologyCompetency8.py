@@ -7,7 +7,7 @@ Competency ID: 08
 User: Maintenance Engineer
 Competency Question: Does my inspection procedure check all the failure modes outlined in the Failure Modes and Effects Analysis (FMEA) that was used in my RCM?
 '''
-class TestOntologyCompetency7(unittest.TestCase):
+class TestOntologyCompetency8(unittest.TestCase):
 
     query = """
         prefix spo: <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#>
@@ -35,10 +35,6 @@ class TestOntologyCompetency7(unittest.TestCase):
     def tearDown(self):
         self.ontologies = None
         tu.clear_staging()
-
-    #def test_failueModeFromFmeaIsFoundInProcedure_shouldReturnEmptyList(self):
-        
-
 
     # TODO: come back to this
 

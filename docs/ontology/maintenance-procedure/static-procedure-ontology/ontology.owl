@@ -877,25 +877,25 @@
      -->
 
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#a">
+    <rdf:Description rdf:about="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/b">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#b">
+    <rdf:Description rdf:about="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/a">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#p">
+    <rdf:Description rdf:about="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#c">
+    <rdf:Description rdf:about="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/c">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#y">
+    <rdf:Description rdf:about="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/y">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#x">
+    <rdf:Description rdf:about="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/x">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.semanticweb.org/owl/owlapi/turtle#z">
+    <rdf:Description rdf:about="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z">
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description>
@@ -909,8 +909,8 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#a"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#b"/>
+                        <swrl:argument1 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/b"/>
+                        <swrl:argument2 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/a"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -920,7 +920,7 @@
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                 <swrl:classPredicate rdf:resource="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#p"/>
+                                <swrl:argument1 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest>
@@ -930,7 +930,7 @@
                                     <rdf:Description>
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
                                         <swrl:classPredicate rdf:resource="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#b"/>
+                                        <swrl:argument1 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/c"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest>
@@ -940,8 +940,8 @@
                                             <rdf:Description>
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                 <swrl:propertyPredicate rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#b"/>
-                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#p"/>
+                                                <swrl:argument1 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/c"/>
+                                                <swrl:argument2 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -951,8 +951,8 @@
                                                     <rdf:Description>
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                         <swrl:propertyPredicate rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#p"/>
-                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#c"/>
+                                                        <swrl:argument1 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p"/>
+                                                        <swrl:argument2 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/a"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -973,8 +973,8 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#p"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#a"/>
+                        <swrl:argument1 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p"/>
+                        <swrl:argument2 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/b"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -992,8 +992,8 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#y"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#x"/>
+                        <swrl:argument1 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/y"/>
+                        <swrl:argument2 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/x"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -1003,8 +1003,8 @@
                             <rdf:Description>
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#z"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#x"/>
+                                <swrl:argument1 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z"/>
+                                <swrl:argument2 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/x"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1019,8 +1019,8 @@
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#z"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/owl/owlapi/turtle#y"/>
+                        <swrl:argument1 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z"/>
+                        <swrl:argument2 rdf:resource="file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/y"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
