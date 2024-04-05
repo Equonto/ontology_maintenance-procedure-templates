@@ -52,7 +52,7 @@ def run_pellet_reasoner():
     sync_reasoner_pellet(infer_property_values = True, infer_data_property_values=True)
 
 def run_query(query):
-    results = default_world.sparql(query)
+    results = default_world.sparql(query, error_on_undefined_entities=False)
     return list(results)
 
 # clear test/ staging file
