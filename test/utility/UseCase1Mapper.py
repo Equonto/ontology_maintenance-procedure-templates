@@ -79,6 +79,9 @@ class UseCase1Mapper:
         self.create_maintenance_procedure("procedure_document_2M_mech_inspection"
                                           , "2M Mech Insp Leak Detection Pumps"
                                           , "procedure_process_2M_mech_inspection")
+        
+        self.create_maintainable_item("maintainable_item_001", "procedure_process_2M_mech_inspection")
+        
         hazard_data = [
             { "hazard_name": "harm_to_persons_by_mechanical_impacts", "process_name": "procedure_process_2M_mech_inspection"}
            ,{ "hazard_name": "harm_to_persons_by_chemical_impacts", "process_name": "procedure_process_2M_mech_inspection"}
