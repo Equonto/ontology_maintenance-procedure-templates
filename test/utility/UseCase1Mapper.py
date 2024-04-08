@@ -7,6 +7,7 @@ class UseCase1Mapper:
         self.ontologies = self.load()
 
     def get_ontologies(self):
+        self.map()
         return self.ontologies
 
     def load(self):
@@ -31,7 +32,7 @@ class UseCase1Mapper:
         hazard = spo.Hazard(hazard_name)
         process = spo.MaintenanceProcedureProcess(process_name)
         hazard_process = spo.HazardRealizationProcess(hazard_name + "_process")
-        hazard.realizedIn.append(hazard_process)
+        hazard_process.realizes.append(hazard)
         hazard_process.occursRelativeTo.append(process)
 
     def create_maintenance_task(self, task_name, task_type, parent_process_name, after_task_name, task_descriptions):  
@@ -42,18 +43,21 @@ class UseCase1Mapper:
             task = spo.MaintenanceTask(task_name)
         if task_type == "corrective":
             task = cmto.CorrectiveMaintenanceTask(task_name)
-        parent_process = spo.MaintenanceProcess(parent_process_name) # todo, check if this is alright
-        parent_process.hasDirectActivityPart.append(task)
+        parent_process = spo.MaintenanceProcess(parent_process_name)
+        task.directActivityPartOf.append(parent_process)
         if after_task_name:
             after_task = spo.MaintenanceTask(after_task_name)
             task.directlyAfter.append(after_task)
 
         for task_description in task_descriptions:
+
             task_description_instance = None
             if (task_description["task_description_type"] == "instructional"):
                 task_description_instance = spo.InstructionalMaintenanceTaskDescription(task_description["task_description_name"])
+                task_description_instance.isAbout.append(task)
             if (task_description["task_description_type"] == "auxilliary"):
                 task_description_instance = spo.AuxilliaryMaintenanceTaskDescription(task_description["task_description_name"])
+                task_description_instance.isAbout.append(task)
 
             for media in task_description["media"]:
                 if (media["media_type"] == "text"):
@@ -142,23 +146,11 @@ class UseCase1Mapper:
                     ]
                 }]
             },
-            { "task_name": "lvl_0_task_2",
-              "task_type": "required",
-                "parent_process_name": "procedure_process_2M_mech_inspection",
-                "after_task_name": "lvl_0_task_1",
-                "task_descriptions": [{
-                    "task_description_name": "lvl_0_task_2_description",
-                    "task_description_type": "instructional",
-                    "media": [
-                        {"media_name":"lvl_0_task_2_description_media_1", "media_type": "text", "media_content": "Look for any piping deformation or restriction."}
-                    ]
-                }]
-            },
             {
                 "task_name": "lvl_0_task_2",
                 "task_type": "required",
                 "parent_process_name": "procedure_process_2M_mech_inspection",
-                "after_task_name": "lvl_0_task_1",
+                "after_task_name": "lvl_0_task_corrective_1",
                 "task_descriptions": [{
                     "task_description_name": "lvl_0_task_2_description",
                     "task_description_type": "instructional",

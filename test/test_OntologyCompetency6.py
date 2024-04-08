@@ -30,7 +30,7 @@ class TestOntologyCompetency6(unittest.TestCase):
         self.ontologies = None
         tu.clear_staging()
 
-    def test_permitExists_shouldBeReplacedWithNewPermit(self):
+    def test_permitExists_shoulReturnProcedure(self):
         namespace = self.ontologies["spo"].get_namespace("http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#")
         with namespace:
             permit1 = namespace.Permit("permit_001")

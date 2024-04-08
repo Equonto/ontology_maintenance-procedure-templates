@@ -92,8 +92,6 @@ class TestOntologyCompetency2(unittest.TestCase):
             self.assertEqual(len(result), 0)
         namespace.destroy()
 
-    # todo: check reasoning case where one thing is in two places
-
 if __name__ == '__main__':
     unittest.main()
 
