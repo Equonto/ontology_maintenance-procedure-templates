@@ -172,7 +172,7 @@ class TestUseCase1Mapping(unittest.TestCase):
             } '''
             
             tu.run_pellet_reasoner()
-            result = tu.run_query(self.query)
+            result = tu.run_query(query)
             self.assertEqual(len(result), 0)
 
         namespace.destroy()
