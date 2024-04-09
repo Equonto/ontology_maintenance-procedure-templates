@@ -155,7 +155,28 @@ class TestUseCase1Mapping(unittest.TestCase):
         namespace.destroy()
 
     def test_useCaseMapping_competency7(self):
-        pass # todo: implement
+        namespace = self.ontologies["spo"].get_namespace("http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#")
+        with namespace:
+            query = '''prefix spo: <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#>
+            prefix iso: <http://rds.posccaesar.org/ontology/lis14/rdl/>
+
+            SELECT DISTINCT ?procedure_process ?task ?text_value
+            WHERE {
+                ?text_class iso:concretizes ?task_description .
+                ?text_class a spo:Text .
+                ?text_class spo:hasTextValue ?text_value .
+                ?task_description iso:isAbout ?task .
+                ?task iso:activityPartOf ?procedure_process .
+                ?procedure_process a spo:MaintenanceProcedureProcess .
+                FILTER (contains(str(?text_value),'replace'))
+            } '''
+            
+            tu.run_pellet_reasoner()
+            result = tu.run_query(self.query)
+            self.assertEqual(len(result), 0)
+
+        namespace.destroy()
+
 
     def test_useCaseMapping_competency8(self):
         pass # todo: implement
