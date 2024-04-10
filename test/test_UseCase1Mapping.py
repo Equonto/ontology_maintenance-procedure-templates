@@ -178,8 +178,34 @@ class TestUseCase1Mapping(unittest.TestCase):
         namespace.destroy()
 
 
-    def test_useCaseMapping_competency8(self):
-        pass # todo: implement
+    # todo: check resuls of this query
+    def test_useCaseMapping_competency8_shouldReturnFailureMode(self):
+        spo = self.ontologies["spo"].get_namespace("http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#")
+        cmto = self.ontologies["cmto"].get_namespace("http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#")
+        with spo, cmto:
+            query = """
+                prefix spo: <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#>
+                prefix cmto: <http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#>
+                prefix iso: <http://rds.posccaesar.org/ontology/lis14/rdl/>
+
+                SELECT ?functional_failure
+                WHERE {
+                    VALUES ?failure_modes_in_fmea { cmto:NOI } .
+                    VALUES ?maintainable_item { spo:maintainable_item_001 } .
+                    VALUES ?procedure_process { cmto:procedure_process_001 } .
+                    ?functional_failure cmto:addressedBy ?corrective_maint_task; a cmto:FunctionalFailure .
+                    ?corrective_maint_task iso:activityPartOf ?procedure_process .
+                    ?maintainable_item spo:participantIn ?procedure_process .
+                    FILTER NOT EXISTS {
+                        ?functional_failure iso:representedIn ?failure_modes_in_fmea
+                    }
+                }
+             """
+            tu.run_pellet_reasoner()
+            result = tu.run_query(query)
+            self.assertEqual(len(result), 1)
+        spo.destroy()
+        cmto.destroy()
 
     def test_useCaseMapping_competency9_shouldReturnNoResources(self):
         namespace = self.ontologies["spo"].get_namespace("http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#")
