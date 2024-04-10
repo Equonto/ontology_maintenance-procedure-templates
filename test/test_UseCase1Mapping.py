@@ -178,9 +178,7 @@ class TestUseCase1Mapping(unittest.TestCase):
 
         namespace.destroy()
 
-
-    # todo: check resuls of this query
-    def test_useCaseMapping_competency8_shouldReturnFailureMode(self):
+    def test_useCaseMapping_competency8_shouldReturnNoRemainingFailures(self):
         spo = self.ontologies["spo"].get_namespace("http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#")
         cmto = self.ontologies["cmto"].get_namespace("http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#")
         with spo, cmto:
@@ -193,7 +191,7 @@ class TestUseCase1Mapping(unittest.TestCase):
                 WHERE {
                     VALUES ?failure_modes_in_fmea { cmto:NOI } .
                     VALUES ?maintainable_item { spo:maintainable_item_001 } .
-                    VALUES ?procedure_process { cmto:procedure_process_001 } .
+                    VALUES ?procedure_process { spo:procedure_process_2M_mech_inspection } .
                     ?functional_failure cmto:addressedBy ?corrective_maint_task; a cmto:FunctionalFailure .
                     ?corrective_maint_task iso:activityPartOf ?procedure_process .
                     ?maintainable_item spo:participantIn ?procedure_process .
@@ -204,7 +202,7 @@ class TestUseCase1Mapping(unittest.TestCase):
              """
             tu.run_pellet_reasoner()
             result = tu.run_query(query)
-            self.assertEqual(len(result), 1)
+            self.assertEqual(len(result), 0)
         spo.destroy()
         cmto.destroy()
 
