@@ -43,11 +43,12 @@ class TestUseCase1Mapping(unittest.TestCase):
 
                 SELECT ?maintenance_task ?parent
                 WHERE {
-                    VALUES ?procedure_process { spo:procedure_process_2M_mech_inspection  } 
+                    VALUES ?procedure_process { spo:procedure_process_001 } 
+                    ?maintenance_task a spo:MaintenanceTask .
                     ?maintenance_task iso:activityPartOf ?procedure_process .
                     ?maintenance_task spo:directActivityPartOf ?parent .
                 }
-            """     
+             """   
             tu.run_pellet_reasoner()
             result = tu.run_query(query)
             self.assertEqual(len(result), 8)

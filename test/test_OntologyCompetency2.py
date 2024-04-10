@@ -16,6 +16,7 @@ class TestOntologyCompetency2(unittest.TestCase):
     SELECT ?maintenance_task ?parent
     WHERE {
         VALUES ?procedure_process { spo:procedure_process_001 } 
+        ?maintenance_task a spo:MaintenanceTask .
         ?maintenance_task iso:activityPartOf ?procedure_process .
         ?maintenance_task spo:directActivityPartOf ?parent .
     }

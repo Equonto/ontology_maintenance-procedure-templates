@@ -6,8 +6,6 @@ from owlready2 import *
 Competency ID: 08
 User: Maintenance Engineer
 Competency Question: Does my Failure Mode and Effects Analysis (FMEA) that was used in my RCM contain all the functional failures that exist in my procedure?
-
-Does my inspection procedure check all the failure modes outlined in the Failure Modes and Effects Analysis (FMEA) that was used in my RCM?
 '''
 class TestOntologyCompetency8(unittest.TestCase):
 
