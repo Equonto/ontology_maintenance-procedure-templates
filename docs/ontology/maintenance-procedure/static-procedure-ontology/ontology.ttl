@@ -38,8 +38,20 @@
 
 
 #################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#string
+xsd:string rdf:type rdfs:Datatype .
+
+
+#################################################################
 #    Object Properties
 #################################################################
+
+###  http://rds.posccaesar.org/ontology/lis14/rdl/concretizedBy
+<http://rds.posccaesar.org/ontology/lis14/rdl/concretizedBy> rdf:type owl:ObjectProperty .
+
 
 ###  http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart
 <http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart> rdf:type owl:ObjectProperty .
@@ -73,6 +85,12 @@
 <http://rds.posccaesar.org/ontology/lis14/rdl/roleOf> rdf:type owl:ObjectProperty .
 
 
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#agentOf
+:agentOf rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> ;
+         owl:inverseOf :hasAgent .
+
+
 ###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf
 :directActivityPartOf rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :indirectActivityPartOf ;
@@ -93,6 +111,11 @@
                          owl:IrreflexiveProperty .
 
 
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasAgent
+:hasAgent rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> .
+
+
 ###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart
 :hasDirectActivityPart rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :hasIndirectActivityPart .
@@ -105,9 +128,9 @@
                          rdf:type owl:TransitiveProperty .
 
 
-###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasPrimaryParticipant
-:hasPrimaryParticipant rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> .
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasPatient
+:hasPatient rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> .
 
 
 ###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasRequirement
@@ -142,6 +165,12 @@
                      rdfs:range :MaintenanceTask .
 
 
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#patientOf
+:patientOf rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> ;
+           owl:inverseOf :hasPatient .
+
+
 ###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#reasoningSupport
 :reasoningSupport rdf:type owl:ObjectProperty .
 
@@ -165,24 +194,34 @@
                     rdfs:label "documentIdentifier" .
 
 
-###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasValue
-:hasValue rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf owl:topDataProperty ;
-          rdfs:domain <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> ;
-          rdfs:label "hasValue" .
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasMediaLocation
+:hasMediaLocation rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject> ;
+                  rdfs:label "hasMediaLocation" .
+
+
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasTextValue
+:hasTextValue rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdf:type owl:FunctionalProperty ;
+              rdfs:label "hasTextValue" .
 
 
 ###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasVersion
 :hasVersion rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
+            rdf:type owl:FunctionalProperty ;
             rdfs:label "hasVersion" .
 
 
-###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isAuxilliaryMedia
-:isAuxilliaryMedia rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf owl:topDataProperty ;
-                   rdfs:range xsd:boolean ;
-                   rdfs:label "isAuxilliaryMedia" .
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isInstructional
+:isInstructional rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdf:type owl:FunctionalProperty ;
+                 rdfs:domain :MaintenanceTaskDescription ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:label "isInstructional" .
 
 
 #################################################################
@@ -197,6 +236,37 @@
 <http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity> rdf:type owl:Class .
 
 
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Animation
+:Animation rdf:type owl:Class ;
+           rdfs:subClassOf :MediaObject ;
+           rdfs:comment "A LIS:MediaObject of type \"Animation\"" ;
+           rdfs:label "Animation" ;
+           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "an animated sequence describing which way to twist a bolt when torquing it (that can be accessed when viewing a procedure)" ;
+           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^xsd:boolean ;
+           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MediaObject of type \"Animation\"" .
+
+
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#AuxilliaryMaintenanceTaskDescription
+:AuxilliaryMaintenanceTaskDescription rdf:type owl:Class ;
+                                      owl:equivalentClass [ owl:intersectionOf ( :MaintenanceTaskDescription
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty :isInstructional ;
+                                                                                   owl:hasValue "false"^^xsd:boolean
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ] ;
+                                      rdfs:subClassOf :MaintenanceTaskDescription ;
+                                      rdfs:comment "A LIS:MaintenanceTaskDescription that provides  additional information for some agent to assist in the execution of a maintenance task." ;
+                                      rdfs:label "AuxilliaryMaintenanceTaskDescription" ;
+                                      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "\"hint: the engine has six bolts in total\"" ;
+                                      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^xsd:boolean ;
+                                      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                                      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MaintenanceTaskDescription that provides  additional information for some agent to assist in the execution of a maintenance task." ;
+                                      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the part of a document containing additional information (outside of the instructions) for performing a maintenance task" .
+
+
 ###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Component
 :Component rdf:type owl:Class ;
            rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject> ;
@@ -207,6 +277,17 @@
            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:PhysicalObject that may have some OMPD:ResourceRole" ;
            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "an item of hardware, software or both that can be individually described and has a required function" .
+
+
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ExecutableScript
+:ExecutableScript rdf:type owl:Class ;
+                  rdfs:subClassOf :MediaObject ;
+                  rdfs:comment "A LIS:MediaObject of type \"ExecutableScript\"" ;
+                  rdfs:label "ExecutableScript" ;
+                  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "an assembly script sitting on a server for automating the movement of a robtic arm to unscrew a bolt." ;
+                  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^xsd:boolean ;
+                  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MediaObject of type \"ExecutableScript\"" .
 
 
 ###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard
@@ -266,6 +347,37 @@
                           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
                           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "An LIS: Activity that has the potential to cause harm" ;
                           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the process in which the hazard is realised and harm occurs" .
+
+
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Image
+:Image rdf:type owl:Class ;
+       rdfs:subClassOf :MediaObject ;
+       rdfs:comment "A LIS:MediaObject of type \"Image\"" ;
+       rdfs:label "Image" ;
+       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "an image of a pump, a schemaitc diagram (that can be accessed while viewing a procedure via a link)" ;
+       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^xsd:boolean ;
+       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MediaObject of type \"Image\"" .
+
+
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#InstructionalMaintenanceTaskDescription
+:InstructionalMaintenanceTaskDescription rdf:type owl:Class ;
+                                         owl:equivalentClass [ owl:intersectionOf ( :MaintenanceTaskDescription
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty :isInstructional ;
+                                                                                      owl:hasValue "true"^^xsd:boolean
+                                                                                    ]
+                                                                                  ) ;
+                                                               rdf:type owl:Class
+                                                             ] ;
+                                         rdfs:subClassOf :MaintenanceTaskDescription ;
+                                         rdfs:comment "A LIS:MaintenanceTaskDescription that describes the actions necessary to execute a maintenance task" ;
+                                         rdfs:label "InstructionalMaintenanceTaskDescription" ;
+                                         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "\"unscrew the six bolts on the engine\"" ;
+                                         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^xsd:boolean ;
+                                         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                                         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MaintenanceTaskDescription that describes the actions necessary to execute a maintenance task" ;
+                                         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the part of a document containing instructions  for performing a maintenance task" .
 
 
 ###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess
@@ -425,6 +537,10 @@
 :MaintenanceTaskDescription rdf:type owl:Class ;
                             owl:equivalentClass [ owl:intersectionOf ( <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject>
                                                                        [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://rds.posccaesar.org/ontology/lis14/rdl/concretizedBy> ;
+                                                                         owl:someValuesFrom :MediaObject
+                                                                       ]
+                                                                       [ rdf:type owl:Restriction ;
                                                                          owl:onProperty <http://rds.posccaesar.org/ontology/lis14/rdl/isAbout> ;
                                                                          owl:someValuesFrom :MaintenanceTask
                                                                        ]
@@ -432,25 +548,13 @@
                                                   rdf:type owl:Class
                                                 ] ;
                             rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> ;
-                            rdfs:comment "An LIS:InformationObject that is about some OMPD:MaintenanceTask" ;
+                            rdfs:comment "An LIS:InformationObject that is about some OMPD:MaintenanceTask and is concretized in some OMPD:MediaObject" ;
                             rdfs:label "MaintenanceTaskDescription" ;
                             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "the section in a maintenance procedure description that describes an individual task in the process" ;
                             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "false"^^xsd:boolean ;
                             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
-                            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "An LIS:InformationObject that is about some OMPD:MaintenanceTask" ;
-                            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the part of a document containing instructions for performing a maintenance task" .
-
-
-###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescriptionMedia
-:MaintenanceTaskDescriptionMedia rdf:type owl:Class ;
-                                 rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> ;
-                                 rdfs:comment "An LIS:InformationObject has some proc:MediaType and is part of some OMPD:MaintenanceTaskDescription" ;
-                                 rdfs:label "MaintenanceTaskDescriptionMedia" ;
-                                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "An image of the engine that is being worked on in a \"disassemble the engine\" maintenance task." ;
-                                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "false"^^xsd:boolean ;
-                                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
-                                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "An LIS:InformationObject has some proc:MediaType and is part of some OMPD:MaintenanceTaskDescription" ;
-                                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "an descriptive information object of one media type that forms part of a maintenance task description" .
+                            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "An LIS:InformationObject that is about some OMPD:MaintenanceTask and is concretized in some OMPD:MediaObject" ;
+                            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the part of a document containing instructions or additional information  for performing a maintenance task" .
 
 
 ###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Material
@@ -465,16 +569,16 @@
           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "items (generally consumables) that are required for the maintenance procedure to be executed that cannot be individually described according to its primary function (generally consumables)." .
 
 
-###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaType
-:MediaType rdf:type owl:Class ;
-           rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> ;
-           rdfs:comment "An LIS:InformationObject that is a type of media" ;
-           rdfs:label "MediaType" ;
-           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "image, text, video" ;
-           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^xsd:boolean ;
-           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
-           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "An LIS:InformationObject that is a type of media" ;
-           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the format of a section of a maintenance procedure that describes an individual task in the process" .
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject
+:MediaObject rdf:type owl:Class ;
+             rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject> ;
+             rdfs:comment "A LIS:PhysicalObject that provides communication to some agent" ;
+             rdfs:label "MediaObject" ;
+             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "a physical image that is on a server and can be accessed while viewing a maintenance procedure document" ;
+             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^xsd:boolean ;
+             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:PhysicalObject that provides communication to some agent" ;
+             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the physical manifestation of an information object (i.e., a image on a server, text on a page)" .
 
 
 ###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Permit
@@ -572,6 +676,25 @@
               <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the role played by an object when it is required in the execution of a the maintenance task (and is not the equipment being worked on)" .
 
 
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Text
+:Text rdf:type owl:Class ;
+      owl:equivalentClass [ owl:intersectionOf ( :MediaObject
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasTextValue ;
+                                                   owl:someValuesFrom xsd:string
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+      rdfs:subClassOf :MediaObject ;
+      rdfs:comment "A LIS:MediaObject of type \"Text\"" ;
+      rdfs:label "Text" ;
+      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "the text \"unscrew the bolts\" or \"check the tank\"" ;
+      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^xsd:boolean ;
+      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MediaObject of type \"Text\"" .
+
+
 ###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Tool
 :Tool rdf:type owl:Class ;
       rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject> ;
@@ -582,6 +705,28 @@
       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:PhysicalObject that  may have some OMPD:ResourceRole" ;
       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "a physical object designed to perform a specific function involved in a maintenance task, usually hand-held" .
+
+
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Video
+:Video rdf:type owl:Class ;
+       rdfs:subClassOf :MediaObject ;
+       rdfs:comment "A LIS:MediaObject of type \"Video\"" ;
+       rdfs:label "Video" ;
+       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "a video of a technician finding and uncrewing the bolts from an engine (that can be accessed when viewing the procedure via a link)" ;
+       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^xsd:boolean ;
+       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MediaObject of type \"Video\"" .
+
+
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#3DModel
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#3DModel> rdf:type owl:Class ;
+                                                                                           rdfs:subClassOf :MediaObject ;
+                                                                                           rdfs:comment "A LIS:MediaObject of type \"3D Model\"" ;
+                                                                                           rdfs:label "3D Model" ;
+                                                                                           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "a 3D model of a pump (that can be accessed when viewing the procedure via a link)" ;
+                                                                                           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^xsd:boolean ;
+                                                                                           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                                                                                           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MediaObject of type \"3D Model\"" .
 
 
 [ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean

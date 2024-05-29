@@ -34,10 +34,25 @@
 # 
 # #################################################################
 # #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#string
+<http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
 # #    Object Properties
 # #
 # #################################################################
 # 
+# 
+# http://rds.posccaesar.org/ontology/lis14/rdl/concretizedBy
+<http://rds.posccaesar.org/ontology/lis14/rdl/concretizedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart
 <http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -63,6 +78,11 @@
 # http://rds.posccaesar.org/ontology/lis14/rdl/roleOf
 <http://rds.posccaesar.org/ontology/lis14/rdl/roleOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#agentOf
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#agentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#agentOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#agentOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasAgent> .
+# 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectActivityPartOf> .
@@ -80,6 +100,10 @@
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> .
 # 
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasAgent
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasAgent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> .
+# 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart> .
@@ -90,9 +114,9 @@
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart> <http://www.w3.org/2002/07/owl#inverseOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectActivityPartOf> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 # 
-# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasPrimaryParticipant
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasPrimaryParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasPrimaryParticipant> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> .
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasPatient
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasPatient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasPatient> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> .
 # 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasRequirement
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -121,6 +145,11 @@
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> .
 # 
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#patientOf
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#patientOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#patientOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#patientOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasPatient> .
+# 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#reasoningSupport
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#reasoningSupport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
@@ -145,22 +174,31 @@
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#documentIdentifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#documentIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "documentIdentifier" .
 # 
-# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasValue
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "hasValue" .
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasMediaLocation
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasMediaLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasMediaLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasMediaLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasMediaLocation> <http://www.w3.org/2000/01/rdf-schema#label> "hasMediaLocation" .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasTextValue
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasTextValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasTextValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasTextValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasTextValue> <http://www.w3.org/2000/01/rdf-schema#label> "hasTextValue" .
 # 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasVersion
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasVersion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasVersion> <http://www.w3.org/2000/01/rdf-schema#label> "hasVersion" .
 # 
-# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isAuxilliaryMedia
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isAuxilliaryMedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isAuxilliaryMedia> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isAuxilliaryMedia> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isAuxilliaryMedia> <http://www.w3.org/2000/01/rdf-schema#label> "isAuxilliaryMedia" .
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isInstructional
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isInstructional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isInstructional> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isInstructional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isInstructional> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isInstructional> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isInstructional> <http://www.w3.org/2000/01/rdf-schema#label> "isInstructional" .
 # 
 # 
 # 
@@ -177,6 +215,39 @@
 # http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity
 <http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Animation
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Animation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Animation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Animation> <http://www.w3.org/2000/01/rdf-schema#comment> "A LIS:MediaObject of type \"Animation\"" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Animation> <http://www.w3.org/2000/01/rdf-schema#label> "Animation" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Animation> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "an animated sequence describing which way to twist a bolt when torquing it (that can be accessed when viewing a procedure)" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Animation> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Animation> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Animation> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MediaObject of type \"Animation\"" .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#AuxilliaryMaintenanceTaskDescription
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#AuxilliaryMaintenanceTaskDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#AuxilliaryMaintenanceTaskDescription> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#hasValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isInstructional> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#AuxilliaryMaintenanceTaskDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#AuxilliaryMaintenanceTaskDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A LIS:MaintenanceTaskDescription that provides  additional information for some agent to assist in the execution of a maintenance task." .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#AuxilliaryMaintenanceTaskDescription> <http://www.w3.org/2000/01/rdf-schema#label> "AuxilliaryMaintenanceTaskDescription" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#AuxilliaryMaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "\"hint: the engine has six bolts in total\"" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#AuxilliaryMaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#AuxilliaryMaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#AuxilliaryMaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MaintenanceTaskDescription that provides  additional information for some agent to assist in the execution of a maintenance task." .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#AuxilliaryMaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the part of a document containing additional information (outside of the instructions) for performing a maintenance task" .
+# 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Component
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject> .
@@ -188,20 +259,30 @@
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Component> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:PhysicalObject that may have some OMPD:ResourceRole" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Component> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "an item of hardware, software or both that can be individually described and has a required function" .
 # 
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ExecutableScript
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ExecutableScript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ExecutableScript> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ExecutableScript> <http://www.w3.org/2000/01/rdf-schema#comment> "A LIS:MediaObject of type \"ExecutableScript\"" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ExecutableScript> <http://www.w3.org/2000/01/rdf-schema#label> "ExecutableScript" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ExecutableScript> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "an assembly script sitting on a server for automating the movement of a robtic arm to unscrew a bolt." .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ExecutableScript> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ExecutableScript> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ExecutableScript> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MediaObject of type \"ExecutableScript\"" .
+# 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
-_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Disposition> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard> <http://www.w3.org/2000/01/rdf-schema#comment> "An LIS: Realizeable Entity that is realizrd in some OMPD: Hazard Realization Process" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard> <http://www.w3.org/2000/01/rdf-schema#label> "Hazard" .
@@ -213,29 +294,29 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid5 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
-_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid8 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
-_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid12 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Disposition> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "An OMPD: Hazard that is realized in some OMPD: Hazard Realization Process that occurs relative to some OMPD: Maintenance Process" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess> <http://www.w3.org/2000/01/rdf-schema#label> "HazardInMaintenanceProcess" .
@@ -256,6 +337,39 @@ _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "An LIS: Activity that has the potential to cause harm" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the process in which the hazard is realised and harm occurs" .
 # 
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Image
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Image> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Image> <http://www.w3.org/2000/01/rdf-schema#comment> "A LIS:MediaObject of type \"Image\"" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Image> <http://www.w3.org/2000/01/rdf-schema#label> "Image" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Image> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "an image of a pump, a schemaitc diagram (that can be accessed while viewing a procedure via a link)" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Image> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Image> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Image> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MediaObject of type \"Image\"" .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#InstructionalMaintenanceTaskDescription
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#InstructionalMaintenanceTaskDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#InstructionalMaintenanceTaskDescription> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid17 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isInstructional> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#InstructionalMaintenanceTaskDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#InstructionalMaintenanceTaskDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A LIS:MaintenanceTaskDescription that describes the actions necessary to execute a maintenance task" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#InstructionalMaintenanceTaskDescription> <http://www.w3.org/2000/01/rdf-schema#label> "InstructionalMaintenanceTaskDescription" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#InstructionalMaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "\"unscrew the six bolts on the engine\"" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#InstructionalMaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#InstructionalMaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#InstructionalMaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MaintenanceTaskDescription that describes the actions necessary to execute a maintenance task" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#InstructionalMaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the part of a document containing instructions  for performing a maintenance task" .
+# 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject> .
@@ -268,18 +382,18 @@ _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid13 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
-_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItemRole> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/hasRole> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid21 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItemRole> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/hasRole> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem> <http://www.w3.org/2000/01/rdf-schema#comment> "An LIS:PhysicalObject hat has a role OMPD:MaintainableItemRole" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem> <http://www.w3.org/2000/01/rdf-schema#label> "MaintainableItem" .
@@ -315,18 +429,18 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid17 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
-_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess> .
-_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/isAbout> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid25 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/isAbout> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "An LIS:InformationObject that is about some OMPD:MaineanceProcedureProcess" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument> <http://www.w3.org/2000/01/rdf-schema#label> "MaintenanceProcedureDocument" .
@@ -338,24 +452,24 @@ _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid21 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid23 .
-_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument> .
-_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/representedBy> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
-_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> .
-_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid29 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/representedBy> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "An OMPD:MaintenanceProcess that is represented in some OMPD:MaintenanceProcedureDocument and has activity part some OMPD:MaintenanceTask" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess> <http://www.w3.org/2000/01/rdf-schema#label> "MaintenanceProcedureProcess" .
@@ -379,45 +493,45 @@ _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid27 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid38 .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid35 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
-_:genid29 <http://www.w3.org/2002/07/owl#onClass> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> .
-_:genid29 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
-_:genid31 <http://www.w3.org/2002/07/owl#onClass> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> .
-_:genid31 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
-_:genid33 <http://www.w3.org/2002/07/owl#onClass> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess> .
-_:genid33 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid35 .
-_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> .
-_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid37 .
-_:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> .
-_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#representedBy> .
+_:genid37 <http://www.w3.org/2002/07/owl#onClass> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> .
+_:genid37 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore> .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#onClass> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> .
+_:genid39 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid41 .
+_:genid41 <http://www.w3.org/2002/07/owl#onClass> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess> .
+_:genid41 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid43 .
+_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid45 .
+_:genid45 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#representedBy> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> <http://www.w3.org/2000/01/rdf-schema#comment> "An OMPD:MaintenanceProcess that is: - a direct activity part of zero or one OMPD:MaintenanceProcedureProcess - an activity part of zero or more OMPD:MaintenanceProcedureProcess - a direct activity part of zero or one OMPD:MaintenanceTask - an activity part of zero or more OMPD:MaintenanceTask - occurs directly before zero or one Maintenance task - occurs before zero or more MaintenanceTask - occurs directly after zero or one MaintenanceTask - occurs after zero or more OMPD:MaintenanceTask" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> <http://www.w3.org/2000/01/rdf-schema#label> "MaintenanceTask" .
@@ -429,37 +543,32 @@ _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid39 .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid39 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid42 .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid40 .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid41 .
-_:genid41 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> .
-_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/isAbout> .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid47 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid49 .
+_:genid49 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/isAbout> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid51 .
+_:genid51 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/concretizedBy> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "An LIS:InformationObject that is about some OMPD:MaintenanceTask" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "An LIS:InformationObject that is about some OMPD:MaintenanceTask and is concretized in some OMPD:MediaObject" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> <http://www.w3.org/2000/01/rdf-schema#label> "MaintenanceTaskDescription" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "the section in a maintenance procedure description that describes an individual task in the process" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "An LIS:InformationObject that is about some OMPD:MaintenanceTask" .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the part of a document containing instructions for performing a maintenance task" .
-# 
-# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescriptionMedia
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescriptionMedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescriptionMedia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescriptionMedia> <http://www.w3.org/2000/01/rdf-schema#comment> "An LIS:InformationObject has some proc:MediaType and is part of some OMPD:MaintenanceTaskDescription" .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescriptionMedia> <http://www.w3.org/2000/01/rdf-schema#label> "MaintenanceTaskDescriptionMedia" .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescriptionMedia> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "An image of the engine that is being worked on in a \"disassemble the engine\" maintenance task." .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescriptionMedia> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescriptionMedia> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescriptionMedia> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "An LIS:InformationObject has some proc:MediaType and is part of some OMPD:MaintenanceTaskDescription" .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescriptionMedia> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "an descriptive information object of one media type that forms part of a maintenance task description" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "An LIS:InformationObject that is about some OMPD:MaintenanceTask and is concretized in some OMPD:MediaObject" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the part of a document containing instructions or additional information  for performing a maintenance task" .
 # 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Material
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -472,16 +581,16 @@ _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Material> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:PhysicalObject that may have some OMPD:ResourceRole" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Material> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "items (generally consumables) that are required for the maintenance procedure to be executed that cannot be individually described according to its primary function (generally consumables)." .
 # 
-# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaType
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaType> <http://www.w3.org/2000/01/rdf-schema#comment> "An LIS:InformationObject that is a type of media" .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaType> <http://www.w3.org/2000/01/rdf-schema#label> "MediaType" .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaType> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "image, text, video" .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaType> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaType> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaType> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "An LIS:InformationObject that is a type of media" .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaType> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the format of a section of a maintenance procedure that describes an individual task in the process" .
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> <http://www.w3.org/2000/01/rdf-schema#comment> "A LIS:PhysicalObject that provides communication to some agent" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> <http://www.w3.org/2000/01/rdf-schema#label> "MediaObject" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "a physical image that is on a server and can be accessed while viewing a maintenance procedure document" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:PhysicalObject that provides communication to some agent" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the physical manifestation of an information object (i.e., a image on a server, text on a page)" .
 # 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Permit
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Permit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -507,24 +616,24 @@ _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#QualifiedPerson
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#QualifiedPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#QualifiedPerson> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid43 .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid43 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid48 .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid45 .
-_:genid45 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://rds.posccaesar.org/ontology/lis14/rdl/Activity> .
-_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#requirementOf> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid47 .
-_:genid47 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Qualification> .
-_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/hasQuality> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/Person> .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#QualifiedPerson> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid53 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid55 .
+_:genid55 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://rds.posccaesar.org/ontology/lis14/rdl/Activity> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#requirementOf> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid57 .
+_:genid57 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Qualification> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/hasQuality> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/Person> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#QualifiedPerson> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Person> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#QualifiedPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "A LIS:Person that may have some OMPD:ResourceRole and has a OMPD:Qualification" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#QualifiedPerson> <http://www.w3.org/2000/01/rdf-schema#label> "QualifiedPerson" .
@@ -536,18 +645,18 @@ _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Resource
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Resource> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid49 .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid49 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid52 .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid51 .
-_:genid51 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole> .
-_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/hasRole> .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/Object> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Resource> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid59 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid61 .
+_:genid61 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole> .
+_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/hasRole> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/Object> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Object> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "An LIS: Object that has some OMPD: Resource Role" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Resource> <http://www.w3.org/2000/01/rdf-schema#label> "Resource" .
@@ -559,29 +668,29 @@ _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid53 .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid53 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid60 .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid55 .
-_:genid55 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid56 .
-_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid56 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid59 .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid57 .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid58 .
-_:genid58 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://rds.posccaesar.org/ontology/lis14/rdl/Activity> .
-_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#requirementOf> .
-_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/Object> .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/roleOf> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/Role> .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid63 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid65 .
+_:genid65 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid66 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid68 .
+_:genid68 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://rds.posccaesar.org/ontology/lis14/rdl/Activity> .
+_:genid68 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#requirementOf> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/Object> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/roleOf> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://rds.posccaesar.org/ontology/lis14/rdl/Role> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Role> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole> <http://www.w3.org/2000/01/rdf-schema#comment> "An LIS:Role that is the role of an LIS:Object that is required to execute some LIS:Activity" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole> <http://www.w3.org/2000/01/rdf-schema#label> "ResourceRole" .
@@ -590,6 +699,28 @@ _:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "An LIS:Role that is the role of an LIS:Object that is required to execute some LIS:Activity" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "the role played by an object when it is required in the execution of a the maintenance task (and is not the equipment being worked on)" .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Text
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Text> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid71 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid73 .
+_:genid73 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid73 <http://www.w3.org/2002/07/owl#onProperty> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasTextValue> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Text> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Text> <http://www.w3.org/2000/01/rdf-schema#comment> "A LIS:MediaObject of type \"Text\"" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Text> <http://www.w3.org/2000/01/rdf-schema#label> "Text" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Text> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "the text \"unscrew the bolts\" or \"check the tank\"" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Text> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Text> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Text> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MediaObject of type \"Text\"" .
 # 
 # http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Tool
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Tool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -602,8 +733,28 @@ _:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Tool> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:PhysicalObject that  may have some OMPD:ResourceRole" .
 <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Tool> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation> "a physical object designed to perform a specific function involved in a maintenance task, usually hand-held" .
 # 
-_:genid61 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-_:genid62 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Video
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Video> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Video> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Video> <http://www.w3.org/2000/01/rdf-schema#comment> "A LIS:MediaObject of type \"Video\"" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Video> <http://www.w3.org/2000/01/rdf-schema#label> "Video" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Video> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "a video of a technician finding and uncrewing the bolts from an engine (that can be accessed when viewing the procedure via a link)" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Video> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Video> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Video> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MediaObject of type \"Video\"" .
+# 
+# http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#3DModel
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#3DModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#3DModel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#3DModel> <http://www.w3.org/2000/01/rdf-schema#comment> "A LIS:MediaObject of type \"3D Model\"" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#3DModel> <http://www.w3.org/2000/01/rdf-schema#label> "3D Model" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#3DModel> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example> "a 3D model of a pump (that can be accessed when viewing the procedure via a link)" .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#3DModel> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#3DModel> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#3DModel> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms> "A LIS:MediaObject of type \"3D Model\"" .
+# 
+_:genid75 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid76 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 # 
 # 
 # #################################################################
@@ -620,75 +771,75 @@ _:genid62 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "tru
 <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/y> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
 <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/x> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
 <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
-_:genid63 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
-_:genid63 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 3" .
-_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid63 <http://www.w3.org/2003/11/swrl#body> _:genid72 .
-_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid70 .
-_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid68 .
-_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid66 .
-_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid65 .
-_:genid65 <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/a> .
-_:genid65 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p> .
-_:genid65 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo> .
-_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid67 .
-_:genid67 <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p> .
-_:genid67 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/c> .
-_:genid67 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> .
-_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid69 .
-_:genid69 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/c> .
-_:genid69 <http://www.w3.org/2003/11/swrl#classPredicate> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess> .
-_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid71 .
-_:genid71 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p> .
-_:genid71 <http://www.w3.org/2003/11/swrl#classPredicate> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess> .
-_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid73 .
-_:genid73 <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/a> .
-_:genid73 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/b> .
-_:genid73 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart> .
-_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid63 <http://www.w3.org/2003/11/swrl#head> _:genid74 .
-_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid75 .
-_:genid75 <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/b> .
-_:genid75 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p> .
-_:genid75 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo> .
-_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid76 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
-_:genid76 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 2" .
-_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid76 <http://www.w3.org/2003/11/swrl#body> _:genid79 .
-_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid77 .
-_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid78 .
-_:genid78 <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/x> .
-_:genid78 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z> .
-_:genid78 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> .
-_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid80 .
-_:genid80 <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/x> .
-_:genid80 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/y> .
-_:genid80 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart> .
-_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid76 <http://www.w3.org/2003/11/swrl#head> _:genid81 .
-_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid82 .
-_:genid82 <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/y> .
-_:genid82 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z> .
-_:genid82 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> .
-_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid77 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid77 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 3" .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid77 <http://www.w3.org/2003/11/swrl#body> _:genid86 .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid82 .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid80 .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid78 .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid79 .
+_:genid79 <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/a> .
+_:genid79 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p> .
+_:genid79 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid81 .
+_:genid81 <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p> .
+_:genid81 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/c> .
+_:genid81 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid83 .
+_:genid83 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/c> .
+_:genid83 <http://www.w3.org/2003/11/swrl#classPredicate> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid85 .
+_:genid85 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p> .
+_:genid85 <http://www.w3.org/2003/11/swrl#classPredicate> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid87 .
+_:genid87 <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/a> .
+_:genid87 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/b> .
+_:genid87 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid77 <http://www.w3.org/2003/11/swrl#head> _:genid88 .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid89 .
+_:genid89 <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/b> .
+_:genid89 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p> .
+_:genid89 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo> .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid90 <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+_:genid90 <http://www.w3.org/2000/01/rdf-schema#label> "Rule 2" .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid90 <http://www.w3.org/2003/11/swrl#body> _:genid93 .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid91 .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid92 .
+_:genid92 <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/x> .
+_:genid92 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z> .
+_:genid92 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid94 .
+_:genid94 <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/x> .
+_:genid94 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/y> .
+_:genid94 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart> .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid90 <http://www.w3.org/2003/11/swrl#head> _:genid95 .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid96 .
+_:genid96 <http://www.w3.org/2003/11/swrl#argument2> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/y> .
+_:genid96 <http://www.w3.org/2003/11/swrl#argument1> <file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z> .
+_:genid96 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

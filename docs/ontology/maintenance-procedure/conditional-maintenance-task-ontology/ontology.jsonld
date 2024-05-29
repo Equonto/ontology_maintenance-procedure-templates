@@ -98,7 +98,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
@@ -281,7 +281,7 @@
   } ]
 }, {
   "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"
   } ],
@@ -303,7 +303,7 @@
   } ]
 }, {
   "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"
   } ]
@@ -312,7 +312,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]

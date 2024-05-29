@@ -3,14 +3,11 @@
      xml:base="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:rdl="http://rds.posccaesar.org/ontology/lis14/rdl/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
-     xmlns:static-procedure-ontology="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#"
-     xmlns:conditional-maintenance-task-ontology="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#">
+     xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
     <owl:Ontology rdf:about="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology">
         <owl:versionIRI rdf:resource="http://spec.equonto.org/ontology/202312/maintenance-procedure/conditional-maintenance-task-ontology"/>
         <owl:imports rdf:resource="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology"/>
@@ -79,38 +76,6 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
-    
-
-
-    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn -->
-
-
-    <owl:AnnotationProperty rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"/>
-    
-
-
-    <!-- http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn -->
-
-
-    <owl:AnnotationProperty rdf:about="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers -->
-
-
-    <owl:AnnotationProperty rdf:about="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers">
-        <rdfs:subPropertyOf rdf:resource="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore -->
-
-
-    <owl:AnnotationProperty rdf:about="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"/>
     
 
 
@@ -196,6 +161,13 @@
     
 
 
+    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"/>
+    
+
+
     <!-- http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addressedBy -->
 
 
@@ -219,6 +191,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn">
+        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
             <rdf:Description rdf:about="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealizedIn"/>
             <rdf:Description rdf:about="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers"/>
@@ -246,7 +219,16 @@
     <!-- http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers -->
 
 
-    <owl:ObjectProperty rdf:about="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers"/>
+    <owl:ObjectProperty rdf:about="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers">
+        <rdfs:subPropertyOf rdf:resource="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore -->
+
+
+    <owl:ObjectProperty rdf:about="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"/>
     
 
 

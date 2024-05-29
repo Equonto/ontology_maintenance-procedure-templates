@@ -1448,11 +1448,11 @@ proc-tpl:IOF_OntologyMetadata
         ottr:annotation  [ ottr:of      o-docttr:Signature ;
                            ottr:values  ( proc-tpl:IOF_OntologyMetadata ottr:none &quot;Define metatadata for an ontology according to the IOF Annotation Schema&quot; ottr:none ottr:none ottr:none ottr:none )
                          ] ;
-        ottr:annotation  [ ottr:of      o-docttr:Provenance ;
-                           ottr:values  ( proc-tpl:IOF_OntologyMetadata &quot;2023-08-12T00:00:00Z&quot;^^xsd:dateTime &quot;2023-08-12T00:00:00Z&quot;^^xsd:dateTime ottr:none ottr:none )
-                         ] ;
         ottr:annotation  [ ottr:of      o-docttr:Version ;
                            ottr:values  ( proc-tpl:IOF_OntologyMetadata ottr:released &quot;0.1.0&quot; ottr:none ottr:none )
+                         ] ;
+        ottr:annotation  [ ottr:of      o-docttr:Provenance ;
+                           ottr:values  ( proc-tpl:IOF_OntologyMetadata &quot;2023-08-12T00:00:00Z&quot;^^xsd:dateTime &quot;2023-08-12T00:00:00Z&quot;^^xsd:dateTime ottr:none ottr:none )
                          ] ;
         ottr:parameters  ( [ ottr:name      &quot;ontologyIri&quot; ;
                              ottr:type      ottr:IRI ;
@@ -1511,14 +1511,43 @@ proc-tpl:IOF_OntologyMetadata
                          ) ;
         ottr:pattern     [ ottr:of      ottr:Triple ;
                            ottr:values  ( _:b0
+                                          rdfs:label
+                                          _:b2
+                                        )
+                         ] ;
+        ottr:pattern     [ ottr:of      ottr:Triple ;
+                           ottr:values  ( _:b0
+                                          dcterms:creator
+                                          _:b6
+                                        )
+                         ] ;
+        ottr:pattern     [ ottr:of      o-rdf:Type ;
+                           ottr:values  ( _:b0
+                                          owl:Ontology
+                                        )
+                         ] ;
+        ottr:pattern     [ ottr:of      ottr:Triple ;
+                           ottr:values  ( _:b0
+                                          dcterms:title
+                                          _:b8
+                                        )
+                         ] ;
+        ottr:pattern     [ ottr:of      ottr:Triple ;
+                           ottr:values  ( _:b0
+                                          owl:versionIRI
+                                          _:b1
+                                        )
+                         ] ;
+        ottr:pattern     [ ottr:of      ottr:Triple ;
+                           ottr:values  ( _:b0
                                           dcterms:publisher
                                           _:b7
                                         )
                          ] ;
         ottr:pattern     [ ottr:of      ottr:Triple ;
                            ottr:values  ( _:b0
-                                          rdfs:label
-                                          _:b2
+                                          dcterms:abstract
+                                          _:b4
                                         )
                          ] ;
         ottr:pattern     [ ottr:arguments  ( [ ottr:value  _:b0 ]
@@ -1532,12 +1561,6 @@ proc-tpl:IOF_OntologyMetadata
                          ] ;
         ottr:pattern     [ ottr:of      ottr:Triple ;
                            ottr:values  ( _:b0
-                                          dcterms:creator
-                                          _:b6
-                                        )
-                         ] ;
-        ottr:pattern     [ ottr:of      ottr:Triple ;
-                           ottr:values  ( _:b0
                                           iof-av:maturity
                                           _:b9
                                         )
@@ -1548,23 +1571,6 @@ proc-tpl:IOF_OntologyMetadata
                                           _:b3
                                         )
                          ] ;
-        ottr:pattern     [ ottr:of      o-rdf:Type ;
-                           ottr:values  ( _:b0
-                                          owl:Ontology
-                                        )
-                         ] ;
-        ottr:pattern     [ ottr:of      ottr:Triple ;
-                           ottr:values  ( _:b0
-                                          dcterms:abstract
-                                          _:b4
-                                        )
-                         ] ;
-        ottr:pattern     [ ottr:of      ottr:Triple ;
-                           ottr:values  ( _:b0
-                                          owl:versionIRI
-                                          _:b1
-                                        )
-                         ] ;
         ottr:pattern     [ ottr:arguments  ( [ ottr:value  _:b0 ]
                                              [ ottr:value  dcterms:contributor ]
                                              [ ottr:modifier  ottr:listExpand ;
@@ -1573,12 +1579,6 @@ proc-tpl:IOF_OntologyMetadata
                                            ) ;
                            ottr:modifier   ottr:cross ;
                            ottr:of         ottr:Triple
-                         ] ;
-        ottr:pattern     [ ottr:of      ottr:Triple ;
-                           ottr:values  ( _:b0
-                                          dcterms:title
-                                          _:b8
-                                        )
                          ] .</pre></div></div><h2 id="Prefixes">Prefixes</h2><div id="prefixes"><p class="info">&#128712; Prefixes are removed from all listings on this page for readability, but are listed here in RDF Turtle format.</p><pre>@prefix ottr:       &lt;http://ns.ottr.xyz/0.4/&gt;.
 @prefix dcterms:    &lt;http://purl.org/dc/terms/&gt;.
 @prefix proc-tpl:   &lt;http://spec.equonto.org/template/maintenance-procedure/&gt;.
@@ -1588,7 +1588,7 @@ proc-tpl:IOF_OntologyMetadata
 @prefix rdfs:       &lt;http://www.w3.org/2000/01/rdf-schema#&gt;.
 @prefix xsd:        &lt;http://www.w3.org/2001/XMLSchema#&gt;.
 @prefix owl:        &lt;http://www.w3.org/2002/07/owl#&gt;.
-@prefix iof-av:     &lt;https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/&gt;.</pre></div></div><div class="footer"><p>This is a generated documentation page for an OTTR template library. For more information about Reasonable Ontology Templates (OTTR), visit <a href="http://ottr.xyz" target="_blank">ottr.xyz</a>.</p><p>Generated: 2024/03/22 02:34:19 Z</p></div><script>var treeviewCounter=0;for(var treeview of document.getElementsByClassName("treeview")){if(treeview.classList.contains('toggle-all')){treeviewCounter+=1;treeview.setAttribute("id","treeview"+treeviewCounter)
+@prefix iof-av:     &lt;https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/&gt;.</pre></div></div><div class="footer"><p>This is a generated documentation page for an OTTR template library. For more information about Reasonable Ontology Templates (OTTR), visit <a href="http://ottr.xyz" target="_blank">ottr.xyz</a>.</p><p>Generated: 2024/05/29 05:25:26 Z</p></div><script>var treeviewCounter=0;for(var treeview of document.getElementsByClassName("treeview")){if(treeview.classList.contains('toggle-all')){treeviewCounter+=1;treeview.setAttribute("id","treeview"+treeviewCounter)
 treeview.insertAdjacentHTML('beforebegin','<p class="treeviewbuttons"><span class="button" onclick="treeViewToggleAll(\'treeview'+treeviewCounter+'\', 1)">Expand all</span> '
 +'<span class="button" onclick="treeViewToggleAll(\'treeview'+treeviewCounter+'\', 0)">Contract all</span></p>');}
 if(treeview.classList.contains('click-first')){treeview.firstChild.firstChild.click();}

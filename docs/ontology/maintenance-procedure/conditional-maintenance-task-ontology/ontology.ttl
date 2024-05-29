@@ -48,24 +48,6 @@
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
 
-###  http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn
-<http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> rdf:type owl:AnnotationProperty .
-
-
-###  http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn
-:functionalFailureRealisedIn rdf:type owl:AnnotationProperty ;
-                             rdfs:subPropertyOf <http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> .
-
-
-###  http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers
-:triggers rdf:type owl:AnnotationProperty ;
-          rdfs:subPropertyOf <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore> .
-
-
-###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore
-<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore> rdf:type owl:AnnotationProperty .
-
-
 ###  https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom
 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> rdf:type owl:AnnotationProperty .
 
@@ -110,6 +92,10 @@
 <http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo> rdf:type owl:ObjectProperty .
 
 
+###  http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn
+<http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> rdf:type owl:ObjectProperty .
+
+
 ###  http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addressedBy
 :addressedBy rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf <http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo> .
@@ -123,6 +109,7 @@
 
 ###  http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn
 :functionalFailureRealisedIn rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf <http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> ;
                              owl:propertyChainAxiom ( :functionalFailureRealizedIn
                                                       :triggers
                                                     ) .
@@ -138,7 +125,12 @@
 
 
 ###  http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers
-:triggers rdf:type owl:ObjectProperty .
+:triggers rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore> .
+
+
+###  http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore
+<http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore> rdf:type owl:ObjectProperty .
 
 
 #################################################################

@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology","name":"Ontology for Maintenance Procedure Documentation (OMPD) Conditional Maintenance Task Ontology", "headline":"The OMPD Conditional Mainteance Task Ontology captures conditial task information (i.e. in response to some limit or functional failure) present in some industrial maintenance procedures.", "dateReleased":"Fri Mar 22 10:36:40 AWST 2024", "license":"http://opensource.org/licenses/MIT", "author":[{"@type":"Person","name":"The University of Western Australia & Equonto Pty. Ltd."}], "contributor":[{"@type":"Person","name":"Caitlin Woods: The University of Western Australia and Equonto"},{"@type":"Person","name":"Melinda Hodkiewicz: The University of Western Australia"},{"@type":"Person","name":"Tim French: The University of Western Australia"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology","name":"Ontology for Maintenance Procedure Documentation (OMPD) Conditional Maintenance Task Ontology", "headline":"The OMPD Conditional Mainteance Task Ontology captures conditial task information (i.e. in response to some limit or functional failure) present in some industrial maintenance procedures.", "dateReleased":"Wed May 29 13:29:07 AWST 2024", "license":"http://opensource.org/licenses/MIT", "author":[{"@type":"Person","name":"The University of Western Australia & Equonto Pty. Ltd."}], "contributor":[{"@type":"Person","name":"Caitlin Woods: The University of Western Australia and Equonto"},{"@type":"Person","name":"Melinda Hodkiewicz: The University of Western Australia"},{"@type":"Person","name":"Tim French: The University of Western Australia"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -132,6 +132,12 @@ This ontology has the following classes and properties.</span>
          <span>results in</span>
       </a>
    </li>
+   <li>
+      <a href="#triggers"
+         title="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers">
+         <span>triggers</span>
+      </a>
+   </li>
 </ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
@@ -157,21 +163,9 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"
-         title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore">
-         <span>directly before</span>
-      </a>
-   </li>
-   <li>
       <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example"
          title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example">
          <span>example</span>
-      </a>
-   </li>
-   <li>
-      <a href="#functionalFailureRealisedIn"
-         title="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn">
-         <span>functional failure realised in</span>
       </a>
    </li>
    <li>
@@ -197,12 +191,6 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"
-         title="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn">
-         <span>realized in</span>
-      </a>
-   </li>
-   <li>
       <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms"
          title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms">
          <span>semi formal natural language axioms</span>
@@ -217,12 +205,6 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
          <span>title</span>
-      </a>
-   </li>
-   <li>
-      <a href="#triggers"
-         title="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers">
-         <span>triggers</span>
       </a>
    </li>
 </ul>
@@ -390,6 +372,12 @@ This section provides details for each class and property defined by Maintenance
             <span>results in</span>
          </a>
       </li>
+      <li>
+         <a href="#triggers"
+            title="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers">
+            <span>triggers</span>
+         </a>
+      </li>
    </ul>
    <div class="entity" id="addressedBy">
       <h3>addressed by<sup class="type-op" title="object property">op</sup>
@@ -450,6 +438,13 @@ This section provides details for each class and property defined by Maintenance
          <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn</p>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"
+                  target="_blank"
+                  title="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn">realized in</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has sub-property chains</dt>
             <dd>
                <a href="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealizedIn"
@@ -457,14 +452,9 @@ This section provides details for each class and property defined by Maintenance
                   title="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealizedIn">functional failure realized in</a>
                <sup class="type-op" title="object property">op</sup> 
                <span class="logic">o</span> 
-               <a href="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers"
-                  target="_blank"
+               <a href="#triggers"
                   title="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers">triggers</a>
                <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>is also defined as</dt>
-            <dd>
-               <a href="#functionalFailureRealisedIn">annotation property</a>
             </dd>
          </dl>
       </div>
@@ -483,6 +473,25 @@ This section provides details for each class and property defined by Maintenance
                <a href="http://rds.posccaesar.org/ontology/lis14/rdl/before"
                   target="_blank"
                   title="http://rds.posccaesar.org/ontology/lis14/rdl/before">before</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="triggers">
+      <h3>triggers<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"
+                  target="_blank"
+                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore">directly before</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -515,21 +524,9 @@ This section provides details for each class and property defined by Maintenance
          </a>
       </li>
       <li>
-         <a href="#http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"
-            title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore">
-            <span>directly before</span>
-         </a>
-      </li>
-      <li>
          <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example"
             title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example">
             <span>example</span>
-         </a>
-      </li>
-      <li>
-         <a href="#functionalFailureRealisedIn"
-            title="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn">
-            <span>functional failure realised in</span>
          </a>
       </li>
       <li>
@@ -555,12 +552,6 @@ This section provides details for each class and property defined by Maintenance
          </a>
       </li>
       <li>
-         <a href="#http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"
-            title="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn">
-            <span>realized in</span>
-         </a>
-      </li>
-      <li>
          <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms"
             title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms">
             <span>semi formal natural language axioms</span>
@@ -575,12 +566,6 @@ This section provides details for each class and property defined by Maintenance
       <li>
          <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
             <span>title</span>
-         </a>
-      </li>
-      <li>
-         <a href="#triggers"
-            title="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers">
-            <span>triggers</span>
          </a>
       </li>
    </ul>
@@ -616,24 +601,6 @@ This section provides details for each class and property defined by Maintenance
       <p>
          <strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
    </div>
-   <div class="entity" id="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore">
-      <h3>directly before<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore</p>
-      <div class="description">
-         <dl>
-            <dt>has sub-properties</dt>
-            <dd>
-               <a href="#triggers"
-                  title="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers">triggers</a>
-               <sup class="type-ap" title="annotation property">ap</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example">
       <h3>example<sup class="type-ap" title="annotation property">ap</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
@@ -641,29 +608,6 @@ This section provides details for each class and property defined by Maintenance
       </h3>
       <p>
          <strong>IRI:</strong> https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example</p>
-   </div>
-   <div class="entity" id="functionalFailureRealisedIn">
-      <h3>functional failure realised in<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"
-                  target="_blank"
-                  title="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn">realized in</a>
-               <sup class="type-ap" title="annotation property">ap</sup>
-            </dd>
-            <dt>is also defined as</dt>
-            <dd>
-               <a href="#functionalFailureRealisedIn">object property</a>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive">
       <h3>is primitive<sup class="type-ap" title="annotation property">ap</sup>
@@ -697,24 +641,6 @@ This section provides details for each class and property defined by Maintenance
       <p>
          <strong>IRI:</strong> http://purl.org/dc/terms/publisher</p>
    </div>
-   <div class="entity" id="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn">
-      <h3>realized in<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn</p>
-      <div class="description">
-         <dl>
-            <dt>has sub-properties</dt>
-            <dd>
-               <a href="#functionalFailureRealisedIn"
-                  title="http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn">functional failure realised in</a>
-               <sup class="type-ap" title="annotation property">ap</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms">
       <h3>semi formal natural language axioms<sup class="type-ap" title="annotation property">ap</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
@@ -738,27 +664,6 @@ This section provides details for each class and property defined by Maintenance
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/dc/terms/title</p>
-   </div>
-   <div class="entity" id="triggers">
-      <h3>triggers<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://spec.equonto.org/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers</p>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"
-                  target="_blank"
-                  title="http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore">directly before</a>
-               <sup class="type-ap" title="annotation property">ap</sup>
-            </dd>
-            <dt>is also defined as</dt>
-            <dd>object property</dd>
-         </dl>
-      </div>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>

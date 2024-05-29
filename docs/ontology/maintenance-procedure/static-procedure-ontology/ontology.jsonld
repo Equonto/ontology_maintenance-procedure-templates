@@ -3,13 +3,32 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity"
+      "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription"
     }, {
       "@id" : "_:genid3"
     } ]
   } ]
 }, {
-  "@id" : "_:genid10",
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid12"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess"
+    }, {
+      "@id" : "_:genid14"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"
@@ -18,30 +37,11 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"
   } ]
 }, {
-  "@id" : "_:genid13",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"
-    }, {
-      "@id" : "_:genid15"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasRole"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItemRole"
-  } ]
-}, {
   "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
+      "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription"
     }, {
       "@id" : "_:genid19"
     } ]
@@ -49,20 +49,19 @@
 }, {
   "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/isAbout"
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isInstructional"
   } ]
 }, {
   "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"
-    }, {
-      "@id" : "_:genid25"
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"
     }, {
       "@id" : "_:genid23"
     } ]
@@ -71,13 +70,63 @@
   "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasRole"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItemRole"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
+    }, {
+      "@id" : "_:genid27"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/isAbout"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"
+    }, {
+      "@id" : "_:genid33"
+    }, {
+      "@id" : "_:genid31"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isInstructional"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/representedBy"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument"
   } ]
 }, {
-  "@id" : "_:genid25",
+  "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart"
@@ -86,25 +135,25 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"
   } ]
 }, {
-  "@id" : "_:genid27",
+  "@id" : "_:genid35",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"
     }, {
+      "@id" : "_:genid45"
+    }, {
+      "@id" : "_:genid43"
+    }, {
+      "@id" : "_:genid41"
+    }, {
+      "@id" : "_:genid39"
+    }, {
       "@id" : "_:genid37"
-    }, {
-      "@id" : "_:genid35"
-    }, {
-      "@id" : "_:genid33"
-    }, {
-      "@id" : "_:genid31"
-    }, {
-      "@id" : "_:genid29"
     } ]
   } ]
 }, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -117,16 +166,7 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"
   } ]
 }, {
-  "@id" : "_:genid3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess"
-  } ]
-}, {
-  "@id" : "_:genid31",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -139,7 +179,7 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf"
   } ]
 }, {
-  "@id" : "_:genid33",
+  "@id" : "_:genid41",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -152,7 +192,7 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf"
   } ]
 }, {
-  "@id" : "_:genid35",
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"
@@ -161,7 +201,7 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo"
   } ]
 }, {
-  "@id" : "_:genid37",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#representedBy"
@@ -170,17 +210,19 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription"
   } ]
 }, {
-  "@id" : "_:genid39",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
     }, {
-      "@id" : "_:genid41"
+      "@id" : "_:genid51"
+    }, {
+      "@id" : "_:genid49"
     } ]
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/isAbout"
@@ -189,51 +231,11 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"
   } ]
 }, {
-  "@id" : "_:genid43",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Person"
-    }, {
-      "@id" : "_:genid47"
-    }, {
-      "@id" : "_:genid45"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid45",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#requirementOf"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
-  } ]
-}, {
-  "@id" : "_:genid47",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasQuality"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Qualification"
-  } ]
-}, {
-  "@id" : "_:genid49",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Object"
-    }, {
-      "@id" : "_:genid51"
-    } ]
-  } ]
-}, {
   "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard"
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity"
     }, {
       "@id" : "_:genid7"
     } ]
@@ -242,42 +244,25 @@
   "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasRole"
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/concretizedBy"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole"
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject"
   } ]
 }, {
   "@id" : "_:genid53",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Role"
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Person"
+    }, {
+      "@id" : "_:genid57"
     }, {
       "@id" : "_:genid55"
     } ]
   } ]
 }, {
   "@id" : "_:genid55",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid56"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/roleOf"
-  } ]
-}, {
-  "@id" : "_:genid56",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Object"
-    }, {
-      "@id" : "_:genid58"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#requirementOf"
@@ -286,19 +271,113 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
   } ]
 }, {
-  "@id" : "_:genid61",
-  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasQuality"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Qualification"
   } ]
 }, {
-  "@id" : "_:genid62",
-  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
+  "@id" : "_:genid59",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Object"
+    }, {
+      "@id" : "_:genid61"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid61",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasRole"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole"
   } ]
 }, {
   "@id" : "_:genid63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Role"
+    }, {
+      "@id" : "_:genid65"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid65",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid66"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/roleOf"
+  } ]
+}, {
+  "@id" : "_:genid66",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Object"
+    }, {
+      "@id" : "_:genid68"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid68",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#requirementOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess"
+  } ]
+}, {
+  "@id" : "_:genid71",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject"
+    }, {
+      "@id" : "_:genid73"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid73",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasTextValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "_:genid75",
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "_:genid76",
+  "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ]
+}, {
+  "@id" : "_:genid77",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : ""
@@ -308,24 +387,24 @@
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid73"
+      "@id" : "_:genid87"
     }, {
-      "@id" : "_:genid71"
+      "@id" : "_:genid85"
     }, {
-      "@id" : "_:genid69"
+      "@id" : "_:genid83"
     }, {
-      "@id" : "_:genid67"
+      "@id" : "_:genid81"
     }, {
-      "@id" : "_:genid65"
+      "@id" : "_:genid79"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid75"
+      "@id" : "_:genid89"
     } ]
   } ]
 }, {
-  "@id" : "_:genid65",
+  "@id" : "_:genid79",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p"
@@ -337,7 +416,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"
   } ]
 }, {
-  "@id" : "_:genid67",
+  "@id" : "_:genid81",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/c"
@@ -349,7 +428,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"
   } ]
 }, {
-  "@id" : "_:genid69",
+  "@id" : "_:genid83",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/c"
@@ -358,16 +437,7 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess"
   } ]
 }, {
-  "@id" : "_:genid7",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid8"
-  } ]
-}, {
-  "@id" : "_:genid71",
+  "@id" : "_:genid85",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p"
@@ -376,7 +446,7 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess"
   } ]
 }, {
-  "@id" : "_:genid73",
+  "@id" : "_:genid87",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/b"
@@ -388,7 +458,7 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart"
   } ]
 }, {
-  "@id" : "_:genid75",
+  "@id" : "_:genid89",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/p"
@@ -400,7 +470,17 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"
   } ]
 }, {
-  "@id" : "_:genid76",
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard"
+    }, {
+      "@id" : "_:genid11"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid90",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : ""
@@ -410,18 +490,18 @@
   } ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid80"
+      "@id" : "_:genid94"
     }, {
-      "@id" : "_:genid78"
+      "@id" : "_:genid92"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid82"
+      "@id" : "_:genid96"
     } ]
   } ]
 }, {
-  "@id" : "_:genid78",
+  "@id" : "_:genid92",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z"
@@ -433,17 +513,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"
   } ]
 }, {
-  "@id" : "_:genid8",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess"
-    }, {
-      "@id" : "_:genid10"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid80",
+  "@id" : "_:genid94",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/y"
@@ -455,7 +525,7 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart"
   } ]
 }, {
-  "@id" : "_:genid82",
+  "@id" : "_:genid96",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "file:/Users/caitlinwoods/Desktop/PhD%20Data%20and%20Code/Ontology/repositiories/ontology_generator/config/maintenance_procedure/output/z"
@@ -493,6 +563,9 @@
 }, {
   "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/concretizedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
@@ -557,6 +630,87 @@
     "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
   } ]
 }, {
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#3DModel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A LIS:MediaObject of type \"3D Model\""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "3D Model"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
+    "@value" : "a 3D model of a pump (that can be accessed when viewing the procedure via a link)"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms" : [ {
+    "@value" : "A LIS:MediaObject of type \"3D Model\""
+  } ]
+}, {
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Animation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A LIS:MediaObject of type \"Animation\""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Animation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
+    "@value" : "an animated sequence describing which way to twist a bolt when torquing it (that can be accessed when viewing a procedure)"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms" : [ {
+    "@value" : "A LIS:MediaObject of type \"Animation\""
+  } ]
+}, {
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#AuxilliaryMaintenanceTaskDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A LIS:MaintenanceTaskDescription that provides  additional information for some agent to assist in the execution of a maintenance task."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AuxilliaryMaintenanceTaskDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
+    "@value" : "\"hint: the engine has six bolts in total\""
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms" : [ {
+    "@value" : "A LIS:MaintenanceTaskDescription that provides  additional information for some agent to assist in the execution of a maintenance task."
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation" : [ {
+    "@value" : "the part of a document containing additional information (outside of the instructions) for performing a maintenance task"
+  } ]
+}, {
   "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Component",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -585,6 +739,31 @@
     "@value" : "an item of hardware, software or both that can be individually described and has a required function"
   } ]
 }, {
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ExecutableScript",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A LIS:MediaObject of type \"ExecutableScript\""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ExecutableScript"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
+    "@value" : "an assembly script sitting on a server for automating the movement of a robtic arm to unscrew a bolt."
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms" : [ {
+    "@value" : "A LIS:MediaObject of type \"ExecutableScript\""
+  } ]
+}, {
   "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Hazard",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -597,7 +776,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Disposition"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid1"
+    "@id" : "_:genid5"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
     "@value" : "oil on the floor, a heavy object that needs to be moved, a high pressure pipe"
@@ -628,7 +807,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Disposition"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid5"
+    "@id" : "_:genid9"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
     "@value" : "a confined space, working at heights, pressurised containers"
@@ -675,6 +854,62 @@
     "@value" : "the process in which the hazard is realised and harm occurs"
   } ]
 }, {
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Image",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A LIS:MediaObject of type \"Image\""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Image"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
+    "@value" : "an image of a pump, a schemaitc diagram (that can be accessed while viewing a procedure via a link)"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms" : [ {
+    "@value" : "A LIS:MediaObject of type \"Image\""
+  } ]
+}, {
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#InstructionalMaintenanceTaskDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A LIS:MaintenanceTaskDescription that describes the actions necessary to execute a maintenance task"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "InstructionalMaintenanceTaskDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid17"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
+    "@value" : "\"unscrew the six bolts on the engine\""
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms" : [ {
+    "@value" : "A LIS:MaintenanceTaskDescription that describes the actions necessary to execute a maintenance task"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation" : [ {
+    "@value" : "the part of a document containing instructions  for performing a maintenance task"
+  } ]
+}, {
   "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#ItemInMaintenanceProcess",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -712,7 +947,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid13"
+    "@id" : "_:genid21"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom" : [ {
     "@value" : "https://spec.industrialontologies.org/iof/ontology/core/Core/MaintainableMaterialItem"
@@ -805,7 +1040,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid17"
+    "@id" : "_:genid25"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
     "@value" : "a document describing how to change the oil in the car, or to replace the coupling on a pump"
@@ -836,7 +1071,7 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid21"
+    "@id" : "_:genid29"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
     "@value" : "engine replacement process"
@@ -898,7 +1133,7 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid27"
+    "@id" : "_:genid35"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
     "@value" : "shut-off the valve, remove the bolts from the cover, replace the shaft"
@@ -920,7 +1155,7 @@
   "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An LIS:InformationObject that is about some OMPD:MaintenanceTask"
+    "@value" : "An LIS:InformationObject that is about some OMPD:MaintenanceTask and is concretized in some OMPD:MediaObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "MaintenanceTaskDescription"
@@ -929,7 +1164,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid39"
+    "@id" : "_:genid47"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
     "@value" : "the section in a maintenance procedure description that describes an individual task in the process"
@@ -942,38 +1177,10 @@
     "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms" : [ {
-    "@value" : "An LIS:InformationObject that is about some OMPD:MaintenanceTask"
+    "@value" : "An LIS:InformationObject that is about some OMPD:MaintenanceTask and is concretized in some OMPD:MediaObject"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation" : [ {
-    "@value" : "the part of a document containing instructions for performing a maintenance task"
-  } ]
-}, {
-  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescriptionMedia",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An LIS:InformationObject has some proc:MediaType and is part of some OMPD:MaintenanceTaskDescription"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "MaintenanceTaskDescriptionMedia"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
-  } ],
-  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
-    "@value" : "An image of the engine that is being worked on in a \"disassemble the engine\" maintenance task."
-  } ],
-  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
-  } ],
-  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
-    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
-  } ],
-  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms" : [ {
-    "@value" : "An LIS:InformationObject has some proc:MediaType and is part of some OMPD:MaintenanceTaskDescription"
-  } ],
-  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation" : [ {
-    "@value" : "an descriptive information object of one media type that forms part of a maintenance task description"
+    "@value" : "the part of a document containing instructions or additional information  for performing a maintenance task"
   } ]
 }, {
   "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Material",
@@ -1004,19 +1211,19 @@
     "@value" : "items (generally consumables) that are required for the maintenance procedure to be executed that cannot be individually described according to its primary function (generally consumables)."
   } ]
 }, {
-  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaType",
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An LIS:InformationObject that is a type of media"
+    "@value" : "A LIS:PhysicalObject that provides communication to some agent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "MediaType"
+    "@value" : "MediaObject"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
-    "@value" : "image, text, video"
+    "@value" : "a physical image that is on a server and can be accessed while viewing a maintenance procedure document"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -1026,10 +1233,10 @@
     "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms" : [ {
-    "@value" : "An LIS:InformationObject that is a type of media"
+    "@value" : "A LIS:PhysicalObject that provides communication to some agent"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation" : [ {
-    "@value" : "the format of a section of a maintenance procedure that describes an individual task in the process"
+    "@value" : "the physical manifestation of an information object (i.e., a image on a server, text on a page)"
   } ]
 }, {
   "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Permit",
@@ -1100,7 +1307,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Person"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid43"
+    "@id" : "_:genid53"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
     "@value" : "a mechanical engineer, an electrician, a machinist"
@@ -1131,7 +1338,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Object"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid49"
+    "@id" : "_:genid59"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
     "@value" : "a crane, welding rods, a multi-meter, mechanic"
@@ -1162,7 +1369,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Role"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid53"
+    "@id" : "_:genid63"
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
     "@value" : "a spanner has a resource role when it is required for disassembling an engine"
@@ -1179,6 +1386,34 @@
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation" : [ {
     "@value" : "the role played by an object when it is required in the execution of a the maintenance task (and is not the equipment being worked on)"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Text",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A LIS:MediaObject of type \"Text\""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Text"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid71"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
+    "@value" : "the text \"unscrew the bolts\" or \"check the tank\""
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms" : [ {
+    "@value" : "A LIS:MediaObject of type \"Text\""
   } ]
 }, {
   "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Tool",
@@ -1207,6 +1442,40 @@
   } ],
   "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation" : [ {
     "@value" : "a physical object designed to perform a specific function involved in a maintenance task, usually hand-held"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#Video",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A LIS:MediaObject of type \"Video\""
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Video"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MediaObject"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example" : [ {
+    "@value" : "a video of a technician finding and uncrewing the bolts from an engine (that can be accessed when viewing the procedure via a link)"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms" : [ {
+    "@value" : "A LIS:MediaObject of type \"Video\""
+  } ]
+}, {
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#agentOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasAgent"
   } ]
 }, {
   "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf",
@@ -1242,6 +1511,12 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"
+  } ]
+}, {
   "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
@@ -1257,7 +1532,19 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#indirectActivityPartOf"
   } ]
 }, {
-  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasPrimaryParticipant",
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasMediaLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "hasMediaLocation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasPatient",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"
@@ -1272,20 +1559,17 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#requirementOf"
   } ]
 }, {
-  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
-  } ],
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasTextValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "hasValue"
+    "@value" : "hasTextValue"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
   "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasVersion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "hasVersion"
   } ],
@@ -1314,10 +1598,13 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/before"
   } ]
 }, {
-  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isAuxilliaryMedia",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#isInstructional",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "isAuxilliaryMedia"
+    "@value" : "isInstructional"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
@@ -1338,6 +1625,15 @@
     "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#reasoningSupport"
   } ]
 }, {
+  "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#patientOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#hasPatient"
+  } ]
+}, {
   "@id" : "http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#reasoningSupport",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
@@ -1352,6 +1648,9 @@
 }, {
   "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#string",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
   "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]

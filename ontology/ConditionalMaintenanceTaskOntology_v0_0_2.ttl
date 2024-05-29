@@ -12,6 +12,7 @@
 @prefix o-owl-dec: <http://tpl.ottr.xyz/owl/declaration/0.1/> .
 @prefix ottr: <http://ns.ottr.xyz/0.4/> .
 @prefix lis: <http://rds.posccaesar.org/ontology/lis14/rdl/> .
+@prefix o-owl-ma: <http://tpl.ottr.xyz/owl/macro/0.1/> .
 @prefix o-owl-re: <http://tpl.ottr.xyz/owl/restriction/0.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix iof-av: <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/> .
@@ -55,7 +56,22 @@ lis:hasParticipant  rdf:type  owl:ObjectProperty .
 
 lis:PhysicalObject  rdf:type  owl:Class .
 
-_:b2    rdf:type            owl:Restriction ;
+_:b2    owl:intersectionOf  _:b3 .
+
+_:b3    rdf:rest   _:b4 ;
+        rdf:first  proc-spo:MaintenanceTask .
+
+_:b4    rdf:rest   rdf:nil ;
+        rdf:first  _:b5 .
+
+_:b2    rdf:type  owl:Class ;
+        rdf:type  owl:Class .
+
+proc-cmto:CorrectiveMaintenanceTask
+        rdf:type             owl:Class ;
+        owl:equivalentClass  _:b2 .
+
+_:b5    rdf:type            owl:Restriction ;
         owl:someValuesFrom  proc-cmto:FunctionalFailure ;
         owl:onProperty      proc-cmto:addresses .
 
@@ -64,46 +80,29 @@ proc-cmto:addresses  rdf:type  owl:ObjectProperty .
 proc-cmto:FunctionalFailure
         rdf:type  owl:Class .
 
-_:b3    owl:intersectionOf  _:b4 .
+_:b6    owl:intersectionOf  _:b7 .
 
-_:b5    rdf:rest   rdf:nil ;
-        rdf:first  _:b2 .
+_:b7    rdf:rest   _:b8 ;
+        rdf:first  lis:InformationObject .
 
-_:b4    rdf:rest   _:b5 ;
-        rdf:first  proc-spo:MaintenanceTask .
+_:b8    rdf:rest   rdf:nil ;
+        rdf:first  _:b9 .
 
-_:b3    rdf:type  owl:Class ;
+_:b6    rdf:type  owl:Class ;
         rdf:type  owl:Class .
 
-proc-cmto:CorrectiveMaintenanceTask
+proc-cmto:FailureModeObservation
         rdf:type             owl:Class ;
-        owl:equivalentClass  _:b3 .
+        owl:equivalentClass  _:b6 .
 
-_:b6    rdf:type            owl:Restriction ;
+_:b9    rdf:type            owl:Restriction ;
         owl:someValuesFrom  proc-cmto:FunctionalFailure ;
         owl:onProperty      lis:isAbout .
 
 lis:isAbout  rdf:type  owl:ObjectProperty .
 
 proc-cmto:FunctionalFailure
-        rdf:type  owl:Class .
-
-_:b7    owl:intersectionOf  _:b8 .
-
-_:b8    rdf:rest   _:b9 ;
-        rdf:first  lis:InformationObject .
-
-_:b9    rdf:rest   rdf:nil ;
-        rdf:first  _:b6 .
-
-_:b7    rdf:type  owl:Class ;
-        rdf:type  owl:Class .
-
-proc-cmto:FailureModeObservation
-        rdf:type             owl:Class ;
-        owl:equivalentClass  _:b7 .
-
-proc-cmto:FunctionalFailure
+        rdf:type            owl:Class ;
         rdfs:subClassOf     lis:Activity ;
         rdf:type            owl:Class ;
         iof-av:semiFormalNaturalLanguageAxioms  "An LIS: Activity that is represented in a OMPD: Failure Mode Observation and hasParticipant some LIS: Physical Object" ;
