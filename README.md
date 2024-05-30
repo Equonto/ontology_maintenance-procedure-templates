@@ -17,6 +17,8 @@ This ontology is also available on the Ontocommons Industry Portal at:
 - https://industryportal.enit.fr/ontologies/OMPD-SPO
 - https://industryportal.enit.fr/ontologies/OMPD-CMTO
 
+This ontology imports the ISO15926 Part 14 CD/TR Upper Ontology, available under a [Creative Commons License](https://creativecommons.org/licenses/by-sa/4.0/). 
+
 To cite this work, please use the following:
 
 ```
