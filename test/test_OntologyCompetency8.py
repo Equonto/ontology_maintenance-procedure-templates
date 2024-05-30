@@ -5,7 +5,7 @@ from owlready2 import *
 '''
 Competency ID: 08
 User: Maintenance Engineer
-Competency Question: Does my Failure Mode and Effects Analysis (FMEA) that was used in my RCM contain all the functional failures that exist in my procedure?
+Competency Question: Does my Failure Mode and Effects Analysis (FMEA) that was used in my RCM contain all the functional failures that are checked in my procedure?
 '''
 class TestOntologyCompetency8(unittest.TestCase):
 
@@ -17,11 +17,11 @@ class TestOntologyCompetency8(unittest.TestCase):
         SELECT ?functional_failure
         WHERE {
             VALUES ?failure_modes_in_fmea { cmto:NOI } .
-            VALUES ?maintainable_item { spo:maintainable_item_001 } .
+            VALUES ?maintainable_item { cmto:maintainable_item_001 } .
             VALUES ?procedure_process { cmto:procedure_process_001 } .
             ?functional_failure cmto:addressedBy ?corrective_maint_task; a cmto:FunctionalFailure .
             ?corrective_maint_task iso:activityPartOf ?procedure_process .
-            ?maintainable_item spo:participantIn ?procedure_process .
+            ?maintainable_item iso:participantIn ?procedure_process .
             FILTER NOT EXISTS {
                 ?functional_failure iso:representedIn ?failure_modes_in_fmea
             }

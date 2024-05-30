@@ -34,7 +34,7 @@ class TestUseCase1Mapping(unittest.TestCase):
             self.assertEqual(len(result), 0)
         namespace.destroy()
 
-    def test_useCaseMapping_competency2_shouldReturnTotalEightTasks(self):
+    def test_useCaseMapping_competency2_shouldReturnTotalSixTasks(self):
         namespace = self.ontologies["spo"].get_namespace("http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#")
         with namespace:
             query = """
@@ -43,7 +43,7 @@ class TestUseCase1Mapping(unittest.TestCase):
 
                 SELECT ?maintenance_task ?parent
                 WHERE {
-                    VALUES ?procedure_process { spo:procedure_process_001 } 
+                    VALUES ?procedure_process { spo:procedure_process_2M_mech_inspection } 
                     ?maintenance_task a spo:MaintenanceTask .
                     ?maintenance_task iso:activityPartOf ?procedure_process .
                     ?maintenance_task spo:directActivityPartOf ?parent .
@@ -51,7 +51,7 @@ class TestUseCase1Mapping(unittest.TestCase):
              """   
             tu.run_pellet_reasoner()
             result = tu.run_query(query)
-            self.assertEqual(len(result), 8)
+            self.assertEqual(len(result), 6)
         namespace.destroy()
 
     def test_useCaseMapping_competency3_shouldReturnLvl1Step2(self):
@@ -155,7 +155,7 @@ class TestUseCase1Mapping(unittest.TestCase):
 
         namespace.destroy()
 
-    def test_useCaseMapping_competency7(self):
+    def test_useCaseMapping_competency7_shouldReturnNoMaintenanceTasks(self):
         namespace = self.ontologies["spo"].get_namespace("http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#")
         with namespace:
             query = '''prefix spo: <http://spec.equonto.org/ontology/maintenance-procedure/static-procedure-ontology#>
